@@ -1,0 +1,79 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1776372369
+icon.svg::CompressedTexture2D::7386682507635890920::1776372316::1776372319::1::::<><><>0<>0<>2d793d4b1a5f85642b93b2df905acd2a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Modern_Interiors_Free_v2.2/::1776372030
+::res://Modern_Interiors_Free_v2.2/Modern tiles_Free/::1776372030
+free_overview.png::CompressedTexture2D::6939155219096498256::1618789688::1776372376::1::::<><><>0<>0<>08a318121b173ee010dfec59c654bac4<>res://.godot/imported/free_overview.png-7c1e0fe615904ede774eef684d3b1acd.ctex::
+LICENSE.txt::TextFile::-1::1618789380::0::1::::<><><>0<>0<><>::
+READ ME.txt::TextFile::-1::1618789266::0::1::::<><><>0<>0<><>::
+::res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/::1618789222
+Adam_16x16.png::CompressedTexture2D::8959605759075684595::1608685780::1776372376::1::::<><><>0<>0<>d2ac393e203679c3cbf9f9f513c83017<>res://.godot/imported/Adam_16x16.png-8c2c2af1fca86050f5b2d016698821ad.ctex::
+Adam_idle_16x16.png::CompressedTexture2D::574213406913877903::1607643276::1776372376::1::::<><><>0<>0<>6e4f802b569557cbaf924ce977442c29<>res://.godot/imported/Adam_idle_16x16.png-c8bb3253b61f7a2b1621f42cf90cfc7d.ctex::
+Adam_idle_anim_16x16.png::CompressedTexture2D::6325155220046823980::1607643212::1776372376::1::::<><><>0<>0<>fe4324c23aae659c16b48be6c3673969<>res://.godot/imported/Adam_idle_anim_16x16.png-410dd141671c389943a2473cb77f3138.ctex::
+Adam_phone_16x16.png::CompressedTexture2D::2102511538589524088::1607643056::1776372376::1::::<><><>0<>0<>03f39c4f02e595078ea16f836135e99c<>res://.godot/imported/Adam_phone_16x16.png-274b56da9400fd6f85cef89418e8b654.ctex::
+Adam_run_16x16.png::CompressedTexture2D::9143981648226303795::1607643194::1776372376::1::::<><><>0<>0<>0f89040d0a312da55cc5eada9b3d2bb6<>res://.godot/imported/Adam_run_16x16.png-17628f53062f15c4fb87b9658bb28ac0.ctex::
+Adam_sit2_16x16.png::CompressedTexture2D::4599719150302458708::1607643116::1776372376::1::::<><><>0<>0<>b577f04a6880b90bfa0caf2726116688<>res://.godot/imported/Adam_sit2_16x16.png-4d3de2eb7c2fd22c29087e72c547803a.ctex::
+Adam_sit3_16x16.png::CompressedTexture2D::7364444297518798170::1608685760::1776372376::1::::<><><>0<>0<>fdab818beda6fdc5edd9628580a201b8<>res://.godot/imported/Adam_sit3_16x16.png-c8cb78b01c2d128efeb011eba5b7dd2a.ctex::
+Adam_sit_16x16.png::CompressedTexture2D::2953279348929700150::1607643130::1776372376::1::::<><><>0<>0<>46e9bcacd290505b13ea03c8ff237c65<>res://.godot/imported/Adam_sit_16x16.png-e1475bebd4daca787186c873d551c2e9.ctex::
+Alex_16x16.png::CompressedTexture2D::6296025481674544532::1608685948::1776372376::1::::<><><>0<>0<>f0963764d5db0a60dbad696d075d48b2<>res://.godot/imported/Alex_16x16.png-5fd51c012ff5e99ac6dd6acf43157b80.ctex::
+Alex_idle_16x16.png::CompressedTexture2D::440506358757364840::1605080716::1776372376::1::::<><><>0<>0<>12ec5b419d8859c5fc0a8d565091811c<>res://.godot/imported/Alex_idle_16x16.png-5cd621862a575631f2b9e43a95e158f5.ctex::
+Alex_idle_anim_16x16.png::CompressedTexture2D::5460598726837698837::1606338334::1776372376::1::::<><><>0<>0<>62fd3b3458c005dde3ebfce813740a2a<>res://.godot/imported/Alex_idle_anim_16x16.png-ab6ec887d8184967161178e6aae3d21c.ctex::
+Alex_phone_16x16.png::CompressedTexture2D::7482679453642522825::1606783536::1776372376::1::::<><><>0<>0<>cf093a3395157620fdad9e55add383e6<>res://.godot/imported/Alex_phone_16x16.png-dff88a6e1bc099ca885bd33834595b41.ctex::
+Alex_run_16x16.png::CompressedTexture2D::1962066471787541187::1605080780::1776372376::1::::<><><>0<>0<>58737e9942b6161fdd38bf6bc43d5fef<>res://.godot/imported/Alex_run_16x16.png-e6ae80c077ae66147448455aacb802f7.ctex::
+Alex_sit2_16x16.png::CompressedTexture2D::2820524060416714512::1607468318::1776372376::1::::<><><>0<>0<>635ec21ed01af3b22f9d9aced405fd6e<>res://.godot/imported/Alex_sit2_16x16.png-dc8d82b9767e2268bef0b1355b5c466c.ctex::
+Alex_sit3_16x16.png::CompressedTexture2D::5906852708547632166::1608685918::1776372376::1::::<><><>0<>0<>c38180fc451f70e86c8296997459d0f3<>res://.godot/imported/Alex_sit3_16x16.png-00a8807a9032c5256deb48a8ece0dfdb.ctex::
+Alex_sit_16x16.png::CompressedTexture2D::2465373899037721944::1606588472::1776372376::1::::<><><>0<>0<>260cddf5320b4dda51ccf5701f7a63f1<>res://.godot/imported/Alex_sit_16x16.png-c6972bbaf1341e3fd71fa446f6485d9d.ctex::
+Amelia_16x16.png::CompressedTexture2D::2287028887588852997::1608685692::1776372376::1::::<><><>0<>0<>23deec202603d62ea9e42f52f9e88070<>res://.godot/imported/Amelia_16x16.png-2b990831bdf8c6632617111782750588.ctex::
+Amelia_idle_16x16.png::CompressedTexture2D::471000148954485365::1607922024::1776372376::1::::<><><>0<>0<>69108d38e9602c1403c4aa2e01050b13<>res://.godot/imported/Amelia_idle_16x16.png-8bfcf775727dd5c13d952b0e8036d1f8.ctex::
+Amelia_idle_anim_16x16.png::CompressedTexture2D::7108007950829159922::1607922010::1776372376::1::::<><><>0<>0<>4dea8164ec3041f7585bcf1731195523<>res://.godot/imported/Amelia_idle_anim_16x16.png-9d306ad08cf6abe8fb23cda9f582a160.ctex::
+Amelia_phone_16x16.png::CompressedTexture2D::1153828521993532655::1607921872::1776372376::1::::<><><>0<>0<>5fc6ce297b066dc4ee3978f5edfefbc9<>res://.godot/imported/Amelia_phone_16x16.png-600d57dcf6ca48a2baf77b006e7d39b1.ctex::
+Amelia_run_16x16.png::CompressedTexture2D::3390391932688845414::1607921954::1776372376::1::::<><><>0<>0<>c79960bff16d0712ba57f947b8829932<>res://.godot/imported/Amelia_run_16x16.png-6f9886488ee1840c0e72759668773904.ctex::
+Amelia_sit2_16x16.png::CompressedTexture2D::7768055811521139401::1607921886::1776372376::1::::<><><>0<>0<>c13f3c936918118437f08bd586739396<>res://.godot/imported/Amelia_sit2_16x16.png-86e991630cfc927235169bbbea9e25dd.ctex::
+Amelia_sit3_16x16.png::CompressedTexture2D::1299150781230533779::1608685664::1776372376::1::::<><><>0<>0<>90b4f5e0791408cdf935fba15f96478c<>res://.godot/imported/Amelia_sit3_16x16.png-e592538124c681ede7502624bb4b1d35.ctex::
+Amelia_sit_16x16.png::CompressedTexture2D::5188234945417395652::1607921940::1776372376::1::::<><><>0<>0<>42b863995e16ed15a1f8709526b36459<>res://.godot/imported/Amelia_sit_16x16.png-983569068da67aa350b563ababbc461e.ctex::
+Bob_16x16.png::CompressedTexture2D::7543436529056090468::1608686196::1776372376::1::::<><><>0<>0<>dd66a8b43861e3b76ff80d1a93916db8<>res://.godot/imported/Bob_16x16.png-a55818d8be8051a62cfefef741c20947.ctex::
+Bob_idle_16x16.png::CompressedTexture2D::5456396688029653073::1607643582::1776372376::1::::<><><>0<>0<>28b4e523815618417360befb9345b0d5<>res://.godot/imported/Bob_idle_16x16.png-291126e34eb239ef0357961106a032b4.ctex::
+Bob_idle_anim_16x16.png::CompressedTexture2D::9001150125697430804::1607643524::1776372376::1::::<><><>0<>0<>016ba053ab314e286401ab66ad99cf3c<>res://.godot/imported/Bob_idle_anim_16x16.png-b0f132db37aad5d50b549a861b5147b0.ctex::
+Bob_phone_16x16.png::CompressedTexture2D::2633431482087181963::1607643376::1776372376::1::::<><><>0<>0<>33b55b268eb8c69dcb79668e2971df08<>res://.godot/imported/Bob_phone_16x16.png-6ca91a612f00bf54e1cfea3b5b024f63.ctex::
+Bob_run_16x16.png::CompressedTexture2D::8171357205667877075::1607643510::1776372376::1::::<><><>0<>0<>b2e2fa0a32eb9b6f0c0924894ebf49f8<>res://.godot/imported/Bob_run_16x16.png-e3680cd3e699e42c85f0b31d1dac8828.ctex::
+Bob_sit2_16x16.png::CompressedTexture2D::7406739475883881248::1607643436::1776372376::1::::<><><>0<>0<>8715da0ef356d88f1996ec2ba6fded82<>res://.godot/imported/Bob_sit2_16x16.png-305ea19c0bba28dda4396675027ad5a8.ctex::
+Bob_sit3_16x16.png::CompressedTexture2D::5297943600970110749::1608686170::1776372376::1::::<><><>0<>0<>02907b1322713dfd00b9b2a38eeb8137<>res://.godot/imported/Bob_sit3_16x16.png-68f4c5ace7ba83338cd1147e9466aca2.ctex::
+Bob_sit_16x16.png::CompressedTexture2D::4786794039737895498::1607643452::1776372376::1::::<><><>0<>0<>79eb01c024b8267345713183cf9db4f5<>res://.godot/imported/Bob_sit_16x16.png-8eff34a1498cfe007197edf47f888b2c.ctex::
+::res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/RPGMAKERMV/::1608945660
+Characters_MV.png::CompressedTexture2D::6216483233903627015::1608945660::1776372376::1::::<><><>0<>0<>76e4a2ab47d369d5dcd21991009cd23c<>res://.godot/imported/Characters_MV.png-5bc8b4fe6e1560486e4e2383a1f26766.ctex::
+::res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Interiors_free/::1604738494
+::res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Interiors_free/16x16/::1618789202
+Interiors_free_16x16.png::CompressedTexture2D::6891104445283791359::1618789690::1776372376::1::::<><><>0<>0<>09374a81d368051e3166e2e2cb7a001d<>res://.godot/imported/Interiors_free_16x16.png-5a05d56fa4335c82ff8a5d62dfac28e4.ctex::
+Room_Builder_free_16x16.png::CompressedTexture2D::3752145659909746759::1618789174::1776372376::1::::<><><>0<>0<>226496c72f84acb5c15c32091322c9b1<>res://.godot/imported/Room_Builder_free_16x16.png-feccec73aea83a43a3fb1cff13bc2c54.ctex::
+::res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Interiors_free/32x32/::1618789232
+Interiors_free_32x32.png::CompressedTexture2D::7796868746240822475::1618788730::1776372376::1::::<><><>0<>0<>6e2fdf864f5b32c8a69068e8032d40b5<>res://.godot/imported/Interiors_free_32x32.png-b6acaa7fe7f1bf3065c958f3fd438ec5.ctex::
+Room_Builder_free_32x32.png::CompressedTexture2D::3677666166450086670::1618789144::1776372376::1::::<><><>0<>0<>d28388b0cdff59c0a093a797365c56a8<>res://.godot/imported/Room_Builder_free_32x32.png-ed5ecf04b2a248b77f10d475eae406e2.ctex::
+::res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Interiors_free/48x48/::1618789242
+Interiors_free_48x48.png::CompressedTexture2D::7012230851610129958::1618788632::1776372376::1::::<><><>0<>0<>a7a24adf6e85c74b860c0dfb340464a3<>res://.godot/imported/Interiors_free_48x48.png-39ae891cdfbb65d27fb23e813a37b738.ctex::
+Room_Builder_free_48x48.png::CompressedTexture2D::7502677157647672853::1618789160::1776372376::1::::<><><>0<>0<>0e826527ac70dc45be380054b93ea7ea<>res://.godot/imported/Room_Builder_free_48x48.png-5cbaf6eb763bec97f536949e4ea17d3a.ctex::
+::res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Old/::1618789242
+idle_16x16_2.png::CompressedTexture2D::5858716339326667675::1598993540::1776372376::1::::<><><>0<>0<>cf39215e83d5e978485a5244f07309a8<>res://.godot/imported/idle_16x16_2.png-7f06a4e2be37adca57ee074d49bb3c1c.ctex::
+idle_32x32_2.png::CompressedTexture2D::3271269880863838677::1598993560::1776372376::1::::<><><>0<>0<>2104b2259acd785ed52e0ff982a564c3<>res://.godot/imported/idle_32x32_2.png-d2af7d9a43b32930a8fd6be8ce113508.ctex::
+idle_48x48_2.png::CompressedTexture2D::7066651833323831244::1598993574::1776372376::1::::<><><>0<>0<>40590f12ac3c16eaf1dfb32077845e0f<>res://.godot/imported/idle_48x48_2.png-734752533d78ec1f5b306badbd94c093.ctex::
+run_horizontal_16x16_2.png::CompressedTexture2D::9002299141545587688::1598988934::1776372376::1::::<><><>0<>0<>a81611b5281771c95a5f4ff3dab3d1ac<>res://.godot/imported/run_horizontal_16x16_2.png-b4b422a4db19d077618d0aa3b89b1cb0.ctex::
+run_horizontal_32x32_2.png::CompressedTexture2D::2230952653157751412::1598988954::1776372376::1::::<><><>0<>0<>ea2f40f0b7c01cacc684b8cd2f75cd8a<>res://.godot/imported/run_horizontal_32x32_2.png-dd8117dbfbd1d5bdc21b125f929556a6.ctex::
+run_horizontal_48x48_2.png::CompressedTexture2D::7845096541023301132::1598988968::1776372376::1::::<><><>0<>0<>ef72bc3bfc552556a3e7f3751a249c53<>res://.godot/imported/run_horizontal_48x48_2.png-8c6d9042ce477c641585a88a5e782ff2.ctex::
+Tileset_16x16_1.png::CompressedTexture2D::5316737436115174573::1597859690::1776372376::1::::<><><>0<>0<>a5609f58157cc095248381e5dfa603e2<>res://.godot/imported/Tileset_16x16_1.png-1cd675cf49a093658cdb6fb12a71c66f.ctex::
+Tileset_16x16_2.png::CompressedTexture2D::8869450796635576547::1597859690::1776372376::1::::<><><>0<>0<>98337a71987661f7375e449469b6a2a5<>res://.godot/imported/Tileset_16x16_2.png-a864d23d9a4127ca5bcca6cb7e67e5ef.ctex::
+Tileset_16x16_3.png::CompressedTexture2D::7346750135735927988::1600143446::1776372376::1::::<><><>0<>0<>ab049f002242313ac7e067d20f6e4dab<>res://.godot/imported/Tileset_16x16_3.png-12fb40d8a5cadfdde884faebc47ddb91.ctex::
+Tileset_16x16_9.png::CompressedTexture2D::5905203377877940913::1598759072::1776372376::1::::<><><>0<>0<>7b3e5a67250215b1f13834635b8f25a6<>res://.godot/imported/Tileset_16x16_9.png-1c1d4a97515016d8752cca1adf5b2abf.ctex::
+Tileset_16x16_16.png::CompressedTexture2D::5998071237989729396::1605996994::1776372376::1::::<><><>0<>0<>73d56037263dc09a0b7ac1d771a8d787<>res://.godot/imported/Tileset_16x16_16.png-5ee56e43c443d119ee306f49152543bf.ctex::
+Tileset_32x32_1.png::CompressedTexture2D::407413337512682451::1597859706::1776372376::1::::<><><>0<>0<>c3093b0166c8daba258ca726bd54523d<>res://.godot/imported/Tileset_32x32_1.png-8bc71bc06cfe86a70e86ae5328df2a33.ctex::
+Tileset_32x32_2.png::CompressedTexture2D::4783286371270206114::1597859706::1776372376::1::::<><><>0<>0<>9adb7752c11ecb7cc31a1d35d072757c<>res://.godot/imported/Tileset_32x32_2.png-95b76429e69db5d122ad65c47783cb06.ctex::
+Tileset_32x32_3.png::CompressedTexture2D::9032889424806805634::1600143424::1776372376::1::::<><><>0<>0<>f7ac8b24e399706244ddc086b4dbdf60<>res://.godot/imported/Tileset_32x32_3.png-1c62281149fa7924560cd0f3ca17568e.ctex::
+Tileset_32x32_9.png::CompressedTexture2D::4958133093740350888::1598759062::1776372376::1::::<><><>0<>0<>5a593f261766c3ee51e3b85eda9ec0c8<>res://.godot/imported/Tileset_32x32_9.png-45eff4c35a3f8a7eba62fae6b0c76dc2.ctex::
+Tileset_32x32_16.png::CompressedTexture2D::9206078364048385403::1605996982::1776372376::1::::<><><>0<>0<>e3ac9cff144f0f57d4a2df3d51b8da89<>res://.godot/imported/Tileset_32x32_16.png-f85d7215f19a64c336242b50429320e6.ctex::
+Tileset_48x48_1.png::CompressedTexture2D::3539612273039170852::1597859720::1776372376::1::::<><><>0<>0<>b99938292c6c971ff8d0f095364265c5<>res://.godot/imported/Tileset_48x48_1.png-4275f75a69472665361c79b0c0f39cee.ctex::
+Tileset_48x48_2.png::CompressedTexture2D::1576036646677934990::1597859720::1776372376::1::::<><><>0<>0<>c033a8f2f6a721f87627bb0764157067<>res://.godot/imported/Tileset_48x48_2.png-e9c53abaa8257a57c85b65ce4a920da8.ctex::
+Tileset_48x48_3.png::CompressedTexture2D::1349688839336991443::1600143406::1776372376::1::::<><><>0<>0<>c7d4eca565cd8db16cf868cad6a7118c<>res://.godot/imported/Tileset_48x48_3.png-8e772a2873d08df206766f58e373b127.ctex::
+Tileset_48x48_9.png::CompressedTexture2D::8715786648250842813::1598759050::1776372376::1::::<><><>0<>0<>76a6eabe4dbf31c02291476fdef9b0e9<>res://.godot/imported/Tileset_48x48_9.png-a6832a3518e8e96c61add4bcad3da27f.ctex::
+Tileset_48x48_16.png::CompressedTexture2D::2557077128548447229::1605996970::1776372376::1::::<><><>0<>0<>182c6ea618ed9ac5ebcdc9648fb0043c<>res://.godot/imported/Tileset_48x48_16.png-3f1bcf98ae98449bb302616b4c6303e5.ctex::
+::res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Old/mv/::1608944814
+Character_2_16x16_RPGMAKER.png::CompressedTexture2D::7066620285080708456::1592592390::1776372376::1::::<><><>0<>0<>62c4bcbabdb86f178b045b5e61d61c18<>res://.godot/imported/Character_2_16x16_RPGMAKER.png-5ef61f83258bfd68a0301e12d68a9577.ctex::
+Character_2_32x32_RPGMAKER.png::CompressedTexture2D::6825896957859403151::1592592402::1776372376::1::::<><><>0<>0<>d3893e80033ace1f68789a260d2cdfa6<>res://.godot/imported/Character_2_32x32_RPGMAKER.png-d517570834da84014ecd5aa78fa2fd57.ctex::
+Character_2_48x48_RPGMAKER.png::CompressedTexture2D::606663843008380037::1592592412::1776372376::1::::<><><>0<>0<>40055c582af3b2babce0d9c74252fc2b<>res://.godot/imported/Character_2_48x48_RPGMAKER.png-af0a1b9a7d9890df20dc9b869ade82f4.ctex::
