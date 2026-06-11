@@ -13,7 +13,18 @@ config_version=5
 config/name="OfficePrototype"
 run/main_scene="uid://bhcyo7m0m6wvf"
 config/features=PackedStringArray("4.6", "Forward Plus")
+run/low_processor_mode=true
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=3840
+window/size/viewport_height=2160
+
+[input_devices]
+
+buffering/agile_event_flushing=true
+pointing/emulate_mouse_from_touch=false
 
 [physics]
 
@@ -23,3 +34,4 @@ config/icon="res://icon.svg"
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.22745098, 0.22745098, 0.3137255, 1)

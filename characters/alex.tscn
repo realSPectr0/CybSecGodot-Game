@@ -393,3 +393,9 @@ animation = &"idle_left"
 frame_progress = 0.29101244
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=86703185]
+zoom = Vector2(2, 2)
+limit_enabled = false
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 648

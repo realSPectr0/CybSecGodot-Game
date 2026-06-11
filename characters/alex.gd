@@ -2,9 +2,15 @@ extends CharacterBody2D
 
 const SPEED = 200.0
 @onready var animated_sprite = $AnimatedSprite2D
-
+@export_file_path('scenes/menu_ui.tscn') var menu_ui_file
+var freeze = false
 var last_direction = "down"  # Default facing direction
 
+func _process(delta: float) -> void:
+	if Input.is_key_pressed(KEY_ESCAPE):
+		print(true)
+		get_tree().change_scene_to_file(menu_ui_file)
+	
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
 	
@@ -19,9 +25,9 @@ func _physics_process(delta: float) -> void:
 	
 	if direction != Vector2.ZERO:
 		direction = direction.normalized()
-	
-	velocity = direction * SPEED
-	move_and_slide()
+	if not freeze:
+		velocity = direction * SPEED
+		move_and_slide()
 	
 	update_animation(direction)
 
