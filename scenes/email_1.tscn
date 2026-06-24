@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://xf3jtqyjrpqt"]
+
+[ext_resource type="Script" uid="uid://beilaw256mmxe" path="res://scenes/email_1.gd" id="1_03jhe"]
+[ext_resource type="Texture2D" uid="uid://irjhw15lvf0o" path="res://game_elements/phishing_email1.png" id="2_20ym0"]
+[ext_resource type="AudioStream" uid="uid://b1gfwbqkqnfou" path="res://game_elements/ding.mp3" id="3_1xxty"]
+[ext_resource type="Script" uid="uid://dnxccetv5ks2m" path="res://scenes/phishing_email_1.gd" id="3_20ym0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1f4a"]
+size = Vector2(40, 40)
+
+[node name="email1" type="Area2D" unique_id=1629039570]
+script = ExtResource("1_03jhe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1513404477]
+shape = SubResource("RectangleShape2D_r1f4a")
+
+[node name="email_canvas" type="CanvasLayer" parent="." unique_id=1162068088]
+visible = false
+
+[node name="PhishingEmail1" type="TextureRect" parent="email_canvas" unique_id=1934665096]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_20ym0")
+stretch_mode = 5
+script = ExtResource("3_20ym0")
+metadata/_edit_use_anchors_ = true
+
+[node name="Escape" type="Button" parent="email_canvas/PhishingEmail1" unique_id=1801780955]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -340.0
+offset_top = 5.0
+offset_bottom = 150.0
+grow_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 100
+text = "Escape"
+metadata/_edit_use_anchors_ = true
+
+[node name="Submit" type="Button" parent="email_canvas/PhishingEmail1" unique_id=1592475223]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -282.5
+offset_top = -208.0
+offset_right = 282.5
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 150
+text = "Submit!"
+metadata/_edit_use_anchors_ = true
+
+[node name="ding" type="AudioStreamPlayer" parent="email_canvas/PhishingEmail1" unique_id=2085615811]
+stream = ExtResource("3_1xxty")
+volume_db = 5.0
+
+[node name="dangerzone1" type="Button" parent="email_canvas/PhishingEmail1" unique_id=414774269]
+custom_minimum_size = Vector2(510, 56)
+layout_mode = 0
+offset_left = 174.0
+offset_top = 420.0
+offset_right = 622.0
+offset_bottom = 476.0
+action_mode = 0
+flat = true
+
+[node name="dangerzone2" type="Button" parent="email_canvas/PhishingEmail1" unique_id=2143206200]
+layout_mode = 0
+offset_left = 173.99998
+offset_top = 1188.0
+offset_right = 181.99998
+offset_bottom = 1196.0
+scale = Vector2(80.90388, 8.170994)
+focus_mode = 0
+focus_behavior_recursive = 1
+flat = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

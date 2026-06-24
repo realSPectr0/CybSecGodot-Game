@@ -1,13 +1,14 @@
 [gd_scene format=4 uid="uid://cmjy7owgdvgjy"]
 
+[ext_resource type="Script" uid="uid://i3d23iw6rqsc" path="res://scenes/level_1.gd" id="1_conm7"]
 [ext_resource type="PackedScene" uid="uid://b1gycxbal0wew" path="res://characters/alex.tscn" id="1_ejswk"]
 [ext_resource type="Texture2D" uid="uid://1x6puqo4va0j" path="res://neo_zero_tileset_V2.0_DEMO/neo_zero_tileset_02.png" id="2_bbk5w"]
 [ext_resource type="Script" uid="uid://dj85iyxs8etky" path="res://scenes/instructions.gd" id="3_conm7"]
-[ext_resource type="Script" uid="uid://beilaw256mmxe" path="res://scenes/email_1.gd" id="4_d3jkd"]
-[ext_resource type="Texture2D" uid="uid://irjhw15lvf0o" path="res://game_elements/phishing_email1.png" id="5_bbk5w"]
+[ext_resource type="PackedScene" uid="uid://xf3jtqyjrpqt" path="res://scenes/email_1.tscn" id="4_ejswk"]
+[ext_resource type="PackedScene" uid="uid://wqfb06y6xt5f" path="res://scenes/email_2.tscn" id="5_bbk5w"]
 [ext_resource type="Texture2D" uid="uid://b0pjf0je72rcb" path="res://neo_zero_tileset_V2.0_DEMO/neo_zero_props_02_free.png" id="5_u3awl"]
 [ext_resource type="Texture2D" uid="uid://cf6p7jtrrsgf0" path="res://neo_zero_V1.0/neo_zero_props_and_items_01.png" id="6_2ku1j"]
-[ext_resource type="AudioStream" uid="uid://b1gfwbqkqnfou" path="res://game_elements/ding.mp3" id="6_conm7"]
+[ext_resource type="PackedScene" uid="uid://qokc1gtqdqcu" path="res://scenes/email_3.tscn" id="7_d3jkd"]
 [ext_resource type="Script" uid="uid://cho74w8wikcqx" path="res://scenes/portal_back.gd" id="7_f31uk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uh2k7"]
@@ -183,9 +184,6 @@ sources/4 = SubResource("TileSetAtlasSource_uh2k7")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1f4a"]
 size = Vector2(40, 40)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tgfx"]
-size = Vector2(40, 40)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts08y"]
 texture = ExtResource("5_u3awl")
 10:0/0 = 0
@@ -321,10 +319,12 @@ size = Vector2(40, 40)
 
 [node name="level1" type="Node2D" unique_id=192562295]
 y_sort_enabled = true
+script = ExtResource("1_conm7")
 
 [node name="player" parent="." unique_id=1092919849 instance=ExtResource("1_ejswk")]
-position = Vector2(961, 994)
+position = Vector2(291.00003, 179.00002)
 scale = Vector2(2.5, 2.5)
+menu_ui_file = "res://scenes/menu_ui.tscn"
 
 [node name="ground" type="TileMapLayer" parent="." unique_id=298397591]
 use_parent_material = true
@@ -348,66 +348,14 @@ script = ExtResource("3_conm7")
 shape = SubResource("RectangleShape2D_r1f4a")
 metadata/_edit_lock_ = true
 
-[node name="email1" type="Area2D" parent="." unique_id=814448890]
+[node name="email1" parent="." unique_id=1629039570 instance=ExtResource("4_ejswk")]
 position = Vector2(960, 979)
-script = ExtResource("4_d3jkd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="email1" unique_id=2057527813]
-shape = SubResource("RectangleShape2D_r1f4a")
-metadata/_edit_lock_ = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="email1" unique_id=478363184]
-
-[node name="PhishingEmail1" type="TextureRect" parent="email1/CanvasLayer" unique_id=515873446]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -4.0
-offset_bottom = -4.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_bbk5w")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Button2" type="Button" parent="email1/CanvasLayer/PhishingEmail1" unique_id=378150118]
-layout_mode = 0
-offset_left = 187.0
-offset_top = 980.0
-offset_right = 195.0
-offset_bottom = 988.0
-scale = Vector2(144.35712, 37.983635)
-focus_mode = 0
-button_mask = 7
-flat = true
-
-[node name="Button" type="Button" parent="email1/CanvasLayer/PhishingEmail1" unique_id=1819286681]
-layout_mode = 0
-offset_left = 183.0
-offset_top = 412.0
-offset_right = 683.0
-offset_bottom = 472.0
-scale = Vector2(1.0061704, 0.99680275)
-focus_mode = 0
-button_mask = 7
-flat = true
-
-[node name="ding" type="AudioStreamPlayer" parent="email1/CanvasLayer" unique_id=740681401]
-stream = ExtResource("6_conm7")
-
-[node name="email2" type="Area2D" parent="." unique_id=1695013327]
+[node name="email2" parent="." unique_id=1265691965 instance=ExtResource("5_bbk5w")]
 position = Vector2(1228, 979)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="email2" unique_id=779142467]
-shape = SubResource("RectangleShape2D_5tgfx")
-metadata/_edit_lock_ = true
-
-[node name="email3" type="Area2D" parent="." unique_id=1045697699]
+[node name="email3" parent="." unique_id=1198952158 instance=ExtResource("7_d3jkd")]
 position = Vector2(1093, 759)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="email3" unique_id=2116734774]
-shape = SubResource("RectangleShape2D_5tgfx")
-metadata/_edit_lock_ = true
 
 [node name="sprite_blocks" type="TileMapLayer" parent="." unique_id=2132286325]
 scale = Vector2(2.79, 2.79)
@@ -424,7 +372,5 @@ shape = SubResource("RectangleShape2D_5uqbn")
 
 [connection signal="body_entered" from="instructions" to="instructions" method="_on_body_entered"]
 [connection signal="body_exited" from="instructions" to="instructions" method="_on_body_exited"]
-[connection signal="body_entered" from="email1" to="email1" method="_on_body_entered"]
-[connection signal="body_exited" from="email1" to="email1" method="_on_body_exited"]
 [connection signal="body_entered" from="portal back" to="portal back" method="_on_body_entered"]
 [connection signal="body_exited" from="portal back" to="portal back" method="_on_body_exited"]

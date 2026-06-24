@@ -11,7 +11,7 @@ func _process(_delta):
 	# Check if player is nearby AND Space (ui_accept) is pressed
 	if player_in_range and Input.is_key_pressed(KEY_SPACE):
 		#face_player() 
-		start_dialogue()
+		Dialogic.start('hard_worker')
 
 func face_player():
 	if not player_ref: 
