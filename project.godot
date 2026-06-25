@@ -35,8 +35,7 @@ layout/default_style="res://dialogue/style.tres"
 
 [display]
 
-window/size/viewport_width=3840
-window/size/viewport_height=2160
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
