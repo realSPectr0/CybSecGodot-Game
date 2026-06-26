@@ -10,16 +10,33 @@ enum REQS{
 
 var generated_requirements_length = 0
 var written_password = ''
-var requirements = [
-	['SPECIAL_CHARACTER', 1],
-	['UPPERCASE_CHARACTER', 1],
-	['LOWERCASE_CHARACTER', 5],
-	['NUMBER', 2],
-]
+var requirements = []
 
 var special_chars = '!@#$%^&*'
 var chars = 'qwertyuiopasdfghjklzxcvbnm'
 var numbers = '1234567890'
+
+var password_patterns = [
+	[['SPECIAL_CHARACTER', 1],
+	['UPPERCASE_CHARACTER', 1],
+	['LOWERCASE_CHARACTER', 5],
+	['NUMBER', 2]],
+	
+	[['SPECIAL_CHARACTER', 1],
+	['UPPERCASE_CHARACTER', 3],
+	['LOWERCASE_CHARACTER', 3],
+	['NUMBER', 1]],
+	
+	[['SPECIAL_CHARACTER', 2],
+	['UPPERCASE_CHARACTER', 1],
+	['LOWERCASE_CHARACTER', 5]],
+	
+	[['SPECIAL_CHARACTER', 1],
+	['UPPERCASE_CHARACTER', 1],
+	['LOWERCASE_CHARACTER', 4],
+	['SPECIAL_CHARACTER', 1],
+	['NUMBER', 1]],
+]
 
 
 func _ready() -> void:
@@ -27,7 +44,7 @@ func _ready() -> void:
 
 
 func generate_password_requirement():
-	
+	requirements = password_patterns.pick_random()
 	
 	for i in $CanvasLayer/Control/Requirements.get_children():
 		i.queue_free()
