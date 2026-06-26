@@ -153,12 +153,12 @@ func _on_password_text_changed(new_text: String) -> void:
 
 
 func _on_submit_pressed() -> void:
-	$Click.play()
+	$Pop.play()
 	
 	$CanvasLayer/Popups/Control/Timer.start()
 	$CanvasLayer/Popups/Control/Panel/ProgressBar.value = $CanvasLayer/Popups/Control/Timer.time_left
 	$CanvasLayer/Popups/Control/Panel/ProgressBar.max_value = $CanvasLayer/Popups/Control/Timer.wait_time
-	$CanvasLayer/Popups/Control/Panel/ProgressBar/Level.text = 'Next: Level %d' % level
+	$CanvasLayer/Popups/Control/Panel/ProgressBar/Level.text = 'Next: Level %d' % (level + 1)
 	
 	$CanvasLayer/Popups/Control.show()
 

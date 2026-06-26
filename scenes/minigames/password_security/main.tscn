@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://cgng01auy1vrf" path="res://scenes/minigames/password_security/sfx/Menu_Sound_Load_Savefile.wav" id="11_0rq2i"]
 [ext_resource type="AudioStream" uid="uid://c6o12xmj4maly" path="res://scenes/minigames/password_security/sfx/Menu_Sound_Error.wav" id="12_6d44t"]
 [ext_resource type="AudioStream" uid="uid://cvidnjq4wmgv0" path="res://scenes/minigames/password_security/sfx/Click2.wav" id="13_nwojs"]
+[ext_resource type="AudioStream" uid="uid://cqnqqge2d10kh" path="res://scenes/minigames/password_security/sfx/Pop1.wav" id="14_0duof"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1b3bd"]
 shader = ExtResource("2_681w4")
@@ -440,6 +441,9 @@ stream = ExtResource("12_6d44t")
 
 [node name="Click" type="AudioStreamPlayer" parent="." unique_id=612046537]
 stream = ExtResource("13_nwojs")
+
+[node name="Pop" type="AudioStreamPlayer" parent="." unique_id=1276265224]
+stream = ExtResource("14_0duof")
 
 [connection signal="text_changed" from="CanvasLayer/Control/EmailEx" to="." method="_on_password_text_changed"]
 [connection signal="text_changed" from="CanvasLayer/Control/Password" to="." method="_on_password_text_changed"]
