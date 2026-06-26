@@ -56,6 +56,16 @@ func _ready() -> void:
 	$CanvasLayer/Popups/Control.hide()
 
 
+func _physics_process(delta: float) -> void:
+	var d = $CanvasLayer/Control/ColorRect.material.get('shader_parameter/time_val')
+	$CanvasLayer/Control/ColorRect.material.set('shader_parameter/time_val', d + delta)
+	
+	$CanvasLayer/Control/Password/PasswordShadow.text = $CanvasLayer/Control/Password.text
+	
+	if $CanvasLayer/Popups/Control.visible:
+		$CanvasLayer/Popups/Control/Panel/ProgressBar.value = $CanvasLayer/Popups/Control/Timer.time_left
+
+
 func generate_password_requirement():
 	requirements = password_patterns.pick_random()
 	generated_requirements_length = 0
@@ -133,14 +143,8 @@ func check_password():
 	return true
 
 
-func _physics_process(delta: float) -> void:
-	var d = $CanvasLayer/Control/ColorRect.material.get('shader_parameter/time_val')
-	$CanvasLayer/Control/ColorRect.material.set('shader_parameter/time_val', d + delta)
-	
-	$CanvasLayer/Control/Password/PasswordShadow.text = $CanvasLayer/Control/Password.text
-	
-	if $CanvasLayer/Popups/Control.visible:
-		$CanvasLayer/Popups/Control/Panel/ProgressBar.value = $CanvasLayer/Popups/Control/Timer.time_left
+func complete_minigame():
+	pass
 
 
 func _on_password_text_changed(new_text: String) -> void:
@@ -166,14 +170,18 @@ func _on_timer_timeout() -> void:
 
 
 func _on_complete_level_pressed() -> void:
+	level += 1
+	
+	if level > level_max:
+		complete_minigame()
+		return
+	
 	generate_password_requirement()
 	$CanvasLayer/Control/Password.clear()
 	$CanvasLayer/Popups/Control.hide()
 	$CanvasLayer/Popups/Control/Panel/RetypePassword.clear()
 	
 	$CanvasLayer/Popups/Control/Timer.stop()
-	
-	level += 1
 
 
 func _on_retype_password_text_changed(new_text: String) -> void:
