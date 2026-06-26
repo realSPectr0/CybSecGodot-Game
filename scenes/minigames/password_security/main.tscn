@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cbvm0yx63y72g" path="res://scenes/minigames/password_security/sfx/keypress-001.wav" id="4_1b3bd"]
 [ext_resource type="Shader" uid="uid://d1ig7er2ak1qp" path="res://scenes/minigames/password_security/blur.gdshader" id="5_16nrt"]
 [ext_resource type="AudioStream" uid="uid://dxah44lgq0kwo" path="res://scenes/minigames/password_security/sfx/keypress-002.wav" id="5_681w4"]
+[ext_resource type="Texture2D" uid="uid://c4vdriykarq4h" path="res://scenes/minigames/password_security/art/confetti.png" id="6_1f6yf"]
 [ext_resource type="AudioStream" uid="uid://dbwh7p5xj51lb" path="res://scenes/minigames/password_security/sfx/keypress-003.wav" id="6_16nrt"]
 [ext_resource type="AudioStream" uid="uid://jwcrpuamas4v" path="res://scenes/minigames/password_security/sfx/keypress-004.wav" id="7_1f6yf"]
 
@@ -35,6 +36,29 @@ bg_color = Color(0.38053218, 0.48720628, 0.3926109, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6d44t"]
 bg_color = Color(0.3548955, 0.511384, 0.5711847, 1)
+
+[sub_resource type="Curve" id="Curve_0rq2i"]
+_data = [Vector2(0.79983705, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_1f6yf"]
+curve = SubResource("Curve_0rq2i")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_16nrt"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(564, 1, 1)
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 53.76
+initial_velocity_max = 53.76
+angular_velocity_min = -41.290016
+angular_velocity_max = 216.78998
+gravity = Vector3(0, 0, 0)
+scale_min = 0.049999997
+scale_max = 0.099999994
+alpha_curve = SubResource("CurveTexture_1f6yf")
+hue_variation_min = -1.0
+hue_variation_max = 0.99999994
 
 [node name="Main" type="Node2D" unique_id=1221830348]
 script = ExtResource("1_g34a3")
@@ -244,6 +268,7 @@ layout_mode = 2
 layer = 100
 
 [node name="Control" type="Control" parent="CanvasLayer/Popups" unique_id=1254759982]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -382,6 +407,13 @@ horizontal_alignment = 1
 [node name="Timer" type="Timer" parent="CanvasLayer/Popups/Control" unique_id=1952942669]
 wait_time = 15.0
 one_shot = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="CanvasLayer/Popups/Control" unique_id=361249713]
+position = Vector2(571, -21)
+amount = 30
+texture = ExtResource("6_1f6yf")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_16nrt")
 
 [node name="Node" type="Node" parent="." unique_id=807537984]
 
