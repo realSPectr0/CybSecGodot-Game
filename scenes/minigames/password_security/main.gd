@@ -8,8 +8,10 @@ enum REQS{
 	NUMBER,
 }
 
+var level = 1
+var level_max = 5
+
 var generated_requirements_length = 0
-var written_password = ''
 var requirements = []
 
 var special_chars = '!@#$%^&*'
@@ -50,10 +52,13 @@ var password_patterns = [
 
 func _ready() -> void:
 	generate_password_requirement()
+	
+	$CanvasLayer/Popups/Control.hide()
 
 
 func generate_password_requirement():
 	requirements = password_patterns.pick_random()
+	generated_requirements_length = 0
 	
 	for i in $CanvasLayer/Control/Requirements.get_children():
 		i.queue_free()
@@ -133,8 +138,48 @@ func _physics_process(delta: float) -> void:
 	$CanvasLayer/Control/ColorRect.material.set('shader_parameter/time_val', d + delta)
 	
 	$CanvasLayer/Control/Password/PasswordShadow.text = $CanvasLayer/Control/Password.text
+	
+	if $CanvasLayer/Popups/Control.visible:
+		$CanvasLayer/Popups/Control/Panel/ProgressBar.value = $CanvasLayer/Popups/Control/Timer.time_left
 
 
 func _on_password_text_changed(new_text: String) -> void:
 	$Node.get_children().pick_random().play()
-	$CanvasLayer/Control/Password/Check.visible = check_password()
+	$CanvasLayer/Control/Password/Submit.visible = check_password()
+
+
+func _on_submit_pressed() -> void:
+	$CanvasLayer/Popups/Control/Timer.start()
+	$CanvasLayer/Popups/Control/Panel/ProgressBar.value = $CanvasLayer/Popups/Control/Timer.time_left
+	$CanvasLayer/Popups/Control/Panel/ProgressBar.max_value = $CanvasLayer/Popups/Control/Timer.wait_time
+	$CanvasLayer/Popups/Control/Panel/ProgressBar/Level.text = 'Next: Level %d' % level
+	
+	$CanvasLayer/Popups/Control.show()
+
+
+func _on_timer_timeout() -> void:
+	print('level failed, you dont remember the password!')
+	
+	generate_password_requirement()
+	$CanvasLayer/Control/Password.clear()
+	$CanvasLayer/Popups/Control.hide()
+
+
+func _on_complete_level_pressed() -> void:
+	generate_password_requirement()
+	$CanvasLayer/Control/Password.clear()
+	$CanvasLayer/Popups/Control.hide()
+	$CanvasLayer/Popups/Control/Panel/RetypePassword.clear()
+	
+	$CanvasLayer/Popups/Control/Timer.stop()
+	
+	level += 1
+
+
+func _on_retype_password_text_changed(new_text: String) -> void:
+	if $CanvasLayer/Control/Password.text == new_text:
+		$CanvasLayer/Popups/Control/Panel/RetypePassword/CompleteLevel.show()
+		$CanvasLayer/Popups/Control/Panel/RetypePassword/WrongPass.hide()
+	else:
+		$CanvasLayer/Popups/Control/Panel/RetypePassword/CompleteLevel.hide()
+		$CanvasLayer/Popups/Control/Panel/RetypePassword/WrongPass.show()

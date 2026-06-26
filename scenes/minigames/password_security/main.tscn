@@ -5,6 +5,7 @@
 [ext_resource type="Shader" uid="uid://cuuy24yf0m585" path="res://scenes/minigames/password_security/main.gdshader" id="2_681w4"]
 [ext_resource type="PackedScene" uid="uid://dkwwxespj8cnb" path="res://scenes/minigames/password_security/requirement.tscn" id="3_8q48t"]
 [ext_resource type="AudioStream" uid="uid://cbvm0yx63y72g" path="res://scenes/minigames/password_security/sfx/keypress-001.wav" id="4_1b3bd"]
+[ext_resource type="Shader" uid="uid://d1ig7er2ak1qp" path="res://scenes/minigames/password_security/blur.gdshader" id="5_16nrt"]
 [ext_resource type="AudioStream" uid="uid://dxah44lgq0kwo" path="res://scenes/minigames/password_security/sfx/keypress-002.wav" id="5_681w4"]
 [ext_resource type="AudioStream" uid="uid://dbwh7p5xj51lb" path="res://scenes/minigames/password_security/sfx/keypress-003.wav" id="6_16nrt"]
 [ext_resource type="AudioStream" uid="uid://jwcrpuamas4v" path="res://scenes/minigames/password_security/sfx/keypress-004.wav" id="7_1f6yf"]
@@ -18,6 +19,22 @@ shader_parameter/colour_2 = Color(0.19085318, 0.33800668, 0.44614577, 1)
 shader_parameter/colour_3 = Color(0.13725491, 0.25490198, 0.34117648, 1)
 shader_parameter/contrast = 1.0
 shader_parameter/spin_amount = 1.05
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_681w4"]
+shader = ExtResource("5_16nrt")
+shader_parameter/lod = 1.75200008322
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16nrt"]
+bg_color = Color(0.5217386, 0.6147897, 0.68402034, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1f6yf"]
+bg_color = Color(0.20264181, 0.21484968, 0.253892, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0rq2i"]
+bg_color = Color(0.38053218, 0.48720628, 0.3926109, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6d44t"]
+bg_color = Color(0.3548955, 0.511384, 0.5711847, 1)
 
 [node name="Main" type="Node2D" unique_id=1221830348]
 script = ExtResource("1_g34a3")
@@ -176,24 +193,21 @@ theme_override_colors/font_color = Color(1, 1, 1, 0.20392157)
 text = "TestingPassword"
 horizontal_alignment = 1
 
-[node name="Check" type="TextureRect" parent="CanvasLayer/Control/Password" unique_id=353371932]
+[node name="Submit" type="Button" parent="CanvasLayer/Control/Password" unique_id=882692776]
 visible = false
-custom_minimum_size = Vector2(32, 32)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 8.0
-offset_top = -16.0
-offset_right = 40.0
-offset_bottom = 16.0
+offset_left = 11.0
+offset_top = -15.5
+offset_right = 100.0
+offset_bottom = 15.5
 grow_horizontal = 0
 grow_vertical = 2
-texture = ExtResource("2_8q48t")
-expand_mode = 1
-stretch_mode = 5
+text = "Submit"
 
 [node name="Requirements" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=1042655266]
 layout_mode = 1
@@ -226,6 +240,149 @@ layout_mode = 2
 [node name="Requirement5" parent="CanvasLayer/Control/Requirements" unique_id=415557023 instance=ExtResource("3_8q48t")]
 layout_mode = 2
 
+[node name="Popups" type="CanvasLayer" parent="CanvasLayer" unique_id=1810693810]
+layer = 100
+
+[node name="Control" type="Control" parent="CanvasLayer/Popups" unique_id=1254759982]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Popups/Control" unique_id=285255140]
+material = SubResource("ShaderMaterial_681w4")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Popups/Control" unique_id=346916113]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 370.0
+offset_top = 145.0
+offset_right = -370.0
+offset_bottom = -145.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_16nrt")
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Popups/Control/Panel" unique_id=1123875615]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_1f6yf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0rq2i")
+value = 30.0
+show_percentage = false
+
+[node name="Level" type="Label" parent="CanvasLayer/Popups/Control/Panel/ProgressBar" unique_id=1884728057]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.5
+offset_top = -20.0
+offset_right = 34.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.3372549)
+text = "Next: Level 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Popups/Control/Panel" unique_id=868502425]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = -7.0
+offset_top = 8.0
+offset_right = 7.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_6d44t")
+text = "LEVEL COMPLETE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CurrentLevel2" type="Label" parent="CanvasLayer/Popups/Control/Panel" unique_id=1707442191]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.0
+offset_top = 75.0
+offset_right = 160.0
+offset_bottom = 124.0
+grow_horizontal = 2
+text = "GREAT JOB! You've created a strong, secure password!
+
+To make sure you remembered what you created. Type the password again in the input box below."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="RetypePassword" type="LineEdit" parent="CanvasLayer/Popups/Control/Panel" unique_id=1117544409]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -137.0
+offset_top = 249.0
+offset_right = 137.0
+offset_bottom = 280.0
+grow_horizontal = 2
+placeholder_text = "Re-enter password"
+
+[node name="CompleteLevel" type="Button" parent="CanvasLayer/Popups/Control/Panel/RetypePassword" unique_id=1345897731]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -83.0
+offset_top = 6.0
+offset_right = 83.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Complete Level"
+
+[node name="WrongPass" type="Label" parent="CanvasLayer/Popups/Control/Panel/RetypePassword" unique_id=83384449]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 38.0
+offset_right = 100.0
+offset_bottom = 61.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.67434764, 0.36305135, 0.31954527, 1)
+text = "Wrong password!"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Popups/Control" unique_id=1952942669]
+wait_time = 15.0
+one_shot = true
+
 [node name="Node" type="Node" parent="." unique_id=807537984]
 
 [node name="Keypress" type="AudioStreamPlayer" parent="Node" unique_id=1408703103]
@@ -242,3 +399,7 @@ stream = ExtResource("7_1f6yf")
 
 [connection signal="text_changed" from="CanvasLayer/Control/EmailEx" to="." method="_on_password_text_changed"]
 [connection signal="text_changed" from="CanvasLayer/Control/Password" to="." method="_on_password_text_changed"]
+[connection signal="pressed" from="CanvasLayer/Control/Password/Submit" to="." method="_on_submit_pressed"]
+[connection signal="text_changed" from="CanvasLayer/Popups/Control/Panel/RetypePassword" to="." method="_on_retype_password_text_changed"]
+[connection signal="pressed" from="CanvasLayer/Popups/Control/Panel/RetypePassword/CompleteLevel" to="." method="_on_complete_level_pressed"]
+[connection signal="timeout" from="CanvasLayer/Popups/Control/Timer" to="." method="_on_timer_timeout"]
