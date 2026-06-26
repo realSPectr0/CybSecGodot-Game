@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dkwwxespj8cnb"]
+
+[ext_resource type="Script" uid="uid://bffsn5k0fvu5r" path="res://scenes/minigames/password_security/requirement.gd" id="1_bharl"]
+
+[node name="Requirement" type="HBoxContainer" unique_id=604735047]
+script = ExtResource("1_bharl")
+
+[node name="CheckBox" type="CheckBox" parent="." unique_id=1309497333]
+layout_mode = 2
+button_mask = 0
+
+[node name="Label" type="Label" parent="." unique_id=304376732]
+layout_mode = 2
+text = "1 Special character"

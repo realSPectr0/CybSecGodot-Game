@@ -1,0 +1,6 @@
+gameloop:
+	
+	player will type the recommended password as fast as they could
+	
+	ex.
+	

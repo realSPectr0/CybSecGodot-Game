@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://c4lq05xlvn71c"]
+
+[ext_resource type="Script" uid="uid://tcxy5vvuc8b7" path="res://scenes/minigames/password_security/main.gd" id="1_g34a3"]
+[ext_resource type="PackedScene" uid="uid://dkwwxespj8cnb" path="res://scenes/minigames/password_security/requirement.tscn" id="3_8q48t"]
+
+[node name="Main" type="Node2D" unique_id=1221830348]
+script = ExtResource("1_g34a3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1858947943]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=189085729]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=73971563]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.310173, 0.3660242, 0.53111786, 1)
+metadata/_edit_lock_ = true
+
+[node name="Password" type="LineEdit" parent="CanvasLayer/Control" unique_id=550310412]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -15.5
+offset_right = 152.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Password"
+max_length = 10
+secret = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Password" unique_id=1227312591]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = -11.0
+offset_right = -7.0
+offset_bottom = 12.0
+grow_vertical = 2
+text = "Enter Password:"
+
+[node name="PasswordShadow" type="Label" parent="CanvasLayer/Control/Password" unique_id=1488989380]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.0
+offset_top = -36.5
+offset_right = 81.0
+offset_bottom = -13.5
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.20392157)
+text = "TestingPassword"
+horizontal_alignment = 1
+
+[node name="PasswordCheck" type="CheckBox" parent="CanvasLayer/Control/Password" unique_id=856998912]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -12.0
+offset_right = 29.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 2
+button_pressed = true
+
+[node name="Requirements" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=1042655266]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -449.0
+offset_top = 74.0
+offset_right = 449.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Requirement" parent="CanvasLayer/Control/Requirements" unique_id=604735047 instance=ExtResource("3_8q48t")]
+layout_mode = 2
+
+[node name="Requirement2" parent="CanvasLayer/Control/Requirements" unique_id=513458456 instance=ExtResource("3_8q48t")]
+layout_mode = 2
+
+[node name="Requirement3" parent="CanvasLayer/Control/Requirements" unique_id=1178432137 instance=ExtResource("3_8q48t")]
+layout_mode = 2
+
+[node name="Requirement4" parent="CanvasLayer/Control/Requirements" unique_id=115636755 instance=ExtResource("3_8q48t")]
+layout_mode = 2
+
+[node name="Requirement5" parent="CanvasLayer/Control/Requirements" unique_id=415557023 instance=ExtResource("3_8q48t")]
+layout_mode = 2
+
+[connection signal="text_changed" from="CanvasLayer/Control/Password" to="." method="_on_password_text_changed"]

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dft8jpl27pqnj"]
+
+[ext_resource type="Script" uid="uid://bfrk0onmn5sjy" path="res://scenes/minigames/password_security/letterbox.gd" id="1_0ypet"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir86x"]
+
+[node name="Letterbox" type="Panel" unique_id=1183964929]
+custom_minimum_size = Vector2(86, 86)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ir86x")
+script = ExtResource("1_0ypet")
+
+[node name="Label" type="Label" parent="." unique_id=625865811]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 56
+horizontal_alignment = 1
+vertical_alignment = 1
