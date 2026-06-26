@@ -30,17 +30,18 @@ shader_parameter/spin_amount = 1.05
 shader = ExtResource("5_16nrt")
 shader_parameter/lod = 1.75200008322
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16nrt"]
-bg_color = Color(0.5217386, 0.6147897, 0.68402034, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmf7k"]
+texture = ExtResource("5_tmf7k")
+texture_margin_left = 57.272724
+texture_margin_top = 75.454544
+texture_margin_right = 62.727272
+texture_margin_bottom = 54.545452
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1f6yf"]
 bg_color = Color(0.20264181, 0.21484968, 0.253892, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0rq2i"]
 bg_color = Color(0.38053218, 0.48720628, 0.3926109, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6d44t"]
-bg_color = Color(0.3548955, 0.511384, 0.5711847, 1)
 
 [sub_resource type="Curve" id="Curve_0rq2i"]
 _data = [Vector2(0.79983705, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -91,14 +92,14 @@ metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1874504776]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -545.0
-offset_top = 32.0
-offset_right = 545.0
-offset_bottom = 289.0
-grow_horizontal = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -555.0
+offset_top = 45.0
+offset_right = -47.0
+offset_bottom = 458.0
+grow_horizontal = 0
 text = "According to the traditional advice---which is still good---a strong password:
 
 - Has 12 Characters, Minimum: You need to choose a password that's long enough.
@@ -134,10 +135,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -274.0
-offset_top = -196.0
-offset_right = 216.0
-offset_bottom = 137.0
+offset_left = -528.0
+offset_top = -236.0
+offset_right = -38.0
+offset_bottom = 97.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_tmf7k")
@@ -156,6 +157,7 @@ offset_top = 24.0
 offset_right = 88.0
 offset_bottom = 47.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0.28876275, 0.28876272, 0.28876272, 1)
 text = "Creating Account"
 horizontal_alignment = 1
 
@@ -166,10 +168,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -138.0
-offset_top = -55.0
-offset_right = 166.0
-offset_bottom = -24.0
+offset_left = -392.0
+offset_top = -95.0
+offset_right = -88.0
+offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "mysteriousdance24@gmail.com"
@@ -214,10 +216,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -138.0
-offset_top = -15.5
-offset_right = 166.0
-offset_bottom = 15.5
+offset_left = -392.0
+offset_top = -55.5
+offset_right = -88.0
+offset_bottom = -24.5
 grow_horizontal = 2
 grow_vertical = 2
 placeholder_text = "Enter password"
@@ -257,17 +259,17 @@ horizontal_alignment = 1
 [node name="Submit" type="Button" parent="CanvasLayer/Control/Password" unique_id=882692776]
 visible = false
 layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 11.0
-offset_top = -15.5
-offset_right = 100.0
-offset_bottom = 15.5
-grow_horizontal = 0
-grow_vertical = 2
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -114.0
+offset_top = 60.5
+offset_right = 33.0
+offset_bottom = 91.5
+grow_horizontal = 2
+grow_vertical = 0
 text = "Submit"
 
 [node name="Requirements" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=1042655266]
@@ -327,13 +329,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 370.0
+offset_left = 343.0
 offset_top = 145.0
-offset_right = -370.0
+offset_right = -343.0
 offset_bottom = -145.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_16nrt")
+theme_override_styles/panel = SubResource("StyleBoxTexture_tmf7k")
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Popups/Control/Panel" unique_id=1123875615]
 layout_mode = 1
@@ -341,7 +343,10 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -27.0
+offset_left = 41.0
+offset_top = -52.0
+offset_right = -41.0
+offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_1f6yf")
@@ -369,14 +374,14 @@ vertical_alignment = 1
 
 [node name="Label" type="Label" parent="CanvasLayer/Popups/Control/Panel" unique_id=868502425]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-offset_left = -7.0
-offset_top = 8.0
-offset_right = 7.0
-offset_bottom = 48.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -66.5
+offset_top = 19.0
+offset_right = 66.5
+offset_bottom = 59.0
 grow_horizontal = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_6d44t")
 text = "LEVEL COMPLETE"
 horizontal_alignment = 1
 vertical_alignment = 1
