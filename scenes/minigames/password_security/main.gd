@@ -153,6 +153,8 @@ func _on_password_text_changed(new_text: String) -> void:
 
 
 func _on_submit_pressed() -> void:
+	$Click.play()
+	
 	$CanvasLayer/Popups/Control/Timer.start()
 	$CanvasLayer/Popups/Control/Panel/ProgressBar.value = $CanvasLayer/Popups/Control/Timer.time_left
 	$CanvasLayer/Popups/Control/Panel/ProgressBar.max_value = $CanvasLayer/Popups/Control/Timer.wait_time
@@ -164,6 +166,8 @@ func _on_submit_pressed() -> void:
 func _on_timer_timeout() -> void:
 	print('level failed, you dont remember the password!')
 	
+	$Error.play()
+	
 	generate_password_requirement()
 	$CanvasLayer/Control/Password.clear()
 	$CanvasLayer/Popups/Control.hide()
@@ -171,6 +175,8 @@ func _on_timer_timeout() -> void:
 
 func _on_complete_level_pressed() -> void:
 	level += 1
+	
+	$Success.play()
 	
 	if level > level_max:
 		complete_minigame()
@@ -185,6 +191,8 @@ func _on_complete_level_pressed() -> void:
 
 
 func _on_retype_password_text_changed(new_text: String) -> void:
+	$Node.get_children().pick_random().play()
+	
 	if $CanvasLayer/Control/Password.text == new_text:
 		$CanvasLayer/Popups/Control/Panel/RetypePassword/CompleteLevel.show()
 		$CanvasLayer/Popups/Control/Panel/RetypePassword/WrongPass.hide()

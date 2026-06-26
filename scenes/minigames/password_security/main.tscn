@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://c4vdriykarq4h" path="res://scenes/minigames/password_security/art/confetti.png" id="6_1f6yf"]
 [ext_resource type="AudioStream" uid="uid://dbwh7p5xj51lb" path="res://scenes/minigames/password_security/sfx/keypress-003.wav" id="6_16nrt"]
 [ext_resource type="AudioStream" uid="uid://jwcrpuamas4v" path="res://scenes/minigames/password_security/sfx/keypress-004.wav" id="7_1f6yf"]
+[ext_resource type="AudioStream" uid="uid://cgng01auy1vrf" path="res://scenes/minigames/password_security/sfx/Menu_Sound_Load_Savefile.wav" id="11_0rq2i"]
+[ext_resource type="AudioStream" uid="uid://c6o12xmj4maly" path="res://scenes/minigames/password_security/sfx/Menu_Sound_Error.wav" id="12_6d44t"]
+[ext_resource type="AudioStream" uid="uid://cvidnjq4wmgv0" path="res://scenes/minigames/password_security/sfx/Click2.wav" id="13_nwojs"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1b3bd"]
 shader = ExtResource("2_681w4")
@@ -428,6 +431,15 @@ stream = ExtResource("6_16nrt")
 
 [node name="Keypress4" type="AudioStreamPlayer" parent="Node" unique_id=1568489467]
 stream = ExtResource("7_1f6yf")
+
+[node name="Success" type="AudioStreamPlayer" parent="." unique_id=298818257]
+stream = ExtResource("11_0rq2i")
+
+[node name="Error" type="AudioStreamPlayer" parent="." unique_id=932014386]
+stream = ExtResource("12_6d44t")
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=612046537]
+stream = ExtResource("13_nwojs")
 
 [connection signal="text_changed" from="CanvasLayer/Control/EmailEx" to="." method="_on_password_text_changed"]
 [connection signal="text_changed" from="CanvasLayer/Control/Password" to="." method="_on_password_text_changed"]
