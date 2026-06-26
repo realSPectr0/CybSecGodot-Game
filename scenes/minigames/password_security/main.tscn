@@ -1,7 +1,23 @@
 [gd_scene format=3 uid="uid://c4lq05xlvn71c"]
 
 [ext_resource type="Script" uid="uid://tcxy5vvuc8b7" path="res://scenes/minigames/password_security/main.gd" id="1_g34a3"]
+[ext_resource type="Texture2D" uid="uid://byl0l15hlcdpy" path="res://scenes/minigames/password_security/art/circle-check.png" id="2_8q48t"]
+[ext_resource type="Shader" uid="uid://cuuy24yf0m585" path="res://scenes/minigames/password_security/main.gdshader" id="2_681w4"]
 [ext_resource type="PackedScene" uid="uid://dkwwxespj8cnb" path="res://scenes/minigames/password_security/requirement.tscn" id="3_8q48t"]
+[ext_resource type="AudioStream" uid="uid://cbvm0yx63y72g" path="res://scenes/minigames/password_security/sfx/keypress-001.wav" id="4_1b3bd"]
+[ext_resource type="AudioStream" uid="uid://dxah44lgq0kwo" path="res://scenes/minigames/password_security/sfx/keypress-002.wav" id="5_681w4"]
+[ext_resource type="AudioStream" uid="uid://dbwh7p5xj51lb" path="res://scenes/minigames/password_security/sfx/keypress-003.wav" id="6_16nrt"]
+[ext_resource type="AudioStream" uid="uid://jwcrpuamas4v" path="res://scenes/minigames/password_security/sfx/keypress-004.wav" id="7_1f6yf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1b3bd"]
+shader = ExtResource("2_681w4")
+shader_parameter/time_val = 0.0
+shader_parameter/spin_time = 0.0
+shader_parameter/colour_1 = Color(0.13892642, 0.2563737, 0.3428721, 1)
+shader_parameter/colour_2 = Color(0.19085318, 0.33800668, 0.44614577, 1)
+shader_parameter/colour_3 = Color(0.13725491, 0.25490198, 0.34117648, 1)
+shader_parameter/contrast = 1.0
+shader_parameter/spin_amount = 1.05
 
 [node name="Main" type="Node2D" unique_id=1221830348]
 script = ExtResource("1_g34a3")
@@ -17,6 +33,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=73971563]
+material = SubResource("ShaderMaterial_1b3bd")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,6 +43,92 @@ grow_vertical = 2
 color = Color(0.310173, 0.3660242, 0.53111786, 1)
 metadata/_edit_lock_ = true
 
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1874504776]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -545.0
+offset_top = 32.0
+offset_right = 545.0
+offset_bottom = 289.0
+grow_horizontal = 2
+text = "According to the traditional advice---which is still good---a strong password:
+
+- Has 12 Characters, Minimum: You need to choose a password that's long enough.
+
+- There's no minimum password length everyone agrees on, but you should generally go for passwords that are a minimum of 12 to 14 characters in length. A longer password would be even better. It's probably a good idea to shoot for 16 to 18.
+
+- Includes Numbers, Symbols, Capital Letters, and Lower-Case Letters: Use a mix of different types of characters to make the password harder to crack.
+"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control" unique_id=647703131]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -516.0
+offset_top = 202.0
+offset_right = 529.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.5946792, 0.5469088, 0.30890942, 1)
+text = "Match the required password need that is displayed above: You may create your own words such as !Hawkeye20, or MorderXXX14."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="EmailEx" type="LineEdit" parent="CanvasLayer/Control" unique_id=115462969]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = 18.0
+offset_right = 152.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "mysteriousdance24@gmail.com"
+editable = false
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/EmailEx" unique_id=737961883]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = -11.0
+offset_right = -7.0
+offset_bottom = 12.0
+grow_vertical = 2
+text = "E-mail"
+horizontal_alignment = 2
+
+[node name="Check" type="TextureRect" parent="CanvasLayer/Control/EmailEx" unique_id=1436966090]
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -16.0
+offset_right = 40.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_8q48t")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Password" type="LineEdit" parent="CanvasLayer/Control" unique_id=550310412]
 layout_mode = 1
 anchors_preset = 8
@@ -34,13 +137,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -152.0
-offset_top = -15.5
+offset_top = 57.5
 offset_right = 152.0
-offset_bottom = 15.5
+offset_bottom = 88.5
 grow_horizontal = 2
 grow_vertical = 2
 placeholder_text = "Password"
-max_length = 10
+max_length = 12
 secret = true
 
 [node name="Label" type="Label" parent="CanvasLayer/Control/Password" unique_id=1227312591]
@@ -54,36 +157,43 @@ offset_right = -7.0
 offset_bottom = 12.0
 grow_vertical = 2
 text = "Enter Password:"
+horizontal_alignment = 2
 
 [node name="PasswordShadow" type="Label" parent="CanvasLayer/Control/Password" unique_id=1488989380]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
+anchor_bottom = 1.0
 offset_left = -81.0
-offset_top = -36.5
+offset_top = 5.5
 offset_right = 81.0
-offset_bottom = -13.5
+offset_bottom = 28.5
 grow_horizontal = 2
+grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 0.20392157)
 text = "TestingPassword"
 horizontal_alignment = 1
 
-[node name="PasswordCheck" type="CheckBox" parent="CanvasLayer/Control/Password" unique_id=856998912]
+[node name="Check" type="TextureRect" parent="CanvasLayer/Control/Password" unique_id=353371932]
 visible = false
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 5.0
-offset_top = -12.0
-offset_right = 29.0
-offset_bottom = 12.0
+offset_left = 8.0
+offset_top = -16.0
+offset_right = 40.0
+offset_bottom = 16.0
 grow_horizontal = 0
 grow_vertical = 2
-button_pressed = true
+texture = ExtResource("2_8q48t")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Requirements" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=1042655266]
 layout_mode = 1
@@ -92,12 +202,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -449.0
-offset_top = 74.0
-offset_right = 449.0
-offset_bottom = 98.0
+offset_left = -519.0
+offset_top = 143.0
+offset_right = 519.0
+offset_bottom = 175.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 32
 alignment = 1
 
 [node name="Requirement" parent="CanvasLayer/Control/Requirements" unique_id=604735047 instance=ExtResource("3_8q48t")]
@@ -115,4 +226,19 @@ layout_mode = 2
 [node name="Requirement5" parent="CanvasLayer/Control/Requirements" unique_id=415557023 instance=ExtResource("3_8q48t")]
 layout_mode = 2
 
+[node name="Node" type="Node" parent="." unique_id=807537984]
+
+[node name="Keypress" type="AudioStreamPlayer" parent="Node" unique_id=1408703103]
+stream = ExtResource("4_1b3bd")
+
+[node name="Keypress2" type="AudioStreamPlayer" parent="Node" unique_id=140680041]
+stream = ExtResource("5_681w4")
+
+[node name="Keypress3" type="AudioStreamPlayer" parent="Node" unique_id=1527002488]
+stream = ExtResource("6_16nrt")
+
+[node name="Keypress4" type="AudioStreamPlayer" parent="Node" unique_id=1568489467]
+stream = ExtResource("7_1f6yf")
+
+[connection signal="text_changed" from="CanvasLayer/Control/EmailEx" to="." method="_on_password_text_changed"]
 [connection signal="text_changed" from="CanvasLayer/Control/Password" to="." method="_on_password_text_changed"]

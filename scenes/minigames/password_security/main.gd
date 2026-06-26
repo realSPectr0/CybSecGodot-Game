@@ -36,6 +36,15 @@ var password_patterns = [
 	['LOWERCASE_CHARACTER', 4],
 	['SPECIAL_CHARACTER', 1],
 	['NUMBER', 1]],
+	
+	[['SPECIAL_CHARACTER', 1],
+	['UPPERCASE_CHARACTER', 1],
+	['LOWERCASE_CHARACTER', 7],
+	['NUMBER', 3]],
+	
+	[['UPPERCASE_CHARACTER', 1],
+	['LOWERCASE_CHARACTER', 6],
+	['NUMBER', 3]],
 ]
 
 
@@ -67,6 +76,9 @@ func generate_password_requirement():
 
 
 func check_password():
+	for i in $CanvasLayer/Control/Requirements.get_children():
+		i.set_check(false)
+	
 	if $CanvasLayer/Control/Password.text == '' or $CanvasLayer/Control/Password.text.length() < generated_requirements_length:
 		return false
 	
@@ -106,6 +118,7 @@ func check_password():
 					return false
 			
 			if count >= count_max:
+				$CanvasLayer/Control/Requirements.get_child(req_idx).set_check(true)
 				count = 0
 				req_idx += 1
 		#else:
@@ -116,8 +129,12 @@ func check_password():
 
 
 func _physics_process(delta: float) -> void:
+	var d = $CanvasLayer/Control/ColorRect.material.get('shader_parameter/time_val')
+	$CanvasLayer/Control/ColorRect.material.set('shader_parameter/time_val', d + delta)
+	
 	$CanvasLayer/Control/Password/PasswordShadow.text = $CanvasLayer/Control/Password.text
 
 
 func _on_password_text_changed(new_text: String) -> void:
-	$CanvasLayer/Control/Password/PasswordCheck.visible = check_password()
+	$Node.get_children().pick_random().play()
+	$CanvasLayer/Control/Password/Check.visible = check_password()
