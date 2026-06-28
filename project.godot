@@ -12,7 +12,7 @@ config_version=5
 
 config/name="OfficePrototype"
 run/main_scene="uid://bhcyo7m0m6wvf"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 run/low_processor_mode=true
 config/icon="res://icon.svg"
 
@@ -24,20 +24,8 @@ GameSaveOrLoad="*uid://ceue4wodyw5w5"
 
 [dialogic]
 
-directories/dch_directory={
-"Level1NPC": "res://dialogue/Level1NPC.dch",
-"receptionist": "res://dialogue/receptionist.dch"
-}
-directories/dtl_directory={
-"correct_email_1": "res://dialogue/correct_email_1.dtl",
-"correct_email_2": "res://dialogue/correct_email_2.dtl",
-"correct_email_3": "res://dialogue/correct_email_3.dtl",
-"incorrect": "res://dialogue/incorrect.dtl",
-"leave_level1": "res://dialogue/leave_level1.dtl",
-"level1_done": "res://dialogue/level1_done.dtl",
-"phishing_email_instructions": "res://dialogue/phishing_email_instructions.dtl",
-"transition_to_level1": "res://dialogue/transition_to_level1.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 layout/style_directory={
 "": "res://dialogue/style.tres",
 "style": "res://dialogue/style.tres"
@@ -47,8 +35,7 @@ layout/default_style="res://dialogue/style.tres"
 
 [display]
 
-window/size/viewport_width=3840
-window/size/viewport_height=2160
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
