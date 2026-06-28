@@ -1,0 +1,8 @@
+label default
+join worker center
+worker: Hey, would you like to learn {overhead_title}?
+- Yes
+	worker: Nice let's go!
+	do GameManager.start_minigame()
+- No
+	worker: Okay.
