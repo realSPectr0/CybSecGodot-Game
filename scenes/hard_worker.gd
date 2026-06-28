@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var minigame_scene: PackedScene
+
 @onready var animated_sprite = $AnimatedSprite2D
 
 var player_in_range = false
@@ -34,8 +36,11 @@ func face_player():
 			animated_sprite.play("idle_up")
 
 func start_dialogue():
-	print('what npcs saiy bro')
-	pass
+	if minigame_scene:
+		var player = get_tree().get_nodes_in_group("Player")[0]
+		player.pop_to_ui(minigame_scene)
+	
+	#print('what npcs saiy bro')
 		# Trigger your phishing quiz or text box here
 
 # Signal from the NPC's Area2D
@@ -44,6 +49,7 @@ func _on_interaction_area_body_entered(body):
 		player_in_range = true
 		player_ref = body
 		
+		start_dialogue()
 
 # Signal from the NPC's Area2D
 func _on_interaction_area_body_exited(body):

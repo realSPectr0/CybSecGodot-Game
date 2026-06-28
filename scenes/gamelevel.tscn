@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://b2ynrkw2abah0" path="res://scenes/hard_worker.gd" id="8_v5q8u"]
 [ext_resource type="Texture2D" uid="uid://d1ihvlmx145ye" path="res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/Bob_idle_anim_16x16.png" id="11_c1rvy"]
 [ext_resource type="Script" uid="uid://dbjn77swuk08u" path="res://scenes/level_1npc.gd" id="13_ov5yj"]
+[ext_resource type="PackedScene" uid="uid://c4lq05xlvn71c" path="res://scenes/minigames/password_security/main.tscn" id="13_pflgl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_llsdn"]
 texture = ExtResource("2_vny4q")
@@ -3925,6 +3926,7 @@ y_sort_enabled = true
 position = Vector2(539.00006, 1019)
 scale = Vector2(2.5, 2.5)
 script = ExtResource("8_v5q8u")
+minigame_scene = ExtResource("13_pflgl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker15" unique_id=684151930]
 position = Vector2(0, 15.649994)

@@ -199,3 +199,7 @@ func _on_retype_password_text_changed(new_text: String) -> void:
 	else:
 		$CanvasLayer/Popups/Control/Panel/RetypePassword/CompleteLevel.hide()
 		$CanvasLayer/Popups/Control/Panel/RetypePassword/WrongPass.show()
+
+
+func _on_close_pressed() -> void:
+	queue_free()

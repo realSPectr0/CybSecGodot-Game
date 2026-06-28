@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://yvdgaclfnric" path="res://scenes/minigames/password_security/art/Msg01.png" id="5_tmf7k"]
 [ext_resource type="Texture2D" uid="uid://c4vdriykarq4h" path="res://scenes/minigames/password_security/art/confetti.png" id="6_1f6yf"]
 [ext_resource type="AudioStream" uid="uid://dbwh7p5xj51lb" path="res://scenes/minigames/password_security/sfx/keypress-003.wav" id="6_16nrt"]
+[ext_resource type="Texture2D" uid="uid://ogo0lxc0jdx" path="res://scenes/minigames/password_security/art/Icon78.png" id="6_kwpmb"]
 [ext_resource type="AudioStream" uid="uid://jwcrpuamas4v" path="res://scenes/minigames/password_security/sfx/keypress-004.wav" id="7_1f6yf"]
 [ext_resource type="AudioStream" uid="uid://cgng01auy1vrf" path="res://scenes/minigames/password_security/sfx/Menu_Sound_Load_Savefile.wav" id="11_0rq2i"]
 [ext_resource type="AudioStream" uid="uid://c6o12xmj4maly" path="res://scenes/minigames/password_security/sfx/Menu_Sound_Error.wav" id="12_6d44t"]
@@ -303,6 +304,19 @@ layout_mode = 2
 [node name="Requirement5" parent="CanvasLayer/Control/Requirements" unique_id=415557023 instance=ExtResource("3_8q48t")]
 layout_mode = 2
 
+[node name="Close" type="TextureButton" parent="CanvasLayer/Control" unique_id=484721116]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 17.0
+offset_right = 68.84442
+offset_bottom = 61.0
+texture_normal = ExtResource("6_kwpmb")
+texture_pressed = ExtResource("6_kwpmb")
+texture_hover = ExtResource("6_kwpmb")
+texture_focused = ExtResource("6_kwpmb")
+ignore_texture_size = true
+stretch_mode = 5
+
 [node name="Popups" type="CanvasLayer" parent="CanvasLayer" unique_id=1810693810]
 layer = 100
 
@@ -486,6 +500,7 @@ stream = ExtResource("14_0duof")
 [connection signal="text_changed" from="CanvasLayer/Control/EmailEx" to="." method="_on_password_text_changed"]
 [connection signal="text_changed" from="CanvasLayer/Control/Password" to="." method="_on_password_text_changed"]
 [connection signal="pressed" from="CanvasLayer/Control/Password/Submit" to="." method="_on_submit_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Close" to="." method="_on_close_pressed"]
 [connection signal="text_changed" from="CanvasLayer/Popups/Control/Panel/RetypePassword" to="." method="_on_retype_password_text_changed"]
 [connection signal="pressed" from="CanvasLayer/Popups/Control/Panel/RetypePassword/CompleteLevel" to="." method="_on_complete_level_pressed"]
 [connection signal="timeout" from="CanvasLayer/Popups/Control/Timer" to="." method="_on_timer_timeout"]
