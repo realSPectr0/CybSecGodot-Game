@@ -3927,6 +3927,7 @@ position = Vector2(539.00006, 1019)
 scale = Vector2(2.5, 2.5)
 script = ExtResource("8_v5q8u")
 minigame_scene = ExtResource("13_pflgl")
+overhead_title = "Password Security"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker15" unique_id=684151930]
 position = Vector2(0, 15.649994)

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var minigame_scene: PackedScene
+@export var overhead_title = ''
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -37,8 +38,14 @@ func face_player():
 
 func start_dialogue():
 	if minigame_scene:
-		var player = get_tree().get_nodes_in_group("Player")[0]
-		player.pop_to_ui(minigame_scene)
+		Dialogic.VAR.set('overhead_title', overhead_title)
+		var res = load('res://dialogue/worker_dialog.dtl')
+		Dialogic.start(res, 'default')
+		
+		GameManager.minigame_ref = minigame_scene
+		
+		#var player = get_tree().get_nodes_in_group("Player")[0]
+		#player.pop_to_ui(minigame_scene)
 	
 	#print('what npcs saiy bro')
 		# Trigger your phishing quiz or text box here
