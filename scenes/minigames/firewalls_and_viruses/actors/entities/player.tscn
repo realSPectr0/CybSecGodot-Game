@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://x4fmae6silrf"]
 
 [ext_resource type="Texture2D" uid="uid://k0moajak18ws" path="res://scenes/minigames/firewalls_and_viruses/art/Player_ship (16 x 16).png" id="1_hsmd5"]
-[ext_resource type="Script" uid="uid://dy783mxkefvkh" path="res://scenes/minigames/firewalls_and_viruses/player.gd" id="2_5eiwc"]
+[ext_resource type="Script" uid="uid://dy783mxkefvkh" path="res://scenes/minigames/firewalls_and_viruses/actors/entities/player.gd" id="2_5eiwc"]
 [ext_resource type="Texture2D" uid="uid://buis2wkytagb2" path="res://scenes/minigames/firewalls_and_viruses/art/Boosters (16 x 16).png" id="3_2qt1j"]
+[ext_resource type="PackedScene" uid="uid://bpqh2dwemnyr3" path="res://scenes/minigames/firewalls_and_viruses/actors/objs/Hurtbox.tscn" id="4_gr0oo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5eiwc"]
 
@@ -47,4 +48,14 @@ position = Vector2(-15, 0)
 rotation = 1.5707964
 sprite_frames = SubResource("SpriteFrames_se8m8")
 autoplay = "default"
-frame_progress = 0.7176074
+frame_progress = 0.47728664
+
+[node name="Hurtbox" parent="." unique_id=111249865 instance=ExtResource("4_gr0oo")]
+collision_layer = 16
+collision_mask = 0
+
+[node name="ShootCooldown" type="Timer" parent="." unique_id=1559429490]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="ShootCooldown" to="." method="_on_shoot_cooldown_timeout"]

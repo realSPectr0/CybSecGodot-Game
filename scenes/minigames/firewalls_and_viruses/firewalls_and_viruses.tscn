@@ -1,7 +1,13 @@
 [gd_scene format=3 uid="uid://c1cy2wvemcfie"]
 
 [ext_resource type="Script" uid="uid://bnc2gim10mkpv" path="res://scenes/minigames/firewalls_and_viruses/firewalls_and_viruses.gd" id="1_blxs7"]
-[ext_resource type="PackedScene" uid="uid://x4fmae6silrf" path="res://scenes/minigames/firewalls_and_viruses/player.tscn" id="2_n6dwe"]
+[ext_resource type="PackedScene" uid="uid://x4fmae6silrf" path="res://scenes/minigames/firewalls_and_viruses/actors/entities/player.tscn" id="2_n6dwe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_se8m8"]
+size = Vector2(20, 428)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6dwe"]
+size = Vector2(20, 670)
 
 [node name="FirewallsAndViruses" type="Node2D" unique_id=1477267590]
 script = ExtResource("1_blxs7")
@@ -80,3 +86,29 @@ position = Vector2(353, 224)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1587790589]
 position = Vector2(288, 161)
 zoom = Vector2(2, 2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=502599311]
+position = Vector2(1, 145)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1279892763]
+shape = SubResource("RectangleShape2D_se8m8")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1117880740]
+position = Vector2(577, 145)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=870729572]
+shape = SubResource("RectangleShape2D_se8m8")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1663297611]
+position = Vector2(276, -3)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1400561519]
+shape = SubResource("RectangleShape2D_n6dwe")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=235987774]
+position = Vector2(276, 327)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1395899833]
+shape = SubResource("RectangleShape2D_n6dwe")

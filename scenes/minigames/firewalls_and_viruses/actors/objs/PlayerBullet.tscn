@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c6gt66wludshd"]
+
+[ext_resource type="Texture2D" uid="uid://cp8fj56qfrw5j" path="res://scenes/minigames/firewalls_and_viruses/art/Player_beam (16 x 16).png" id="1_c0c7r"]
+[ext_resource type="Script" uid="uid://chstyuywuhsul" path="res://scenes/minigames/firewalls_and_viruses/actors/objs/player_bullet.gd" id="1_exy4w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_se8m8"]
+radius = 8.0
+
+[node name="PlayerBullet" type="Node2D" unique_id=1404685106]
+script = ExtResource("1_exy4w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1674554600]
+rotation = 1.5707964
+texture = ExtResource("1_c0c7r")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1949131488]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=287526009]
+shape = SubResource("CircleShape2D_se8m8")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=400206622]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
