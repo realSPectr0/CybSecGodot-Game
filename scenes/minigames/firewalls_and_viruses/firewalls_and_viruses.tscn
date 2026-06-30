@@ -112,3 +112,9 @@ rotation = 1.5707964
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1395899833]
 shape = SubResource("RectangleShape2D_n6dwe")
+
+[node name="EnemySpawnTimer" type="Timer" parent="." unique_id=943344969]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]

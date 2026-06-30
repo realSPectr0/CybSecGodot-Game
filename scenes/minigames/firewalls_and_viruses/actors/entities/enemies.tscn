@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bellsd1p4a0c"]
+
+[ext_resource type="Texture2D" uid="uid://dg1ably06e0ba" path="res://scenes/minigames/firewalls_and_viruses/art/enemies/Pink/Pink1.png" id="1_grdin"]
+[ext_resource type="Script" uid="uid://bekodmyuqy7s8" path="res://scenes/minigames/firewalls_and_viruses/actors/entities/enemies.gd" id="1_xp5lm"]
+[ext_resource type="Texture2D" uid="uid://by52qyhikrvcc" path="res://scenes/minigames/firewalls_and_viruses/art/enemies/Pink/Pink2.png" id="2_xp5lm"]
+[ext_resource type="Texture2D" uid="uid://du4dy18nl0wfn" path="res://scenes/minigames/firewalls_and_viruses/art/enemies/Pink/Pink3.png" id="3_aatj4"]
+[ext_resource type="Texture2D" uid="uid://c3c8eraw3fg4w" path="res://scenes/minigames/firewalls_and_viruses/art/enemies/Pink/Pink4.png" id="4_lt274"]
+[ext_resource type="Texture2D" uid="uid://bw836kw0dumwd" path="res://scenes/minigames/firewalls_and_viruses/art/enemies/Pink/Pink5.png" id="5_hi65e"]
+[ext_resource type="Texture2D" uid="uid://cd8rgwg7sjfna" path="res://scenes/minigames/firewalls_and_viruses/art/enemies/Pink/Pink6.png" id="6_8a2r5"]
+[ext_resource type="Texture2D" uid="uid://drrx0hf8pymoy" path="res://scenes/minigames/firewalls_and_viruses/art/enemies/Pink/Pink7.png" id="7_m8fao"]
+[ext_resource type="Texture2D" uid="uid://dk1xhvcljyfej" path="res://scenes/minigames/firewalls_and_viruses/art/enemies/Pink/Pink8.png" id="8_37m3m"]
+[ext_resource type="PackedScene" uid="uid://bpqh2dwemnyr3" path="res://scenes/minigames/firewalls_and_viruses/actors/objs/Hurtbox.tscn" id="10_aatj4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_se8m8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_grdin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xp5lm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aatj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lt274")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hi65e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8a2r5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_m8fao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_37m3m")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_se8m8"]
+radius = 15.033297
+
+[node name="Enemies" type="Node2D" unique_id=895441982]
+script = ExtResource("1_xp5lm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1737520434]
+sprite_frames = SubResource("SpriteFrames_se8m8")
+frame_progress = 0.6277169
+
+[node name="Hurtbox" parent="." unique_id=111249865 instance=ExtResource("10_aatj4")]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=10915856]
+shape = SubResource("CircleShape2D_se8m8")
+
+[connection signal="hit" from="Hurtbox" to="." method="_on_hurtbox_hit"]
+[connection signal="zero" from="Hurtbox" to="." method="_on_hurtbox_zero"]
