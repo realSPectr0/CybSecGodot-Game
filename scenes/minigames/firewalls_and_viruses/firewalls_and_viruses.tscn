@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://c1cy2wvemcfie"]
+
+[ext_resource type="Script" uid="uid://bnc2gim10mkpv" path="res://scenes/minigames/firewalls_and_viruses/firewalls_and_viruses.gd" id="1_blxs7"]
+[ext_resource type="PackedScene" uid="uid://x4fmae6silrf" path="res://scenes/minigames/firewalls_and_viruses/player.tscn" id="2_n6dwe"]
+
+[node name="FirewallsAndViruses" type="Node2D" unique_id=1477267590]
+script = ExtResource("1_blxs7")
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=363387328]
+
+[node name="Node2D" type="Node2D" parent="SpawnPoints" unique_id=1571747235]
+position = Vector2(35, -26)
+
+[node name="Node2D2" type="Node2D" parent="SpawnPoints" unique_id=1415352231]
+position = Vector2(130, -26)
+
+[node name="Node2D3" type="Node2D" parent="SpawnPoints" unique_id=1024906437]
+position = Vector2(234, -26)
+
+[node name="Node2D4" type="Node2D" parent="SpawnPoints" unique_id=1460608116]
+position = Vector2(340, -24)
+
+[node name="Node2D5" type="Node2D" parent="SpawnPoints" unique_id=648583272]
+position = Vector2(444, -24)
+
+[node name="Node2D6" type="Node2D" parent="SpawnPoints" unique_id=1078142276]
+position = Vector2(522, -23)
+
+[node name="Node2D7" type="Node2D" parent="SpawnPoints" unique_id=415946223]
+position = Vector2(35, 361)
+
+[node name="Node2D8" type="Node2D" parent="SpawnPoints" unique_id=1943064430]
+position = Vector2(130, 361)
+
+[node name="Node2D9" type="Node2D" parent="SpawnPoints" unique_id=2143239061]
+position = Vector2(234, 361)
+
+[node name="Node2D10" type="Node2D" parent="SpawnPoints" unique_id=480603388]
+position = Vector2(340, 363)
+
+[node name="Node2D11" type="Node2D" parent="SpawnPoints" unique_id=494557040]
+position = Vector2(444, 363)
+
+[node name="Node2D12" type="Node2D" parent="SpawnPoints" unique_id=292628543]
+position = Vector2(522, 364)
+
+[node name="Node2D18" type="Node2D" parent="SpawnPoints" unique_id=389144302]
+position = Vector2(-35, 288)
+
+[node name="Node2D19" type="Node2D" parent="SpawnPoints" unique_id=1480355904]
+position = Vector2(-37, 226)
+
+[node name="Node2D20" type="Node2D" parent="SpawnPoints" unique_id=524772317]
+position = Vector2(-35, 160)
+
+[node name="Node2D21" type="Node2D" parent="SpawnPoints" unique_id=1535276877]
+position = Vector2(-34, 91)
+
+[node name="Node2D22" type="Node2D" parent="SpawnPoints" unique_id=76913603]
+position = Vector2(-31, 31)
+
+[node name="Node2D23" type="Node2D" parent="SpawnPoints" unique_id=970498133]
+position = Vector2(601, 288)
+
+[node name="Node2D24" type="Node2D" parent="SpawnPoints" unique_id=1875473501]
+position = Vector2(599, 226)
+
+[node name="Node2D25" type="Node2D" parent="SpawnPoints" unique_id=18066177]
+position = Vector2(601, 160)
+
+[node name="Node2D26" type="Node2D" parent="SpawnPoints" unique_id=371176823]
+position = Vector2(602, 91)
+
+[node name="Node2D27" type="Node2D" parent="SpawnPoints" unique_id=325101334]
+position = Vector2(605, 31)
+
+[node name="Player" parent="." unique_id=1818421122 instance=ExtResource("2_n6dwe")]
+position = Vector2(353, 224)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1587790589]
+position = Vector2(288, 161)
+zoom = Vector2(2, 2)
