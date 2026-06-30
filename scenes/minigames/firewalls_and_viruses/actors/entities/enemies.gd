@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_hurtbox_hit() -> void:
-	pass # Replace with function body.
+	$HitFX.play("flash")
 
 
 func _on_hurtbox_zero() -> void:

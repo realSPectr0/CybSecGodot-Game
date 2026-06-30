@@ -8,6 +8,7 @@ var is_active = false:
 			set_physics_process(true)
 		else:
 			set_physics_process(false)
+			get_parent().remove_child(self)
 
 var move_speed = 300.0
 var dir
@@ -24,4 +25,4 @@ func _physics_process(delta: float) -> void:
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	is_active = false
 	
-	get_parent().remove_child(self)
+	#get_parent().remove_child(self)
