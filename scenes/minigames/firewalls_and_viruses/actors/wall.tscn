@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dhsyqc67oq54r"]
+
+[ext_resource type="Texture2D" uid="uid://i3gtkkkpjamq" path="res://scenes/minigames/firewalls_and_viruses/art/wall.png" id="1_62v01"]
+[ext_resource type="Script" uid="uid://df5v0jawpnvnu" path="res://scenes/minigames/firewalls_and_viruses/actors/wall.gd" id="2_beu6f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x6q6w"]
+radius = 11.0
+
+[node name="Wall" type="Sprite2D" unique_id=1031540991]
+texture = ExtResource("1_62v01")
+script = ExtResource("2_beu6f")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1201225274]
+collision_layer = 32
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=741318528]
+shape = SubResource("CircleShape2D_x6q6w")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

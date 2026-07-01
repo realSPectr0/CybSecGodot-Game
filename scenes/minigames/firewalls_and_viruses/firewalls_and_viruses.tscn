@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bnc2gim10mkpv" path="res://scenes/minigames/firewalls_and_viruses/firewalls_and_viruses.gd" id="1_blxs7"]
 [ext_resource type="PackedScene" uid="uid://x4fmae6silrf" path="res://scenes/minigames/firewalls_and_viruses/actors/entities/player.tscn" id="2_n6dwe"]
+[ext_resource type="FontFile" uid="uid://1ro1o45ct4p4" path="res://scenes/minigames/firewalls_and_viruses/LCDBlock.ttf" id="3_ao08b"]
+[ext_resource type="PackedScene" uid="uid://dhsyqc67oq54r" path="res://scenes/minigames/firewalls_and_viruses/actors/wall.tscn" id="4_x6q6w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_se8m8"]
 size = Vector2(20, 428)
@@ -9,79 +11,77 @@ size = Vector2(20, 428)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n6dwe"]
 size = Vector2(20, 670)
 
+[sub_resource type="Animation" id="Animation_n6dwe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ao08b"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x6q6w"]
+_data = {
+&"RESET": SubResource("Animation_n6dwe"),
+&"new_animation": SubResource("Animation_ao08b")
+}
+
 [node name="FirewallsAndViruses" type="Node2D" unique_id=1477267590]
 script = ExtResource("1_blxs7")
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=363387328]
 
-[node name="Node2D" type="Node2D" parent="SpawnPoints" unique_id=1571747235]
-position = Vector2(35, -26)
-
-[node name="Node2D2" type="Node2D" parent="SpawnPoints" unique_id=1415352231]
-position = Vector2(130, -26)
-
-[node name="Node2D3" type="Node2D" parent="SpawnPoints" unique_id=1024906437]
-position = Vector2(234, -26)
-
-[node name="Node2D4" type="Node2D" parent="SpawnPoints" unique_id=1460608116]
-position = Vector2(340, -24)
-
-[node name="Node2D5" type="Node2D" parent="SpawnPoints" unique_id=648583272]
-position = Vector2(444, -24)
-
-[node name="Node2D6" type="Node2D" parent="SpawnPoints" unique_id=1078142276]
-position = Vector2(522, -23)
-
-[node name="Node2D7" type="Node2D" parent="SpawnPoints" unique_id=415946223]
-position = Vector2(35, 361)
-
-[node name="Node2D8" type="Node2D" parent="SpawnPoints" unique_id=1943064430]
-position = Vector2(130, 361)
-
-[node name="Node2D9" type="Node2D" parent="SpawnPoints" unique_id=2143239061]
-position = Vector2(234, 361)
-
-[node name="Node2D10" type="Node2D" parent="SpawnPoints" unique_id=480603388]
-position = Vector2(340, 363)
-
-[node name="Node2D11" type="Node2D" parent="SpawnPoints" unique_id=494557040]
-position = Vector2(444, 363)
-
-[node name="Node2D12" type="Node2D" parent="SpawnPoints" unique_id=292628543]
-position = Vector2(522, 364)
-
-[node name="Node2D18" type="Node2D" parent="SpawnPoints" unique_id=389144302]
-position = Vector2(-35, 288)
-
-[node name="Node2D19" type="Node2D" parent="SpawnPoints" unique_id=1480355904]
-position = Vector2(-37, 226)
-
-[node name="Node2D20" type="Node2D" parent="SpawnPoints" unique_id=524772317]
-position = Vector2(-35, 160)
-
-[node name="Node2D21" type="Node2D" parent="SpawnPoints" unique_id=1535276877]
-position = Vector2(-34, 91)
-
-[node name="Node2D22" type="Node2D" parent="SpawnPoints" unique_id=76913603]
-position = Vector2(-31, 31)
-
-[node name="Node2D23" type="Node2D" parent="SpawnPoints" unique_id=970498133]
-position = Vector2(601, 288)
-
-[node name="Node2D24" type="Node2D" parent="SpawnPoints" unique_id=1875473501]
-position = Vector2(599, 226)
-
-[node name="Node2D25" type="Node2D" parent="SpawnPoints" unique_id=18066177]
-position = Vector2(601, 160)
-
-[node name="Node2D26" type="Node2D" parent="SpawnPoints" unique_id=371176823]
-position = Vector2(602, 91)
-
 [node name="Node2D27" type="Node2D" parent="SpawnPoints" unique_id=325101334]
-position = Vector2(605, 31)
+position = Vector2(620, 34)
+
+[node name="Node2D28" type="Node2D" parent="SpawnPoints" unique_id=1358512511]
+position = Vector2(620, 66)
+
+[node name="Node2D29" type="Node2D" parent="SpawnPoints" unique_id=543270364]
+position = Vector2(620, 97)
+
+[node name="Node2D30" type="Node2D" parent="SpawnPoints" unique_id=1466964129]
+position = Vector2(620, 129)
+
+[node name="Node2D31" type="Node2D" parent="SpawnPoints" unique_id=310190372]
+position = Vector2(620, 161)
+
+[node name="Node2D32" type="Node2D" parent="SpawnPoints" unique_id=1617259407]
+position = Vector2(620, 193)
+
+[node name="Node2D33" type="Node2D" parent="SpawnPoints" unique_id=1821155498]
+position = Vector2(620, 225)
+
+[node name="Node2D34" type="Node2D" parent="SpawnPoints" unique_id=713442819]
+position = Vector2(620, 257)
+
+[node name="Node2D35" type="Node2D" parent="SpawnPoints" unique_id=269684375]
+position = Vector2(620, 288)
 
 [node name="Player" parent="." unique_id=1818421122 instance=ExtResource("2_n6dwe")]
-position = Vector2(289, 154)
+position = Vector2(57, 154)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1587790589]
 position = Vector2(288, 161)
@@ -97,6 +97,12 @@ shape = SubResource("RectangleShape2D_se8m8")
 position = Vector2(577, 145)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=870729572]
+shape = SubResource("RectangleShape2D_se8m8")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1473188466]
+position = Vector2(154, 145)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=349260976]
 shape = SubResource("RectangleShape2D_se8m8")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1663297611]
@@ -116,5 +122,57 @@ shape = SubResource("RectangleShape2D_n6dwe")
 [node name="EnemySpawnTimer" type="Timer" parent="." unique_id=943344969]
 wait_time = 3.0
 autostart = true
+
+[node name="Text" type="Node2D" parent="." unique_id=664061806]
+position = Vector2(278, 30)
+
+[node name="Label" type="Label" parent="Text" unique_id=2084648095]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.5
+offset_top = -11.5
+offset_right = 94.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ao08b")
+text = "Protect the Firewall!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text" unique_id=1359562815]
+libraries/ = SubResource("AnimationLibrary_x6q6w")
+autoplay = &"new_animation"
+speed_scale = 0.5
+
+[node name="Wall" parent="." unique_id=1031540991 instance=ExtResource("4_x6q6w")]
+position = Vector2(160, 96)
+
+[node name="Wall2" parent="." unique_id=1613875155 instance=ExtResource("4_x6q6w")]
+position = Vector2(160, 128)
+
+[node name="Wall3" parent="." unique_id=953619409 instance=ExtResource("4_x6q6w")]
+position = Vector2(160, 160)
+
+[node name="Wall4" parent="." unique_id=862427456 instance=ExtResource("4_x6q6w")]
+position = Vector2(160, 192)
+
+[node name="Wall5" parent="." unique_id=1969241683 instance=ExtResource("4_x6q6w")]
+position = Vector2(160, 224)
+
+[node name="Wall6" parent="." unique_id=519167565 instance=ExtResource("4_x6q6w")]
+position = Vector2(160, 256)
+
+[node name="Wall7" parent="." unique_id=605945191 instance=ExtResource("4_x6q6w")]
+position = Vector2(160, 288)
+
+[node name="Wall8" parent="." unique_id=1996718169 instance=ExtResource("4_x6q6w")]
+position = Vector2(160, 64)
+
+[node name="Wall9" parent="." unique_id=1482795343 instance=ExtResource("4_x6q6w")]
+position = Vector2(160, 32)
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]

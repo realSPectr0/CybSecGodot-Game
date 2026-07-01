@@ -88,11 +88,13 @@ script = ExtResource("1_xp5lm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1737520434]
 sprite_frames = SubResource("SpriteFrames_se8m8")
-frame_progress = 0.6277169
+autoplay = "default"
+frame_progress = 0.07252253
 
 [node name="Hurtbox" parent="." unique_id=111249865 instance=ExtResource("10_aatj4")]
 collision_layer = 8
 collision_mask = 4
+hp = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=10915856]
 shape = SubResource("CircleShape2D_se8m8")

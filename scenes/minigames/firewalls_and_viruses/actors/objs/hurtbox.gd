@@ -3,7 +3,7 @@ extends Area2D
 signal zero
 signal hit
 
-var hp = 1
+@export var hp = 1
 
 
 func take_damage(amount = 1):

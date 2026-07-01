@@ -8,7 +8,8 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	var dir = global_position.direction_to(get_parent().player.global_position)
+	#var dir = global_position.direction_to(get_parent().player.global_position)
+	var dir = Vector2.LEFT
 	global_position += dir * move_speed * delta
 
 
@@ -17,4 +18,4 @@ func _on_hurtbox_hit() -> void:
 
 
 func _on_hurtbox_zero() -> void:
-	pass # Replace with function body.
+	queue_free()
