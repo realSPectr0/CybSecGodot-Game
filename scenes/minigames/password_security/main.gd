@@ -144,7 +144,7 @@ func check_password():
 
 
 func complete_minigame():
-	pass
+	queue_free()
 
 
 func _on_password_text_changed(new_text: String) -> void:
@@ -160,10 +160,17 @@ func _on_submit_pressed() -> void:
 	$CanvasLayer/Popups/Control/Panel/ProgressBar.max_value = $CanvasLayer/Popups/Control/Timer.wait_time
 	$CanvasLayer/Popups/Control/Panel/ProgressBar/Level.text = 'Next: Level %d' % (level + 1)
 	
+	if level >= level_max:
+		$CanvasLayer/Popups/Control/Panel/ProgressBar/Level.text = 'Minigame Completed'
+	
 	$CanvasLayer/Popups/Control.show()
 
 
 func _on_timer_timeout() -> void:
+	if level >= level_max:
+		complete_minigame()
+		return
+	
 	print('level failed, you dont remember the password!')
 	
 	$Error.play()
