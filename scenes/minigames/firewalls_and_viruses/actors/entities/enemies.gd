@@ -18,4 +18,8 @@ func _on_hurtbox_hit() -> void:
 
 
 func _on_hurtbox_zero() -> void:
+	var e = load("res://scenes/minigames/firewalls_and_viruses/actors/objs/explosion.tscn").instantiate()
+	e.global_position = global_position
+	get_parent().get_parent().add_child(e)
+	
 	queue_free()

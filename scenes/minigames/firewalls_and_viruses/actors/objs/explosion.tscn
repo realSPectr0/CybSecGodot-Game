@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://6rsmyud7qr5s"]
+
+[ext_resource type="Texture2D" uid="uid://bk0ycvcew22gg" path="res://scenes/minigames/firewalls_and_viruses/art/Explosion (16 x 16).png" id="1_fuuda"]
+[ext_resource type="Script" uid="uid://cdi5vs65r3rxp" path="res://scenes/minigames/firewalls_and_viruses/actors/objs/explosion.gd" id="1_jvibk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvibk"]
+atlas = ExtResource("1_fuuda")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toxhs"]
+atlas = ExtResource("1_fuuda")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybs10"]
+atlas = ExtResource("1_fuuda")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kuig"]
+atlas = ExtResource("1_fuuda")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6awjk"]
+atlas = ExtResource("1_fuuda")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljc28"]
+atlas = ExtResource("1_fuuda")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_se8m8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvibk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toxhs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybs10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kuig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6awjk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljc28")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Explosion" type="Node2D" unique_id=317608214]
+script = ExtResource("1_jvibk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1276911710]
+sprite_frames = SubResource("SpriteFrames_se8m8")
+autoplay = "default"
+frame = 5
+frame_progress = 1.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
