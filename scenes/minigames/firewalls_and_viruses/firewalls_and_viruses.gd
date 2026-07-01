@@ -14,7 +14,8 @@ func _ready() -> void:
 	
 	tree_exiting.connect(func():
 		var player = get_tree().get_nodes_in_group("Player")[0]
-		player.freeze = false
+		if player:
+			player.freeze = false
 	)
 
 
