@@ -12,10 +12,10 @@ func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_ESCAPE):
 		print(true)
 		SceneChanger.change_scene(menu_ui_file)
-	if interacting:
-		freeze = true
-	else:
-		freeze = false
+	#if interacting:
+		#freeze = true
+	#else:
+		#freeze = false
 	if freeze:
 		set_physics_process(false)
 	else:

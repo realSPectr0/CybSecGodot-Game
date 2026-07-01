@@ -11,6 +11,11 @@ func _ready() -> void:
 	for i in 200:
 		var e = b.instantiate()
 		player_bullet_pool.append(e)
+	
+	tree_exiting.connect(func():
+		var player = get_tree().get_nodes_in_group("Player")[0]
+		player.freeze = false
+	)
 
 
 func get_active_bullet():

@@ -8,6 +8,15 @@ extends CharacterBody2D
 var player_in_range = false
 var player_ref = null
 
+
+func _ready() -> void:
+	Dialogic.timeline_ended.connect(func():
+		if GameManager.minigame_ref == false:
+			var player = get_tree().get_nodes_in_group("Player")[0]
+			player.freeze = false
+		)
+
+
 func _process(_delta):
 	face_player()
 	animated_sprite.play()
@@ -38,6 +47,10 @@ func face_player():
 
 func start_dialogue():
 	if minigame_scene:
+		var player = get_tree().get_nodes_in_group("Player")[0]
+		player.freeze = true
+		player.animated_sprite.play('idle_down')
+		
 		Dialogic.VAR.set('overhead_title', overhead_title)
 		var res = load('res://dialogue/worker_dialog.dtl')
 		Dialogic.start(res, 'default')
