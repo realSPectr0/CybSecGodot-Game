@@ -11,7 +11,7 @@ var player_ref = null
 
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(func():
-		if GameManager.minigame_ref == false:
+		if GameManager.minigame_ref != null:
 			var player = get_tree().get_nodes_in_group("Player")[0]
 			player.freeze = false
 		)
