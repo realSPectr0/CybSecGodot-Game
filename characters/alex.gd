@@ -7,6 +7,8 @@ var freeze = false
 var last_direction = "down"  # Default facing direction
 var interacting = false
 
+@onready var camera = $Camera2D
+
 
 func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_ESCAPE):

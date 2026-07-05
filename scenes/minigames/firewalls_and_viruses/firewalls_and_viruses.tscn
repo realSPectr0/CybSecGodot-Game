@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c1cy2wvemcfie"]
 
 [ext_resource type="Script" uid="uid://bnc2gim10mkpv" path="res://scenes/minigames/firewalls_and_viruses/firewalls_and_viruses.gd" id="1_blxs7"]
+[ext_resource type="Texture2D" uid="uid://okxnfe2bn10o" path="res://scenes/minigames/firewalls_and_viruses/art/Space_BG (2 frames) (64 x 64).png" id="2_hnjdv"]
 [ext_resource type="StyleBox" uid="uid://b53txwjystlc4" path="res://scenes/minigames/password_security/reso/panel.tres" id="2_mm307"]
 [ext_resource type="Shader" uid="uid://d1ig7er2ak1qp" path="res://scenes/minigames/password_security/blur.gdshader" id="2_myumc"]
 [ext_resource type="PackedScene" uid="uid://x4fmae6silrf" path="res://scenes/minigames/firewalls_and_viruses/actors/entities/player.tscn" id="2_n6dwe"]
@@ -72,6 +73,159 @@ size = Vector2(20, 428)
 
 [node name="FirewallsAndViruses" type="Node2D" unique_id=1477267590]
 script = ExtResource("1_blxs7")
+
+[node name="BG" type="CanvasLayer" parent="." unique_id=827494424]
+layer = -5
+follow_viewport_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BG" unique_id=259267479]
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="BG" unique_id=1276868104]
+position = Vector2(128, 0)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="BG" unique_id=1325089757]
+position = Vector2(256, 0)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="BG" unique_id=744645070]
+position = Vector2(384, 0)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="BG" unique_id=756442380]
+position = Vector2(512, 0)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="BG" unique_id=2026308539]
+position = Vector2(0, 64)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D7" type="Sprite2D" parent="BG" unique_id=390320098]
+position = Vector2(128, 64)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D8" type="Sprite2D" parent="BG" unique_id=11240866]
+position = Vector2(256, 64)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D9" type="Sprite2D" parent="BG" unique_id=407115552]
+position = Vector2(384, 64)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D10" type="Sprite2D" parent="BG" unique_id=1457166126]
+position = Vector2(512, 64)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D11" type="Sprite2D" parent="BG" unique_id=758849282]
+position = Vector2(0, 128)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D12" type="Sprite2D" parent="BG" unique_id=819457011]
+position = Vector2(128, 128)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D13" type="Sprite2D" parent="BG" unique_id=2092345538]
+position = Vector2(256, 128)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D14" type="Sprite2D" parent="BG" unique_id=577475823]
+position = Vector2(384, 128)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D15" type="Sprite2D" parent="BG" unique_id=1317320219]
+position = Vector2(512, 128)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D16" type="Sprite2D" parent="BG" unique_id=1250709578]
+position = Vector2(0, 192)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D17" type="Sprite2D" parent="BG" unique_id=2095786280]
+position = Vector2(128, 192)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D18" type="Sprite2D" parent="BG" unique_id=2029117135]
+position = Vector2(256, 192)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D19" type="Sprite2D" parent="BG" unique_id=1963004128]
+position = Vector2(384, 192)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D20" type="Sprite2D" parent="BG" unique_id=2146435495]
+position = Vector2(512, 192)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D21" type="Sprite2D" parent="BG" unique_id=1844901215]
+position = Vector2(0, 256)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D22" type="Sprite2D" parent="BG" unique_id=57683643]
+position = Vector2(128, 256)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D23" type="Sprite2D" parent="BG" unique_id=932207930]
+position = Vector2(256, 256)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D24" type="Sprite2D" parent="BG" unique_id=18681369]
+position = Vector2(384, 256)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D25" type="Sprite2D" parent="BG" unique_id=603203655]
+position = Vector2(512, 256)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D26" type="Sprite2D" parent="BG" unique_id=1753493183]
+position = Vector2(0, 320)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D27" type="Sprite2D" parent="BG" unique_id=1601305956]
+position = Vector2(128, 320)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D28" type="Sprite2D" parent="BG" unique_id=1033045033]
+position = Vector2(256, 320)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D29" type="Sprite2D" parent="BG" unique_id=1469696017]
+position = Vector2(384, 320)
+texture = ExtResource("2_hnjdv")
+centered = false
+
+[node name="Sprite2D30" type="Sprite2D" parent="BG" unique_id=903729159]
+position = Vector2(512, 320)
+texture = ExtResource("2_hnjdv")
+centered = false
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=180256552]
 process_mode = 3

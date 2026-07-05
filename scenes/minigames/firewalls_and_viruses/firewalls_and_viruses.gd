@@ -12,11 +12,15 @@ func _ready() -> void:
 		var e = b.instantiate()
 		player_bullet_pool.append(e)
 	
-	tree_exiting.connect(func():
-		var player = get_tree().get_nodes_in_group("Player")[0]
-		if player:
-			player.freeze = false
-	)
+	#var p = get_tree().get_nodes_in_group("Player")[0]
+	#p.camera.enabled = false
+	
+	#tree_exiting.connect(func():
+		#var player = get_tree().get_nodes_in_group("Player")[0]
+		#player.camera.enabled = true
+		#if player:
+			#player.freeze = false
+	#)
 
 
 # game over
