@@ -30,6 +30,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=904164355]
+collision_layer = 16
 script = ExtResource("2_5eiwc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=358239023]
@@ -57,5 +58,11 @@ collision_mask = 0
 [node name="ShootCooldown" type="Timer" parent="." unique_id=1559429490]
 wait_time = 0.2
 one_shot = true
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=512518036]
+target_position = Vector2(0, 48)
+
+[node name="RayCast2D2" type="RayCast2D" parent="." unique_id=1192349239]
+target_position = Vector2(0, -48)
 
 [connection signal="timeout" from="ShootCooldown" to="." method="_on_shoot_cooldown_timeout"]

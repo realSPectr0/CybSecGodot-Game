@@ -11,15 +11,34 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("shoot") and can_shoot:
 		shoot()
 	
-	if can_move:
-		$Container.look_at(get_global_mouse_position())
-		
-		vel.x = Input.get_axis('ui_left', 'ui_right') * move_speed
-		vel.y = Input.get_axis('ui_up', 'ui_down') * move_speed
-		
-		velocity = vel
-		
-		move_and_slide()
+	#if can_move:
+		#$Container.look_at(get_global_mouse_position())
+		#
+		#vel.x = Input.get_axis('ui_left', 'ui_right') * move_speed
+		#vel.y = Input.get_axis('ui_up', 'ui_down') * move_speed
+		#
+		#velocity = vel
+		#
+		#move_and_slide()
+
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed('ui_up') and check_col('up'):
+		global_position.y -= 32.0
+	elif Input.is_action_just_pressed('ui_down') and check_col('down'):
+		global_position.y += 32.0
+
+
+func check_col(dir: String = 'up'):
+	if dir == 'up':
+		return !$RayCast2D2.is_colliding()
+	elif dir == 'down':
+		return !$RayCast2D.is_colliding()
+	
+	#if $RayCast2D.is_colliding() or $RayCast2D2.is_colliding():
+		#return false
+	
+	return true
 
 
 func shoot():
@@ -30,8 +49,9 @@ func shoot():
 	
 	if b:
 		b.global_position = global_position
-		b.look_at(get_global_mouse_position())
-		b.dir = global_position.direction_to(get_global_mouse_position())
+		#b.look_at(get_global_mouse_position())
+		#b.dir = global_position.direction_to(get_global_mouse_position())
+		b.dir = Vector2.RIGHT
 		b.is_active = true
 		
 		get_parent().add_child(b)
