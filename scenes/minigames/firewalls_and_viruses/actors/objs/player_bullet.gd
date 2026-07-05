@@ -1,5 +1,8 @@
 extends Node2D
 
+var damage = 1
+
+
 var is_active = false: 
 	set(value):
 		is_active = value
@@ -7,6 +10,7 @@ var is_active = false:
 		if is_active:
 			set_physics_process(true)
 		else:
+			damage = 1
 			set_physics_process(false)
 			get_parent().remove_child(self)
 

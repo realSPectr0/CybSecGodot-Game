@@ -6,6 +6,8 @@ var vel: Vector2
 var can_move = true
 var can_shoot = true
 
+var damage = 1
+
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("shoot") and can_shoot:
@@ -48,6 +50,7 @@ func shoot():
 	$ShootCooldown.start()
 	
 	if b:
+		b.damage = damage
 		b.global_position = global_position
 		#b.look_at(get_global_mouse_position())
 		#b.dir = global_position.direction_to(get_global_mouse_position())

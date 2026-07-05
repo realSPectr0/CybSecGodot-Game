@@ -18,7 +18,8 @@ func take_damage(amount = 1):
 func _on_area_entered(area: Area2D) -> void:
 	area.get_parent().is_active = false
 	
-	take_damage()
+	var damage = area.get_parent().damage
+	take_damage(damage)
 
 
 func _on_body_entered(body: Node2D) -> void:
