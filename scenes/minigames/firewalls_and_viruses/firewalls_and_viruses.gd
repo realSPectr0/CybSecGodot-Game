@@ -32,5 +32,9 @@ func spawn_enemy():
 	add_child(e)
 
 
+func play_sfx(sound_name: String):
+	$Sounds.get_node(sound_name).play()
+
+
 func _on_enemy_spawn_timer_timeout() -> void:
 	spawn_enemy()

@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://x4fmae6silrf" path="res://scenes/minigames/firewalls_and_viruses/actors/entities/player.tscn" id="2_n6dwe"]
 [ext_resource type="FontFile" uid="uid://1ro1o45ct4p4" path="res://scenes/minigames/firewalls_and_viruses/LCDBlock.ttf" id="3_ao08b"]
 [ext_resource type="PackedScene" uid="uid://dhsyqc67oq54r" path="res://scenes/minigames/firewalls_and_viruses/actors/wall.tscn" id="4_x6q6w"]
+[ext_resource type="AudioStream" uid="uid://wcorh30axbud" path="res://scenes/minigames/firewalls_and_viruses/sounds/sfx/HitGore2.wav" id="5_se70r"]
+[ext_resource type="AudioStream" uid="uid://c2she1e4chpuj" path="res://scenes/minigames/firewalls_and_viruses/sounds/sfx/Explosion1.wav" id="6_ncnd3"]
+[ext_resource type="AudioStream" uid="uid://b40jptipi8vu4" path="res://scenes/minigames/firewalls_and_viruses/sounds/Bogart VGM - 8Bit Action- Menu_Select.mp3" id="7_5ijel"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_se8m8"]
 size = Vector2(20, 428)
@@ -174,5 +177,22 @@ position = Vector2(160, 64)
 
 [node name="Wall9" parent="." unique_id=1482795343 instance=ExtResource("4_x6q6w")]
 position = Vector2(160, 32)
+
+[node name="Sounds" type="Node" parent="." unique_id=478545709]
+
+[node name="Hit" type="AudioStreamPlayer" parent="Sounds" unique_id=1046993382]
+stream = ExtResource("5_se70r")
+volume_db = -8.0
+max_polyphony = 5
+
+[node name="Explosion" type="AudioStreamPlayer" parent="Sounds" unique_id=1514306402]
+stream = ExtResource("6_ncnd3")
+volume_db = -8.0
+max_polyphony = 5
+
+[node name="BGM" type="AudioStreamPlayer" parent="." unique_id=496039732]
+stream = ExtResource("7_5ijel")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]

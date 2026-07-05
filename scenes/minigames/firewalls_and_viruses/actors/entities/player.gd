@@ -54,6 +54,8 @@ func shoot():
 		b.dir = Vector2.RIGHT
 		b.is_active = true
 		
+		$Laser.play()
+		
 		get_parent().add_child(b)
 
 

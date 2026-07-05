@@ -15,11 +15,15 @@ func _physics_process(delta: float) -> void:
 
 func _on_hurtbox_hit() -> void:
 	$HitFX.play("flash")
+	
+	get_parent().play_sfx('Hit')
 
 
 func _on_hurtbox_zero() -> void:
 	var e = load("res://scenes/minigames/firewalls_and_viruses/actors/objs/explosion.tscn").instantiate()
 	e.global_position = global_position
 	get_parent().get_parent().add_child(e)
+	
+	get_parent().play_sfx('Explosion')
 	
 	queue_free()

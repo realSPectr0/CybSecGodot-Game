@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dy783mxkefvkh" path="res://scenes/minigames/firewalls_and_viruses/actors/entities/player.gd" id="2_5eiwc"]
 [ext_resource type="Texture2D" uid="uid://buis2wkytagb2" path="res://scenes/minigames/firewalls_and_viruses/art/Boosters (16 x 16).png" id="3_2qt1j"]
 [ext_resource type="PackedScene" uid="uid://bpqh2dwemnyr3" path="res://scenes/minigames/firewalls_and_viruses/actors/objs/Hurtbox.tscn" id="4_gr0oo"]
+[ext_resource type="AudioStream" uid="uid://crtm7u2o8kagr" path="res://scenes/minigames/firewalls_and_viruses/sounds/sfx/Laser_09.mp3" id="5_nm2q0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5eiwc"]
 
@@ -64,5 +65,10 @@ target_position = Vector2(0, 48)
 
 [node name="RayCast2D2" type="RayCast2D" parent="." unique_id=1192349239]
 target_position = Vector2(0, -48)
+
+[node name="Laser" type="AudioStreamPlayer" parent="." unique_id=1679195321]
+stream = ExtResource("5_nm2q0")
+volume_db = -8.0
+max_polyphony = 5
 
 [connection signal="timeout" from="ShootCooldown" to="." method="_on_shoot_cooldown_timeout"]
