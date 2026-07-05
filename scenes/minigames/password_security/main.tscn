@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://byl0l15hlcdpy" path="res://scenes/minigames/password_security/art/circle-check.png" id="2_8q48t"]
 [ext_resource type="Shader" uid="uid://cuuy24yf0m585" path="res://scenes/minigames/password_security/main.gdshader" id="2_681w4"]
 [ext_resource type="PackedScene" uid="uid://dkwwxespj8cnb" path="res://scenes/minigames/password_security/requirement.tscn" id="3_8q48t"]
+[ext_resource type="Texture2D" uid="uid://dftlont6rr065" path="res://modernuserinterface-win/16x16/Modern_UI_Style_2.png" id="3_xrfbm"]
 [ext_resource type="AudioStream" uid="uid://cbvm0yx63y72g" path="res://scenes/minigames/password_security/sfx/keypress-001.wav" id="4_1b3bd"]
 [ext_resource type="Shader" uid="uid://d1ig7er2ak1qp" path="res://scenes/minigames/password_security/blur.gdshader" id="5_16nrt"]
 [ext_resource type="AudioStream" uid="uid://dxah44lgq0kwo" path="res://scenes/minigames/password_security/sfx/keypress-002.wav" id="5_681w4"]
-[ext_resource type="Texture2D" uid="uid://yvdgaclfnric" path="res://scenes/minigames/password_security/art/Msg01.png" id="5_tmf7k"]
 [ext_resource type="Texture2D" uid="uid://c4vdriykarq4h" path="res://scenes/minigames/password_security/art/confetti.png" id="6_1f6yf"]
 [ext_resource type="AudioStream" uid="uid://dbwh7p5xj51lb" path="res://scenes/minigames/password_security/sfx/keypress-003.wav" id="6_16nrt"]
 [ext_resource type="Texture2D" uid="uid://ogo0lxc0jdx" path="res://scenes/minigames/password_security/art/Icon78.png" id="6_kwpmb"]
@@ -27,16 +27,25 @@ shader_parameter/colour_3 = Color(0.13725491, 0.25490198, 0.34117648, 1)
 shader_parameter/contrast = 1.0
 shader_parameter/spin_amount = 1.05
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xrfbm"]
+texture = ExtResource("3_xrfbm")
+texture_margin_left = 4.0
+texture_margin_top = 5.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(12, 235, 24, 25)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_681w4"]
 shader = ExtResource("5_16nrt")
 shader_parameter/lod = 1.75200008322
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmf7k"]
-texture = ExtResource("5_tmf7k")
-texture_margin_left = 57.272724
-texture_margin_top = 75.454544
-texture_margin_right = 62.727272
-texture_margin_bottom = 54.545452
+texture = ExtResource("3_xrfbm")
+texture_margin_left = 6.0
+texture_margin_top = 8.0
+texture_margin_right = 6.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(8, 0, 32, 33)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1f6yf"]
 bg_color = Color(0.20264181, 0.21484968, 0.253892, 1)
@@ -142,23 +151,24 @@ offset_right = -38.0
 offset_bottom = 97.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_tmf7k")
-patch_margin_left = 64
-patch_margin_top = 77
-patch_margin_right = 64
-patch_margin_bottom = 42
+texture = ExtResource("3_xrfbm")
+region_rect = Rect2(8, 0, 32, 32)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 6
 
 [node name="Label" type="Label" parent="CanvasLayer/Control/Msg01" unique_id=1913273189]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -88.0
-offset_top = 24.0
-offset_right = 88.0
-offset_bottom = 47.0
+offset_left = -116.0
+offset_top = -7.0
+offset_right = 116.0
+offset_bottom = 25.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0.28876275, 0.28876272, 0.28876272, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_xrfbm")
 text = "Creating Account"
 horizontal_alignment = 1
 
@@ -188,6 +198,7 @@ offset_top = -11.0
 offset_right = -7.0
 offset_bottom = 12.0
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.48381484, 0.48381484, 0.48381484, 1)
 text = "E-mail"
 horizontal_alignment = 2
 
@@ -237,6 +248,7 @@ offset_top = -11.0
 offset_right = -7.0
 offset_bottom = 12.0
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.48381484, 0.48381484, 0.48381484, 1)
 text = "Password:"
 horizontal_alignment = 2
 
@@ -357,10 +369,10 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 41.0
-offset_top = -52.0
-offset_right = -41.0
-offset_bottom = -25.0
+offset_left = 7.0
+offset_top = -35.0
+offset_right = -7.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_1f6yf")
@@ -391,11 +403,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -66.5
-offset_top = 19.0
-offset_right = 66.5
-offset_bottom = 59.0
+offset_left = -107.0
+offset_top = 10.0
+offset_right = 107.0
+offset_bottom = 50.0
 grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_xrfbm")
 text = "LEVEL COMPLETE"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -410,6 +423,7 @@ offset_top = 75.0
 offset_right = 160.0
 offset_bottom = 124.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0.35865653, 0.35865656, 0.35865653, 1)
 text = "GREAT JOB! You've created a strong, secure password!
 
 To make sure you remembered what you created. Type the password again in the input box below."
