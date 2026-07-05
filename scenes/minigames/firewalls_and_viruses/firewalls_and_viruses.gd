@@ -19,6 +19,13 @@ func _ready() -> void:
 	)
 
 
+# game over
+func virus_entered():
+	get_tree().paused = true
+	
+	$UI/GameOverControl.show()
+
+
 func get_active_bullet():
 	for i in player_bullet_pool:
 		if i.is_active == false:
@@ -38,3 +45,13 @@ func play_sfx(sound_name: String):
 
 func _on_enemy_spawn_timer_timeout() -> void:
 	spawn_enemy()
+
+
+func _on_end_area_area_entered(area: Area2D) -> void:
+	virus_entered()
+
+
+func _on_quit_pressed() -> void:
+	get_tree().paused = false
+	
+	queue_free()
