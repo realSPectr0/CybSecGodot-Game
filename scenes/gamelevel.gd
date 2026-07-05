@@ -11,6 +11,11 @@ func _ready() -> void:
 		player_ref.global_position = data.player_position
 		
 	#pass # Replace with function body.
+	
+	if GameManager.previous_location != Vector2.ZERO:
+		$player.global_position = GameManager.previous_location
+		
+		GameManager.previous_location = Vector2.ZERO
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

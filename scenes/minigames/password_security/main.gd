@@ -55,11 +55,12 @@ func _ready() -> void:
 	
 	$CanvasLayer/Popups/Control.hide()
 	
-	#tree_exiting.connect(func():
+	tree_exiting.connect(func():
+		GameManager.finish_minigame()
 		#var player = get_tree().get_nodes_in_group("Player")[0]
 		#if player:
 			#player.freeze = false
-	#)
+	)
 
 
 func _physics_process(delta: float) -> void:
