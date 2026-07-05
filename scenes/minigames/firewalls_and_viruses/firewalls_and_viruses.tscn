@@ -288,7 +288,7 @@ offset_right = 152.0
 offset_bottom = 127.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.84239596, 0.35174605, 0.4343292, 1)
-text = "The ship has been destroyed!"
+text = "The system has been breached!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -455,7 +455,7 @@ volume_db = -10.0
 autoplay = true
 
 [node name="EndArea" type="Area2D" parent="." unique_id=170874927]
-position = Vector2(-16, 145)
+position = Vector2(-45, 145)
 collision_layer = 256
 collision_mask = 8
 
