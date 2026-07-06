@@ -9,6 +9,8 @@ var can_shoot = true
 var credits = 0
 
 var damage = 1
+var attack_speed = .2
+var virus_movement = 50.0
 
 
 func _physics_process(delta: float) -> void:
@@ -49,7 +51,7 @@ func shoot():
 	var b = get_parent().get_active_bullet()
 	
 	can_shoot = false
-	$ShootCooldown.start()
+	$ShootCooldown.start(attack_speed)
 	
 	if b:
 		b.damage = damage

@@ -4,7 +4,7 @@ var move_speed = 50.0
 
 
 func _ready() -> void:
-	pass
+	move_speed = get_parent().player.virus_movement
 
 
 func _physics_process(delta: float) -> void:

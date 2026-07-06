@@ -105,12 +105,20 @@ func _on_game_complete_timer_timeout() -> void:
 
 
 func upgrade_buy(key: String):
-	pass
+	match key:
+		'avs':
+			player.damage += 1
+		'popup_blockers':
+			player.virus_movement -= 5
+		'update_os':
+			player.attack_speed -= .05
 
 
 func upgrade_button_hovered(ref):
 	$UI/UpgradesControl/Panel/Description.text = ref.desc
 	
+	$UI/UpgradesControl/Panel/UpgradeDesc.text = ref.upgrade_description
+	$UI/UpgradesControl/Panel/Buy.text = 'Buy Upgrade %d' % ref.cost
 	$UI/UpgradesControl/Panel/Buy.show()
 
 
