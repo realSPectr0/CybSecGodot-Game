@@ -12,6 +12,7 @@
 [ext_resource type="StyleBox" uid="uid://miqenymvbqx2" path="res://scenes/minigames/password_security/reso/button.tres" id="5_xkaol"]
 [ext_resource type="AudioStream" uid="uid://c2she1e4chpuj" path="res://scenes/minigames/firewalls_and_viruses/sounds/sfx/Explosion1.wav" id="6_ncnd3"]
 [ext_resource type="AudioStream" uid="uid://b40jptipi8vu4" path="res://scenes/minigames/firewalls_and_viruses/sounds/Bogart VGM - 8Bit Action- Menu_Select.mp3" id="7_5ijel"]
+[ext_resource type="PackedScene" uid="uid://ckpm8rglqrcg4" path="res://scenes/minigames/firewalls_and_viruses/actors/upgrade_buttons.tscn" id="7_6p06u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lp7i4"]
 shader = ExtResource("2_myumc")
@@ -442,13 +443,25 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 303.0
-offset_top = 134.0
-offset_right = -303.0
-offset_bottom = -134.0
+offset_left = 246.0
+offset_top = 133.0
+offset_right = -246.0
+offset_bottom = -133.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("2_mm307")
+
+[node name="Close" type="Button" parent="UI/UpgradesControl/Panel" unique_id=1570833996]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -49.0
+offset_right = 111.0
+offset_bottom = -14.0
+theme_override_styles/normal = ExtResource("5_xkaol")
+theme_override_styles/pressed = ExtResource("5_xkaol")
+theme_override_styles/hover = ExtResource("5_xkaol")
+theme_override_styles/focus = ExtResource("5_xkaol")
+text = "Close"
 
 [node name="Label" type="Label" parent="UI/UpgradesControl/Panel" unique_id=575252239]
 layout_mode = 1
@@ -464,32 +477,31 @@ text = "UPGRADES"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/UpgradesControl/Panel" unique_id=1618974029]
+[node name="UpgradesBox" type="VBoxContainer" parent="UI/UpgradesControl/Panel" unique_id=1618974029]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 21.0
-offset_top = -90.0
-offset_right = 214.0
-offset_bottom = 157.0
+offset_top = -60.0
+offset_right = 277.0
+offset_bottom = 53.0
 grow_vertical = 2
+alignment = 1
 
-[node name="Button" type="Button" parent="UI/UpgradesControl/Panel/VBoxContainer" unique_id=52121255]
+[node name="AVS" parent="UI/UpgradesControl/Panel/UpgradesBox" unique_id=506420343 instance=ExtResource("7_6p06u")]
 layout_mode = 2
-theme_override_styles/normal = ExtResource("5_xkaol")
-theme_override_styles/pressed = ExtResource("5_xkaol")
-theme_override_styles/hover = ExtResource("5_xkaol")
-theme_override_styles/focus = ExtResource("5_xkaol")
-text = "Anti-Virus Software"
+desc = "Installing an anti-malware app and keeping it up to date can help defend your PC against viruses and other malware (malicious software). Microsoft Defender is free anti-malware software included with Windows if you have a Microsoft 365 Personal, Family, or Premium subscription. It's kept updated automatically through Windows Update. There are also anti-malware products made by other companies that you can choose from."
 
-[node name="Button2" type="Button" parent="UI/UpgradesControl/Panel/VBoxContainer" unique_id=1881525377]
+[node name="PopupBlockers" parent="UI/UpgradesControl/Panel/UpgradesBox" unique_id=239961630 instance=ExtResource("7_6p06u")]
 layout_mode = 2
-theme_override_styles/normal = ExtResource("5_xkaol")
-theme_override_styles/pressed = ExtResource("5_xkaol")
-theme_override_styles/hover = ExtResource("5_xkaol")
-theme_override_styles/focus = ExtResource("5_xkaol")
-text = "Anti-Virus Software"
+text = "Pop-up Blockers"
+desc = "Pop-up windows are small browser windows that appear on top of the website you're viewing. Although most are created by advertisers, they can also contain malicious or unsafe code. A pop-up blocker can prevent some or all of these windows from appearing. The pop-up blocker in Microsoft Edge is turned on by default."
+
+[node name="UpdateOS" parent="UI/UpgradesControl/Panel/UpgradesBox" unique_id=1358981986 instance=ExtResource("7_6p06u")]
+layout_mode = 2
+text = "Update Operating Systems"
+desc = "Periodically, Microsoft releases special security updates that can help protect your PC. These updates can help prevent viruses and other malware attacks by closing possible security holes."
 
 [node name="Credits" type="Label" parent="UI/UpgradesControl/Panel" unique_id=1646163228]
 layout_mode = 0
@@ -500,17 +512,36 @@ offset_bottom = 79.0
 theme_override_colors/font_color = Color(0.33838508, 0.53299034, 0.77504385, 1)
 text = "Credits: 10,000"
 
-[node name="Close" type="Button" parent="UI/UpgradesControl" unique_id=1570833996]
-layout_mode = 0
-offset_left = 306.0
-offset_top = 92.0
-offset_right = 414.0
-offset_bottom = 127.0
+[node name="Description" type="RichTextLabel" parent="UI/UpgradesControl/Panel" unique_id=1612348986]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -347.0
+offset_top = 70.0
+offset_right = -25.0
+offset_bottom = 307.0
+theme_override_colors/default_color = Color(0.23111457, 0.26557514, 0.37673503, 1)
+
+[node name="Buy" type="Button" parent="UI/UpgradesControl/Panel" unique_id=909364949]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -269.0
+offset_top = -48.0
+offset_right = -49.0
+offset_bottom = -13.0
+grow_horizontal = 0
+grow_vertical = 0
 theme_override_styles/normal = ExtResource("5_xkaol")
 theme_override_styles/pressed = ExtResource("5_xkaol")
 theme_override_styles/hover = ExtResource("5_xkaol")
 theme_override_styles/focus = ExtResource("5_xkaol")
-text = "Close"
+text = "Buy Upgrade 100"
 
 [node name="GameEndBar" type="ProgressBar" parent="UI" unique_id=1446479976]
 anchors_preset = 12
@@ -707,7 +738,8 @@ debug_color = Color(0.8988215, 0.25966322, 0.4597475, 0.41960785)
 [connection signal="pressed" from="UI/GameOverControl/Panel/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="UI/GameWinControl/Panel/Quit" to="." method="_on_quit_pressed"]
 [connection signal="visibility_changed" from="UI/UpgradesControl" to="." method="_on_upgrades_control_visibility_changed"]
-[connection signal="pressed" from="UI/UpgradesControl/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="UI/UpgradesControl/Panel/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="UI/UpgradesControl/Panel/Buy" to="." method="_on_buy_pressed"]
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
 [connection signal="timeout" from="GameCompleteTimer" to="." method="_on_game_complete_timer_timeout"]
 [connection signal="timeout" from="DifficultyTimer" to="." method="_on_difficulty_timer_timeout"]

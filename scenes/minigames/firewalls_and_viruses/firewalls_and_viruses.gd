@@ -25,6 +25,9 @@ func _ready() -> void:
 	)
 	
 	$UI/GameEndBar.max_value = $GameCompleteTimer.wait_time
+	
+	for i in $UI/UpgradesControl/Panel/UpgradesBox.get_children():
+		i.hovered.connect(upgrade_button_hovered)
 
 
 func _physics_process(delta: float) -> void:
@@ -99,3 +102,17 @@ func _on_difficulty_timer_timeout() -> void:
 
 func _on_game_complete_timer_timeout() -> void:
 	win_game()
+
+
+func upgrade_buy(key: String):
+	pass
+
+
+func upgrade_button_hovered(ref):
+	$UI/UpgradesControl/Panel/Description.text = ref.desc
+	
+	$UI/UpgradesControl/Panel/Buy.show()
+
+
+func _on_buy_pressed() -> void:
+	pass # Replace with function body.

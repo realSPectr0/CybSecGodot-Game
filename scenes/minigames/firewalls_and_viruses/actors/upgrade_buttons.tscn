@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ckpm8rglqrcg4"]
+
+[ext_resource type="StyleBox" uid="uid://miqenymvbqx2" path="res://scenes/minigames/password_security/reso/button.tres" id="1_4ovy0"]
+[ext_resource type="Script" uid="uid://bhimrqw8bnqtw" path="res://scenes/minigames/firewalls_and_viruses/actors/upgrade_buttons.gd" id="2_jswa7"]
+
+[node name="AVS" type="Button" unique_id=506420343]
+theme_override_styles/normal = ExtResource("1_4ovy0")
+theme_override_styles/pressed = ExtResource("1_4ovy0")
+theme_override_styles/hover = ExtResource("1_4ovy0")
+theme_override_styles/focus = ExtResource("1_4ovy0")
+text = "Anti-Virus Software"
+script = ExtResource("2_jswa7")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
