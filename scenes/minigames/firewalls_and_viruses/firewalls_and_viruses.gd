@@ -5,6 +5,8 @@ var player_bullet_pool = []
 
 @onready var player = $Player
 
+var upgrade_hovered: String = ''
+var upgrade_ref = null
 
 func _ready() -> void:
 	var b = load('res://scenes/minigames/firewalls_and_viruses/actors/objs/PlayerBullet.tscn')
@@ -31,7 +33,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	$UI/Credits.text = '%d' % player.credits
+	$UI/Credits.text = 'Credits: %d' % player.credits
 	
 	$UI/GameEndBar.value = $GameCompleteTimer.time_left
 
@@ -115,12 +117,19 @@ func upgrade_buy(key: String):
 
 
 func upgrade_button_hovered(ref):
+	upgrade_ref = ref
+	
 	$UI/UpgradesControl/Panel/Description.text = ref.desc
 	
 	$UI/UpgradesControl/Panel/UpgradeDesc.text = ref.upgrade_description
 	$UI/UpgradesControl/Panel/Buy.text = 'Buy Upgrade %d' % ref.cost
 	$UI/UpgradesControl/Panel/Buy.show()
+	$UI/UpgradesControl/Panel/Buy.disabled = true if player.credits < ref.cost else false
 
 
 func _on_buy_pressed() -> void:
-	pass # Replace with function body.
+	upgrade_buy(upgrade_ref.id)
+	player.credits -= upgrade_ref.cost
+	
+	$UI/UpgradesControl/Panel/Buy.disabled = true if player.credits < upgrade_ref.cost else false
+	$UI/UpgradesControl/Panel/Credits.text = 'Credits: %d' % player.credits
