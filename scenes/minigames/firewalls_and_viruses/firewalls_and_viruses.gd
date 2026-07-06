@@ -87,6 +87,8 @@ func _on_close_pressed() -> void:
 func _on_upgrades_control_visibility_changed() -> void:
 	if $UI/UpgradesControl.visible:
 		get_tree().paused = true
+		
+		$UI/UpgradesControl/Panel/Credits.text = 'Credits: %d' % player.credits
 	else:
 		get_tree().paused = false
 

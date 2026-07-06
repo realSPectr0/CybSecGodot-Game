@@ -421,7 +421,6 @@ theme_override_styles/focus = ExtResource("5_xkaol")
 text = "Quit"
 
 [node name="UpgradesControl" type="Control" parent="UI" unique_id=1131442774]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -494,12 +493,12 @@ text = "Anti-Virus Software"
 
 [node name="Credits" type="Label" parent="UI/UpgradesControl/Panel" unique_id=1646163228]
 layout_mode = 0
-offset_left = 50.0
+offset_left = 27.0
 offset_top = 56.0
-offset_right = 126.0
+offset_right = 141.0
 offset_bottom = 79.0
 theme_override_colors/font_color = Color(0.33838508, 0.53299034, 0.77504385, 1)
-text = "10,000"
+text = "Credits: 10,000"
 
 [node name="Close" type="Button" parent="UI/UpgradesControl" unique_id=1570833996]
 layout_mode = 0
