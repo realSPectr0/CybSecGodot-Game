@@ -6,6 +6,8 @@ var vel: Vector2
 var can_move = true
 var can_shoot = true
 
+var credits = 0
+
 var damage = 1
 
 

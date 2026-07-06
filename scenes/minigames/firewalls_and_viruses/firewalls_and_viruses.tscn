@@ -25,6 +25,12 @@ texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 region_rect = Rect2(12, 235, 24, 25)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6p06u"]
+bg_color = Color(0.22376983, 0.22376983, 0.22376983, 0.68)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hnjdv"]
+bg_color = Color(0.25779998, 0.33407432, 0.26985964, 1)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_se8m8"]
 size = Vector2(20, 428)
 
@@ -231,6 +237,29 @@ centered = false
 process_mode = 3
 layer = 101
 
+[node name="Upgrades" type="Button" parent="UI" unique_id=1069537453]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 113.0
+offset_bottom = 47.0
+theme_override_styles/normal = ExtResource("5_xkaol")
+theme_override_styles/pressed = ExtResource("5_xkaol")
+theme_override_styles/hover = ExtResource("5_xkaol")
+theme_override_styles/focus = ExtResource("5_xkaol")
+text = "Upgrades"
+
+[node name="Credits" type="Label" parent="UI" unique_id=1209934885]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1031.0
+offset_top = 20.0
+offset_right = -955.0
+offset_bottom = 43.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.33838508, 0.53299034, 0.77504385, 1)
+text = "10,000"
+
 [node name="GameOverControl" type="Control" parent="UI" unique_id=1829737394]
 visible = false
 layout_mode = 3
@@ -311,6 +340,209 @@ theme_override_styles/hover = ExtResource("5_xkaol")
 theme_override_styles/focus = ExtResource("5_xkaol")
 text = "Quit"
 
+[node name="GameWinControl" type="Control" parent="UI" unique_id=504086969]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="UI/GameWinControl" unique_id=1632594218]
+material = SubResource("ShaderMaterial_lp7i4")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UI/GameWinControl" unique_id=578385274]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 367.0
+offset_top = 225.0
+offset_right = -367.0
+offset_bottom = -225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_mm307")
+
+[node name="Label" type="Label" parent="UI/GameWinControl/Panel" unique_id=1402401332]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -107.0
+offset_top = 10.0
+offset_right = 107.0
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_xkaol")
+text = "COMPLETE!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="UI/GameWinControl/Panel" unique_id=576334272]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -152.0
+offset_top = 87.0
+offset_right = 152.0
+offset_bottom = 127.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.38582775, 0.60233885, 0.3845715, 1)
+text = "YOU PREVENT ALL MALWARES AND VIRUSES!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Button" parent="UI/GameWinControl/Panel" unique_id=432448285]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -44.0
+offset_right = 56.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = ExtResource("5_xkaol")
+theme_override_styles/pressed = ExtResource("5_xkaol")
+theme_override_styles/hover = ExtResource("5_xkaol")
+theme_override_styles/focus = ExtResource("5_xkaol")
+text = "Quit"
+
+[node name="UpgradesControl" type="Control" parent="UI" unique_id=1131442774]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="UI/UpgradesControl" unique_id=269659977]
+material = SubResource("ShaderMaterial_lp7i4")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UI/UpgradesControl" unique_id=1365581340]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 303.0
+offset_top = 134.0
+offset_right = -303.0
+offset_bottom = -134.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_mm307")
+
+[node name="Label" type="Label" parent="UI/UpgradesControl/Panel" unique_id=575252239]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -9.0
+offset_bottom = 41.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_xkaol")
+text = "UPGRADES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/UpgradesControl/Panel" unique_id=1618974029]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = -90.0
+offset_right = 214.0
+offset_bottom = 157.0
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="UI/UpgradesControl/Panel/VBoxContainer" unique_id=52121255]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_xkaol")
+theme_override_styles/pressed = ExtResource("5_xkaol")
+theme_override_styles/hover = ExtResource("5_xkaol")
+theme_override_styles/focus = ExtResource("5_xkaol")
+text = "Anti-Virus Software"
+
+[node name="Button2" type="Button" parent="UI/UpgradesControl/Panel/VBoxContainer" unique_id=1881525377]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_xkaol")
+theme_override_styles/pressed = ExtResource("5_xkaol")
+theme_override_styles/hover = ExtResource("5_xkaol")
+theme_override_styles/focus = ExtResource("5_xkaol")
+text = "Anti-Virus Software"
+
+[node name="Credits" type="Label" parent="UI/UpgradesControl/Panel" unique_id=1646163228]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 56.0
+offset_right = 126.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(0.33838508, 0.53299034, 0.77504385, 1)
+text = "10,000"
+
+[node name="Close" type="Button" parent="UI/UpgradesControl" unique_id=1570833996]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 92.0
+offset_right = 414.0
+offset_bottom = 127.0
+theme_override_styles/normal = ExtResource("5_xkaol")
+theme_override_styles/pressed = ExtResource("5_xkaol")
+theme_override_styles/hover = ExtResource("5_xkaol")
+theme_override_styles/focus = ExtResource("5_xkaol")
+text = "Close"
+
+[node name="GameEndBar" type="ProgressBar" parent="UI" unique_id=1446479976]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_6p06u")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hnjdv")
+value = 40.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="UI/GameEndBar" unique_id=1743829629]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -11.5
+offset_right = 110.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.19500001)
+text = "Game Complete"
+horizontal_alignment = 1
+
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=363387328]
 
 [node name="Node2D27" type="Node2D" parent="SpawnPoints" unique_id=325101334]
@@ -381,6 +613,15 @@ shape = SubResource("RectangleShape2D_n6dwe")
 
 [node name="EnemySpawnTimer" type="Timer" parent="." unique_id=943344969]
 wait_time = 3.0
+autostart = true
+
+[node name="GameCompleteTimer" type="Timer" parent="." unique_id=1036908603]
+wait_time = 90.0
+one_shot = true
+autostart = true
+
+[node name="DifficultyTimer" type="Timer" parent="." unique_id=1990839510]
+wait_time = 30.0
 autostart = true
 
 [node name="Text" type="Node2D" parent="." unique_id=664061806]
@@ -463,6 +704,12 @@ collision_mask = 8
 shape = SubResource("RectangleShape2D_y3kor")
 debug_color = Color(0.8988215, 0.25966322, 0.4597475, 0.41960785)
 
+[connection signal="pressed" from="UI/Upgrades" to="." method="_on_upgrades_pressed"]
 [connection signal="pressed" from="UI/GameOverControl/Panel/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="UI/GameWinControl/Panel/Quit" to="." method="_on_quit_pressed"]
+[connection signal="visibility_changed" from="UI/UpgradesControl" to="." method="_on_upgrades_control_visibility_changed"]
+[connection signal="pressed" from="UI/UpgradesControl/Close" to="." method="_on_close_pressed"]
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
+[connection signal="timeout" from="GameCompleteTimer" to="." method="_on_game_complete_timer_timeout"]
+[connection signal="timeout" from="DifficultyTimer" to="." method="_on_difficulty_timer_timeout"]
 [connection signal="area_entered" from="EndArea" to="." method="_on_end_area_area_entered"]

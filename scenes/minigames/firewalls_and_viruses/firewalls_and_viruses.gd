@@ -23,13 +23,26 @@ func _ready() -> void:
 		#if player:
 			#player.freeze = false
 	)
+	
+	$UI/GameEndBar.max_value = $GameCompleteTimer.wait_time
 
+
+func _physics_process(delta: float) -> void:
+	$UI/Credits.text = '%d' % player.credits
+	
+	$UI/GameEndBar.value = $GameCompleteTimer.time_left
 
 # game over
 func virus_entered():
 	get_tree().paused = true
 	
 	$UI/GameOverControl.show()
+
+
+func win_game():
+	get_tree().paused = true
+	
+	$UI/GameWinControl.show()
 
 
 func get_active_bullet():
@@ -61,3 +74,26 @@ func _on_quit_pressed() -> void:
 	get_tree().paused = false
 	
 	queue_free()
+
+
+func _on_upgrades_pressed() -> void:
+	$UI/UpgradesControl.show()
+
+
+func _on_close_pressed() -> void:
+	$UI/UpgradesControl.hide()
+
+
+func _on_upgrades_control_visibility_changed() -> void:
+	if $UI/UpgradesControl.visible:
+		get_tree().paused = true
+	else:
+		get_tree().paused = false
+
+
+func _on_difficulty_timer_timeout() -> void:
+	$EnemySpawnTimer.wait_time -= .5
+
+
+func _on_game_complete_timer_timeout() -> void:
+	win_game()
