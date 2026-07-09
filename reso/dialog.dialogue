@@ -1,5 +1,5 @@
 ~ start
-Worker: Are you ready to learn {{GameManager.overhead_title}}?
+Worker: Are you ready to learn {{GameManager.minigame_title}}?
 - Yes
 	Worker: Okay!
 	do GameManager.start_minigame()
