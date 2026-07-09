@@ -10,7 +10,8 @@ var credits = 0
 
 var damage = 1
 var attack_speed = .2
-var virus_movement = 50.0
+var virus_movement = 100.0
+var virus_hp_spawn_on_spawn = 8.0
 
 
 func _physics_process(delta: float) -> void:

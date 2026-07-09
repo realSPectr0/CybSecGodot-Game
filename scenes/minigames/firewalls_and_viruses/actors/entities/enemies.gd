@@ -13,6 +13,10 @@ func _physics_process(delta: float) -> void:
 	global_position += dir * move_speed * delta
 
 
+func set_hp(new_hp):
+	$Hurtbox.hp = new_hp
+
+
 func _on_hurtbox_hit() -> void:
 	$HitFX.play("flash")
 	
@@ -24,7 +28,7 @@ func _on_hurtbox_zero() -> void:
 	e.global_position = global_position
 	get_parent().add_child(e)
 	
-	get_parent().player.credits += 10
+	get_parent().player.credits += 7
 	
 	get_parent().play_sfx('Explosion')
 	

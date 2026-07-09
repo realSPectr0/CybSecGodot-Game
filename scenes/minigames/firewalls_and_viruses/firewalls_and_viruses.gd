@@ -59,6 +59,7 @@ func get_active_bullet():
 func spawn_enemy():
 	var e = load('res://scenes/minigames/firewalls_and_viruses/actors/entities/enemies.tscn').instantiate()
 	e.global_position = $SpawnPoints.get_children().pick_random().global_position
+	e.set_hp(player.virus_hp_spawn_on_spawn)
 	
 	add_child(e)
 
@@ -100,6 +101,7 @@ func _on_upgrades_control_visibility_changed() -> void:
 
 func _on_difficulty_timer_timeout() -> void:
 	$EnemySpawnTimer.wait_time -= .5
+	player.virus_hp_spawn_on_spawn += 1
 
 
 func _on_game_complete_timer_timeout() -> void:
