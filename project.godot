@@ -19,9 +19,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*uid://cbl2iv8lqmhem"
-Dialogic="*uid://ds2q0uclmolvu"
 SceneChanger="*uid://buf0bssqvxfsr"
 GameSaveOrLoad="*uid://ceue4wodyw5w5"
+DialogueManager="*uid://c3rodes2l3gxb"
 
 [dialogic]
 
@@ -74,7 +74,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [global_group]
 
@@ -133,6 +133,10 @@ shoot={
 
 buffering/agile_event_flushing=true
 pointing/emulate_mouse_from_touch=false
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://reso/dialog.dialogue")
 
 [layer_names]
 

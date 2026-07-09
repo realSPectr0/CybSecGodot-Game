@@ -10,20 +10,26 @@ var player_ref = null
 
 
 func _ready() -> void:
-	Dialogic.timeline_ended.connect(func():
+	DialogueManager.dialogue_ended.connect(func(res):
 		if GameManager.minigame_ref != null:
 			var player = get_tree().get_nodes_in_group("Player")[0]
 			player.freeze = false
 		)
+	
+	#Dialogic.timeline_ended.connect(func():
+		#if GameManager.minigame_ref != null:
+			#var player = get_tree().get_nodes_in_group("Player")[0]
+			#player.freeze = false
+		#)
 
 
 func _process(_delta):
 	face_player()
 	animated_sprite.play()
 	# Check if player is nearby AND Space (ui_accept) is pressed
-	if player_in_range and Input.is_key_pressed(KEY_SPACE):
+	#if player_in_range and Input.is_key_pressed(KEY_SPACE):
 		#face_player() 
-		Dialogic.start('hard_worker')
+		#Dialogic.start('hard_worker')
 
 func face_player():
 	if not player_ref: 
@@ -51,9 +57,14 @@ func start_dialogue():
 		player.freeze = true
 		player.animated_sprite.play('idle_down')
 		
-		Dialogic.VAR.set('overhead_title', overhead_title)
-		var res = load('res://dialogue/worker_dialog.dtl')
-		Dialogic.start(res, 'default')
+		GameManager.minigame_title = overhead_title
+		
+		var res = load('res://reso/dialog.dialogue')
+		DialogueManager.show_dialogue_balloon(res, 'start')
+		
+		#Dialogic.VAR.set('overhead_title', overhead_title)
+		#var res = load('res://dialogue/worker_dialog.dtl')
+		#Dialogic.start(res, 'default')
 		
 		GameManager.minigame_ref = minigame_scene
 		

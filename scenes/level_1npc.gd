@@ -13,13 +13,13 @@ func _process(_delta):
 		#face_player()
 		player_ref.interacting = true
 		if GameSaveOrLoad.finished_levels < 1:
-			Dialogic.start('transition_to_level1')
-			await Dialogic.timeline_ended
+			#Dialogic.start('transition_to_level1')
+			#await Dialogic.timeline_ended
 			GameSaveOrLoad.save_game($"../player".global_position)
 			SceneChanger.change_scene('res://scenes/level1.tscn')
 		else:
-			Dialogic.start('level1_done')
-			await Dialogic.timeline_ended
+			#Dialogic.start('level1_done')
+			#await Dialogic.timeline_ended
 			player_ref.interacting = false
 
 func face_player():
