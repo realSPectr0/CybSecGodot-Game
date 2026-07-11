@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c1cy2wvemcfie" path="res://scenes/minigames/firewalls_and_viruses/firewalls_and_viruses.tscn" id="13_2xpee"]
 [ext_resource type="Script" uid="uid://dbjn77swuk08u" path="res://scenes/level_1npc.gd" id="13_ov5yj"]
 [ext_resource type="PackedScene" uid="uid://c4lq05xlvn71c" path="res://scenes/minigames/password_security/main.tscn" id="13_pflgl"]
+[ext_resource type="PackedScene" uid="uid://cmycgi23kmuo6" path="res://scenes/minigames/gaming_security/GamingSecurity.tscn" id="14_gueac"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_llsdn"]
 texture = ExtResource("2_vny4q")
@@ -3863,6 +3864,7 @@ y_sort_enabled = true
 position = Vector2(906, 783)
 scale = Vector2(2.5, 2.5)
 script = ExtResource("8_v5q8u")
+minigame_scene = ExtResource("14_gueac")
 overhead_title = "Gaming Security"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker12" unique_id=101408917]
