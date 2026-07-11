@@ -3571,7 +3571,7 @@ script = ExtResource("1_i68so")
 [node name="player" parent="." unique_id=1092919849 instance=ExtResource("1_gm810")]
 unique_name_in_owner = true
 y_sort_enabled = true
-position = Vector2(231.00003, 1027)
+position = Vector2(355, 1137.0001)
 scale = Vector2(2.5, 2.5)
 menu_ui_file = "res://scenes/menu_ui.tscn"
 
@@ -3863,6 +3863,7 @@ y_sort_enabled = true
 position = Vector2(906, 783)
 scale = Vector2(2.5, 2.5)
 script = ExtResource("8_v5q8u")
+overhead_title = "Gaming Security"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker12" unique_id=101408917]
 position = Vector2(0, 16)

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cmycgi23kmuo6"]
+
+[ext_resource type="Script" uid="uid://chvkpxgkjq611" path="res://scenes/minigames/gaming_security/gaming_security.gd" id="1_p4v7v"]
+
+[node name="GamingSecurity" type="Node2D" unique_id=1531940149]
+script = ExtResource("1_p4v7v")
