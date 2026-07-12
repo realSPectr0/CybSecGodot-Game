@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://ts4dtswbrtn7" path="res://scenes/minigames/gaming_security/actors/hacking_scene.gd" id="1_bk2fs"]
 [ext_resource type="StyleBox" uid="uid://b53txwjystlc4" path="res://scenes/minigames/password_security/reso/panel.tres" id="2_pc0f0"]
 [ext_resource type="FontFile" uid="uid://crhrry2yonump" path="res://scenes/minigames/gaming_security/reso/Roboto-Regular.ttf" id="3_8ywxd"]
+[ext_resource type="FontFile" uid="uid://b3p3cv3tuouyb" path="res://scenes/minigames/gaming_security/reso/Roboto-Light.ttf" id="4_iof0b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ywxd"]
+bg_color = Color(0.06811081, 0.06811082, 0.06811078, 1)
 
 [node name="HackingScene" type="Control" unique_id=2060549719]
 layout_mode = 3
@@ -37,28 +41,18 @@ horizontal_alignment = 1
 
 [node name="Main" type="Panel" parent="." unique_id=457533579]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 303.0
-offset_top = 145.0
-offset_right = -303.0
-offset_bottom = -145.0
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 145.0
+offset_top = -209.0
+offset_right = 554.0
+offset_bottom = -115.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("2_pc0f0")
-
-[node name="Label" type="Label" parent="Main" unique_id=172039857]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -134.0
-offset_top = 27.0
-offset_right = 134.0
-offset_bottom = 50.0
-grow_horizontal = 2
-horizontal_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="Main" unique_id=461710863]
 layout_mode = 1
@@ -88,3 +82,550 @@ theme_override_colors/font_color = Color(0.26405665, 0.43579945, 0.2754511, 1)
 theme_override_fonts/font = ExtResource("3_8ywxd")
 text = "Progress..."
 horizontal_alignment = 1
+
+[node name="Code" type="RichTextLabel" parent="." unique_id=980233195]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -561.0
+offset_top = -234.0
+offset_right = 125.0
+offset_bottom = 302.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.26842242, 0.69239235, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_iof0b")
+theme_override_font_sizes/normal_font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ywxd")
+bbcode_enabled = true
+text = "#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# [b][color=red]NETWORK PENETRATION SUITE v3.2.1[/color][/b]
+# [i]Author: root@darknet[/i]
+# [u]Usage: ./hack.py --target <IP> --port <PORT>[/u]
+
+import sys
+import os
+import time
+import random
+import socket
+import struct
+import hashlib
+import base64
+import threading
+import queue
+import subprocess
+import re
+from datetime import datetime
+from urllib.parse import urlparse
+
+# [b]=== GLOBAL CONFIGURATION ===[/b]
+TARGET_IP = \"192.168.1.100\"
+TARGET_PORT = 443
+THREADS = 50
+TIMEOUT = 0.5
+VERBOSE = True
+LOG_FILE = \"attack_log.txt\"
+
+# [b]=== COLORS FOR TERMINAL OUTPUT ===[/b]
+RED = \"\\033[91m\"
+GREEN = \"\\033[92m\"
+YELLOW = \"\\033[93m\"
+BLUE = \"\\033[94m\"
+MAGENTA = \"\\033[95m\"
+CYAN = \"\\033[96m\"
+WHITE = \"\\033[97m\"
+RESET = \"\\033[0m\"
+
+# [b]=== FAKE ENCRYPTION KEYS ===[/b]
+[color=green]RSA_PUBLIC_KEY[/color] = \"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3XqM3X4Q8Y5X9...\"
+[color=green]AES_KEY[/color] = b'\\x2b\\x7e\\x15\\x16\\x28\\xae\\xd2\\xa6\\xab\\xf7\\x15\\x88\\x09\\xcf\\x4f\\x3c'
+[color=green]IV[/color] = b'\\x00\\x01\\x02\\x03\\x04\\x05\\x06\\x07\\x08\\x09\\x0a\\x0b\\x0c\\x0d\\x0e\\x0f'
+
+# [b]=== FAKE PORTS AND SERVICES ===[/b]
+SERVICES = {
+    21: \"FTP\",
+    22: \"SSH\",
+    23: \"Telnet\",
+    25: \"SMTP\",
+    53: \"DNS\",
+    80: \"HTTP\",
+    110: \"POP3\",
+    143: \"IMAP\",
+    443: \"HTTPS\",
+    445: \"SMB\",
+    3306: \"MySQL\",
+    3389: \"RDP\",
+    5432: \"PostgreSQL\",
+    5900: \"VNC\",
+    6379: \"Redis\",
+    8080: \"HTTP-Alt\"
+}
+
+# [b]=== FAKE EXPLOIT PAYLOADS ===[/b]
+EXPLOITS = [
+    \"[color=red]CVE-2021-44228[/color] (Log4Shell)\",
+    \"[color=red]CVE-2022-22965[/color] (Spring4Shell)\",
+    \"[color=red]CVE-2022-1388[/color] (F5 BIG-IP)\",
+    \"[color=red]CVE-2021-4034[/color] (PwnKit)\",
+    \"[color=red]CVE-2022-0847[/color] (Dirty Pipe)\",
+    \"[color=red]CVE-2021-3156[/color] (Sudo Baron Samedit)\",
+    \"[color=red]CVE-2022-26134[/color] (Confluence OGNL)\",
+    \"[color=red]CVE-2021-41773[/color] (Apache Path Traversal)\",
+    \"[color=red]CVE-2022-22947[/color] (Spring Cloud Gateway)\",
+    \"[color=red]CVE-2021-45046[/color] (Log4Shell 2.0)\"
+]
+
+# [b]=== FAKE FILE SYSTEM PATHS ===[/b]
+SENSITIVE_PATHS = [
+    \"[color=yellow]/etc/passwd[/color]\",
+    \"[color=yellow]/etc/shadow[/color]\",
+    \"[color=yellow]/etc/hosts[/color]\",
+    \"[color=yellow]/root/.bash_history[/color]\",
+    \"[color=yellow]/home/user/.ssh/id_rsa[/color]\",
+    \"[color=yellow]/var/log/auth.log[/color]\",
+    \"[color=yellow]/var/log/syslog[/color]\",
+    \"[color=yellow]/proc/cpuinfo[/color]\",
+    \"[color=yellow]/proc/meminfo[/color]\",
+    \"[color=yellow]/proc/net/tcp[/color]\"
+]
+
+# [b]=== UTILITY FUNCTIONS ===[/b]
+def log(message, level=\"INFO\"):
+    [i]# [color=blue]Logging function with BBCode styling[/color][/i]
+    timestamp = datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\")
+    colored = {
+        \"INFO\": CYAN,
+        \"WARN\": YELLOW,
+        \"ERROR\": RED,
+        \"SUCCESS\": GREEN,
+        \"DEBUG\": MAGENTA
+    }.get(level, WHITE)
+    
+    # [b]BBCode formatted output[/b]
+    bbcode_level = {
+        \"INFO\": \"[color=cyan]INFO[/color]\",
+        \"WARN\": \"[color=yellow]WARN[/color]\",
+        \"ERROR\": \"[color=red]ERROR[/color]\",
+        \"SUCCESS\": \"[color=green]SUCCESS[/color]\",
+        \"DEBUG\": \"[color=magenta]DEBUG[/color]\"
+    }.get(level, \"[color=white]INFO[/color]\")
+    
+    print(f\"{colored}[{timestamp}] [{level}] {message}{RESET}\")
+    with open(LOG_FILE, \"a\") as f:
+        f.write(f\"[{timestamp}] [{level}] {message}\\n\")
+
+def slow_print(text, delay=0.005):
+    [i]# [color=blue]Print text with dramatic typing effect[/color][/i]
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+
+def random_hex(length=8):
+    [i]# [color=blue]Generate random hex string[/color][/i]
+    return ''.join(random.choice('0123456789abcdef') for _ in range(length))
+
+def fake_encrypt(data):
+    [i]# [color=blue]Fake encryption for show[/color][/i]
+    return base64.b64encode(data.encode()).decode()
+
+def fake_decrypt(data):
+    [i]# [color=blue]Fake decryption for show[/color][/i]
+    return base64.b64decode(data.encode()).decode()
+
+def progress_bar(iteration, total, prefix='', suffix='', length=50, fill='█'):
+    [i]# [color=blue]Display progress bar[/color][/i]
+    percent = 100 * (iteration / float(total))
+    filled_length = int(length * iteration // total)
+    bar = fill * filled_length + '-' * (length - filled_length)
+    sys.stdout.write(f'\\r{prefix} |{bar}| {percent:.2f}% {suffix}')
+    sys.stdout.flush()
+
+# [b]=== NETWORK SCANNING MODULE ===[/b]
+def scan_port(ip, port):
+    [i]# [color=blue]Scan a single port[/color][/i]
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(TIMEOUT)
+        result = sock.connect_ex((ip, port))
+        sock.close()
+        if result == 0:
+            service = SERVICES.get(port, \"Unknown\")
+            log(f\"[color=green]Port {port} ({service}) is OPEN on {ip}[/color]\", \"SUCCESS\")
+            return True
+        return False
+    except Exception as e:
+        log(f\"[color=red]Port scan error: {e}[/color]\", \"ERROR\")
+        return False
+
+def port_scan(ip, start=1, end=1024):
+    [i]# [color=blue]Multi-threaded port scanner[/color][/i]
+    log(f\"[color=cyan]Starting port scan on {ip} (ports {start}-{end})[/color]\", \"INFO\")
+    open_ports = []
+    threads = []
+    q = queue.Queue()
+    
+    for port in range(start, end + 1):
+        q.put(port)
+    
+    def worker():
+        while not q.empty():
+            port = q.get()
+            if scan_port(ip, port):
+                open_ports.append(port)
+            q.task_done()
+    
+    for _ in range(THREADS):
+        t = threading.Thread(target=worker)
+        t.start()
+        threads.append(t)
+    
+    q.join()
+    log(f\"[color=green]Port scan completed. {len(open_ports)} open ports found.[/color]\", \"SUCCESS\")
+    return open_ports
+
+# [b]=== EXPLOIT MODULE ===[/b]
+def exploit_service(ip, port, service):
+    [i]# [color=blue]Attempt to exploit a service[/color][/i]
+    exploit = random.choice(EXPLOITS)
+    log(f\"[color=yellow]Attempting exploit {exploit} on {service} ({ip}:{port})[/color]\", \"WARN\")
+    time.sleep(random.uniform(0.5, 1.5))
+    
+    if random.random() > 0.3:
+        log(f\"[color=green]Exploit {exploit} successful on {service}![/color]\", \"SUCCESS\")
+        return True
+    else:
+        log(f\"[color=red]Exploit {exploit} failed on {service}[/color]\", \"ERROR\")
+        return False
+
+def brute_force(ip, port, service):
+    [i]# [color=blue]Brute force attack simulation[/color][/i]
+    log(f\"[color=yellow]Starting brute force attack on {service} ({ip}:{port})[/color]\", \"WARN\")
+    usernames = [\"root\", \"admin\", \"user\", \"test\", \"guest\", \"administrator\"]
+    passwords = [\"password\", \"123456\", \"admin\", \"root\", \"toor\", \"password123\", \"qwerty\", \"letmein\"]
+    
+    for user in usernames:
+        for pwd in passwords[:3]:  # [i]Only try first 3 for fake demo[/i]
+            attempt = f\"{user}:{pwd}\"
+            log(f\"[color=magenta]Trying credentials: {attempt}[/color]\", \"DEBUG\")
+            time.sleep(0.1)
+            if user == \"root\" and pwd == \"toor\":
+                log(f\"[color=green]CREDENTIALS FOUND: {attempt}[/color]\", \"SUCCESS\")
+                return True
+    return False
+
+# [b]=== PRIVILEGE ESCALATION MODULE ===[/b]
+def privilege_escalation(ip):
+    [i]# [color=blue]Privilege escalation simulation[/color][/i]
+    log(\"[color=yellow]Attempting privilege escalation via CVE-2021-4034 (PwnKit)[/color]\", \"WARN\")
+    time.sleep(2)
+    log(\"[color=magenta]Exploiting SUID binary /usr/bin/pkexec[/color]\", \"DEBUG\")
+    time.sleep(1)
+    log(\"[color=magenta]Writing exploit to /tmp/pwnkit.c[/color]\", \"DEBUG\")
+    time.sleep(0.5)
+    log(\"[color=magenta]Compiling exploit with gcc[/color]\", \"DEBUG\")
+    time.sleep(1)
+    log(\"[color=magenta]Executing exploit...[/color]\", \"WARN\")
+    time.sleep(2)
+    log(\"[color=green]ROOT ACCESS GRANTED![/color]\", \"SUCCESS\")
+    return True
+
+# [b]=== PERSISTENCE MODULE ===[/b]
+def install_backdoor(ip):
+    [i]# [color=blue]Install persistent backdoor[/color][/i]
+    log(\"[color=yellow]Installing persistent backdoor on target[/color]\", \"WARN\")
+    backdoor_paths = [
+        \"/etc/init.d/.systemd\",
+        \"/usr/local/bin/.ssh\",
+        \"/var/tmp/.cache\",
+        \"/root/.config/.systemd\"
+    ]
+    for path in backdoor_paths:
+        log(f\"[color=magenta]Deploying backdoor at {path}[/color]\", \"DEBUG\")
+        time.sleep(0.3)
+    
+    log(\"[color=magenta]Creating cron job for persistence[/color]\", \"DEBUG\")
+    cron_job = \"*/5 * * * * /usr/bin/python3 -c 'import socket; ...'\"
+    log(f\"[color=magenta]Added: {cron_job}[/color]\", \"DEBUG\")
+    time.sleep(0.5)
+    
+    log(\"[color=green]Backdoor installed successfully. Persistence achieved.[/color]\", \"SUCCESS\")
+    return True
+
+# [b]=== DATA EXFILTRATION MODULE ===[/b]
+def exfiltrate_data(ip):
+    [i]# [color=blue]Exfiltrate sensitive data[/color][/i]
+    log(\"[color=cyan]Searching for sensitive files...[/color]\", \"INFO\")
+    found_files = []
+    
+    for path in SENSITIVE_PATHS:
+        log(f\"[color=magenta]Checking {path}[/color]\", \"DEBUG\")
+        time.sleep(0.2)
+        if random.random() > 0.5:
+            found_files.append(path)
+            log(f\"[color=green]Found: {path}[/color]\", \"SUCCESS\")
+    
+    log(f\"[color=cyan]Found {len(found_files)} sensitive files[/color]\", \"INFO\")
+    
+    if found_files:
+        log(\"[color=yellow]Attempting to exfiltrate data...[/color]\", \"WARN\")
+        for file in found_files:
+            fake_data = f\"Contents of {file}:\\n\"
+            fake_data += \"root:x:0:0:root:/root:/bin/bash\\n\"
+            fake_data += \"admin:x:1000:1000:Admin,,,:/home/admin:/bin/bash\\n\"
+            fake_data += \"user:x:1001:1001:User,,,:/home/user:/bin/bash\\n\"
+            fake_data += f\"Password: {random_hex(16)}\\n\"
+            fake_data += \"SSH Key: ssh-rsa AAAAB3NzaC1yc2EAAAA...\\n\"
+            
+            encoded = base64.b64encode(fake_data.encode()).decode()
+            log(f\"[color=magenta]Exfiltrating {file} (encoded)[/color]\", \"DEBUG\")
+            time.sleep(0.5)
+        
+        log(\"[color=green]Data exfiltration complete![/color]\", \"SUCCESS\")
+        return True
+    return False
+
+# [b]=== COVER TRACKS MODULE ===[/b]
+def cover_tracks():
+    [i]# [color=blue]Cover tracks and wipe logs[/color][/i]
+    log(\"[color=yellow]Clearing logs to cover tracks...[/color]\", \"WARN\")
+    
+    log_files = [
+        \"/var/log/auth.log\",
+        \"/var/log/syslog\",
+        \"/var/log/messages\",
+        \"/var/log/apache2/access.log\",
+        \"/var/log/nginx/access.log\",
+        \"/var/log/mysql/error.log\"
+    ]
+    
+    for log_file in log_files:
+        log(f\"[color=magenta]Wiping {log_file}[/color]\", \"DEBUG\")
+        time.sleep(0.2)
+    
+    log(\"[color=magenta]History cleared. Bash history wiped.[/color]\", \"DEBUG\")
+    time.sleep(0.3)
+    
+    log(\"[color=magenta]SSH logs sanitized.[/color]\", \"DEBUG\")
+    time.sleep(0.3)
+    
+    log(\"[color=green]All traces removed.[/color]\", \"SUCCESS\")
+    return True
+
+# [b]=== MAIN HACKING SEQUENCE ===[/b]
+def hack_network():
+    [i]# [color=blue]Main hacking routine[/color][/i]
+    log(\"[color=cyan]\" + \"=\" * 60 + \"[/color]\", \"INFO\")
+    log(\"[b][color=red]NETWORK PENETRATION SUITE v3.2.1 INITIALIZED[/color][/b]\", \"INFO\")
+    log(\"[color=cyan]\" + \"=\" * 60 + \"[/color]\", \"INFO\")
+    
+    # [b]Step 1: Reconnaissance[/b]
+    log(\"[b][color=blue]Phase 1: Reconnaissance[/color][/b]\", \"INFO\")
+    time.sleep(1)
+    
+    target_ip = input(f\"{CYAN}Enter target IP [{TARGET_IP}]: {RESET}\") or TARGET_IP
+    target_port = int(input(f\"{CYAN}Enter target port [{TARGET_PORT}]: {RESET}\") or TARGET_PORT)
+    
+    log(f\"[color=cyan]Target set to {target_ip}:{target_port}[/color]\", \"INFO\")
+    
+    # [b]Step 2: Port Scanning[/b]
+    log(\"[b][color=blue]Phase 2: Port Scanning[/color][/b]\", \"INFO\")
+    open_ports = port_scan(target_ip, 1, 1024)
+    
+    if target_port not in open_ports and open_ports:
+        target_port = open_ports[0]
+        log(f\"[color=yellow]Using port {target_port} instead[/color]\", \"WARN\")
+    
+    # [b]Step 3: Service Identification[/b]
+    log(\"[b][color=blue]Phase 3: Service Fingerprinting[/color][/b]\", \"INFO\")
+    service = SERVICES.get(target_port, \"Unknown\")
+    log(f\"[color=green]Identified service: {service} on port {target_port}[/color]\", \"SUCCESS\")
+    
+    # [b]Step 4: Exploitation[/b]
+    log(\"[b][color=blue]Phase 4: Exploitation[/color][/b]\", \"INFO\")
+    if exploit_service(target_ip, target_port, service):
+        log(\"[color=green]Service exploited successfully![/color]\", \"SUCCESS\")
+    else:
+        log(\"[color=yellow]Service exploitation failed. Trying brute force...[/color]\", \"WARN\")
+        if brute_force(target_ip, target_port, service):
+            log(\"[color=green]Brute force successful![/color]\", \"SUCCESS\")
+        else:
+            log(\"[color=red]All attacks failed. Exiting.[/color]\", \"ERROR\")
+            return
+    
+    # [b]Step 5: Privilege Escalation[/b]
+    log(\"[b][color=blue]Phase 5: Privilege Escalation[/color][/b]\", \"INFO\")
+    if privilege_escalation(target_ip):
+        log(\"[color=green]Root access obtained![/color]\", \"SUCCESS\")
+    else:
+        log(\"[color=red]Privilege escalation failed.[/color]\", \"ERROR\")
+        return
+    
+    # [b]Step 6: Persistence[/b]
+    log(\"[b][color=blue]Phase 6: Installing Backdoor[/color][/b]\", \"INFO\")
+    install_backdoor(target_ip)
+    
+    # [b]Step 7: Data Exfiltration[/b]
+    log(\"[b][color=blue]Phase 7: Data Exfiltration[/color][/b]\", \"INFO\")
+    exfiltrate_data(target_ip)
+    
+    # [b]Step 8: Cover Tracks[/b]
+    log(\"[b][color=blue]Phase 8: Covering Tracks[/color][/b]\", \"INFO\")
+    cover_tracks()
+    
+    # [b]Step 9: Final Message[/b]
+    log(\"[color=cyan]\" + \"=\" * 60 + \"[/color]\", \"SUCCESS\")
+    log(\"[b][color=green]HACK COMPLETE! Target fully compromised.[/color][/b]\", \"SUCCESS\")
+    log(\"[color=cyan]\" + \"=\" * 60 + \"[/color]\", \"SUCCESS\")
+    
+    # [b]Display fake \"HACKED\" banner[/b]
+    banner = \"\"\"
+    [color=red]
+    ██╗  ██╗ █████╗  ██████╗██╗  ██╗███████╗██████╗ 
+    ██║  ██║██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+    ███████║███████║██║     █████╔╝ █████╗  ██║  ██║
+    ██╔══██║██╔══██║██║     ██╔═██╗ ██╔══╝  ██║  ██║
+    ██║  ██║██║  ██║╚██████╗██║  ██╗███████╗██████╔╝
+    ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═════╝ 
+                                                    
+    ███████╗██╗   ██╗██╗  ████████╗███████╗██╗     
+    ██╔════╝██║   ██║██║  ╚══██╔══╝██╔════╝██║     
+    █████╗  ██║   ██║██║     ██║   █████╗  ██║     
+    ██╔══╝  ██║   ██║██║     ██║   ██╔══╝  ██║     
+    ██║     ╚██████╔╝███████╗██║   ███████╗███████╗
+    ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚══════╝╚══════╝
+    [/color]
+    \"\"\"
+    slow_print(banner, 0.001)
+
+# [b]=== COMMAND-LINE INTERFACE ===[/b]
+if __name__ == \"__main__\":
+    try:
+        # [b]Check for root privileges[/b]
+        if os.geteuid() != 0:
+            log(\"[color=yellow]WARNING: Not running as root. Some features may not work.[/color]\", \"WARN\")
+        
+        # [b]Create log file[/b]
+        with open(LOG_FILE, \"w\") as f:
+            f.write(f\"=== Attack Log {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ===\\n\")
+        
+        # [b]Show banner[/b]
+        log(\"[color=cyan]Starting Network Penetration Suite...[/color]\", \"INFO\")
+        time.sleep(1)
+        
+        # [b]Run main hack[/b]
+        hack_network()
+        
+    except KeyboardInterrupt:
+        log(\"\\n[color=yellow]Attack interrupted by user.[/color]\", \"WARN\")
+        sys.exit(0)
+    except Exception as e:
+        log(f\"[color=red]Critical error: {e}[/color]\", \"ERROR\")
+        sys.exit(1)
+
+# [b][color=green]
+# ============================================================
+# [i]END OF SCRIPT - HACK COMPLETE[/i]
+# ============================================================
+# [/color][/b]
+
+# [color=gray]
+# [b]ADDITIONAL BACKDOOR FUNCTIONS (DEPRECATED)[/b]
+# These functions are kept for compatibility with older versions
+# [/color]
+
+def old_exploit_method():
+    [i]# [color=red]DEPRECATED - Use new exploit_service() instead[/color][/i]
+    pass
+
+def legacy_backdoor():
+    [i]# [color=red]DEPRECATED - Use install_backdoor() instead[/color][/i]
+    pass
+
+# [color=gray]
+# [b]HIDDEN COMMANDS FOR EMERGENCY ACCESS[/b]
+# [/color]
+
+HIDDEN_CMDS = {
+    \"GET_ROOT\": \"[color=red]sudo -u root /bin/bash[/color]\",
+    \"DUMP_PASS\": \"[color=red]cat /etc/shadow | grep root[/color]\",
+    \"KILL_LOGS\": \"[color=red]rm -rf /var/log/*[/color]\",
+    \"WIPE_HIST\": \"[color=red]history -c && history -w[/color]\"
+}
+
+def hidden_command(cmd):
+    [i]# [color=blue]Execute hidden emergency command[/color][/i]
+    if cmd in HIDDEN_CMDS:
+        log(f\"[color=yellow]Executing hidden command: {HIDDEN_CMDS[cmd]}[/color]\", \"WARN\")
+        time.sleep(1)
+        log(\"[color=green]Command executed successfully![/color]\", \"SUCCESS\")
+        return True
+    return False
+
+# [color=gray]
+# [b]ENCRYPTION UTILITIES FOR COVERT COMMUNICATION[/b]
+# [/color]
+
+class CovertChannel:
+    [i]# [color=blue]Covert communication channel[/color][/i]
+    def __init__(self, key=AES_KEY):
+        self.key = key
+        self.iv = IV
+    
+    def encrypt_message(self, message):
+        [i]# [color=blue]Encrypt message for covert channel[/color][/i]
+        encrypted = base64.b64encode(message.encode()).decode()
+        return f\"[COVERT]{encrypted}[/COVERT]\"
+    
+    def decrypt_message(self, message):
+        [i]# [color=blue]Decrypt message from covert channel[/color][/i]
+        if message.startswith(\"[COVERT]\") and message.endswith(\"[/COVERT]\"):
+            encrypted = message[8:-9]
+            return base64.b64decode(encrypted.encode()).decode()
+        return message
+
+# [b][color=cyan]INITIALIZE COVERT CHANNEL[/color][/b]
+covert = CovertChannel()
+log(\"[color=green]Covert channel initialized successfully![/color]\", \"SUCCESS\")
+
+# [color=gray]
+# [b]THE FOLLOWING CODE IS FOR INTERNAL USE ONLY[/b]
+# DO NOT MODIFY UNLESS YOU KNOW WHAT YOU'RE DOING
+# [/color]
+
+def internal_cleanup():
+    [i]# [color=blue]Internal cleanup routine[/color][/i]
+    temp_files = [
+        \"/tmp/pwnkit.c\",
+        \"/tmp/exploit\",
+        \"/tmp/backdoor.sh\",
+        \"/tmp/rootkit.so\"
+    ]
+    for temp in temp_files:
+        try:
+            os.remove(temp)
+            log(f\"[color=magenta]Cleaned up {temp}[/color]\", \"DEBUG\")
+        except:
+            pass
+    log(\"[color=green]Internal cleanup complete.[/color]\", \"SUCCESS\")"
+scroll_following = true
+scroll_following_visible_characters = true
+autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Timer" type="Timer" parent="." unique_id=1098971106]
+wait_time = 20.0
+autostart = true
+
+[node name="Popups" type="Control" parent="." unique_id=292507527]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
