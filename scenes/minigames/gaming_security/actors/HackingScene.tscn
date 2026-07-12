@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://c6iycc7g5w71f"]
+
+[ext_resource type="Script" uid="uid://ts4dtswbrtn7" path="res://scenes/minigames/gaming_security/actors/hacking_scene.gd" id="1_bk2fs"]
+[ext_resource type="StyleBox" uid="uid://b53txwjystlc4" path="res://scenes/minigames/password_security/reso/panel.tres" id="2_pc0f0"]
+[ext_resource type="FontFile" uid="uid://crhrry2yonump" path="res://scenes/minigames/gaming_security/reso/Roboto-Regular.ttf" id="3_8ywxd"]
+
+[node name="HackingScene" type="Control" unique_id=2060549719]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bk2fs")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=600239186]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11288101, 0.11859331, 0.1537481, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1874615106]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -275.0
+offset_top = 27.0
+offset_right = 275.0
+offset_bottom = 50.0
+grow_horizontal = 2
+text = "YOU ARE BEING HACKED! CLOSE THE CAT VIDEOS TO COUNTER-ATTACK."
+horizontal_alignment = 1
+
+[node name="Main" type="Panel" parent="." unique_id=457533579]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 303.0
+offset_top = 145.0
+offset_right = -303.0
+offset_bottom = -145.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_pc0f0")
+
+[node name="Label" type="Label" parent="Main" unique_id=172039857]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -134.0
+offset_top = 27.0
+offset_right = 134.0
+offset_bottom = 50.0
+grow_horizontal = 2
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Main" unique_id=461710863]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -43.0
+offset_right = -25.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+value = 6.65
+
+[node name="Label" type="Label" parent="Main/ProgressBar" unique_id=1581991930]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -134.0
+offset_top = -26.0
+offset_right = 134.0
+offset_bottom = -7.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.26405665, 0.43579945, 0.2754511, 1)
+theme_override_fonts/font = ExtResource("3_8ywxd")
+text = "Progress..."
+horizontal_alignment = 1
