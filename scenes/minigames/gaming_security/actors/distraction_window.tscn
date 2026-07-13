@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bpv743uo44nlb"]
+
+[ext_resource type="Script" uid="uid://brm0r5qimq3b5" path="res://scenes/minigames/gaming_security/actors/distraction_window.gd" id="2_mtpak"]
+[ext_resource type="Texture2D" uid="uid://dftlont6rr065" path="res://modernuserinterface-win/16x16/Modern_UI_Style_2.png" id="2_tp5y5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7gw0q"]
+texture = ExtResource("2_tp5y5")
+texture_margin_left = 6.0
+texture_margin_top = 8.0
+texture_margin_right = 6.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(12, 235, 24, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iof0b"]
+atlas = ExtResource("2_tp5y5")
+region = Rect2(144, 352, 16, 16)
+
+[node name="DistractionWindow" type="Panel" unique_id=1197594170]
+offset_right = 415.0
+offset_bottom = 348.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7gw0q")
+script = ExtResource("2_mtpak")
+
+[node name="Close" type="TextureButton" parent="." unique_id=1518646863]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -39.0
+offset_top = 8.0
+offset_right = -7.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture_normal = SubResource("AtlasTexture_iof0b")
+texture_pressed = SubResource("AtlasTexture_iof0b")
+texture_hover = SubResource("AtlasTexture_iof0b")
+texture_focused = SubResource("AtlasTexture_iof0b")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

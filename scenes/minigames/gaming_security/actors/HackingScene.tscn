@@ -36,7 +36,7 @@ offset_top = 27.0
 offset_right = 275.0
 offset_bottom = 50.0
 grow_horizontal = 2
-text = "YOU ARE BEING HACKED! CLOSE THE CAT VIDEOS TO COUNTER-ATTACK."
+text = "YOU ARE BEING HACKED! CLOSE THE CAT VIDEOS DISTRACTIONS."
 horizontal_alignment = 1
 
 [node name="Main" type="Panel" parent="." unique_id=457533579]
@@ -620,7 +620,17 @@ visible_characters = 0
 visible_ratio = 0.0
 
 [node name="Timer" type="Timer" parent="." unique_id=1098971106]
-wait_time = 20.0
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="EndTimer" type="Timer" parent="." unique_id=1167908885]
+one_shot = true
+autostart = true
+
+[node name="DistractionPopupTimer" type="Timer" parent="." unique_id=731490897]
+wait_time = 3.0
+one_shot = true
 autostart = true
 
 [node name="Popups" type="Control" parent="." unique_id=292507527]
@@ -628,4 +638,10 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="DistractionPopupCooldown" type="Timer" parent="." unique_id=797729837]
+one_shot = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_end_timer_timeout"]
+[connection signal="timeout" from="DistractionPopupTimer" to="." method="_on_distraction_popup_timer_timeout"]
+[connection signal="timeout" from="DistractionPopupCooldown" to="." method="_on_distraction_popup_cooldown_timeout"]
