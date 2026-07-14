@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://brm0r5qimq3b5" path="res://scenes/minigames/gaming_security/actors/distraction_window.gd" id="2_mtpak"]
 [ext_resource type="Texture2D" uid="uid://dftlont6rr065" path="res://modernuserinterface-win/16x16/Modern_UI_Style_2.png" id="2_tp5y5"]
+[ext_resource type="SpriteFrames" uid="uid://cfw0iwnbyrw5q" path="res://scenes/minigames/gaming_security/art/cat2.tres" id="3_tp5y5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7gw0q"]
 texture = ExtResource("2_tp5y5")
@@ -38,5 +39,38 @@ texture_hover = SubResource("AtlasTexture_iof0b")
 texture_focused = SubResource("AtlasTexture_iof0b")
 ignore_texture_size = true
 stretch_mode = 5
+
+[node name="Label" type="Label" parent="." unique_id=898314444]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 63.0
+offset_right = 381.0
+offset_bottom = 86.0
+text = "TOP 10 SILLY CATS OF ALL TIME (MUST WATCH)"
+
+[node name="Label3" type="Label" parent="." unique_id=1764824207]
+layout_mode = 1
+offset_left = 21.0
+offset_top = 21.0
+offset_right = 169.0
+offset_bottom = 44.0
+text = "SO CUTE!"
+
+[node name="Label2" type="Label" parent="." unique_id=1081823378]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 87.0
+offset_right = 168.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0.44995803, 0.6466652, 0.9607665, 1)
+theme_override_font_sizes/font_size = 12
+text = "Click here"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=965387170]
+position = Vector2(207, 235)
+scale = Vector2(0.94690275, 0.9469028)
+sprite_frames = ExtResource("3_tp5y5")
+autoplay = "default"
+frame_progress = 0.68885523
 
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

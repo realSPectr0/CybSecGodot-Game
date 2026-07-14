@@ -1,0 +1,110 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cfw0iwnbyrw5q"]
+
+[ext_resource type="Texture2D" uid="uid://dkdel0a6dyjvj" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-001.png" id="1_advdq"]
+[ext_resource type="Texture2D" uid="uid://tj2a7kphcg1p" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-002.png" id="2_mfako"]
+[ext_resource type="Texture2D" uid="uid://bclner0848fky" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-003.png" id="3_eqjne"]
+[ext_resource type="Texture2D" uid="uid://os7h7sgtpd23" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-004.png" id="4_joojw"]
+[ext_resource type="Texture2D" uid="uid://c25hep5r6px1h" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-005.png" id="5_8lucc"]
+[ext_resource type="Texture2D" uid="uid://bfvaju6olqvfh" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-006.png" id="6_do3ol"]
+[ext_resource type="Texture2D" uid="uid://ddwsqg5pfsvms" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-007.png" id="7_p8n0o"]
+[ext_resource type="Texture2D" uid="uid://b51c8g7e1xa4o" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-008.png" id="8_8132y"]
+[ext_resource type="Texture2D" uid="uid://c60m66cmhe5mv" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-009.png" id="9_ltl3a"]
+[ext_resource type="Texture2D" uid="uid://d30xsebsl22th" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-010.png" id="10_ghnre"]
+[ext_resource type="Texture2D" uid="uid://cov2vt4kdcrex" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-011.png" id="11_stlmv"]
+[ext_resource type="Texture2D" uid="uid://db3s5dcoqfsik" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-012.png" id="12_rv4xc"]
+[ext_resource type="Texture2D" uid="uid://ccco5y52xu44y" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-013.png" id="13_p5q5l"]
+[ext_resource type="Texture2D" uid="uid://do8b4kqikceok" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-014.png" id="14_unhrl"]
+[ext_resource type="Texture2D" uid="uid://dyuf2w8yxxdu2" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-015.png" id="15_qqn6v"]
+[ext_resource type="Texture2D" uid="uid://bg4p528dyf2jr" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-016.png" id="16_dfw0k"]
+[ext_resource type="Texture2D" uid="uid://q5p343qjemb7" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-017.png" id="17_8ruuk"]
+[ext_resource type="Texture2D" uid="uid://dxem5sfyjog60" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-018.png" id="18_k2oft"]
+[ext_resource type="Texture2D" uid="uid://cfg4aiei1jydt" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-019.png" id="19_3tt24"]
+[ext_resource type="Texture2D" uid="uid://cq53m7mqdl3x2" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-020.png" id="20_0q7sy"]
+[ext_resource type="Texture2D" uid="uid://oegru1kv2lhp" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-021.png" id="21_tjyqu"]
+[ext_resource type="Texture2D" uid="uid://bqwrq2gggc0b6" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-022.png" id="22_glgxf"]
+[ext_resource type="Texture2D" uid="uid://bm8408mu501nj" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-023.png" id="23_k8jif"]
+[ext_resource type="Texture2D" uid="uid://du1x4siqtd0tx" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-024.png" id="24_d5wde"]
+[ext_resource type="Texture2D" uid="uid://stotxvuoo2ad" path="res://scenes/minigames/gaming_security/art/ezgif-552cfa2783408ed6-png-split/ezgif-frame-025.png" id="25_3i1rw"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_advdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mfako")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eqjne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_joojw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8lucc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_do3ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p8n0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8132y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ltl3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ghnre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_stlmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rv4xc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_p5q5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_unhrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qqn6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dfw0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8ruuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_k2oft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3tt24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0q7sy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_tjyqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_glgxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_k8jif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_d5wde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3i1rw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
