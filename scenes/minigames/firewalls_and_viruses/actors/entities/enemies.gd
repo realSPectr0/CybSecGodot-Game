@@ -21,6 +21,11 @@ func _on_hurtbox_hit() -> void:
 	$HitFX.play("flash")
 	
 	get_parent().play_sfx('Hit')
+	
+	var df = load('res://scenes/minigames/firewalls_and_viruses/actors/objs/DamageFloater.tscn').instantiate()
+	df.global_position = global_position
+	df.get_node('Label').text = '%d'%  get_parent().player.damage
+	get_parent().add_child(df)
 
 
 func _on_hurtbox_zero() -> void:
