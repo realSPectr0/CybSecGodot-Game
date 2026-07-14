@@ -3,9 +3,6 @@ extends Node2D
 
 var money = 0
 
-var stage = 1
-var stage_max = 5
-
 
 func _ready() -> void:
 	$UI/ProgressBar.max_value = $StageTimer.wait_time
@@ -30,7 +27,7 @@ func spawn_hacker():
 	elif random_spawn == $SpawnPoints/Right:
 		e.dir = Vector2.LEFT
 	
-	add_child(e)
+	$HackersContainer.add_child(e)
 
 
 func _on_gui_input(event: InputEvent) -> void:
@@ -38,7 +35,10 @@ func _on_gui_input(event: InputEvent) -> void:
 
 
 func _on_stage_timer_timeout() -> void:
-	$StageTimer.start()
+	# game over
+	
+	
+	queue_free()
 
 
 func _on_hacker_spawn_timer_timeout() -> void:
@@ -46,6 +46,9 @@ func _on_hacker_spawn_timer_timeout() -> void:
 
 
 func _on_pc_area_area_entered(area: Area2D) -> void:
+	for i in $HackersContainer.get_children():
+		i.queue_free()
+	
 	var e = load('res://scenes/minigames/gaming_security/actors/HackingScene.tscn').instantiate()
 	$UI.add_child(e)
 	
