@@ -83,6 +83,12 @@ _data = {
 &"flash": SubResource("Animation_aatj4")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_se8m8"]
+bg_color = Color(0.13008696, 0.13008696, 0.13008687, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y3kor"]
+bg_color = Color(0.66666055, 0.22344777, 0.20961365, 1)
+
 [node name="Enemies" type="Node2D" unique_id=895441982]
 script = ExtResource("1_xp5lm")
 
@@ -101,6 +107,23 @@ shape = SubResource("CircleShape2D_se8m8")
 
 [node name="HitFX" type="AnimationPlayer" parent="." unique_id=723170966]
 libraries/ = SubResource("AnimationLibrary_lt274")
+
+[node name="HPBar" type="ProgressBar" parent="." unique_id=218335369]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -21.0
+offset_top = 17.0
+offset_right = 21.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_se8m8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_y3kor")
+value = 40.0
+show_percentage = false
 
 [connection signal="hit" from="Hurtbox" to="." method="_on_hurtbox_hit"]
 [connection signal="zero" from="Hurtbox" to="." method="_on_hurtbox_zero"]

@@ -5,12 +5,16 @@ var move_speed = 50.0
 
 func _ready() -> void:
 	move_speed = get_parent().player.virus_movement
+	
+	$HPBar.max_value = $Hurtbox.hp
 
 
 func _physics_process(delta: float) -> void:
 	#var dir = global_position.direction_to(get_parent().player.global_position)
 	var dir = Vector2.LEFT
 	global_position += dir * move_speed * delta
+	
+	$HPBar.value = $Hurtbox.hp
 
 
 func set_hp(new_hp):
