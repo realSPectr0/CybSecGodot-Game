@@ -151,7 +151,8 @@ func check_password():
 
 
 func complete_minigame():
-	queue_free()
+	GameManager.finish_minigame()
+	#queue_free()
 
 
 func _on_password_text_changed(new_text: String) -> void:

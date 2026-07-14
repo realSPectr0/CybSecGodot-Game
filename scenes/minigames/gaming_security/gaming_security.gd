@@ -37,9 +37,9 @@ func _on_gui_input(event: InputEvent) -> void:
 
 func _on_stage_timer_timeout() -> void:
 	# game over
+	GameManager.finish_minigame()
 	
-	
-	queue_free()
+	#queue_free()
 
 
 func _on_hacker_spawn_timer_timeout() -> void:
