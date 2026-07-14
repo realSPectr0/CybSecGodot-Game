@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://drr1f7gneijwu" path="res://Modern_Office_Revamped_v1.2/1_Room_Builder_Office/Room_Builder_Office_16x16.png" id="2_4fubd"]
 [ext_resource type="Texture2D" uid="uid://cvjhv8kqoghix" path="res://Modern_Office_Revamped_v1.2/2_Modern_Office_Black_Shadow/Modern_Office_Black_Shadow.png" id="2_k6wgn"]
 [ext_resource type="Texture2D" uid="uid://dap4xw4ecqhvc" path="res://Modern_Office_Revamped_v1.2/7_Modern_Office_Previous_Version/Modern_Office_old/Office_walls_floors_16x16.png" id="3_savdu"]
+[ext_resource type="PackedScene" uid="uid://d0iinxi3foiu0" path="res://scenes/minigames/gaming_security/slash_line.tscn" id="5_savdu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gthmc"]
 texture = ExtResource("2_4fubd")
@@ -588,6 +589,8 @@ horizontal_alignment = 1
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Text" unique_id=1097247013]
 libraries/ = SubResource("AnimationLibrary_gthmc")
 autoplay = &"new_animation"
+
+[node name="SlashLine" parent="." unique_id=1800426340 instance=ExtResource("5_savdu")]
 
 [connection signal="area_entered" from="PC/PCArea" to="." method="_on_pc_area_area_entered"]
 [connection signal="timeout" from="StageTimer" to="." method="_on_stage_timer_timeout"]

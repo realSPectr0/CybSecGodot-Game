@@ -4,6 +4,7 @@ extends Node2D
 var money = 0
 
 
+
 func _ready() -> void:
 	$UI/ProgressBar.max_value = $StageTimer.wait_time
 
@@ -46,6 +47,9 @@ func _on_hacker_spawn_timer_timeout() -> void:
 
 
 func _on_pc_area_area_entered(area: Area2D) -> void:
+	
+	#return
+	
 	for i in $HackersContainer.get_children():
 		i.queue_free()
 	

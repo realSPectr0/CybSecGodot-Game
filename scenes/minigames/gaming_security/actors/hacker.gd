@@ -18,6 +18,8 @@ func _ready() -> void:
 		$AnimatedSprite2D.play('run_up')
 	elif dir == Vector2.DOWN:
 		$AnimatedSprite2D.play('run_down')
+	
+	$HPBar.max_value = hp
 
 
 func _physics_process(delta: float) -> void:
@@ -25,6 +27,8 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	global_position += dir * move_speed * delta
+	
+	$HPBar.value = hp
 
 
 func _on_area_2d_mouse_entered() -> void:
