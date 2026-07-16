@@ -7,6 +7,7 @@ var freeze = false
 var last_direction = "down"  # Default facing direction
 var interacting = false
 
+
 func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_ESCAPE):
 		print(true)
@@ -19,7 +20,12 @@ func _process(delta: float) -> void:
 		set_physics_process(false)
 	else:
 		set_physics_process(true)
+
+
 func _physics_process(delta: float) -> void:
+	if freeze:
+		return
+	
 	var direction = Vector2.ZERO
 	
 	if Input.is_key_pressed(KEY_W):
@@ -57,3 +63,12 @@ func update_animation(direction: Vector2) -> void:
 				last_direction = "down"
 		
 		animated_sprite.play("walk_" + last_direction)
+
+
+func pop_to_ui(scene):
+	for i in $UI/Popup.get_children():
+		i.queue_free()
+	
+	freeze = true
+	
+	$UI/Popup.add_child(scene.instantiate())

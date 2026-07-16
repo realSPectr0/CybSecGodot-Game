@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://b2ynrkw2abah0" path="res://scenes/hard_worker.gd" id="8_v5q8u"]
 [ext_resource type="Texture2D" uid="uid://d1ihvlmx145ye" path="res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/Bob_idle_anim_16x16.png" id="11_c1rvy"]
 [ext_resource type="Script" uid="uid://dbjn77swuk08u" path="res://scenes/level_1npc.gd" id="13_ov5yj"]
+[ext_resource type="PackedScene" uid="uid://c4lq05xlvn71c" path="res://scenes/minigames/password_security/main.tscn" id="13_pflgl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_llsdn"]
 texture = ExtResource("2_vny4q")
@@ -3103,7 +3104,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2xpee")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_down",
 "speed": 5.0
 }, {
@@ -3126,7 +3127,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_muvkp")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_left",
 "speed": 5.0
 }, {
@@ -3149,7 +3150,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7a4g2")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_right",
 "speed": 5.0
 }, {
@@ -3172,7 +3173,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_spr1k")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_up",
 "speed": 5.0
 }]
@@ -3297,7 +3298,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qa273")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_down",
 "speed": 5.0
 }, {
@@ -3320,7 +3321,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_b4tx4")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_left",
 "speed": 5.0
 }, {
@@ -3343,7 +3344,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_05n35")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_right",
 "speed": 5.0
 }, {
@@ -3366,7 +3367,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_it7fq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_up",
 "speed": 5.0
 }]
@@ -3488,7 +3489,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n1h8b")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_down",
 "speed": 5.0
 }, {
@@ -3511,7 +3512,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_o7i0g")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_left",
 "speed": 5.0
 }, {
@@ -3534,7 +3535,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t2r5r")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_right",
 "speed": 5.0
 }, {
@@ -3557,7 +3558,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5lknj")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_up",
 "speed": 5.0
 }]
@@ -3925,6 +3926,8 @@ y_sort_enabled = true
 position = Vector2(539.00006, 1019)
 scale = Vector2(2.5, 2.5)
 script = ExtResource("8_v5q8u")
+minigame_scene = ExtResource("13_pflgl")
+overhead_title = "Password Security"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker15" unique_id=684151930]
 position = Vector2(0, 15.649994)

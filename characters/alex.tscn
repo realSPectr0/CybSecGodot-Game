@@ -4,9 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cj2fi7j5pyvej" path="res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/Alex_idle_anim_16x16.png" id="2_wtoyo"]
 [ext_resource type="Texture2D" uid="uid://27o7ibix6urj" path="res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/Alex_run_16x16.png" id="3_3vean"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ft1p4"]
-size = Vector2(14.5, 9)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_xsrno"]
 atlas = ExtResource("2_wtoyo")
 region = Rect2(288, 0, 16, 32)
@@ -216,7 +213,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qmxx2")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_down",
 "speed": 6.0
 }, {
@@ -239,7 +236,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nirlg")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_left",
 "speed": 6.0
 }, {
@@ -262,7 +259,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_45qoo")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_right",
 "speed": 6.0
 }, {
@@ -285,7 +282,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mmkfc")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_up",
 "speed": 6.0
 }, {
@@ -308,9 +305,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ckwv1")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk_down",
-"speed": 6.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -328,9 +325,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nu7vl")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk_left",
-"speed": 6.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -351,9 +348,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iy667")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk_right",
-"speed": 6.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -374,28 +371,39 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4qahi")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk_up",
-"speed": 6.0
+"speed": 10.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ft1p4"]
+size = Vector2(9.5, 9)
 
 [node name="Alex" type="CharacterBody2D" unique_id=1092919849 groups=["Player"]]
 script = ExtResource("1_0hfun")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=502267153]
-position = Vector2(-0.25, 11.5)
-shape = SubResource("RectangleShape2D_ft1p4")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1716424355]
 texture_filter = 1
+position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_g4jyg")
-animation = &"idle_left"
-frame_progress = 0.29101244
+animation = &"walk_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=502267153]
+position = Vector2(-0.25, -2)
+shape = SubResource("RectangleShape2D_ft1p4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=86703185]
-zoom = Vector2(2, 2)
+zoom = Vector2(1.5, 1.5)
 limit_enabled = false
 limit_left = 0
 limit_top = 0
 limit_right = 1152
 limit_bottom = 648
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1711189355]
+target_position = Vector2(16, 0)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2117119241]
+
+[node name="Popup" type="CanvasLayer" parent="UI" unique_id=1845755248]
+layer = 101
