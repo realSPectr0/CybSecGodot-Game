@@ -3194,7 +3194,7 @@ script = ExtResource("1_i68so")
 [node name="player" parent="." unique_id=1092919849 instance=ExtResource("1_gm810")]
 unique_name_in_owner = true
 y_sort_enabled = true
-position = Vector2(1195.0001, 216.00003)
+position = Vector2(1179.0001, 106.00002)
 scale = Vector2(2.5, 2.5)
 menu_ui_file = "res://scenes/menu_ui.tscn"
 
