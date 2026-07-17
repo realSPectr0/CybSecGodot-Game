@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dciktokephrrt"
+path="res://.godot/imported/receptionist_welcome.dialogue-5ef4310c41053cdab8a4df64e42d8c0b.tres"
+
+[deps]
+
+source_file="res://reso/receptionist_welcome.dialogue"
+dest_files=["res://.godot/imported/receptionist_welcome.dialogue-5ef4310c41053cdab8a4df64e42d8c0b.tres"]
+
+[params]
+
+defaults=true

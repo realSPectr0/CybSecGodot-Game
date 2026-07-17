@@ -5,13 +5,23 @@ extends CharacterBody2D
 var player_in_range = false
 var player_ref = null
 
+
+
+func _ready() -> void:
+	DialogueManager.dialogue_ended.connect(func(res):
+		if player_in_range:
+			var player = get_tree().get_nodes_in_group("Player")[0]
+			player.freeze = false
+		)
+
+
 func _process(_delta):
 	face_player()
 	animated_sprite.play()
 	# Check if player is nearby AND Space (ui_accept) is pressed
-	if player_in_range and Input.is_key_pressed(KEY_SPACE):
-		#face_player() 
-		start_dialogue()
+	#if player_in_range and Input.is_key_pressed(KEY_SPACE):
+		##face_player() 
+		#start_dialogue()
 
 func face_player():
 	if not player_ref: 
@@ -34,8 +44,12 @@ func face_player():
 			animated_sprite.play("idle_up")
 
 func start_dialogue():
-	print('dialogue started')
-	pass
+	var player = get_tree().get_nodes_in_group("Player")[0]
+	player.freeze = true
+	player.animated_sprite.play('idle_down')
+	
+	var res = load('res://reso/receptionist_welcome.dialogue')
+	DialogueManager.show_dialogue_balloon(res, 'start')
 		# Trigger your phishing quiz or text box here
 
 # Signal from the NPC's Area2D
@@ -44,6 +58,7 @@ func _on_interaction_area_body_entered(body):
 		player_in_range = true
 		player_ref = body
 		
+		start_dialogue()
 
 # Signal from the NPC's Area2D
 func _on_interaction_area_body_exited(body):
