@@ -9,6 +9,12 @@ var interacting = false
 
 @onready var camera = $Camera2D
 
+func _ready() -> void:
+	if GameManager.character == 'male':
+		$AnimatedSprite2D.sprite_frames = load('res://reso/male_char.tres')
+	else:
+		$AnimatedSprite2D.sprite_frames = load('res://reso/female_char.tres')
+
 
 func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_ESCAPE):

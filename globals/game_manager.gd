@@ -7,6 +7,9 @@ var minigame_title: String = ''
 var previous_location : Vector2
 
 
+var character = 'male'
+
+
 func start_minigame():
 	if minigame_ref == null:
 		return
