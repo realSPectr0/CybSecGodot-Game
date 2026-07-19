@@ -24,7 +24,7 @@ func _ready() -> void:
 
 
 func _process(_delta):
-	face_player()
+	#face_player()
 	animated_sprite.play()
 	# Check if player is nearby AND Space (ui_accept) is pressed
 	#if player_in_range and Input.is_key_pressed(KEY_SPACE):
