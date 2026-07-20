@@ -37,7 +37,11 @@ func _on_gui_input(event: InputEvent) -> void:
 
 func _on_stage_timer_timeout() -> void:
 	# game over
-	GameManager.finish_minigame()
+	
+	get_tree().paused = true
+	$UI/GameOverControl.show()
+	
+	#GameManager.finish_minigame()
 	
 	#queue_free()
 
@@ -57,3 +61,7 @@ func _on_pc_area_area_entered(area: Area2D) -> void:
 	$UI.add_child(e)
 	
 	get_tree().paused = true
+
+
+func _on_ok_pressed() -> void:
+	GameManager.finish_minigame()
