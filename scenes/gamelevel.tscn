@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c5gdqo28lueux" path="res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="5_pgho5"]
 [ext_resource type="PackedScene" uid="uid://x3e0uwidxls2" path="res://scenes/receptionpc.tscn" id="7_vny4q"]
 [ext_resource type="Script" uid="uid://b2ynrkw2abah0" path="res://scenes/hard_worker.gd" id="8_v5q8u"]
+[ext_resource type="PackedScene" uid="uid://ojbjrkjj75uf" path="res://scenes/minigames/deepfakes/deepfakes.tscn" id="11_pflgl"]
 [ext_resource type="PackedScene" uid="uid://c1cy2wvemcfie" path="res://scenes/minigames/firewalls_and_viruses/firewalls_and_viruses.tscn" id="13_2xpee"]
 [ext_resource type="Script" uid="uid://dbjn77swuk08u" path="res://scenes/level_1npc.gd" id="13_ov5yj"]
 [ext_resource type="PackedScene" uid="uid://c4lq05xlvn71c" path="res://scenes/minigames/password_security/main.tscn" id="13_pflgl"]
@@ -2796,6 +2797,30 @@ position = Vector2(0, 16)
 shape = SubResource("CircleShape2D_85vpr")
 metadata/_edit_lock_ = true
 
+[node name="hard_worker13" type="CharacterBody2D" parent="Hard_workers" unique_id=1599245229]
+y_sort_enabled = true
+position = Vector2(181.00005, 543.00006)
+scale = Vector2(2.5, 2.5)
+script = ExtResource("8_v5q8u")
+minigame_scene = ExtResource("11_pflgl")
+overhead_title = "Deepfakes"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker13" unique_id=2055568176]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_4yucn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Hard_workers/hard_worker13" unique_id=2031435396]
+sprite_frames = SubResource("SpriteFrames_x8kms")
+animation = &"idle_up"
+metadata/_edit_lock_ = true
+
+[node name="interaction area" type="Area2D" parent="Hard_workers/hard_worker13" unique_id=1938783798]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker13/interaction area" unique_id=154638773]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_85vpr")
+metadata/_edit_lock_ = true
+
 [node name="hard_worker12" type="CharacterBody2D" parent="Hard_workers" unique_id=958485274]
 y_sort_enabled = true
 position = Vector2(661, 302)
@@ -2892,6 +2917,8 @@ metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="Hard_workers/hard_worker11/interaction area" to="Hard_workers/hard_worker11" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Hard_workers/hard_worker11/interaction area" to="Hard_workers/hard_worker11" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="Hard_workers/hard_worker13/interaction area" to="Hard_workers/hard_worker13" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Hard_workers/hard_worker13/interaction area" to="Hard_workers/hard_worker13" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="Hard_workers/hard_worker12/interaction area" to="Hard_workers/hard_worker12" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Hard_workers/hard_worker12/interaction area" to="Hard_workers/hard_worker12" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="Hard_workers/hard_worker15/interaction area" to="Hard_workers/hard_worker15" method="_on_interaction_area_body_entered"]

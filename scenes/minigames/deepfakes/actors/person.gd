@@ -22,7 +22,8 @@ func _ready() -> void:
 		$AnimatedSprite2D.sprite_frames = sf
 	
 	if is_fake:
-		modulate = Color.RED
+		#modulate = Color.RED
+		$ColorRect.show()
 	
 	if is_fake == false:
 		hurt_box.hp = 4

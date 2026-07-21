@@ -22,11 +22,17 @@ func _ready() -> void:
 	for i in 200:
 		var e = b.instantiate()
 		player_bullet_pool.append(e)
+	
+	$UI/GameTimeBar.max_value = $GameTimer.wait_time
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
 		shoot()
+
+
+func _physics_process(delta: float) -> void:
+	$UI/GameTimeBar.value = $GameTimer.time_left
 
 
 func get_active_bullet():
@@ -90,3 +96,7 @@ func on_person_death(ref):
 
 func on_person_hit():
 	$Hit.play()
+
+
+func _on_game_timer_timeout() -> void:
+	game_over('GAME WIN!')
