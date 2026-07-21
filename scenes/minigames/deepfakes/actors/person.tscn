@@ -7,6 +7,43 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_y3kor"]
 radius = 8.0
 
+[sub_resource type="Animation" id="Animation_lt274"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_aatj4"]
+resource_name = "flash"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(4.415934, 4.415934, 4.415934, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rj4lp"]
+_data = {
+&"RESET": SubResource("Animation_lt274"),
+&"flash": SubResource("Animation_aatj4")
+}
+
 [node name="Person" type="Node2D" unique_id=1904525826]
 script = ExtResource("1_4n10c")
 
@@ -28,9 +65,15 @@ one_shot = true
 [node name="Hurtbox" parent="." unique_id=111249865 instance=ExtResource("3_rj4lp")]
 collision_layer = 8
 collision_mask = 4
+hp = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1545554571]
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_y3kor")
 
+[node name="HitFX" type="AnimationPlayer" parent="." unique_id=142784221]
+libraries/ = SubResource("AnimationLibrary_rj4lp")
+
 [connection signal="timeout" from="ChangeDirTimer" to="." method="_on_change_dir_timer_timeout"]
+[connection signal="hit" from="Hurtbox" to="." method="_on_hurtbox_hit"]
+[connection signal="zero" from="Hurtbox" to="." method="_on_hurtbox_zero"]
