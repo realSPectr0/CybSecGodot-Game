@@ -47,12 +47,21 @@ func shoot():
 		add_child(b)
 
 
+func game_over(message = ''):
+	get_tree().paused = true
+	
+	$UI/GameOverPanel/Label.text = message
+	$UI/GameOverPanel.show()
+
+
 func spawn_person():
 	var random_spawn_point = Vector2(randf_range($SpawnPointLeft.global_position.x, $SpawnPointRight.global_position.x), $SpawnPointLeft.global_position.y)
 	
 	var e = load('res://scenes/minigames/deepfakes/actors/person.tscn').instantiate()
 	e.global_position = random_spawn_point
 	e.sf = people_sprite_frames.pick_random()
+	e.death.connect(on_person_death)
+	e.is_fake = true if randf() < 0.5 else false
 	$PersonsContainer.add_child(e)
 
 
@@ -60,3 +69,17 @@ func _on_spawn_timer_timeout() -> void:
 	spawn_person()
 	
 	$SpawnTimer.start(spawn_time)
+
+
+func _on_end_area_entered(area: Area2D) -> void:
+	if area.get_parent().is_fake:
+		game_over('GAME OVER THE DEEPFAKES HAVE BREACHED THE OFFICE.')
+
+
+func _on_quit_pressed() -> void:
+	queue_free()
+
+
+func on_person_death(ref):
+	if ref.is_fake == false:
+		game_over('GAME OVER YOU KILLED A REAL PERSON!')

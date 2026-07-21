@@ -2,10 +2,109 @@
 
 [ext_resource type="Script" uid="uid://pvl2efn00rkk" path="res://scenes/minigames/deepfakes/deepfakes.gd" id="1_m1kws"]
 [ext_resource type="TileSet" uid="uid://qq62iwuludu" path="res://reso/new_tile_set.tres" id="2_3q3o4"]
+[ext_resource type="StyleBox" uid="uid://miqenymvbqx2" path="res://scenes/minigames/password_security/reso/button.tres" id="3_j3h85"]
+[ext_resource type="FontFile" uid="uid://sa5q1m5icp5w" path="res://scenes/minigames/firewalls_and_viruses/Habbo.ttf" id="3_xj0q6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3h85"]
+bg_color = Color(0.6660055, 0.26838967, 0.27016193, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xj0q6"]
+bg_color = Color(0.46728477, 0.1428257, 0.21508199, 0.688)
+
+[sub_resource type="Animation" id="Animation_j3h85"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xj0q6"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j3h85"]
+_data = {
+&"RESET": SubResource("Animation_j3h85"),
+&"new_animation": SubResource("Animation_xj0q6")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_se8m8"]
+size = Vector2(356, 20)
 
 [node name="Deepfakes" type="Node2D" unique_id=1879241003]
 y_sort_enabled = true
 script = ExtResource("1_m1kws")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1095591700]
+process_mode = 3
+layer = 85
+
+[node name="GameOverPanel" type="Panel" parent="UI" unique_id=762568966]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 276.0
+offset_bottom = -236.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI/GameOverPanel" unique_id=870675368]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -236.0
+offset_top = 21.0
+offset_right = 236.0
+offset_bottom = 71.00891
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_xj0q6")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_j3h85")
+text = "GAME OVER THE DEEPFAKES HAVE BREACHED THE OFFICE."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Button" parent="UI/GameOverPanel" unique_id=789471073]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -46.0
+offset_right = 90.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_xj0q6")
+theme_override_styles/normal = ExtResource("3_j3h85")
+theme_override_styles/pressed = ExtResource("3_j3h85")
+theme_override_styles/hover = ExtResource("3_j3h85")
+theme_override_styles/focus = ExtResource("3_j3h85")
+text = "Quit"
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=1157351881]
 z_index = -15
@@ -36,4 +135,40 @@ autostart = true
 [node name="Cannon" type="Node2D" parent="." unique_id=406106457]
 position = Vector2(528, 448)
 
+[node name="Node2D" type="Node2D" parent="." unique_id=334591073]
+process_mode = 3
+position = Vector2(527, 151)
+
+[node name="Label" type="Label" parent="Node2D" unique_id=688019388]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -11.995533
+offset_right = 104.0
+offset_bottom = 8.004467
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_xj0q6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xj0q6")
+text = "DO NOT SHOOT THE REAL PEOPLE!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D" unique_id=2072179473]
+libraries/ = SubResource("AnimationLibrary_j3h85")
+autoplay = &"new_animation"
+
+[node name="End" type="Area2D" parent="." unique_id=816885578]
+position = Vector2(528, 490)
+collision_layer = 32
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="End" unique_id=592894576]
+shape = SubResource("RectangleShape2D_se8m8")
+
+[connection signal="pressed" from="UI/GameOverPanel/Quit" to="." method="_on_quit_pressed"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="area_entered" from="End" to="." method="_on_end_area_entered"]

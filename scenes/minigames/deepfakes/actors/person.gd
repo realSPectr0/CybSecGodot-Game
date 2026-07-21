@@ -1,5 +1,7 @@
 extends Node2D
 
+signal death(ref)
+
 
 var dir : Vector2 = Vector2.DOWN
 var prev_dir : Vector2 = Vector2.ZERO
@@ -16,6 +18,9 @@ func _ready() -> void:
 	
 	if sf:
 		$AnimatedSprite2D.sprite_frames = sf
+	
+	if is_fake:
+		modulate = Color.RED
 
 
 func _physics_process(delta: float) -> void:
@@ -59,4 +64,9 @@ func _on_hurtbox_hit() -> void:
 
 
 func _on_hurtbox_zero() -> void:
+	#if is_fake == false:
+		#pass
+	
+	death.emit(self)
+	
 	queue_free()
