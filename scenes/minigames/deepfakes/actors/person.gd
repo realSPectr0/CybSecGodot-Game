@@ -29,6 +29,9 @@ func _physics_process(delta: float) -> void:
 		dir = Vector2.DOWN
 	
 	global_position += dir * move_speed * delta
+	
+	if global_position.y > 480.0:
+		queue_free()
 
 
 func _on_change_dir_timer_timeout() -> void:
