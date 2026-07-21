@@ -1,6 +1,7 @@
 extends Node2D
 
 signal death(ref)
+signal hit
 
 
 var dir : Vector2 = Vector2.DOWN
@@ -12,6 +13,7 @@ var is_fake = false
 var sf
 
 @onready var anim_sprite = $AnimatedSprite2D
+@onready var hurt_box = $Hurtbox
 
 func _ready() -> void:
 	$ChangeDirTimer.start(randf_range(1, 3))
@@ -21,6 +23,9 @@ func _ready() -> void:
 	
 	if is_fake:
 		modulate = Color.RED
+	
+	if is_fake == false:
+		hurt_box.hp = 4
 
 
 func _physics_process(delta: float) -> void:
@@ -61,6 +66,8 @@ func _on_change_dir_timer_timeout() -> void:
 
 func _on_hurtbox_hit() -> void:
 	$HitFX.play("flash")
+	
+	hit.emit()
 
 
 func _on_hurtbox_zero() -> void:

@@ -45,6 +45,7 @@ func shoot():
 		b.look_at(get_global_mouse_position())
 		
 		add_child(b)
+		$Laser.play()
 
 
 func game_over(message = ''):
@@ -61,7 +62,9 @@ func spawn_person():
 	e.global_position = random_spawn_point
 	e.sf = people_sprite_frames.pick_random()
 	e.death.connect(on_person_death)
+	e.hit.connect(on_person_hit)
 	e.is_fake = true if randf() < 0.5 else false
+	
 	$PersonsContainer.add_child(e)
 
 
@@ -83,3 +86,7 @@ func _on_quit_pressed() -> void:
 func on_person_death(ref):
 	if ref.is_fake == false:
 		game_over('GAME OVER YOU KILLED A REAL PERSON!')
+
+
+func on_person_hit():
+	$Hit.play()
