@@ -27,7 +27,7 @@ one_shot = true
 
 [node name="Hurtbox" parent="." unique_id=111249865 instance=ExtResource("3_rj4lp")]
 collision_layer = 8
-collision_mask = 0
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1545554571]
 position = Vector2(0, -5)

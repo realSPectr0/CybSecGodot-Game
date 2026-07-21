@@ -33,4 +33,7 @@ autostart = true
 
 [node name="PersonsContainer" type="Node2D" parent="." unique_id=1599093021]
 
+[node name="Cannon" type="Node2D" parent="." unique_id=406106457]
+position = Vector2(528, 448)
+
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
