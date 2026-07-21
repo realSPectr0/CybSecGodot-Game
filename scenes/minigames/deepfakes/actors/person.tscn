@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cai2tago3ls5j"]
+
+[ext_resource type="Script" uid="uid://b1oxknpg7gpl5" path="res://scenes/minigames/deepfakes/actors/person.gd" id="1_4n10c"]
+[ext_resource type="SpriteFrames" uid="uid://qk6d0dwg7idc" path="res://reso/chars_sprite_frames/char_5.tres" id="2_rj4lp"]
+[ext_resource type="PackedScene" uid="uid://bpqh2dwemnyr3" path="res://scenes/minigames/firewalls_and_viruses/actors/objs/Hurtbox.tscn" id="3_rj4lp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y3kor"]
+radius = 8.0
+
+[node name="Person" type="Node2D" unique_id=1904525826]
+script = ExtResource("1_4n10c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=915227984]
+position = Vector2(0, -11)
+sprite_frames = ExtResource("2_rj4lp")
+animation = &"run_right"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1235795841]
+
+[node name="RayCast2D" type="RayCast2D" parent="Node2D" unique_id=1896796383]
+target_position = Vector2(32, 0)
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="ChangeDirTimer" type="Timer" parent="." unique_id=1522389760]
+one_shot = true
+
+[node name="Hurtbox" parent="." unique_id=111249865 instance=ExtResource("3_rj4lp")]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1545554571]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_y3kor")
+
+[connection signal="timeout" from="ChangeDirTimer" to="." method="_on_change_dir_timer_timeout"]

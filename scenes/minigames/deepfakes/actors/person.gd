@@ -1,0 +1,38 @@
+extends Node2D
+
+
+var dir : Vector2 = Vector2.DOWN
+var move_speed = 50.0
+
+var sf
+
+@onready var anim_sprite = $AnimatedSprite2D
+
+func _ready() -> void:
+	$ChangeDirTimer.start(randf_range(1, 3))
+	
+	if sf:
+		$AnimatedSprite2D.sprite_frames = sf
+
+
+func _physics_process(delta: float) -> void:
+	$Node2D.look_at(global_position + dir)
+	
+	if dir == Vector2.DOWN:
+		$AnimatedSprite2D.play("run_down")
+	elif dir == Vector2.LEFT:
+		$AnimatedSprite2D.play("run_left")
+	elif dir == Vector2.RIGHT:
+		$AnimatedSprite2D.play("run_right")
+	
+	if $Node2D/RayCast2D.get_collider():
+		dir = Vector2.DOWN
+	
+	global_position += dir * move_speed * delta
+
+
+func _on_change_dir_timer_timeout() -> void:
+	if randf() > 0.5:
+		dir = Vector2.RIGHT
+	else:
+		dir = Vector2.LEFT
