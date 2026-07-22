@@ -86,7 +86,8 @@ func _on_end_area_entered(area: Area2D) -> void:
 
 
 func _on_quit_pressed() -> void:
-	queue_free()
+	GameManager.finish_minigame()
+	#queue_free()
 
 
 func on_person_death(ref):
