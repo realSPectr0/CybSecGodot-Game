@@ -86,6 +86,7 @@ func _on_end_area_entered(area: Area2D) -> void:
 
 
 func _on_quit_pressed() -> void:
+	get_tree().paused = false
 	GameManager.finish_minigame()
 	#queue_free()
 
