@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://be2rohgniv6kv" path="res://reso/female_char.tres" id="2_0hfun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ft1p4"]
-size = Vector2(9.5, 9)
+size = Vector2(9.5, 12.5)
 
 [node name="Alex" type="CharacterBody2D" unique_id=1092919849 groups=["Player"]]
 script = ExtResource("1_0hfun")
@@ -13,10 +13,10 @@ script = ExtResource("1_0hfun")
 texture_filter = 1
 position = Vector2(0, -10)
 sprite_frames = ExtResource("2_0hfun")
-animation = &"walk_up"
+animation = &"idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=502267153]
-position = Vector2(-0.25, -2)
+position = Vector2(-0.25, -0.25)
 shape = SubResource("RectangleShape2D_ft1p4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=86703185]
