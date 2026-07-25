@@ -1,0 +1,140 @@
+{
+	"emails": [
+		{
+			"from": "no-reply@amazon.com",
+			"to": "Your Amazon order #112-8493021-5567123 has shipped",
+			"message": "Hi Sarah,
+Great news! Your order has shipped and is on its way.
+Order #112-8493021-5567123
+Shipped to: 482 Maple Ave, Apt 3B, Portland, OR 97201
+Estimated delivery: July 26 – 28,
+			2026
+[br]
+Items: 1x Wireless Bluetooth Headphones – Black ($79.99)
+1x USB-C Fast Charging Cable,
+			6ft ($12.49)
+Track your package anytime in your order history. We’ll send delivery updates as it moves through the carrier network. Need to change delivery instructions? Update your preferences in the Amazon app before the driver arrives.
+If you didn’t place this order, contact Customer Service at 1-888-280-4331 or visit the Help section on Amazon.com. For your security, we will never ask you to confirm passwords or payment details via email.
+[br]
+Thanks for shopping with us.
+The Amazon Team","type": "legit"
+		},
+		{
+			"from": "security@paypa1-security-alerts.com",
+			"to": "URGENT: Unusual activity on your PayPal account",
+			"message": "Dear Valued Customer,[br]
+We detected suspicious login activity on your PayPal account from an unrecognized device in Kiev, Ukraine. A transaction of $1,
+			249.00 was attempted at 4: 17 AM EST.[br]
+Please verify your account within 24 hours to avoid permanent suspension.[br]
+Click the secure link below and log in with your existing credentials. You will be asked to confirm your billing address, card number, and the three-digit security code on the back of your card. This takes under two minutes and ensures your account stays protected.[br
+			]
+[VERIFY MY ACCOUNT NOW][br]
+Failure to respond will result in your account being flagged for review. We take these matters seriously and appreciate your prompt cooperation.[br]
+This is an automated alert. Do not reply to this email.[br]
+PayPal Security Department","type": "phishing"
+		},
+		{
+			"from": "usps-delivery@usps-tracking-update.net",
+			"to": "Action Required: Package on hold — $2.99 fee",
+			"message": "USPS Alert: We attempted delivery today but no one was available to sign. Your package is held at the regional facility and will be returned to sender in 48 hours unless the redelivery fee is paid.[br]
+Tracking: 9400111899223456789012
+Status: ON HOLD — PAYMENT REQUIRED
+Fee: $2.99[br]
+Pay now to schedule redelivery and avoid return fees. Once confirmed, your package will be prioritized for next-day delivery.[br]
+[PAY REDELIVERY FEE][br]
+You are receiving this because the sender selected signature-required delivery. This is standard for all missed signature deliveries.[br]
+Reply STOP to opt out.[br]
+Msg and data rates may apply.","type": "smishing"
+		},
+		{
+			"from": "statements@wellsfargo.com",
+			"to": "Your July 2026 account statement is now available",
+			"message": "Hi Michael,[br][br]Your monthly account statement for July 2026 is now ready to view online.[br][br]Account ending in 4832[br]Statement period: July 1 – July 31, 2026[br]Available to view until: September 30, 2026[br][br]You can access your statement anytime by signing in to Wells Fargo Online or the mobile app. Go to the Documents & Messages section to download a PDF copy for your records. Paperless statements help keep your information secure and reduce mail clutter.[br][br]If you notice any transactions you do not recognize, please contact us immediately at 1-800-869-3557 or visit your nearest branch. We also recommend reviewing your account activity regularly and setting up alerts for added security.[br][br]Thank you for banking with Wells Fargo.[br][br]Wells Fargo Online Banking Team",
+			"type": "legit"
+		},
+		{
+			"from": "hr@acmecorp.com",
+			"to": "Your direct deposit for July 15, 2026 has been processed",
+			"message": "Hi Jennifer,[br][br]This is a confirmation that your direct deposit for the pay period ending July 15, 2026 has been successfully processed.[br][br]Net pay: $3,247.88[br]Deposit account ending in: 7791[br]Pay date: July 15, 2026[br][br]Your detailed pay stub, including deductions, taxes, and contributions, is available in the employee portal under Payroll & Compensation. Please review your information and verify that your deposit account and tax withholdings are up to date.[br][br]If you have questions about your pay, reach out to Payroll at payroll@acmecorp.com or extension 4102. For tax or benefits questions, contact HR Benefits at benefits@acmecorp.com.[br][br]Have a great weekend.[br][br]Acme Corp HR Department",
+			"type": "legit"
+		},
+		{
+			"from": "info@netflix.com",
+			"to": "Your Netflix subscription has been renewed",
+			"message": "Hi Alex,[br][br]Your Netflix membership has been successfully renewed for another month.[br][br]Plan: Standard with ads[br]Amount charged: $6.99[br]Payment method: Visa ending in 2241[br]Next billing date: August 25, 2026[br][br]You can manage your plan, update your payment method, or review your billing history anytime by visiting the Account section on Netflix.com. If your payment method expires soon, please update it to avoid any interruption to your service.[br][br]We’re always adding new movies and shows. Check out What’s New this week and build your watchlist so you never miss a release.[br][br]Thanks for being a Netflix member.[br][br]– The Netflix Team",
+			"type": "legit"
+		},
+		{
+			"from": "noreply@ups.com",
+			"to": "Your UPS package has been delivered",
+			"message": "Hi David,[br][br]Your UPS package has been delivered.[br][br]Tracking number: 1Z999AA10123456784[br]Delivered to: Front porch[br]Delivery date: July 24, 2026 at 2:14 PM[br]Shipped from: Best Buy[br][br]If you cannot locate your package, check around your delivery location and with others in your household. You can also view a photo of your delivery by clicking the tracking link above and selecting Proof of Delivery.[br][br]Need to return an item? Visit the retailer’s website to start a return and generate a UPS label. You can also schedule a pickup or drop off your package at any UPS Access Point location.[br][br]Thank you for shipping with UPS.[br][br]UPS Customer Service",
+			"type": "legit"
+		},
+		{
+			"from": "no-reply@google.com",
+			"to": "You're using 85% of your Google storage",
+			"message": "Hi Priya,[br][br]You’re currently using 12.8 GB of your 15 GB of Google account storage. Once you reach your limit, you won’t be able to send or receive emails through Gmail until you free up space or upgrade your plan.[br][br]Storage used across Google Drive, Gmail, and Google Photos:[br]• Google Drive: 4.2 GB[br]• Gmail: 6.1 GB[br]• Google Photos: 2.5 GB[br][br]To free up space, review and delete large or unnecessary files in Google Drive, empty your Gmail trash and spam folders, or remove backed-up photos and videos you no longer need.[br][br]If you need more storage, consider upgrading to Google One for as low as $1.99 per month. Upgrading also gives you access to expert support and additional member benefits.[br][br]Manage your storage at any time by visiting google.com/settings/storage.[br][br]The Google Account Team",
+			"type": "legit"
+		},
+		{
+		"from": "alerts@chase-secure-verify.com",
+		"to": "Your Chase account has been temporarily locked",
+		"message": "Dear Chase Customer,[br][br]We have temporarily restricted access to your online banking due to multiple failed login attempts from an unknown IP address in Moscow, Russia. For your protection, all transactions have been suspended until you verify your identity.[br][br]To unlock your account immediately, please confirm your details through our secure verification portal. You will need to provide your username, password, and the answers to your security questions. This process ensures only you can restore access.[br][br][UNLOCK MY ACCOUNT NOW][br][br]If we do not receive verification within 12 hours, your account will be permanently closed and any remaining funds will be held for up to 90 days per federal banking regulations.[br][br]Do not reply to this email. This mailbox is not monitored. For assistance, call our fraud hotline at 1-800-555-0199.[br][br]Chase Fraud Prevention Center",
+		"type": "phishing"
+	},
+	{
+		"from": "support@micros0ft-365-team.com",
+		"to": "Your Microsoft 365 subscription will expire in 24 hours",
+		"message": "Dear User,[br][br]This is a final reminder that your Microsoft 365 subscription has expired and your services will be disabled within 24 hours. All emails, documents, and cloud files associated with your account will be permanently deleted if payment is not received immediately.[br][br]Renew now for just $49.99 to keep your account active and avoid data loss. Our system shows your auto-renewal failed due to an outdated billing method on file.[br][br][RENEW SUBSCRIPTION NOW][br][br]Please update your payment information, including your card number, expiration date, and CVV code, to complete the renewal. Once processed, your services will be restored within 15 minutes.[br][br]Failure to act will result in irreversible account termination. Microsoft is not responsible for lost data due to non-payment.[br][br]Microsoft Billing Department",
+		"type": "phishing"
+	},
+	{
+		"from": "shipping@fedex-notify.net",
+		"to": "Delivery failed: Incorrect address on file",
+		"message": "Hello,[br][br]We attempted to deliver your package today but the shipping address was incomplete and our driver could not locate your residence. Your package is now being held at our regional warehouse and will be returned to the sender in 3 business days.[br][br]To reschedule delivery, please update your address and pay a $3.50 address correction fee. This fee covers administrative processing and ensures accurate routing for future shipments.[br][br][UPDATE DELIVERY ADDRESS][br][br]You must confirm your full name, current address, phone number, and a valid credit card to complete this request. Without this information, we cannot guarantee redelivery.[br][br]Tracking number: 7849201156473[br]Package weight: 2.4 lbs[br][br]If you did not order this package, please disregard this notice.[br][br]FedEx Customer Support",
+		"type": "phishing"
+	},
+	{
+		"from": "refunds@irs-gov-refund.org",
+		"to": "IRS: You have an unclaimed tax refund of $847.23",
+		"message": "Dear Taxpayer,[br][br]Our records indicate that you have an unclaimed federal tax refund of $847.23 from the 2025 tax year. This refund was flagged due to a miscalculation on your original filing and is scheduled to expire on July 30, 2026.[br][br]To claim your refund, please complete the electronic refund verification form by clicking the link below. You will need to provide your Social Security number, date of birth, and direct deposit information so we can process your payment within 5 to 7 business days.[br][br][CLAIM MY REFUND NOW][br][br]The IRS will not issue paper checks for unclaimed refunds. All payments must be processed electronically through our secure portal. Do not delay — unclaimed refunds are forfeited to the U.S. Treasury after the expiration date.[br][br]This message is confidential and intended only for the recipient.[br][br]Internal Revenue Service",
+		"type": "phishing"
+	},
+	{
+		"from": "security@coinbase-wallet-alert.io",
+		"to": "Suspicious withdrawal detected on your Coinbase account",
+		"message": "Hi there,[br][br]We noticed a suspicious withdrawal request from your Coinbase wallet. Someone initiated a transfer of 0.84 BTC (approx. $78,400) to an external wallet address at 6:42 AM EST. If this was not you, your account may be compromised.[br][br]We have placed a temporary hold on this transaction for 6 hours to give you time to cancel it. You must act fast.[br][br][CANCEL TRANSACTION][br][br]To secure your wallet, log in and verify your identity by providing your recovery phrase and two-factor authentication backup codes. This allows our security team to reverse the unauthorized transfer and restore your account.[br][br]Coinbase will never ask for your password via email, but recovery phrases are required for wallet verification during fraud investigations.[br][br]If you do not respond, the withdrawal will be processed automatically and cannot be reversed.[br][br]Coinbase Security Operations",
+		"type": "phishing"
+	},
+	{
+		"from": "usps-msg@usps-delivery-notice.net",
+		"to": "USPS: Your package needs address confirmation",
+		"message": "USPS: We tried to deliver your package today but the address label was damaged. Your item is on hold at the local post office.[br][br]To reschedule delivery, confirm your shipping address now:[br][br][CONFIRM ADDRESS][br][br]Failure to respond within 24 hours will result in your package being returned to sender. A $0.99 processing fee applies for redelivery scheduling.[br][br]Reply STOP to unsubscribe.[br][br]Msg&data rates may apply.[br][br]USPS Delivery Services",
+		"type": "smishing"
+	},
+	{
+		"from": "alert@chase-fraud-sms.net",
+		"to": "Chase Fraud Alert: Did you attempt a $1,200.00 charge?",
+		"message": "Chase Fraud Alert: A charge of $1,200.00 was attempted on your card ending in 8832 at BEST BUY #4421. If you made this purchase, no action needed.[br][br]If you did NOT make this purchase, reply NO and secure your account here:[br][br][SECURE ACCOUNT][br][br]You will be asked to verify your card PIN and last 4 digits of your SSN to confirm identity.[br][br]Reply STOP to end alerts.[br][br]Msg&data rates may apply.[br][br]Chase Alerts",
+		"type": "smishing"
+	},
+	{
+		"from": "prizes@winners-circle-rewards.com",
+		"to": "Congrats! You've won a $500 Walmart gift card",
+		"message": "Congratulations! You've been selected as our weekly sweepstakes winner! You have won a $500 Walmart gift card.[br][br]Your entry was drawn from local area subscribers. Claim your prize before midnight tonight or it will be awarded to another winner.[br][br][CLAIM $500 GIFT CARD][br][br]Just pay a $4.99 shipping and handling fee to receive your card by mail within 5 business days.[br][br]Reply STOP to cancel.[br][br]Msg&data rates may apply.[br][br]Winners Circle Rewards",
+		"type": "smishing"
+	},
+	{
+		"from": "toll@ezpass-toll-violation.org",
+		"to": "EZ-Pass: Unpaid toll violation notice",
+		"message": "EZ-Pass Notice: Your vehicle was recorded traveling on the I-95 Express Lane without a valid toll payment. Balance due: $12.50.[br][br]After 48 hours, a $50 late fee will be added and a hold may be placed on your vehicle registration.[br][br]Pay now to avoid penalties:[br][br][PAY TOLL NOW][br][br]If you believe this is an error, submit a dispute with your license plate number and payment method on file.[br][br]Reply STOP to opt out.[br][br]Msg&data rates may apply.[br][br]EZ-Pass Toll Authority",
+		"type": "smishing"
+	},
+	{
+		"from": "notice@verizon-wireless-billing.net",
+		"to": "Verizon: Your account will be suspended today",
+		"message": "VERIZON: We were unable to process your latest payment of $87.34. Your service will be suspended within 4 hours if payment is not received.[br][br]Avoid interruption by updating your billing information now:[br][br][UPDATE PAYMENT][br][br]A convenience fee of $2.99 will be added to your next bill for same-day processing.[br][br]Reply HELP for assistance or STOP to cancel.[br][br]Msg&data rates may apply.[br][br]Verizon Wireless",
+		"type": "smishing"
+	}
+	]
+}

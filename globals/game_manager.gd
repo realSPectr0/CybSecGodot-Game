@@ -26,3 +26,11 @@ func start_minigame():
 
 func finish_minigame():
 	get_tree().change_scene_to_file('res://scenes/gamelevel.tscn')
+
+
+func get_data(path):
+	var f = FileAccess.open(path, FileAccess.READ)
+	var j = JSON.new()
+	j.parse(f.get_as_text())
+	
+	return j.data
