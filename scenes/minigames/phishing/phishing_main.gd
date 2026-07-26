@@ -41,6 +41,7 @@ func get_fih():
 	current_message = random_message
 
 
+
 func pop_correct_or_wrong(is_correct = true):
 	if is_correct:
 		$UI/AfterSelectionPopup/Panel/Label.modulate = Color.GREEN
