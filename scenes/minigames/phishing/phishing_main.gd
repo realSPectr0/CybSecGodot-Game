@@ -11,6 +11,7 @@ var points_max = 1000
 @onready var messages = GameManager.get_data('res://scenes/minigames/phishing/emails_data.json')['emails']
 
 var current_message = {}
+var points_per_correct_answer = 100
 
 
 func _ready() -> void:
@@ -57,13 +58,21 @@ func pop_correct_or_wrong(is_correct = true):
 	
 	await $UI/AfterSelectionPopup/AnimationPlayer.animation_finished
 	$UI/AfterSelectionPopup.hide()
+	
+	if points_total >= points_max:
+		game_win()
+
+
+func game_win():
+	get_tree().paused = false
+	GameManager.finish_minigame()
 
 
 func _on_legit_pressed() -> void:
 	$UI/MessageControl.hide()
 	
 	if current_message['type'] == 'legit':
-		points_total += 75
+		points_total += points_per_correct_answer
 		pop_correct_or_wrong()
 	else:
 		pop_correct_or_wrong(false)
@@ -73,7 +82,7 @@ func _on_phishing_pressed() -> void:
 	$UI/MessageControl.hide()
 	
 	if current_message['type'] == 'phishing':
-		points_total += 75
+		points_total += points_per_correct_answer
 		pop_correct_or_wrong()
 	else:
 		pop_correct_or_wrong(false)
@@ -83,7 +92,7 @@ func _on_smishing_pressed() -> void:
 	$UI/MessageControl.hide()
 	
 	if current_message['type'] == 'smishing':
-		points_total += 75
+		points_total += points_per_correct_answer
 		pop_correct_or_wrong()
 	else:
 		pop_correct_or_wrong(false)
