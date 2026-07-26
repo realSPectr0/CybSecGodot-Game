@@ -46,7 +46,6 @@ func get_fih():
 	get_tree().paused = true
 
 
-
 func pop_correct_or_wrong(is_correct = true):
 	if is_correct:
 		$UI/AfterSelectionPopup/Panel/Label.modulate = Color.GREEN
@@ -67,7 +66,9 @@ func pop_correct_or_wrong(is_correct = true):
 	$FishCatchTimer.start()
 	
 	if points_total >= points_max:
-		game_win()
+		get_tree().paused = true
+		$UI/GameWinPanel.show()
+		#game_win()
 
 
 func game_win():
@@ -107,3 +108,7 @@ func _on_smishing_pressed() -> void:
 
 func _on_fish_catch_timer_timeout() -> void:
 	get_fih()
+
+
+func _on_done_pressed() -> void:
+	game_win()
