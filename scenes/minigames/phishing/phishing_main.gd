@@ -63,6 +63,7 @@ func pop_correct_or_wrong(is_correct = true):
 		game_win()
 
 
+
 func game_win():
 	get_tree().paused = false
 	GameManager.finish_minigame()
