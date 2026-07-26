@@ -8,6 +8,7 @@
 [ext_resource type="StyleBox" uid="uid://miqenymvbqx2" path="res://scenes/minigames/password_security/reso/button.tres" id="3_ik8eq"]
 [ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="4_7gv7h"]
 [ext_resource type="Texture2D" uid="uid://bwf4g8fi5m012" path="res://scenes/minigames/phishing/art/Bubbles_16x16.png" id="4_u45im"]
+[ext_resource type="Texture2D" uid="uid://dftlont6rr065" path="res://modernuserinterface-win/16x16/Modern_UI_Style_2.png" id="7_7gv7h"]
 
 [sub_resource type="Animation" id="Animation_7gv7h"]
 length = 0.001
@@ -4135,6 +4136,14 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir86x"]
+atlas = ExtResource("7_7gv7h")
+region = Rect2(384, 192, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rqt4"]
+atlas = ExtResource("7_7gv7h")
+region = Rect2(384, 176, 32, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_3g6w1"]
 atlas = ExtResource("3_h1j8j")
 region = Rect2(0, 0, 32, 64)
@@ -4472,8 +4481,8 @@ tile_map_data = PackedByteArray("AAAkABUAAAACAA0AAAAkABYAAAACAA4AAAAVABwAAAATABM
 tile_set = SubResource("TileSet_oe11y")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=529057708]
-position = Vector2(542, 317)
-zoom = Vector2(2, 2)
+position = Vector2(611, 341)
+zoom = Vector2(2.5, 2.5)
 
 [node name="Scout" type="AnimatedSprite2D" parent="." unique_id=687757760]
 z_index = 7
@@ -4483,6 +4492,19 @@ animation = &"pull"
 autoplay = "idle"
 frame = 3
 frame_progress = 1.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Scout" unique_id=529099421]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+step = 0.01
+texture_under = SubResource("AtlasTexture_ir86x")
+texture_progress = SubResource("AtlasTexture_6rqt4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=998347030]
 position = Vector2(688, 272)
@@ -4507,6 +4529,12 @@ autoplay = "default"
 frame_progress = 0.19804582
 centered = false
 
+[node name="FishCatchTimer" type="Timer" parent="." unique_id=386818289]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
 [connection signal="pressed" from="UI/MessageControl/Panel/HBoxContainer/Legit" to="." method="_on_legit_pressed"]
 [connection signal="pressed" from="UI/MessageControl/Panel/HBoxContainer/Phishing" to="." method="_on_phishing_pressed"]
 [connection signal="pressed" from="UI/MessageControl/Panel/HBoxContainer/Smishing" to="." method="_on_smishing_pressed"]
+[connection signal="timeout" from="FishCatchTimer" to="." method="_on_fish_catch_timer_timeout"]
