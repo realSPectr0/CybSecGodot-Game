@@ -9,6 +9,9 @@ var previous_location : Vector2
 
 var character = 'male'
 
+var npc_nearby = null
+var global_player_ref
+
 
 func start_minigame():
 	if minigame_ref == null:

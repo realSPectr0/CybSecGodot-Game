@@ -1,8 +1,14 @@
 extends Node2D
 
 @onready var player_ref = $player
+
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GameManager.global_player_ref = $player
+	
 	var data = GameSaveOrLoad.load_game()
 	print(get_path())
 	#print(player_ref, data)
