@@ -9,6 +9,7 @@
 [ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="4_7gv7h"]
 [ext_resource type="Texture2D" uid="uid://bwf4g8fi5m012" path="res://scenes/minigames/phishing/art/Bubbles_16x16.png" id="4_u45im"]
 [ext_resource type="Texture2D" uid="uid://dftlont6rr065" path="res://modernuserinterface-win/16x16/Modern_UI_Style_2.png" id="7_7gv7h"]
+[ext_resource type="FontFile" uid="uid://sa5q1m5icp5w" path="res://scenes/minigames/firewalls_and_viruses/Habbo.ttf" id="10_0ti2k"]
 
 [sub_resource type="Animation" id="Animation_7gv7h"]
 length = 0.001
@@ -4280,6 +4281,21 @@ script = ExtResource("1_glc8e")
 process_mode = 3
 layer = 48
 
+[node name="Node2D" type="Node2D" parent="UI" unique_id=938134974]
+position = Vector2(406, 289)
+
+[node name="Label" type="Label" parent="UI/Node2D" unique_id=842531290]
+offset_left = -362.0
+offset_top = -69.0
+offset_right = -45.0
+offset_bottom = 131.0
+theme_override_colors/font_color = Color(0.37290987, 0.3461217, 0.2224921, 1)
+theme_override_fonts/font = ExtResource("10_0ti2k")
+theme_override_font_sizes/font_size = 32
+text = "Beware of fake emails and letters from unknown sources.
+Always double check where they came from."
+autowrap_mode = 2
+
 [node name="MessageControl" type="Control" parent="UI" unique_id=723173589]
 visible = false
 layout_mode = 3
@@ -4581,18 +4597,6 @@ centered = false
 wait_time = 5.0
 one_shot = true
 autostart = true
-
-[node name="Node2D" type="Node2D" parent="." unique_id=1439246487]
-position = Vector2(347, 278)
-
-[node name="Label" type="Label" parent="Node2D" unique_id=109165414]
-offset_right = 169.0
-offset_bottom = 110.0
-theme_override_colors/font_color = Color(0.37290987, 0.3461217, 0.2224921, 1)
-theme_override_font_sizes/font_size = 10
-text = "Beware of fake emails and letters from unknown sources.
-Always double check where they came from."
-autowrap_mode = 2
 
 [connection signal="pressed" from="UI/MessageControl/Panel/HBoxContainer/Legit" to="." method="_on_legit_pressed"]
 [connection signal="pressed" from="UI/MessageControl/Panel/HBoxContainer/Phishing" to="." method="_on_phishing_pressed"]

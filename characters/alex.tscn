@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cegqpodclwb48" path="res://characters/alex.gd" id="1_0hfun"]
 [ext_resource type="SpriteFrames" uid="uid://be2rohgniv6kv" path="res://reso/female_char.tres" id="2_0hfun"]
+[ext_resource type="StyleBox" uid="uid://miqenymvbqx2" path="res://scenes/minigames/password_security/reso/button.tres" id="3_3vean"]
+[ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="4_xsrno"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ft1p4"]
 size = Vector2(9.5, 12.5)
@@ -46,6 +48,10 @@ offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("3_3vean")
+theme_override_styles/pressed = ExtResource("4_xsrno")
+theme_override_styles/hover = ExtResource("4_xsrno")
+theme_override_styles/focus = ExtResource("4_xsrno")
 text = "Talk"
 
 [node name="Popup" type="CanvasLayer" parent="UI" unique_id=1845755248]
