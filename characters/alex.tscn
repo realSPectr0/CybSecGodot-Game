@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://cegqpodclwb48" path="res://characters/alex.gd" id="1_0hfun"]
 [ext_resource type="SpriteFrames" uid="uid://be2rohgniv6kv" path="res://reso/female_char.tres" id="2_0hfun"]
-[ext_resource type="FontFile" uid="uid://sa5q1m5icp5w" path="res://scenes/minigames/firewalls_and_viruses/Habbo.ttf" id="3_wtoyo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ft1p4"]
 size = Vector2(9.5, 12.5)
@@ -33,21 +32,23 @@ target_position = Vector2(16, 0)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=2117119241]
 
-[node name="Popup" type="CanvasLayer" parent="UI" unique_id=1845755248]
-layer = 101
-
 [node name="Talk" type="Button" parent="UI" unique_id=1630515941]
 visible = false
-anchors_preset = 5
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
+anchor_bottom = 1.0
 offset_left = -114.0
-offset_top = 10.0
+offset_top = -91.0
 offset_right = 114.0
-offset_bottom = 70.0
+offset_bottom = -31.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("3_wtoyo")
-theme_override_font_sizes/font_size = 48
+grow_vertical = 0
+theme_override_font_sizes/font_size = 26
 text = "Talk"
+
+[node name="Popup" type="CanvasLayer" parent="UI" unique_id=1845755248]
+layer = 101
 
 [connection signal="pressed" from="UI/Talk" to="." method="_on_talk_pressed"]

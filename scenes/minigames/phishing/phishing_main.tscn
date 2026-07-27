@@ -4582,6 +4582,17 @@ wait_time = 5.0
 one_shot = true
 autostart = true
 
+[node name="Node2D" type="Node2D" parent="." unique_id=1439246487]
+position = Vector2(347, 278)
+
+[node name="Label" type="Label" parent="Node2D" unique_id=109165414]
+offset_right = 189.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 10
+text = "Beware of fake emails and letters from unknown sources.
+Always doueble check where they came from."
+autowrap_mode = 2
+
 [connection signal="pressed" from="UI/MessageControl/Panel/HBoxContainer/Legit" to="." method="_on_legit_pressed"]
 [connection signal="pressed" from="UI/MessageControl/Panel/HBoxContainer/Phishing" to="." method="_on_phishing_pressed"]
 [connection signal="pressed" from="UI/MessageControl/Panel/HBoxContainer/Smishing" to="." method="_on_smishing_pressed"]
