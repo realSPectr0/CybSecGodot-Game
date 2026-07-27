@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://b2ynrkw2abah0" path="res://scenes/hard_worker.gd" id="8_v5q8u"]
 [ext_resource type="PackedScene" uid="uid://ojbjrkjj75uf" path="res://scenes/minigames/deepfakes/deepfakes.tscn" id="11_pflgl"]
 [ext_resource type="PackedScene" uid="uid://c1cy2wvemcfie" path="res://scenes/minigames/firewalls_and_viruses/firewalls_and_viruses.tscn" id="13_2xpee"]
+[ext_resource type="PackedScene" uid="uid://da6bwpmv2khoi" path="res://scenes/minigames/phishing/phishing_main.tscn" id="13_gueac"]
 [ext_resource type="Script" uid="uid://dbjn77swuk08u" path="res://scenes/level_1npc.gd" id="13_ov5yj"]
 [ext_resource type="PackedScene" uid="uid://c4lq05xlvn71c" path="res://scenes/minigames/password_security/main.tscn" id="13_pflgl"]
 [ext_resource type="PackedScene" uid="uid://cmycgi23kmuo6" path="res://scenes/minigames/gaming_security/GamingSecurity.tscn" id="14_gueac"]
@@ -1456,6 +1457,7 @@ texture = ExtResource("5_pgho5")
 2:5/0/z_index = 1
 2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0, 8, 8, -8, 8)
 3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:5/0 = 0
 10:5/0 = 0
 11:5/0 = 0
@@ -1473,6 +1475,7 @@ texture = ExtResource("5_pgho5")
 2:6/0/z_index = 1
 2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 5.143959, -8, 5.143959, 8, -8, 8)
 3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:6/0 = 0
 9:6/0 = 0
 10:6/0 = 0
@@ -1487,9 +1490,11 @@ texture = ExtResource("5_pgho5")
 2:7/0 = 0
 2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 5.143959, -8, 5.143959, 8, -8, 8)
 3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:7/0 = 0
 5:7/0 = 0
 6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:7/0 = 0
 10:7/0 = 0
 11:7/0 = 0
@@ -1504,6 +1509,7 @@ texture = ExtResource("5_pgho5")
 2:8/0 = 0
 2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 5.143959, -8, 5.143959, 8, -8, 8)
 3:8/0 = 0
+3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:8/0 = 0
 8:8/0 = 0
 9:8/0 = 0
@@ -1516,6 +1522,7 @@ texture = ExtResource("5_pgho5")
 1:9/0 = 0
 2:9/0 = 0
 3:9/0 = 0
+3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:9/0 = 0
 7:9/0 = 0
 8:9/0 = 0
@@ -2845,6 +2852,30 @@ position = Vector2(0, 16)
 shape = SubResource("CircleShape2D_85vpr")
 metadata/_edit_lock_ = true
 
+[node name="hard_worker14" type="CharacterBody2D" parent="Hard_workers" unique_id=1926426823]
+y_sort_enabled = true
+position = Vector2(180.00002, 302)
+scale = Vector2(2.5, 2.5)
+script = ExtResource("8_v5q8u")
+minigame_scene = ExtResource("13_gueac")
+overhead_title = "Pishing & Smishing"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker14" unique_id=132921624]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_4yucn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Hard_workers/hard_worker14" unique_id=612103004]
+sprite_frames = SubResource("SpriteFrames_x8kms")
+animation = &"idle_up"
+metadata/_edit_lock_ = true
+
+[node name="interaction area" type="Area2D" parent="Hard_workers/hard_worker14" unique_id=2122519012]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker14/interaction area" unique_id=1778589060]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_85vpr")
+metadata/_edit_lock_ = true
+
 [node name="hard_worker15" type="CharacterBody2D" parent="Hard_workers" unique_id=393327488]
 y_sort_enabled = true
 position = Vector2(423, 300.00003)
@@ -2921,6 +2952,8 @@ metadata/_edit_lock_ = true
 [connection signal="body_exited" from="Hard_workers/hard_worker13/interaction area" to="Hard_workers/hard_worker13" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="Hard_workers/hard_worker12/interaction area" to="Hard_workers/hard_worker12" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Hard_workers/hard_worker12/interaction area" to="Hard_workers/hard_worker12" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="Hard_workers/hard_worker14/interaction area" to="Hard_workers/hard_worker14" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Hard_workers/hard_worker14/interaction area" to="Hard_workers/hard_worker14" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="Hard_workers/hard_worker15/interaction area" to="Hard_workers/hard_worker15" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Hard_workers/hard_worker15/interaction area" to="Hard_workers/hard_worker15" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="Boss/interaction area" to="Boss" method="_on_interaction_area_body_entered"]
