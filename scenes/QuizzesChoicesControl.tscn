@@ -122,7 +122,7 @@ id = "firewalls"
 layout_mode = 2
 title = "Deepfakes & AI"
 id = "deepfakes"
-quiz_path = "res://reso/quizzes/deepfake_quiz.json"
+quiz_path = "res://reso/quizzes/deepfakes_quiz.json"
 
 [node name="QuestionPanel" type="Panel" parent="." unique_id=1404759325]
 visible = false
