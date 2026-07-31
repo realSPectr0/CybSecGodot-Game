@@ -3,6 +3,8 @@ extends Control
 var question_data = {}
 var question_idx = 0
 
+var wrong_answers_count = 0
+
 
 func _ready() -> void:
 	await get_tree().create_timer(.5).timeout
@@ -52,6 +54,21 @@ func generate_password():
 	pass
 
 
+func answer_choose(idx):
+	question_idx += 1
+	
+	if question_idx >= question_data.size():
+		$QuestionPanel.hide()
+		$Panel.show()
+		return
+	
+	show_question(question_idx)
+
+
 func _on_close_pressed() -> void:
 	GameManager.global_player_ref.freeze = false
 	queue_free()
+
+
+func _on_answer_button_pressed(extra_arg_0: int) -> void:
+	answer_choose(extra_arg_0)
