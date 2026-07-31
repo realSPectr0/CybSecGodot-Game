@@ -33,3 +33,5 @@ theme_override_styles/pressed = ExtResource("3_enig1")
 theme_override_styles/hover = ExtResource("3_enig1")
 theme_override_styles/focus = ExtResource("3_enig1")
 text = "Take Quiz"
+
+[connection signal="pressed" from="TakeQuiz" to="." method="_on_take_quiz_pressed"]

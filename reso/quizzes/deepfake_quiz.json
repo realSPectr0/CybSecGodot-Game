@@ -1,0 +1,42 @@
+{
+	"question_1": {
+		"text": "What is a deepfake?",
+		"choices": [
+			"A. A video that has low image quality",
+			"B. Media created or changed by AI to imitate a real person",
+			"C. A private social media account",
+			"D. A computer virus sent through a video"
+		],
+		"answer_idx": 1
+	},
+	"question_2": {
+		"text": "Which detail could be a sign of a deepfake?",
+		"choices": [
+			"A. The person speaks clearly",
+			"B. The video has background music",
+			"C. The lips do not match the audio",
+			"D. The video was recorded indoors"
+		],
+		"answer_idx": 2
+	},
+	"question_3": {
+		"text": "What should you do if you receive a call from a relative urgently asking for money?",
+		"choices": [
+			"A. Send the money immediately",
+			"B. Ask for your family code word and verify another way",
+			"C. Share the call recording online",
+			"D. Give the caller your personal information"
+		],
+		"answer_idx": 1
+	},
+	"question_4": {
+		"text": "What should you do before sharing a shocking video?",
+		"choices": [
+			"A. Check whether reliable sources confirm it",
+			"B. Repost it before it gets deleted",
+			"C. Believe it if the voice sounds real",
+			"D. Send it to as many people as possible"
+		],
+		"answer_idx": 0
+	}
+}

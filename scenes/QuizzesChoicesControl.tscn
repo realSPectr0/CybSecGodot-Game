@@ -33,6 +33,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="." unique_id=196575370]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -100,6 +101,7 @@ columns = 2
 layout_mode = 2
 title = "Phishing & Smishing"
 id = "phishing"
+quiz_path = "res://reso/quizzes/phishing_quiz.json"
 
 [node name="QuizBox2" parent="Panel/GridContainer" unique_id=81203068 instance=ExtResource("7_k7tq7")]
 layout_mode = 2
@@ -110,6 +112,7 @@ id = "gaming_security"
 layout_mode = 2
 title = "Password Security"
 id = "password_security"
+quiz_path = "res://reso/quizzes/password_security.json"
 
 [node name="QuizBox4" parent="Panel/GridContainer" unique_id=1546559460 instance=ExtResource("7_k7tq7")]
 layout_mode = 2
@@ -120,3 +123,135 @@ id = "firewalls"
 layout_mode = 2
 title = "Deepfakes & AI"
 id = "deepfakes"
+quiz_path = "res://reso/quizzes/deepfake_quiz.json"
+
+[node name="QuestionPanel" type="Panel" parent="." unique_id=1404759325]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 160.0
+offset_top = 42.0
+offset_right = -160.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("3_xqvo0")
+
+[node name="QuestionIDX" type="Label" parent="QuestionPanel" unique_id=1057933707]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_top = 53.0
+offset_right = 68.0
+offset_bottom = 76.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.3515629, 0.3515629, 0.35156286, 1)
+theme_override_fonts/font = ExtResource("4_k7tq7")
+theme_override_font_sizes/font_size = 26
+text = "Question 1/5"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="QuestionPanel" unique_id=1844131447]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.5
+offset_top = 19.0
+offset_right = 80.5
+offset_bottom = 42.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.3515629, 0.3515629, 0.35156286, 1)
+theme_override_fonts/font = ExtResource("4_k7tq7")
+theme_override_font_sizes/font_size = 26
+text = "Phishing & Smishing"
+horizontal_alignment = 1
+
+[node name="Close" type="Button" parent="QuestionPanel" unique_id=884174458]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -48.0
+offset_right = 72.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("4_p3mwi")
+theme_override_styles/pressed = ExtResource("5_k7tq7")
+theme_override_styles/hover = ExtResource("5_k7tq7")
+theme_override_styles/focus = ExtResource("5_k7tq7")
+text = "Close"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="QuestionPanel" unique_id=1657996674]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = 123.0
+offset_right = -42.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="QuestionText" type="Label" parent="QuestionPanel/VBoxContainer" unique_id=2112838335]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3515629, 0.3515629, 0.35156286, 1)
+theme_override_fonts/font = ExtResource("4_k7tq7")
+theme_override_font_sizes/font_size = 26
+text = "What is smishing?"
+autowrap_mode = 2
+
+[node name="Buttons" type="GridContainer" parent="QuestionPanel/VBoxContainer" unique_id=1350276147]
+layout_mode = 2
+columns = 2
+
+[node name="AnswerButton" type="Button" parent="QuestionPanel/VBoxContainer/Buttons" unique_id=1248212121]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("4_p3mwi")
+theme_override_styles/pressed = ExtResource("5_k7tq7")
+theme_override_styles/hover = ExtResource("5_k7tq7")
+theme_override_styles/focus = ExtResource("5_k7tq7")
+text = "Answer"
+text_overrun_behavior = 5
+
+[node name="AnswerButton2" type="Button" parent="QuestionPanel/VBoxContainer/Buttons" unique_id=1156802120]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("4_p3mwi")
+theme_override_styles/pressed = ExtResource("5_k7tq7")
+theme_override_styles/hover = ExtResource("5_k7tq7")
+theme_override_styles/focus = ExtResource("5_k7tq7")
+text = "Answer"
+text_overrun_behavior = 5
+
+[node name="AnswerButton3" type="Button" parent="QuestionPanel/VBoxContainer/Buttons" unique_id=200459561]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("4_p3mwi")
+theme_override_styles/pressed = ExtResource("5_k7tq7")
+theme_override_styles/hover = ExtResource("5_k7tq7")
+theme_override_styles/focus = ExtResource("5_k7tq7")
+text = "Answer"
+text_overrun_behavior = 5
+
+[node name="AnswerButton4" type="Button" parent="QuestionPanel/VBoxContainer/Buttons" unique_id=1864154832]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("4_p3mwi")
+theme_override_styles/pressed = ExtResource("5_k7tq7")
+theme_override_styles/hover = ExtResource("5_k7tq7")
+theme_override_styles/focus = ExtResource("5_k7tq7")
+text = "Answer"
+text_overrun_behavior = 5
