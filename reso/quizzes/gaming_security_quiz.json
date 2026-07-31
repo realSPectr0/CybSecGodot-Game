@@ -1,0 +1,42 @@
+{
+	"question_1": {
+		"text": "What is the safest way to log in after receiving a gaming account alert?",
+		"choices": [
+			"A. Click the link in the message",
+			"B. Reply with your password",
+			"C. Go directly to the game’s official website or app",
+			"D. Ask the sender whether the link is real"
+		],
+		"answer_idx": 2
+	},
+	"question_2": {
+		"text": "Why is reusing passwords dangerous?",
+		"choices": [
+			"A. It makes games run more slowly",
+			"B. A leaked password can be tried on your other accounts",
+			"C. It prevents you from earning rewards",
+			"D. It automatically disables antivirus"
+		],
+		"answer_idx": 1
+	},
+	"question_3": {
+		"text": "Which situation is most likely a scam?",
+		"choices": [
+			"A. A game installs an official update",
+			"B. A friend invites you to a normal match",
+			"C. A website promises free V-Bucks if you log in",
+			"D. A platform asks you to enable 2FA in its settings"
+		],
+		"answer_idx": 2
+	},
+	"question_4": {
+		"text": "What should you do if an online player pressures you for personal information or pictures?",
+		"choices": [
+			"A. Give them limited information",
+			"B. Stop communicating and tell a trusted adult",
+			"C. Move the conversation to another app",
+			"D. Ask them for their information first"
+		],
+		"answer_idx": 1
+	}
+}

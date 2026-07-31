@@ -202,6 +202,7 @@ quiz_path = "res://reso/quizzes/phishing_quiz.json"
 layout_mode = 2
 title = "Gaming & Security"
 id = "gaming_security"
+quiz_path = "res://reso/quizzes/gaming_security_quiz.json"
 
 [node name="QuizBox3" parent="Panel/GridContainer" unique_id=394057940 instance=ExtResource("7_k7tq7")]
 layout_mode = 2
@@ -213,6 +214,7 @@ quiz_path = "res://reso/quizzes/password_security.json"
 layout_mode = 2
 title = "Firewalls & Viruses"
 id = "firewalls"
+quiz_path = "res://reso/quizzes/firewalls_quiz.json"
 
 [node name="QuizBox5" parent="Panel/GridContainer" unique_id=650521393 instance=ExtResource("7_k7tq7")]
 layout_mode = 2
