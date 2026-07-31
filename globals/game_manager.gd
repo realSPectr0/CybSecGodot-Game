@@ -12,6 +12,21 @@ var character = 'male'
 var npc_nearby = null
 var global_player_ref
 
+var player_data = {}
+
+var USER_PATH = 'user://player_data.json'
+
+
+func _ready() -> void:
+	player_data = get_data('res://reso/player_data.json')
+
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_MOUSE_EXIT or what == NOTIFICATION_EXIT_TREE:
+		var f = FileAccess.open(USER_PATH, FileAccess.WRITE)
+		f.store_string(JSON.stringify(player_data))
+		f.close()
+
 
 func start_minigame():
 	if minigame_ref == null:

@@ -1,0 +1,8 @@
+~ start
+Staff: Do you want to learn?
+- Yes
+	Staff: Okay!
+	do GameManager.start_minigame()
+- No
+	Staff: Okay see ya later!
+=> END

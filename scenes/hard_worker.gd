@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var minigame_scene: PackedScene
 @export var overhead_title = ''
+@export var id = ''
 
 @onready var animated_sprite = $AnimatedSprite2D
 

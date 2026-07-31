@@ -9,12 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://c5gdqo28lueux" path="res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="5_pgho5"]
 [ext_resource type="PackedScene" uid="uid://x3e0uwidxls2" path="res://scenes/receptionpc.tscn" id="7_vny4q"]
 [ext_resource type="Script" uid="uid://b2ynrkw2abah0" path="res://scenes/hard_worker.gd" id="8_v5q8u"]
+[ext_resource type="Texture2D" uid="uid://bwnwqhw585y4f" path="res://art/0_Premade_Characters/16x16/Premade_Character_17.png" id="10_gueac"]
 [ext_resource type="PackedScene" uid="uid://ojbjrkjj75uf" path="res://scenes/minigames/deepfakes/deepfakes.tscn" id="11_pflgl"]
 [ext_resource type="PackedScene" uid="uid://c1cy2wvemcfie" path="res://scenes/minigames/firewalls_and_viruses/firewalls_and_viruses.tscn" id="13_2xpee"]
 [ext_resource type="PackedScene" uid="uid://da6bwpmv2khoi" path="res://scenes/minigames/phishing/phishing_main.tscn" id="13_gueac"]
 [ext_resource type="Script" uid="uid://dbjn77swuk08u" path="res://scenes/level_1npc.gd" id="13_ov5yj"]
 [ext_resource type="PackedScene" uid="uid://c4lq05xlvn71c" path="res://scenes/minigames/password_security/main.tscn" id="13_pflgl"]
 [ext_resource type="PackedScene" uid="uid://cmycgi23kmuo6" path="res://scenes/minigames/gaming_security/GamingSecurity.tscn" id="14_gueac"]
+[ext_resource type="PackedScene" uid="uid://rdeu7poj2ehb" path="res://scenes/quiz_person.tscn" id="17_k3sw6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_inqap"]
 texture = ExtResource("3_vny4q")
@@ -234,9 +236,7 @@ texture = ExtResource("3_vny4q")
 8:10/0 = 0
 8:10/0/z_index = 1
 9:10/0 = 0
-9:10/0/z_index = 1
 10:10/0 = 0
-10:10/0/z_index = 1
 12:10/0 = 0
 13:10/0 = 0
 14:10/0 = 0
@@ -256,9 +256,7 @@ texture = ExtResource("3_vny4q")
 8:11/0 = 0
 8:11/0/z_index = 1
 9:11/0 = 0
-9:11/0/z_index = 1
 10:11/0 = 0
-10:11/0/z_index = 1
 11:11/0 = 0
 11:11/0/z_index = 1
 12:11/0 = 0
@@ -275,9 +273,7 @@ texture = ExtResource("3_vny4q")
 7:12/0 = 0
 8:12/0 = 0
 9:12/0 = 0
-9:12/0/z_index = 1
 10:12/0 = 0
-10:12/0/z_index = 1
 11:12/0 = 0
 11:12/0/z_index = 1
 12:12/0 = 0
@@ -296,9 +292,7 @@ texture = ExtResource("3_vny4q")
 7:13/0 = 0
 8:13/0 = 0
 9:13/0 = 0
-9:13/0/z_index = 1
 10:13/0 = 0
-10:13/0/z_index = 1
 11:13/0 = 0
 12:13/0 = 0
 13:13/0 = 0
@@ -312,9 +306,7 @@ texture = ExtResource("3_vny4q")
 7:14/0 = 0
 8:14/0 = 0
 9:14/0 = 0
-9:14/0/z_index = 1
 10:14/0 = 0
-10:14/0/z_index = 1
 11:14/0 = 0
 12:14/0 = 0
 14:14/0 = 0
@@ -329,9 +321,7 @@ texture = ExtResource("3_vny4q")
 7:15/0 = 0
 8:15/0 = 0
 9:15/0 = 0
-9:15/0/z_index = 1
 10:15/0 = 0
-10:15/0/z_index = 1
 11:15/0 = 0
 12:15/0 = 0
 12:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -2625,29 +2615,29 @@ sources/2 = SubResource("TileSetAtlasSource_twbrq")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4yucn"]
 size = Vector2(14.5, 9.700012)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4yucn"]
-atlas = ExtResource("1_llsdn")
-region = Rect2(288, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3sw6"]
+atlas = ExtResource("10_gueac")
+region = Rect2(288, 32, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4m13e"]
-atlas = ExtResource("1_llsdn")
-region = Rect2(304, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dy68"]
+atlas = ExtResource("10_gueac")
+region = Rect2(304, 32, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_85vpr"]
-atlas = ExtResource("1_llsdn")
-region = Rect2(320, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_fix8w"]
+atlas = ExtResource("10_gueac")
+region = Rect2(320, 32, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jhrqw"]
-atlas = ExtResource("1_llsdn")
-region = Rect2(336, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_q57yw"]
+atlas = ExtResource("10_gueac")
+region = Rect2(336, 32, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0aj3a"]
-atlas = ExtResource("1_llsdn")
-region = Rect2(352, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_muvkp"]
+atlas = ExtResource("10_gueac")
+region = Rect2(352, 32, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qa273"]
-atlas = ExtResource("1_llsdn")
-region = Rect2(368, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ah82"]
+atlas = ExtResource("10_gueac")
+region = Rect2(368, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6na0p"]
 atlas = ExtResource("1_llsdn")
@@ -2725,22 +2715,22 @@ region = Rect2(176, 0, 16, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4yucn")
+"texture": SubResource("AtlasTexture_k3sw6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4m13e")
+"texture": SubResource("AtlasTexture_2dy68")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_85vpr")
+"texture": SubResource("AtlasTexture_fix8w")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jhrqw")
+"texture": SubResource("AtlasTexture_q57yw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0aj3a")
+"texture": SubResource("AtlasTexture_muvkp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qa273")
+"texture": SubResource("AtlasTexture_1ah82")
 }],
 "loop": 1,
 "name": &"idle_down",
@@ -2826,7 +2816,7 @@ script = ExtResource("1_i68so")
 [node name="player" parent="." unique_id=1092919849 instance=ExtResource("1_gm810")]
 unique_name_in_owner = true
 y_sort_enabled = true
-position = Vector2(1178, 104.00006)
+position = Vector2(944, 445)
 scale = Vector2(2.5, 2.5)
 menu_ui_file = "res://scenes/menu_ui.tscn"
 
@@ -2849,14 +2839,12 @@ y_sort_enabled = true
 scale = Vector2(2.5, 2.5)
 tile_map_data = PackedByteArray("AAADAAAAAQARAAAAAAADAAEAAQARAAEAAAAEAAAAAQASAAAAAAAEAAEAAQASAAEAAAAMABEAAQARAAAAAAAMABIAAQARAAEAAAANABEAAQASAAAAAAANABIAAQASAAEAAAAEABQAAAALAAAAAAAEABUAAAALAAEAAAAEABYAAAALAAEAAAAEABcAAAALAAEAAAAEABgAAAALAAIAAAAFABQAAAAMAAAAAAAFABUAAAAMAAEAAAAFABYAAAAMAAEAAAAFABcAAAAMAAEAAAAFABgAAAAMAAIAAAAGABQAAAAMAAAAAAAGABUAAAAMAAEAAAAGABYAAAAMAAEAAAAGABcAAAAMAAEAAAAGABgAAAAMAAIAAAAHABQAAAAMAAAAAAAHABUAAAAMAAEAAAAHABYAAAAMAAEAAAAHABcAAAAMAAEAAAAHABgAAAAMAAIAAAAIABQAAAAMAAAAAAAIABUAAAAMAAEAAAAIABYAAAAMAAEAAAAIABcAAAAMAAEAAAAIABgAAAAMAAIAAAAJABQAAAAMAAAAAAAJABUAAAAMAAEAAAAJABYAAAAMAAEAAAAJABcAAAAMAAEAAAAJABgAAAAMAAIAAAAKABQAAAAMAAAAAAAKABUAAAAMAAEAAAAKABYAAAAMAAEAAAAKABcAAAAMAAEAAAAKABgAAAAMAAIAAAALABQAAAANAAAAAAALABUAAAANAAEAAAALABYAAAANAAEAAAALABcAAAANAAEAAAALABgAAAANAAIAAAAZABkAAAAGABYAAAAaABkAAAAFABYAAAAbABkAAAAHABYAAAAZABoAAAAGABcAAAAbABoAAAAHABcAAAASAAAAAQARAAAAAAASAAEAAQARAAEAAAATAAAAAQASAAAAAAATAAEAAQASAAEAAAALAAAAAQARAAAAAAAMAAAAAQASAAAAAAALAAEAAQARAAEAAAAMAAEAAQASAAEAAAAdAAAAAgAHAAgAAAAdAAEAAgAHAAkAAAAaABAAAAACAAUAAAAaABEAAAACAAUAAAAbABAAAAACAAUAAAAbABEAAAACAAUAAAAcABAAAAACAAUAAAAcABEAAAACAAUAAAAdABAAAAACAAUAAAAdABEAAAACAAUAAAAeABAAAAACAAUAAAAeABEAAAACAAUAAAAZABAAAAABAAUAAAAZABEAAAABAAUAAAAZABIAAAABAAYAAAAaABIAAAACAAYAAAAbABIAAAACAAYAAAAcABIAAAACAAYAAAAdABIAAAACAAYAAAAeABIAAAACAAYAAAAZAA8AAAABAAQAAAAaAA8AAAACAAQAAAAbAA8AAAACAAQAAAAcAA8AAAACAAQAAAAdAA8AAAACAAQAAAAeAA8AAAACAAQAAAAfABAAAAADAAUAAAAfABEAAAADAAUAAAAfABIAAAADAAYAAAAfAA8AAAADAAQAAAAEAAcAAAABAB4AAAAHAAcAAAAHABwAAAAKAAcAAAABAB4AAAANAAcAAAAHABwAAAAQAAcAAAABAB4AAAAEAAUAAAABAB4AAAAHAAUAAAAHABwAAAAKAAUAAAABAB4AAAANAAUAAAAHABwAAAAQAAUAAAABAB4AAAAEAA0AAAABAB4AAAAHAA0AAAAHABwAAAAKAA0AAAABAB4AAAANAA0AAAAHABwAAAAQAA0AAAABAB4AAAAEAAsAAAABAB4AAAAHAAsAAAAHABwAAAAKAAsAAAABAB4AAAANAAsAAAAHABwAAAAQAAsAAAABAB4AAAAaABoAAAAFABcAAAA=")
 tile_set = SubResource("TileSet_twbrq")
-collision_visibility_mode = 1
 
 [node name="sofas,chairs,seperators" type="TileMapLayer" parent="." unique_id=2048473705]
 y_sort_enabled = true
 scale = Vector2(2.5, 2.5)
 tile_map_data = PackedByteArray("AAACAAQAAAAAABoAAAACAAUAAAAAABsAAAACAAYAAAAAABwAAAACAAoAAAAAABoAAAACAAsAAAAAABsAAAACAAwAAAAAABwAAAADAAUAAAABABsAAAADAAYAAAABABwAAAADAAwAAAABABwAAAAEAAUAAAACABsAAAAEAAYAAAACABwAAAAEAAwAAAACABwAAAAFAAQAAAADABoAAAAFAAUAAAADABsAAAAFAAYAAAADABwAAAAFAAsAAAADABsAAAAFAAwAAAADABwAAAAGAAUAAAABABsAAAAGAAYAAAABABwAAAAGAAsAAAABABsAAAAGAAwAAAABABwAAAAHAAUAAAACABsAAAAHAAYAAAACABwAAAAHAAsAAAACABsAAAAHAAwAAAACABwAAAAIAAUAAAADABsAAAAIAAYAAAADABwAAAAIAAsAAAADABsAAAAIAAwAAAADABwAAAAJAAUAAAAEABsAAAAJAAYAAAAEABwAAAAJAAsAAAAEABsAAAAJAAwAAAAEABwAAAAKAAUAAAAFABsAAAAKAAYAAAAFABwAAAAKAAsAAAAFABsAAAAKAAwAAAAFABwAAAALAAUAAAAGABsAAAALAAYAAAAGABwAAAALAAsAAAAGABsAAAALAAwAAAAGABwAAAAMAAUAAAABABsAAAAMAAYAAAABABwAAAAMAAsAAAABABsAAAAMAAwAAAABABwAAAANAAUAAAACABsAAAANAAYAAAACABwAAAANAAsAAAACABsAAAANAAwAAAACABwAAAAOAAUAAAADABsAAAAOAAYAAAADABwAAAAOAAsAAAADABsAAAAOAAwAAAADABwAAAAPAAUAAAAEABsAAAAPAAYAAAAEABwAAAAPAAsAAAAEABsAAAAPAAwAAAAEABwAAAAQAAUAAAAFABsAAAAQAAYAAAAFABwAAAAQAAsAAAAFABsAAAAQAAwAAAAFABwAAAARAAUAAAAGABsAAAARAAYAAAAGABwAAAARAAoAAAAGABoAAAARAAsAAAAGABsAAAARAAwAAAAGABwAAAAXABcAAAACABQAAAAYABcAAAADABQAAAAcABcAAAADABEAAAAdABcAAAAEABEAAAAXABgAAAACABUAAAAXABkAAAACABYAAAAYABgAAAADABUAAAAYABkAAAADABYAAAAZABcAAAAEABQAAAAZABgAAAAEABUAAAAaABcAAAAGAAoAAAAaABgAAAAGAAsAAAAbABcAAAACABEAAAAbABgAAAACABIAAAAcABgAAAADABIAAAAcABkAAAADABMAAAAdABgAAAAEABIAAAAdABkAAAAEABMAAAAbAAYAAgAAAAUAAAAbAAcAAgAAAAYAAAAbAAgAAgAAAAcAAAAbAAkAAgAAAAcAAAAbAAoAAgAAAAgAAAAcAAYAAgABAAUAAAAcAAcAAgABAAYAAAAcAAoAAgABAAgAAAAdAAYAAgABAAUAAAAdAAcAAgABAAYAAAAdAAoAAgADAAUAAAAeAAYAAgABAAUAAAAeAAcAAgABAAYAAAAeAAoAAgABAAgAAAAfAAYAAgACAAUAAAAfAAcAAgACAAYAAAAfAAgAAgACAAcAAAAfAAkAAgACAAcAAAAfAAoAAgACAAgAAAAaABMAAAABAAgAAAAcABMAAAABAAgAAAAeABMAAAABAAgAAAAaAA8AAAAAAAgAAAAcAA8AAAAAAAgAAAAeAA8AAAAAAAgAAAAbAAwAAAAJAAwAAAAbAA0AAAAJAA0AAAAcAAwAAAAKAAwAAAAcAA0AAAAKAA0AAAAeAAwAAAAJAAoAAAAeAA0AAAAJAAsAAAAfAAwAAAAKAAoAAAAfAA0AAAAKAAsAAAAYABEAAAAFAAgAAAAgABEAAAAEAAgAAAAOAAoAAAADABoAAAALAAoAAAAGABoAAAAIAAoAAAADABoAAAAFAAoAAAADABoAAAAEAAsAAAACABsAAAADAAsAAAABABsAAAAIAAQAAAADABoAAAALAAQAAAAGABoAAAARAAQAAAAGABoAAAAOAAQAAAADABoAAAAEAA4AAAABAAgAAAAHAA4AAAABAAgAAAAKAA4AAAABAAgAAAANAA4AAAABAAgAAAAQAA4AAAABAAgAAAAQAAQAAAACAAgAAAANAAQAAAACAAgAAAAKAAQAAAACAAgAAAAHAAQAAAACAAgAAAAEAAQAAAACAAgAAAAQAAgAAAABAAgAAAANAAgAAAABAAgAAAAKAAgAAAABAAgAAAAHAAgAAAABAAgAAAAEAAgAAAABAAgAAAA=")
 tile_set = SubResource("TileSet_twbrq")
-collision_visibility_mode = 1
 
 [node name="MISC" type="TileMapLayer" parent="." unique_id=1655501540]
 z_index = 1
@@ -2864,7 +2852,6 @@ y_sort_enabled = true
 scale = Vector2(2.5, 2.5)
 tile_map_data = PackedByteArray("AAADAAQAAAANACAAAAADAAYAAAAKAB4AAAADAAcAAAAKAB8AAAADAAoAAAANAB4AAAAEAAQAAAAOACAAAAAEAAYAAAALAB4AAAAEAAcAAAALAB8AAAAEAAoAAAAOAB4AAAAFAAQAAAAPACAAAAAFAAYAAAAMAB4AAAAFAAcAAAAMAB8AAAAFAAoAAAAPAB4AAAAGAAQAAAALAA8AAAAGAAYAAAALABMAAAAGAAcAAAALABQAAAAGAAoAAAALAA8AAAAHAAYAAAAOAA0AAAAIAAYAAAAPAA0AAAAJAAQAAAANAB8AAAAJAAYAAAAHABoAAAAJAAcAAAAHABsAAAAJAAoAAAANACAAAAAKAAQAAAAOAB8AAAAKAAYAAAAIABoAAAAKAAcAAAAIABsAAAAKAAoAAAAOACAAAAALAAYAAAAJABoAAAALAAcAAAAJABsAAAALAAoAAAAPACAAAAAMAAQAAAAOAAoAAAAMAAYAAAANABwAAAAMAAcAAAANAB0AAAAMAAoAAAANAB4AAAANAAQAAAAOACAAAAANAAYAAAAOABwAAAANAAcAAAAOAB0AAAANAAoAAAAOAB4AAAAOAAQAAAAPACAAAAAOAAYAAAAPABwAAAAOAAoAAAAPAB4AAAAPAAQAAAALAA8AAAAPAAYAAAANAA0AAAAPAAoAAAANAB8AAAAQAAYAAAAOAA0AAAAQAAoAAAAOAB8AAAARAAYAAAAPAA0AAAARAAoAAAAPAB8AAAAHAAQAAAAOAAoAAAAHAAcAAAAOAA4AAAAHAAoAAAAOAAoAAAAOAAcAAAAPAB0AAAAQAAQAAAAOAAoAAAAQAAcAAAAOAA4AAAABABMAAQAAABYAAAABABQAAQAAABcAAAACABEAAAAHAAoAAAACABIAAAAHAAsAAAACABMAAQABABYAAAACABQAAQABABcAAAADABEAAAAIAAoAAAADABIAAAAIAAsAAAADABUAAAAFAAoAAAADABYAAAAFAAsAAAAEABEAAAAIAAgAAAAEABIAAAAIAAkAAAAEABYAAAAMAC0AAAAEABcAAAAMAC4AAAAFABEAAAAJAAgAAAAFABIAAAAJAAkAAAAFABQAAAAAAAgAAAAFABUAAAALACMAAAAFABYAAAALACQAAAAFABcAAAALACUAAAAFABkAAAABAAgAAAAHABQAAAAAAAgAAAAHABkAAAABAAgAAAAJABQAAAAAAAgAAAAJABkAAAABAAgAAAAKABEAAAAJAAoAAAAKABIAAAAJAAsAAAALABEAAAAKAAoAAAALABIAAAAKAAsAAAALABQAAAAAAAgAAAALABkAAAABAAgAAAAOABEAAAAMAA8AAAAOABIAAAAMABAAAAAOABMAAAAMABEAAAAWABUAAQAAABYAAAAWABYAAQAAABcAAAAXABUAAQABABYAAAAXABYAAQABABcAAAAYABQAAAAKACYAAAAYABUAAAAKACcAAAAYABYAAAAKACgAAAAZABQAAAALACYAAAAZABUAAAALACcAAAAZABYAAAALACgAAAAaABQAAAAMAA8AAAAaABUAAAAMABAAAAAaABYAAAAMABEAAAAbABUAAAAEABgAAAAbABYAAAAEABkAAAAcABUAAAAFABgAAAAcABYAAAAFABkAAAAdABQAAAACABcAAAAdABUAAAACABgAAAAdABYAAAACABkAAAAeABQAAAADABcAAAAeABUAAAADABgAAAAeABYAAAADABkAAAAZAAcAAQAAABYAAAAZAAgAAQAAABcAAAAaAAcAAQABABYAAAAaAAgAAQABABcAAAAdAAYAAAAOAA0AAAAdAAcAAAAOAA4AAAAWAA4AAQAAABYAAAAWAA8AAQAAABcAAAAXAA4AAQABABYAAAAXAA8AAQABABcAAAADAAwAAAAHABoAAAAEAAwAAAAIABoAAAAFAAwAAAAJABoAAAAHAAwAAAAOAA0AAAAJAAwAAAAKABoAAAAKAAwAAAALABoAAAALAAwAAAAMABoAAAAMAAwAAAAKAB4AAAANAAwAAAALAB4AAAAOAAwAAAAMAB4AAAAPAAwAAAANABwAAAAQAAwAAAAOABwAAAARAAwAAAAPABwAAAADAA0AAAAHABsAAAAEAA0AAAAIABsAAAAFAA0AAAAJABsAAAAGAAwAAAANAA0AAAAHAA0AAAAOAA4AAAAIAAwAAAAPAA0AAAAJAA0AAAAKABsAAAAKAA0AAAALABsAAAALAA0AAAAMABsAAAAMAA0AAAAKAB8AAAANAA0AAAALAB8AAAAOAA0AAAAMAB8AAAAPAA0AAAANAB0AAAAQAA0AAAAOAB0AAAARAA0AAAAPAB0AAAA=")
 tile_set = SubResource("TileSet_twbrq")
-collision_visibility_mode = 1
 
 [node name="receptionpc" parent="." unique_id=1427256539 instance=ExtResource("7_vny4q")]
 z_index = 3
@@ -2882,6 +2869,7 @@ scale = Vector2(2.5, 2.5)
 script = ExtResource("8_v5q8u")
 minigame_scene = ExtResource("13_2xpee")
 overhead_title = "Firewalls & Viruses"
+id = "firewalls"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker11" unique_id=958727143]
 position = Vector2(0, 16)
@@ -2906,6 +2894,7 @@ scale = Vector2(2.5, 2.5)
 script = ExtResource("8_v5q8u")
 minigame_scene = ExtResource("11_pflgl")
 overhead_title = "Deepfakes"
+id = "deepfakes"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker13" unique_id=2055568176]
 position = Vector2(0, 16)
@@ -2930,6 +2919,7 @@ scale = Vector2(2.5, 2.5)
 script = ExtResource("8_v5q8u")
 minigame_scene = ExtResource("14_gueac")
 overhead_title = "Gaming Security"
+id = "gaming_security"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker12" unique_id=101408917]
 position = Vector2(0, 16)
@@ -2953,7 +2943,8 @@ position = Vector2(180.00002, 302)
 scale = Vector2(2.5, 2.5)
 script = ExtResource("8_v5q8u")
 minigame_scene = ExtResource("13_gueac")
-overhead_title = "Pishing & Smishing"
+overhead_title = "Phishing & Smishing"
+id = "phishing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker14" unique_id=132921624]
 position = Vector2(0, 16)
@@ -2978,6 +2969,7 @@ scale = Vector2(2.5, 2.5)
 script = ExtResource("8_v5q8u")
 minigame_scene = ExtResource("13_pflgl")
 overhead_title = "Password Security"
+id = "password_security"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker15" unique_id=684151930]
 position = Vector2(0, 15.649994)
@@ -3040,6 +3032,9 @@ metadata/_edit_lock_ = true
 position = Vector2(0, 16)
 shape = SubResource("CircleShape2D_85vpr")
 metadata/_edit_lock_ = true
+
+[node name="QuizPerson" parent="." unique_id=1322085865 instance=ExtResource("17_k3sw6")]
+position = Vector2(1140, 594)
 
 [connection signal="body_entered" from="Hard_workers/hard_worker11/interaction area" to="Hard_workers/hard_worker11" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Hard_workers/hard_worker11/interaction area" to="Hard_workers/hard_worker11" method="_on_interaction_area_body_exited"]

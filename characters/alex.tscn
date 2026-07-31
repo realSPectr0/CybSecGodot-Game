@@ -9,6 +9,7 @@
 size = Vector2(9.5, 12.5)
 
 [node name="Alex" type="CharacterBody2D" unique_id=1092919849 groups=["Player"]]
+collision_layer = 128
 script = ExtResource("1_0hfun")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1716424355]

@@ -137,7 +137,7 @@ pointing/emulate_mouse_from_touch=false
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://reso/dialog.dialogue", "res://reso/receptionist_welcome.dialogue")
+locale/translations_pot_files=PackedStringArray("res://reso/dialog.dialogue", "res://reso/receptionist_welcome.dialogue", "res://reso/quizzes_learn.dialogue")
 
 [layer_names]
 
@@ -148,6 +148,7 @@ locale/translations_pot_files=PackedStringArray("res://reso/dialog.dialogue", "r
 2d_physics/layer_5="PlayerHurtbox"
 2d_physics/layer_6="Wall"
 2d_physics/layer_7="EnemyBody"
+2d_physics/layer_8="PlayerBody"
 
 [physics]
 
