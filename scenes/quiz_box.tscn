@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b337cp125k7x7"]
+
+[ext_resource type="FontFile" uid="uid://sa5q1m5icp5w" path="res://scenes/minigames/firewalls_and_viruses/Habbo.ttf" id="1_4fg62"]
+[ext_resource type="Script" uid="uid://dcvjrkl8lvy7i" path="res://scenes/quiz_box.gd" id="1_ofxhu"]
+[ext_resource type="StyleBox" uid="uid://miqenymvbqx2" path="res://scenes/minigames/password_security/reso/button.tres" id="2_ofxhu"]
+[ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="3_enig1"]
+
+[node name="QuizBox" type="VBoxContainer" unique_id=1257231719]
+size_flags_horizontal = 3
+script = ExtResource("1_ofxhu")
+
+[node name="Label" type="Label" parent="." unique_id=664095241]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3515629, 0.3515629, 0.35156286, 1)
+theme_override_fonts/font = ExtResource("1_4fg62")
+theme_override_font_sizes/font_size = 26
+text = "Phishing & Smishing"
+horizontal_alignment = 1
+
+[node name="Status" type="Label" parent="." unique_id=735913635]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3515629, 0.3515629, 0.35156286, 1)
+theme_override_fonts/font = ExtResource("1_4fg62")
+theme_override_font_sizes/font_size = 26
+text = "NOT DONE"
+horizontal_alignment = 1
+
+[node name="TakeQuiz" type="Button" parent="." unique_id=1671821512]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("2_ofxhu")
+theme_override_styles/pressed = ExtResource("3_enig1")
+theme_override_styles/hover = ExtResource("3_enig1")
+theme_override_styles/focus = ExtResource("3_enig1")
+text = "Take Quiz"

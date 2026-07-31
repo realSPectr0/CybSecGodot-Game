@@ -2816,7 +2816,7 @@ script = ExtResource("1_i68so")
 [node name="player" parent="." unique_id=1092919849 instance=ExtResource("1_gm810")]
 unique_name_in_owner = true
 y_sort_enabled = true
-position = Vector2(944, 445)
+position = Vector2(745, 404.99997)
 scale = Vector2(2.5, 2.5)
 menu_ui_file = "res://scenes/menu_ui.tscn"
 
@@ -2881,6 +2881,7 @@ animation = &"idle_up"
 metadata/_edit_lock_ = true
 
 [node name="interaction area" type="Area2D" parent="Hard_workers/hard_worker11" unique_id=1024255063]
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker11/interaction area" unique_id=619658001]
 position = Vector2(0, 16)
@@ -2906,6 +2907,7 @@ animation = &"idle_up"
 metadata/_edit_lock_ = true
 
 [node name="interaction area" type="Area2D" parent="Hard_workers/hard_worker13" unique_id=1938783798]
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker13/interaction area" unique_id=154638773]
 position = Vector2(0, 16)
@@ -2931,6 +2933,7 @@ animation = &"idle_up"
 metadata/_edit_lock_ = true
 
 [node name="interaction area" type="Area2D" parent="Hard_workers/hard_worker12" unique_id=740653715]
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker12/interaction area" unique_id=658642573]
 position = Vector2(0, 16)
@@ -2956,6 +2959,7 @@ animation = &"idle_up"
 metadata/_edit_lock_ = true
 
 [node name="interaction area" type="Area2D" parent="Hard_workers/hard_worker14" unique_id=2122519012]
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker14/interaction area" unique_id=1778589060]
 position = Vector2(0, 16)
@@ -2981,6 +2985,7 @@ animation = &"idle_up"
 metadata/_edit_lock_ = true
 
 [node name="interaction area" type="Area2D" parent="Hard_workers/hard_worker15" unique_id=1892576611]
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker15/interaction area" unique_id=2128546990]
 position = Vector2(0, 16)

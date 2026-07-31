@@ -2,7 +2,7 @@
 Staff: Do you want to learn?
 - Yes
 	Staff: Okay!
-	do GameManager.start_minigame()
+	do GameManager.start_quiz()
 - No
 	Staff: Okay see ya later!
 => END

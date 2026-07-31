@@ -2991,7 +2991,7 @@ sources/2 = SubResource("TileSetAtlasSource_7ih8f")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c53tk"]
 shader = ExtResource("7_pvt8j")
-shader_parameter/blur_amount = 0.9280001390799999
+shader_parameter/blur_amount = 0.92800013908
 shader_parameter/mix_amount = 0.0
 shader_parameter/color_over = Color(0, 0, 0, 1)
 

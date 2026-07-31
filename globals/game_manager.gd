@@ -32,18 +32,29 @@ func start_minigame():
 	if minigame_ref == null:
 		return
 	
-	var player = get_tree().get_nodes_in_group("Player")[0]
+	var e = load('res://scenes/password_prompt.tscn')
+	GameManager.global_player_ref.pop_to_ui(e)
+	
+	#var player = get_tree().get_nodes_in_group("Player")[0]
 	#player.pop_to_ui(minigame_ref)
 	#player.freeze = true
 	
-	get_tree().change_scene_to_packed(minigame_ref)
-	previous_location = player.global_position
-	
-	minigame_ref = null
+	#get_tree().change_scene_to_packed(minigame_ref)
+	#previous_location = player.global_position
+	#
+	#minigame_ref = null
 
 
 func finish_minigame():
 	get_tree().change_scene_to_file('res://scenes/gamelevel.tscn')
+
+
+func start_quiz():
+	var e = load('res://scenes/QuizzesChoicesControl.tscn')
+	GameManager.global_player_ref.pop_to_ui(e)
+	
+	GameManager.global_player_ref.freeze = true
+	GameManager.global_player_ref.animated_sprite.play('idle_down')
 
 
 func get_data(path):

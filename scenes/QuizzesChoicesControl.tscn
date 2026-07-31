@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://cl068fr8tevcu"]
+
+[ext_resource type="Script" uid="uid://c1nifr6hhacbd" path="res://scenes/quizzes_choices_control.gd" id="1_maipp"]
+[ext_resource type="Shader" uid="uid://dhmvdnbmvrlhc" path="res://reso/blur.gdshader" id="2_vkey8"]
+[ext_resource type="StyleBox" uid="uid://b53txwjystlc4" path="res://scenes/minigames/password_security/reso/panel.tres" id="3_xqvo0"]
+[ext_resource type="FontFile" uid="uid://sa5q1m5icp5w" path="res://scenes/minigames/firewalls_and_viruses/Habbo.ttf" id="4_k7tq7"]
+[ext_resource type="StyleBox" uid="uid://miqenymvbqx2" path="res://scenes/minigames/password_security/reso/button.tres" id="4_p3mwi"]
+[ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="5_k7tq7"]
+[ext_resource type="PackedScene" uid="uid://b337cp125k7x7" path="res://scenes/quiz_box.tscn" id="7_k7tq7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tioxh"]
+shader = ExtResource("2_vkey8")
+shader_parameter/blur_amount = 0.92800013908
+shader_parameter/mix_amount = 0.0
+shader_parameter/color_over = Color(0, 0, 0, 1)
+
+[node name="QuizzesChoicesControl" type="Control" unique_id=444663624]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_maipp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=628645392]
+material = SubResource("ShaderMaterial_tioxh")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=196575370]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 160.0
+offset_top = 42.0
+offset_right = -160.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("3_xqvo0")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1975141759]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_top = 24.0
+offset_right = 68.0
+offset_bottom = 47.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.3515629, 0.3515629, 0.35156286, 1)
+theme_override_fonts/font = ExtResource("4_k7tq7")
+theme_override_font_sizes/font_size = 26
+text = "Choose a quiz you'd like to perform."
+horizontal_alignment = 1
+
+[node name="Close" type="Button" parent="Panel" unique_id=1984411820]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -48.0
+offset_right = 72.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("4_p3mwi")
+theme_override_styles/pressed = ExtResource("5_k7tq7")
+theme_override_styles/hover = ExtResource("5_k7tq7")
+theme_override_styles/focus = ExtResource("5_k7tq7")
+text = "Close"
+
+[node name="GridContainer" type="GridContainer" parent="Panel" unique_id=520026009]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 75.0
+offset_top = 88.0
+offset_right = -75.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 22
+theme_override_constants/v_separation = 22
+columns = 2
+
+[node name="QuizBox" parent="Panel/GridContainer" unique_id=1257231719 instance=ExtResource("7_k7tq7")]
+layout_mode = 2
+title = "Phishing & Smishing"
+id = "phishing"
+
+[node name="QuizBox2" parent="Panel/GridContainer" unique_id=81203068 instance=ExtResource("7_k7tq7")]
+layout_mode = 2
+title = "Gaming & Security"
+id = "gaming_security"
+
+[node name="QuizBox3" parent="Panel/GridContainer" unique_id=394057940 instance=ExtResource("7_k7tq7")]
+layout_mode = 2
+title = "Password Security"
+id = "password_security"
+
+[node name="QuizBox4" parent="Panel/GridContainer" unique_id=1546559460 instance=ExtResource("7_k7tq7")]
+layout_mode = 2
+title = "Firewalls & Viruses"
+id = "firewalls"
+
+[node name="QuizBox5" parent="Panel/GridContainer" unique_id=650521393 instance=ExtResource("7_k7tq7")]
+layout_mode = 2
+title = "Deepfakes & AI"
+id = "deepfakes"
