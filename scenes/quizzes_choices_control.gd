@@ -24,6 +24,12 @@ func _ready() -> void:
 	for b in $QuestionPanel/VBoxContainer/Buttons.get_children():
 		b.pressed.connect(func():
 			question_idx += 1
+			
+			if question_idx >= question_data.size():
+				$QuestionPanel.hide()
+				$Panel.show()
+				return
+			
 			show_question(question_idx)
 			)
 
@@ -44,3 +50,8 @@ func show_question(idx):
 
 func generate_password():
 	pass
+
+
+func _on_close_pressed() -> void:
+	GameManager.global_player_ref.freeze = false
+	queue_free()

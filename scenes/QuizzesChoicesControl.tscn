@@ -33,7 +33,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="." unique_id=196575370]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -126,6 +125,7 @@ id = "deepfakes"
 quiz_path = "res://reso/quizzes/deepfake_quiz.json"
 
 [node name="QuestionPanel" type="Panel" parent="." unique_id=1404759325]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -255,3 +255,5 @@ theme_override_styles/hover = ExtResource("5_k7tq7")
 theme_override_styles/focus = ExtResource("5_k7tq7")
 text = "Answer"
 text_overrun_behavior = 5
+
+[connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]
