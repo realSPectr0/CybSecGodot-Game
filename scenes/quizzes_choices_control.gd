@@ -80,8 +80,14 @@ func answer_choose(idx):
 	var q = question_data['question_%d' % (question_idx+1)] 
 	if q['answer_idx'] != idx:
 		wrong_answers_count += 1
+		$AnswerStatePopup/Panel/Label.text = 'WRONG!'
+		$AnswerStatePopup/Panel.self_modulate = Color.DARK_RED
+		$AnswerStatePopup/Panel/AnimationPlayer.play("anim")
 	else:
+		$AnswerStatePopup/Panel.self_modulate = Color.SEA_GREEN
+		$AnswerStatePopup/Panel/Label.text = 'CORRECT!'
 		correct_answers_count += 1
+		$AnswerStatePopup/Panel/AnimationPlayer.play("anim")
 	
 	question_idx += 1
 	
