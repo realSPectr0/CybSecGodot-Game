@@ -30,4 +30,8 @@ func _on_enter_pressed() -> void:
 	else:
 		print('invalid password')
 		
+		$Panel/State.text = 'Invalid password, try again.'
+		$Panel/State.show()
 		
+		await get_tree().create_timer(2.0).timeout
+		$Panel/State.hide()
