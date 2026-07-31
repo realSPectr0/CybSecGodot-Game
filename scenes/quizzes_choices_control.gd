@@ -71,7 +71,7 @@ func generate_password():
 		var rand = randi_range(0, nums.length() - 1)
 		new_pass += nums.split('')[rand]
 	
-	print(new_pass)
+	#print(new_pass)
 	
 	return new_pass
 
@@ -86,12 +86,18 @@ func answer_choose(idx):
 	question_idx += 1
 	
 	if question_idx >= question_data.size():
-		$QuestionPanel.hide()
-		$Panel.show()
+		$QuestionPanel/PasswordSuccess.show()
+		$QuestionPanel/VBoxContainer.hide()
 		
 		if wrong_answers_count <= 0:
 			var new_pass = generate_password()
 			GameManager.player_data['passwords'][currently_taking_quiz.id] = new_pass
+			
+			#$QuestionPanel/PasswordSuccess.font_color = Color.SEA_GREEN
+			$QuestionPanel/PasswordSuccess.text = 'You completed the quiz, the password is %s.' % new_pass
+		else:
+			$QuestionPanel/PasswordSuccess.text = 'You failed the quiz, try again.'
+			#$QuestionPanel/PasswordSuccess.font_color = Color.DARK_RED
 		return
 	
 	show_question(question_idx)
@@ -104,3 +110,10 @@ func _on_close_pressed() -> void:
 
 func _on_answer_button_pressed(extra_arg_0: int) -> void:
 	answer_choose(extra_arg_0)
+
+
+func _on_close_qustion_panel_pressed() -> void:
+	$QuestionPanel.hide()
+	$Panel.show()
+	
+	_on_close_pressed()

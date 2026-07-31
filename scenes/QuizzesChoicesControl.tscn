@@ -170,6 +170,45 @@ theme_override_font_sizes/font_size = 26
 text = "Phishing & Smishing"
 horizontal_alignment = 1
 
+[node name="PasswordSuccess" type="Label" parent="QuestionPanel" unique_id=2018015336]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -191.5
+offset_top = 276.0
+offset_right = 191.5
+offset_bottom = 299.0
+grow_horizontal = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.3515629, 0.3515629, 0.35156286, 1)
+theme_override_fonts/font = ExtResource("4_k7tq7")
+theme_override_font_sizes/font_size = 32
+text = "You completed the quiz, the password is %s."
+horizontal_alignment = 1
+
+[node name="CloseQustionPanel" type="Button" parent="QuestionPanel/PasswordSuccess" unique_id=1961638413]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -95.5
+offset_top = 23.0
+offset_right = 95.5
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("4_p3mwi")
+theme_override_styles/pressed = ExtResource("5_k7tq7")
+theme_override_styles/hover = ExtResource("5_k7tq7")
+theme_override_styles/focus = ExtResource("5_k7tq7")
+text = "Confirm"
+text_overrun_behavior = 5
+
 [node name="Close" type="Button" parent="QuestionPanel" unique_id=884174458]
 visible = false
 layout_mode = 1
@@ -257,6 +296,7 @@ text = "Answer"
 text_overrun_behavior = 5
 
 [connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="QuestionPanel/PasswordSuccess/CloseQustionPanel" to="." method="_on_close_qustion_panel_pressed"]
 [connection signal="pressed" from="QuestionPanel/VBoxContainer/Buttons/AnswerButton" to="." method="_on_answer_button_pressed" binds= [0]]
 [connection signal="pressed" from="QuestionPanel/VBoxContainer/Buttons/AnswerButton2" to="." method="_on_answer_button_pressed" binds= [1]]
 [connection signal="pressed" from="QuestionPanel/VBoxContainer/Buttons/AnswerButton3" to="." method="_on_answer_button_pressed" binds= [2]]
