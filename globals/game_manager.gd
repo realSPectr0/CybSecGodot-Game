@@ -33,6 +33,7 @@ func start_minigame():
 		return
 	
 	var e = load('res://scenes/password_prompt.tscn')
+	#e.minigame_id = npc_nearby.id
 	GameManager.global_player_ref.pop_to_ui(e)
 	
 	#var player = get_tree().get_nodes_in_group("Player")[0]
