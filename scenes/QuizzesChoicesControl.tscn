@@ -361,7 +361,7 @@ theme_override_styles/pressed = ExtResource("5_k7tq7")
 theme_override_styles/hover = ExtResource("5_k7tq7")
 theme_override_styles/focus = ExtResource("5_k7tq7")
 text = "Answer"
-text_overrun_behavior = 5
+autowrap_mode = 2
 
 [node name="AnswerButton2" type="Button" parent="QuestionPanel/VBoxContainer/Buttons" unique_id=1156802120]
 layout_mode = 2
@@ -371,7 +371,7 @@ theme_override_styles/pressed = ExtResource("5_k7tq7")
 theme_override_styles/hover = ExtResource("5_k7tq7")
 theme_override_styles/focus = ExtResource("5_k7tq7")
 text = "Answer"
-text_overrun_behavior = 5
+autowrap_mode = 2
 
 [node name="AnswerButton3" type="Button" parent="QuestionPanel/VBoxContainer/Buttons" unique_id=200459561]
 layout_mode = 2
@@ -381,7 +381,7 @@ theme_override_styles/pressed = ExtResource("5_k7tq7")
 theme_override_styles/hover = ExtResource("5_k7tq7")
 theme_override_styles/focus = ExtResource("5_k7tq7")
 text = "Answer"
-text_overrun_behavior = 5
+autowrap_mode = 2
 
 [node name="AnswerButton4" type="Button" parent="QuestionPanel/VBoxContainer/Buttons" unique_id=1864154832]
 layout_mode = 2
@@ -391,7 +391,7 @@ theme_override_styles/pressed = ExtResource("5_k7tq7")
 theme_override_styles/hover = ExtResource("5_k7tq7")
 theme_override_styles/focus = ExtResource("5_k7tq7")
 text = "Answer"
-text_overrun_behavior = 5
+autowrap_mode = 2
 
 [connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="QuestionPanel/PasswordSuccess/CloseQustionPanel" to="." method="_on_close_qustion_panel_pressed"]
