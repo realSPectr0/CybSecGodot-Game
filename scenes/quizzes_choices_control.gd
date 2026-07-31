@@ -20,6 +20,16 @@ func _ready() -> void:
 			$QuestionPanel.show()
 			show_question(0)
 			)
+	
+	for b in $QuestionPanel/VBoxContainer/Buttons.get_children():
+		b.pressed.connect(func():
+			question_idx += 1
+			show_question(question_idx)
+			)
+
+
+func _physics_process(delta: float) -> void:
+	$QuestionPanel/QuestionIDX.text = '%d/%d' % [question_idx + 1, question_data.size()]
 
 
 func show_question(idx):
