@@ -1,5 +1,5 @@
 ~ start
-Staff: Do you want to learn?
+Staff: Do you want to know the password for {{GameManager.minigame_title}}?
 - Yes
 	Staff: Okay!
 	do GameManager.start_quiz()
