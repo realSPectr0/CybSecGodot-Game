@@ -13,6 +13,7 @@ func _ready() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	GameManager.minigame_title = title
+	GameManager.quiz_path = quiz_path
 	
 	GameManager.global_player_ref.freeze = true
 	GameManager.global_player_ref.animated_sprite.play('idle_down')

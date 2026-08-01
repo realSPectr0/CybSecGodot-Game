@@ -15,21 +15,27 @@ func _ready() -> void:
 	GameManager.global_player_ref.freeze = true
 	GameManager.global_player_ref.animated_sprite.play('idle_down')
 	
-	$QuestionPanel.hide()
-	$Panel.show()
+	#$QuestionPanel.hide()
+	#$Panel.show()
 	
-	for i in $Panel/GridContainer.get_children():
-		i.take.connect(func(ref):
-			currently_taking_quiz = ref
-			
-			wrong_answers_count = 0
-			correct_answers_count = 0
-			question_idx = 0
-			question_data = GameManager.get_data(i.quiz_path)
-			
-			$QuestionPanel.show()
-			show_question(0)
-			)
+	question_data = GameManager.get_data(GameManager.quiz_path)
+	show_question(0)
+	
+	$QuestionPanel/Label2.text = GameManager.minigame_title
+	$QuestionPanel.show()
+	
+	#for i in $Panel/GridContainer.get_children():
+		#i.take.connect(func(ref):
+			#currently_taking_quiz = ref
+			#
+			#wrong_answers_count = 0
+			#correct_answers_count = 0
+			#question_idx = 0
+			#question_data = GameManager.get_data(i.quiz_path)
+			#
+			#$QuestionPanel.show()
+			#show_question(0)
+			#)
 	
 	#for b in $QuestionPanel/VBoxContainer/Buttons.get_children():
 		#b.pressed.connect(func():
