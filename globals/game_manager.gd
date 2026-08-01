@@ -4,6 +4,8 @@ extends Node
 var minigame_ref
 var minigame_title: String = ''
 var quiz_path = ''
+var quiz_pass = ''
+var quiz_id = ''
 
 var previous_location : Vector2
 

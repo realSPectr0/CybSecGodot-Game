@@ -14,9 +14,16 @@ func _ready() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	GameManager.minigame_title = title
 	GameManager.quiz_path = quiz_path
+	GameManager.quiz_id = id
 	
 	GameManager.global_player_ref.freeze = true
 	GameManager.global_player_ref.animated_sprite.play('idle_down')
 	
-	var res = load('res://reso/quizzes_learn.dialogue')
-	DialogueManager.show_dialogue_balloon(res, 'start')
+	if GameManager.player_data['passwords'][id] != '':
+		GameManager.quiz_pass = GameManager.player_data['passwords'][id]
+		
+		var res = load('res://reso/quiz_already_done.dialogue')
+		DialogueManager.show_dialogue_balloon(res, 'start')
+	else:
+		var res = load('res://reso/quizzes_learn.dialogue')
+		DialogueManager.show_dialogue_balloon(res, 'start')

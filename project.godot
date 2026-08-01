@@ -137,7 +137,7 @@ pointing/emulate_mouse_from_touch=false
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://reso/dialog.dialogue", "res://reso/receptionist_welcome.dialogue", "res://reso/quizzes_learn.dialogue")
+locale/translations_pot_files=PackedStringArray("res://reso/dialog.dialogue", "res://reso/receptionist_welcome.dialogue", "res://reso/quizzes_learn.dialogue", "res://reso/quiz_already_done.dialogue")
 
 [layer_names]
 

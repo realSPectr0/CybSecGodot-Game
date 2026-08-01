@@ -6,7 +6,7 @@ var question_idx = 0
 var wrong_answers_count = 0
 var correct_answers_count = 0
 
-var currently_taking_quiz = null
+var currently_taking_quiz_id = ''
 
 
 func _ready() -> void:
@@ -17,6 +17,8 @@ func _ready() -> void:
 	
 	#$QuestionPanel.hide()
 	#$Panel.show()
+	
+	currently_taking_quiz_id = GameManager.quiz_id
 	
 	question_data = GameManager.get_data(GameManager.quiz_path)
 	show_question(0)
@@ -103,7 +105,7 @@ func answer_choose(idx):
 		
 		if wrong_answers_count <= 0:
 			var new_pass = generate_password()
-			GameManager.player_data['passwords'][currently_taking_quiz.id] = new_pass
+			GameManager.player_data['passwords'][currently_taking_quiz_id] = new_pass
 			
 			#$QuestionPanel/PasswordSuccess.font_color = Color.SEA_GREEN
 			$QuestionPanel/PasswordSuccess.text = 'You completed the quiz, the password is %s.' % new_pass
