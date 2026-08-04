@@ -1,0 +1,66 @@
+{
+  "stage_id": "metadata_lab",
+  "question": "Which metadata clue is most useful for narrowing Alex's location?",
+  "files": [
+	{
+	  "id": "harbor_sunset",
+	  "filename": "harbor_sunset.jpg",
+	  "type": "JPEG",
+	  "created": "2026-06-12 19:42:00",
+	  "modified": "2026-06-12 20:05:00",
+	  "timezone": "UTC-7",
+	  "camera": "Pixel 8",
+	  "editing_software": "Snapseed",
+	  "gps": "Removed",
+	  "owner": "Alex Carter",
+	  "reliability": "medium-high"
+	},
+	{
+	  "id": "weekend_notes",
+	  "filename": "weekend_notes.pdf",
+	  "type": "PDF",
+	  "author": "Alex Carter",
+	  "created": "2026-06-12 09:14:00",
+	  "timezone": "UTC-7",
+	  "title": "Weekend Notes",
+	  "subject": "Waterfront event research",
+	  "software": "LibreOffice 25.2 (simulated)",
+	  "page_count": 2,
+	  "reliability": "medium-high"
+	},
+	{
+	  "id": "desert_banner",
+	  "filename": "desert_banner.png",
+	  "type": "PNG",
+	  "downloaded": "2026-06-03",
+	  "original_gps_location": "Desert Springs",
+	  "original_photographer": "Morgan Lee",
+	  "source": "OpenStock Local (fictional)",
+	  "owner": "Not Alex Carter",
+	  "created": "2024-09-18",
+	  "reliability": "low / red herring"
+	}
+  ],
+  "answers": [
+	{
+	  "id": "A",
+	  "text": "The Desert Springs GPS tag"
+	},
+	{
+	  "id": "B",
+	  "text": "Matching UTC-7 timestamps across Alex's files"
+	},
+	{
+	  "id": "C",
+	  "text": "The use of Snapseed"
+	},
+	{
+	  "id": "D",
+	  "text": "The PDF author name by itself"
+	}
+  ],
+  "correct_answer": "B",
+  "correct_feedback": "The matching time zone appears in multiple files connected to Alex. Multiple related clues are stronger than one isolated field.",
+  "incorrect_feedback": "Check who created each file and whether the clue appears in more than one independent source.",
+  "hint": "Check whether the file belongs to Alex or came from another source."
+}

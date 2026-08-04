@@ -1,7 +1,39 @@
 [gd_scene format=3 uid="uid://dbgmq6qflf0nq"]
 
 [ext_resource type="Script" uid="uid://cxgu53c2cc1b4" path="res://scenes/minigames/osint/metadata_lab.gd" id="1_dxn0k"]
+[ext_resource type="PackedScene" uid="uid://tu1y35ih215s" path="res://scenes/minigames/osint/file_detail.tscn" id="2_2b6ky"]
 [ext_resource type="PackedScene" uid="uid://ccw6v855fdo4p" path="res://scenes/minigames/osint/image_container.tscn" id="2_pqp44"]
+[ext_resource type="Texture2D" uid="uid://dftlont6rr065" path="res://modernuserinterface-win/16x16/Modern_UI_Style_2.png" id="3_fsxrw"]
+[ext_resource type="Texture2D" uid="uid://ciuy77xrqrw05" path="res://scenes/minigames/osint/art/01_METADATA_LAB/files/harbor_sunset.jpg" id="5_j4u2r"]
+[ext_resource type="Texture2D" uid="uid://bpmd6aqyddmhp" path="res://scenes/minigames/osint/art/01_METADATA_LAB/ui/weekend_notes_render/page-1.png" id="6_pwxkk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqp44"]
+bg_color = Color(0.094391085, 0.121254794, 0.18236837, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3882353, 0.8392157, 0.77254903, 0.45490196)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2b6ky"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.92535293, 0.9253529, 0.9253527, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir86x"]
+atlas = ExtResource("3_fsxrw")
+region = Rect2(400, 336, 16, 16)
 
 [node name="MetadataLab" type="Panel" unique_id=1275078080]
 anchors_preset = 15
@@ -11,7 +43,138 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dxn0k")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1091757408]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1261211692]
+layer = 41
+
+[node name="FileProperties" type="Panel" parent="CanvasLayer" unique_id=1706718333]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 476.0
+offset_top = 100.0
+offset_right = -202.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pqp44")
+
+[node name="Title" type="Label" parent="CanvasLayer/FileProperties" unique_id=726041388]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 26.0
+offset_right = 261.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.5719027, 0.7969905, 0.8176524, 1)
+theme_override_font_sizes/font_size = 20
+text = "File 1: harbor_sunset.jpg"
+
+[node name="Panel" type="Panel" parent="CanvasLayer/FileProperties" unique_id=1246071042]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 63.0
+offset_right = -30.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2b6ky")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/FileProperties/Panel" unique_id=1241909318]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 10.0
+offset_right = -16.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=634659759 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Title"
+
+[node name="Subject" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=331513618 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Subject"
+
+[node name="SoftwareFile" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=654640676 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Software"
+
+[node name="PageCount" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=1355560955 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Pages"
+
+[node name="FileType" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=648348086 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "File Type"
+
+[node name="Created" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=1375741056 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Created"
+
+[node name="Modified" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=653806556 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Modified"
+
+[node name="Timezone" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=1355999463 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Timezone"
+
+[node name="Camera" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=120230374 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Camera"
+
+[node name="Software" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=1441122790 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Editing Software"
+
+[node name="GPS" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=1396264624 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "GPS Location"
+
+[node name="Owner" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=60881501 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Owner"
+
+[node name="Dimensions" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=1909062761 instance=ExtResource("2_2b6ky")]
+visible = false
+layout_mode = 2
+title = "Dimensions"
+
+[node name="Author" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=1083155401 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Author"
+
+[node name="Size" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=1477090887 instance=ExtResource("2_2b6ky")]
+visible = false
+layout_mode = 2
+title = "File Size"
+
+[node name="Close" type="TextureButton" parent="CanvasLayer/FileProperties" unique_id=343755608]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -47.0
+offset_top = 13.0
+offset_right = -15.0
+offset_bottom = 45.0
+grow_horizontal = 0
+texture_normal = SubResource("AtlasTexture_ir86x")
+texture_pressed = SubResource("AtlasTexture_ir86x")
+texture_hover = SubResource("AtlasTexture_ir86x")
+texture_focused = SubResource("AtlasTexture_ir86x")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Images" type="HBoxContainer" parent="." unique_id=1091757408]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -23,11 +186,27 @@ offset_bottom = 133.0
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="ImageContainer" parent="HBoxContainer" unique_id=95141774 instance=ExtResource("2_pqp44")]
+[node name="ImageContainer" parent="Images" unique_id=95141774 instance=ExtResource("2_pqp44")]
 layout_mode = 2
+id = "harbor_sunset"
 
-[node name="ImageContainer2" parent="HBoxContainer" unique_id=532437243 instance=ExtResource("2_pqp44")]
-layout_mode = 2
+[node name="Image" parent="Images/ImageContainer/VBoxContainer" parent_id_path=PackedInt32Array(95141774, 95141774) index="1" unique_id=1838667571]
+texture = ExtResource("5_j4u2r")
 
-[node name="ImageContainer3" parent="HBoxContainer" unique_id=2031237674 instance=ExtResource("2_pqp44")]
+[node name="ImageContainer2" parent="Images" unique_id=532437243 instance=ExtResource("2_pqp44")]
 layout_mode = 2
+id = "weekend_notes"
+
+[node name="Image" parent="Images/ImageContainer2/VBoxContainer" parent_id_path=PackedInt32Array(532437243, 95141774) index="1" unique_id=1838667571]
+offset_transform_enabled = true
+texture = ExtResource("6_pwxkk")
+
+[node name="ImageContainer3" parent="Images" unique_id=2031237674 instance=ExtResource("2_pqp44")]
+layout_mode = 2
+id = "desert_banner"
+
+[connection signal="pressed" from="CanvasLayer/FileProperties/Close" to="." method="_on_close_pressed"]
+
+[editable path="Images/ImageContainer"]
+[editable path="Images/ImageContainer2"]
+[editable path="Images/ImageContainer3"]
