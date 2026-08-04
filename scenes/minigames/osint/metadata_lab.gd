@@ -16,7 +16,13 @@ func show_file_properties(data):
 		$CanvasLayer/FileProperties/Panel/VBoxContainer/Modified/Label2.text = data['modified']
 	else:
 		$CanvasLayer/FileProperties/Panel/VBoxContainer/Modified.hide()
-	$CanvasLayer/FileProperties/Panel/VBoxContainer/Timezone/Label2.text = data['timezone']
+	
+	if data.has('timezone'):
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/Timezone.show()
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/Timezone/Label2.text = data['timezone']
+	else:
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/Timezone.hide()
+	
 	
 	if data.has('camera'):
 		$CanvasLayer/FileProperties/Panel/VBoxContainer/Camera.show()
@@ -73,6 +79,30 @@ func show_file_properties(data):
 	else:
 		$CanvasLayer/FileProperties/Panel/VBoxContainer/Author.hide()
 	
+	if data.has('downloaded'):
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/Downloaded.show()
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/Downloaded/Label2.text =  data['downloaded']
+	else:
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/Downloaded.hide()
+	
+	if data.has('original_gps_location'):
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/OrigGPS.show()
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/OrigGPS/Label2.text =  data['original_gps_location']
+	else:
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/OrigGPS.hide()
+	
+	if data.has('original_photographer'):
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/OrigPhotographer.show()
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/OrigPhotographer/Label2.text =  data['original_photographer']
+	else:
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/OrigPhotographer.hide()
+	
+	
+	if data.has('source'):
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/Source.show()
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/Source/Label2.text =  data['source']
+	else:
+		$CanvasLayer/FileProperties/Panel/VBoxContainer/Source.hide()
 	
 	$CanvasLayer/FileProperties.show()
 

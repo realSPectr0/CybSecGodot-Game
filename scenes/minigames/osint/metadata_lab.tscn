@@ -122,6 +122,22 @@ title = "Created"
 layout_mode = 2
 title = "Modified"
 
+[node name="Downloaded" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=1888490039 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Downloaded"
+
+[node name="OrigGPS" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=666425555 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Original GPS Loc."
+
+[node name="OrigPhotographer" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=740980563 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Original Photographer"
+
+[node name="Source" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=520823683 instance=ExtResource("2_2b6ky")]
+layout_mode = 2
+title = "Source"
+
 [node name="Timezone" parent="CanvasLayer/FileProperties/Panel/VBoxContainer" unique_id=1355999463 instance=ExtResource("2_2b6ky")]
 layout_mode = 2
 title = "Timezone"
