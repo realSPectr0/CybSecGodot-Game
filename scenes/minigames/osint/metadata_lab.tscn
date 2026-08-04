@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dbgmq6qflf0nq"]
+
+[ext_resource type="Script" uid="uid://cxgu53c2cc1b4" path="res://scenes/minigames/osint/metadata_lab.gd" id="1_dxn0k"]
+[ext_resource type="PackedScene" uid="uid://ccw6v855fdo4p" path="res://scenes/minigames/osint/image_container.tscn" id="2_pqp44"]
+
+[node name="MetadataLab" type="Panel" unique_id=1275078080]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dxn0k")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1091757408]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 43.0
+offset_top = -149.0
+offset_right = 858.0
+offset_bottom = 133.0
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="ImageContainer" parent="HBoxContainer" unique_id=95141774 instance=ExtResource("2_pqp44")]
+layout_mode = 2
+
+[node name="ImageContainer2" parent="HBoxContainer" unique_id=532437243 instance=ExtResource("2_pqp44")]
+layout_mode = 2
+
+[node name="ImageContainer3" parent="HBoxContainer" unique_id=2031237674 instance=ExtResource("2_pqp44")]
+layout_mode = 2
