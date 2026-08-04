@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dftlont6rr065" path="res://modernuserinterface-win/16x16/Modern_UI_Style_2.png" id="3_fsxrw"]
 [ext_resource type="Texture2D" uid="uid://ciuy77xrqrw05" path="res://scenes/minigames/osint/art/01_METADATA_LAB/files/harbor_sunset.jpg" id="5_j4u2r"]
 [ext_resource type="Texture2D" uid="uid://bpmd6aqyddmhp" path="res://scenes/minigames/osint/art/01_METADATA_LAB/ui/weekend_notes_render/page-1.png" id="6_pwxkk"]
+[ext_resource type="FontFile" uid="uid://sa5q1m5icp5w" path="res://scenes/minigames/firewalls_and_viruses/Habbo.ttf" id="7_1i6ou"]
+[ext_resource type="StyleBox" uid="uid://miqenymvbqx2" path="res://scenes/minigames/password_security/reso/button.tres" id="8_2guko"]
+[ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="9_bhxig"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqp44"]
 bg_color = Color(0.094391085, 0.121254794, 0.18236837, 1)
@@ -190,15 +193,191 @@ texture_focused = SubResource("AtlasTexture_ir86x")
 ignore_texture_size = true
 stretch_mode = 5
 
+[node name="QuestionPanel" type="Panel" parent="CanvasLayer" unique_id=2075476818]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 81.0
+offset_top = 23.0
+offset_right = -81.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pqp44")
+
+[node name="Title" type="Label" parent="CanvasLayer/QuestionPanel" unique_id=339286502]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -117.5
+offset_top = 28.0
+offset_right = 117.5
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.5719027, 0.7969905, 0.8176524, 1)
+theme_override_font_sizes/font_size = 20
+text = "Investigation Question:"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/QuestionPanel" unique_id=1615078289]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = 123.0
+offset_right = -42.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="QuestionText" type="Label" parent="CanvasLayer/QuestionPanel/VBoxContainer" unique_id=1241187600]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8175213, 0.8175213, 0.81752115, 1)
+theme_override_fonts/font = ExtResource("7_1i6ou")
+theme_override_font_sizes/font_size = 26
+text = "sdffdsfd"
+autowrap_mode = 2
+
+[node name="Buttons" type="GridContainer" parent="CanvasLayer/QuestionPanel/VBoxContainer" unique_id=1562518076]
+layout_mode = 2
+columns = 2
+
+[node name="AnswerButton" type="Button" parent="CanvasLayer/QuestionPanel/VBoxContainer/Buttons" unique_id=31074030]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("8_2guko")
+theme_override_styles/pressed = ExtResource("9_bhxig")
+theme_override_styles/hover = ExtResource("9_bhxig")
+theme_override_styles/focus = ExtResource("9_bhxig")
+text = "Answer"
+autowrap_mode = 2
+
+[node name="AnswerButton2" type="Button" parent="CanvasLayer/QuestionPanel/VBoxContainer/Buttons" unique_id=233521252]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("8_2guko")
+theme_override_styles/pressed = ExtResource("9_bhxig")
+theme_override_styles/hover = ExtResource("9_bhxig")
+theme_override_styles/focus = ExtResource("9_bhxig")
+text = "Answer"
+autowrap_mode = 2
+
+[node name="AnswerButton3" type="Button" parent="CanvasLayer/QuestionPanel/VBoxContainer/Buttons" unique_id=1858316483]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("8_2guko")
+theme_override_styles/pressed = ExtResource("9_bhxig")
+theme_override_styles/hover = ExtResource("9_bhxig")
+theme_override_styles/focus = ExtResource("9_bhxig")
+text = "Answer"
+autowrap_mode = 2
+
+[node name="AnswerButton4" type="Button" parent="CanvasLayer/QuestionPanel/VBoxContainer/Buttons" unique_id=1809208730]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("8_2guko")
+theme_override_styles/pressed = ExtResource("9_bhxig")
+theme_override_styles/hover = ExtResource("9_bhxig")
+theme_override_styles/focus = ExtResource("9_bhxig")
+text = "Answer"
+autowrap_mode = 2
+
+[node name="Result" type="Label" parent="CanvasLayer/QuestionPanel" unique_id=1527160237]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -284.0
+offset_top = -163.0
+offset_right = 284.0
+offset_bottom = -59.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.5719027, 0.7969905, 0.8176524, 1)
+theme_override_font_sizes/font_size = 20
+text = "Result"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Result2" type="Label" parent="CanvasLayer/QuestionPanel/Result" unique_id=558587663]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -109.0
+offset_top = -130.0
+offset_right = 109.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.5719027, 0.7969905, 0.8176524, 1)
+theme_override_font_sizes/font_size = 20
+text = "Correct!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="QuestionClose" type="TextureButton" parent="CanvasLayer/QuestionPanel" unique_id=1498819974]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -47.0
+offset_top = 13.0
+offset_right = -15.0
+offset_bottom = 45.0
+grow_horizontal = 0
+texture_normal = SubResource("AtlasTexture_ir86x")
+texture_pressed = SubResource("AtlasTexture_ir86x")
+texture_hover = SubResource("AtlasTexture_ir86x")
+texture_focused = SubResource("AtlasTexture_ir86x")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Finish" type="Button" parent="." unique_id=1089461590]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.0
+offset_top = 29.0
+offset_right = 125.0
+offset_bottom = 77.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_1i6ou")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("8_2guko")
+theme_override_styles/pressed = ExtResource("9_bhxig")
+theme_override_styles/hover = ExtResource("9_bhxig")
+theme_override_styles/focus = ExtResource("9_bhxig")
+text = "Finish Investigation"
+icon_alignment = 2
+expand_icon = true
+
 [node name="Images" type="HBoxContainer" parent="." unique_id=1091757408]
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 43.0
-offset_top = -149.0
-offset_right = 858.0
-offset_bottom = 133.0
+offset_left = -407.5
+offset_top = -141.0
+offset_right = 407.5
+offset_bottom = 141.0
+grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
@@ -222,6 +401,8 @@ layout_mode = 2
 id = "desert_banner"
 
 [connection signal="pressed" from="CanvasLayer/FileProperties/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="CanvasLayer/QuestionPanel/QuestionClose" to="." method="_on_question_close_pressed"]
+[connection signal="pressed" from="Finish" to="." method="_on_finish_pressed"]
 
 [editable path="Images/ImageContainer"]
 [editable path="Images/ImageContainer2"]

@@ -5,6 +5,9 @@ extends Panel
 func _ready() -> void:
 	for i in $Images.get_children():
 		i.inspected.connect(on_inspected)
+	
+	for i in $CanvasLayer/QuestionPanel/VBoxContainer/Buttons.get_children():
+		i.pressed.connect(on_button_choose.bind(i))
 
 
 func show_file_properties(data):
@@ -107,6 +110,21 @@ func show_file_properties(data):
 	$CanvasLayer/FileProperties.show()
 
 
+func show_question():
+	$CanvasLayer/QuestionPanel/Result.hide()
+	$CanvasLayer/QuestionPanel.show()
+	
+	var d = GameManager.get_data('res://scenes/minigames/osint/data/metada_lab_data.json')
+	$CanvasLayer/QuestionPanel/VBoxContainer/QuestionText.text = d['question']
+	
+	var count = 0
+	for i in d['answers']:
+		$CanvasLayer/QuestionPanel/VBoxContainer/Buttons.get_child(count).text = '%s. %s' % [i['id'], i['text']]
+		$CanvasLayer/QuestionPanel/VBoxContainer/Buttons.get_child(count).set_meta('id', i['id'])
+		
+		count += 1
+
+
 func on_inspected(ref):
 	var d = GameManager.get_data('res://scenes/minigames/osint/data/metada_lab_data.json')
 	for i in d['files']:
@@ -115,5 +133,27 @@ func on_inspected(ref):
 			break
 
 
+func on_button_choose(ref):
+	var d = GameManager.get_data('res://scenes/minigames/osint/data/metada_lab_data.json')
+	
+	$CanvasLayer/QuestionPanel/Result.show()
+	if ref.get_meta('id') == d['correct_answer']:
+		$CanvasLayer/QuestionPanel/Result/Result2.text = 'Correct!'
+		$CanvasLayer/QuestionPanel/Result/Result2.set('theme_override_colors/font_color', Color.SEA_GREEN)
+		$CanvasLayer/QuestionPanel/Result.text = d['correct_feedback']
+	else:
+		$CanvasLayer/QuestionPanel/Result/Result2.text = 'Wrong!'
+		$CanvasLayer/QuestionPanel/Result/Result2.set('theme_override_colors/font_color', Color.DARK_RED)
+		$CanvasLayer/QuestionPanel/Result.text = d['incorrect_feedback']
+
+
 func _on_close_pressed() -> void:
 	$CanvasLayer/FileProperties.hide()
+
+
+func _on_finish_pressed() -> void:
+	show_question()
+
+
+func _on_question_close_pressed() -> void:
+	$CanvasLayer/QuestionPanel.hide()
