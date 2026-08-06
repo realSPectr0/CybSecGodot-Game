@@ -14,3 +14,13 @@ script = ExtResource("1_seyjm")
 
 [node name="MetadataLab" parent="." unique_id=1275078080 instance=ExtResource("2_soyir")]
 layout_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=791012269]
+layer = 41
+
+[node name="Points" type="Label" parent="CanvasLayer" unique_id=110081490]
+offset_left = 33.0
+offset_top = 21.0
+offset_right = 136.0
+offset_bottom = 44.0
+text = "Points: 10000"

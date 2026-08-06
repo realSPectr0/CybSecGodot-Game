@@ -135,12 +135,15 @@ func on_inspected(ref):
 
 func on_button_choose(ref):
 	var d = GameManager.get_data('res://scenes/minigames/osint/data/metada_lab_data.json')
+	var point_reward = 20
 	
 	$CanvasLayer/QuestionPanel/Result.show()
 	if ref.get_meta('id') == d['correct_answer']:
 		$CanvasLayer/QuestionPanel/Result/Result2.text = 'Correct!'
 		$CanvasLayer/QuestionPanel/Result/Result2.set('theme_override_colors/font_color', Color.SEA_GREEN)
 		$CanvasLayer/QuestionPanel/Result.text = d['correct_feedback']
+		
+		$CanvasLayer/QuestionPanel/Result/Complete.show()
 	else:
 		$CanvasLayer/QuestionPanel/Result/Result2.text = 'Wrong!'
 		$CanvasLayer/QuestionPanel/Result/Result2.set('theme_override_colors/font_color', Color.DARK_RED)
@@ -157,3 +160,7 @@ func _on_finish_pressed() -> void:
 
 func _on_question_close_pressed() -> void:
 	$CanvasLayer/QuestionPanel.hide()
+
+
+func _on_complete_pressed() -> void:
+	get_tree().stage_idx += 1
