@@ -9,7 +9,19 @@ func _ready() -> void:
 	
 	var count = 0
 	for i in $HBoxContainer.get_children():
+		$HBoxContainer.get_child(count).get_child(0).get_child(0).get_node('Title').text = 'Session %s' % data['data'][count]['session_id']
 		
+		$HBoxContainer.get_child(count).get_child(0).get_child(2).get_node('Label2').text = data['data'][count]['session_id']
+		$HBoxContainer.get_child(count).get_child(0).get_child(3).get_node('Label2').text = data['data'][count]['cookie_id']
+		$HBoxContainer.get_child(count).get_child(0).get_child(4).get_node('Label2').text = data['data'][count]['browser']
+		$HBoxContainer.get_child(count).get_child(0).get_child(5).get_node('Label2').text = data['data'][count]['operating_system']
+		$HBoxContainer.get_child(count).get_child(0).get_child(6).get_node('Label2').text = data['data'][count]['screen_resolution']
+		$HBoxContainer.get_child(count).get_child(0).get_child(7).get_node('Label2').text = data['data'][count]['language']
+		$HBoxContainer.get_child(count).get_child(0).get_child(8).get_node('Label2').text = data['data'][count]['timezone']
+		$HBoxContainer.get_child(count).get_child(0).get_child(9).get_node('Label2').text = data['data'][count]['ip_region']
+		$HBoxContainer.get_child(count).get_child(0).get_child(10).get_node('Label2').text = data['data'][count]['referrer']
+		$HBoxContainer.get_child(count).get_child(0).get_child(11).get_node('Label2').text = data['data'][count]['visit_time']
+		$HBoxContainer.get_child(count).get_child(0).get_child(12).get_node('Label2').text = 'true' if data['data'][count]['vpn_detected'] else 'false'
 		
 		count += 1
 	
