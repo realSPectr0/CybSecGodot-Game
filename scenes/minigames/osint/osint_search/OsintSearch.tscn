@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://k3moks0oxym7"]
+
+[ext_resource type="Script" uid="uid://b75j5627nfi7t" path="res://scenes/minigames/osint/osint_search/osint_search.gd" id="1_w0v6q"]
+[ext_resource type="FontFile" uid="uid://sa5q1m5icp5w" path="res://scenes/minigames/firewalls_and_viruses/Habbo.ttf" id="2_wvrhe"]
+[ext_resource type="StyleBox" uid="uid://miqenymvbqx2" path="res://scenes/minigames/password_security/reso/button.tres" id="3_ntno5"]
+[ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="4_ghosf"]
+
+[node name="OsintSearch" type="Control" unique_id=1267056239]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w0v6q")
+
+[node name="Finish" type="Button" parent="." unique_id=1442412159]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.0
+offset_top = 29.0
+offset_right = 125.0
+offset_bottom = 77.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wvrhe")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("3_ntno5")
+theme_override_styles/pressed = ExtResource("4_ghosf")
+theme_override_styles/hover = ExtResource("4_ghosf")
+theme_override_styles/focus = ExtResource("4_ghosf")
+text = "Finish Investigation"
+icon_alignment = 2
+expand_icon = true
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=1738801538]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 218.0
+offset_top = 100.0
+offset_right = -218.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="Social Media" type="TabBar" parent="TabContainer" unique_id=681839056]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Events" type="TabBar" parent="TabContainer" unique_id=401322737]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Weather" type="TabBar" parent="TabContainer" unique_id=1060299396]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2

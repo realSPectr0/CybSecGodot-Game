@@ -1,0 +1,98 @@
+{
+  "stage_id": "osint_search",
+  "social_post": {
+	"username": "pixeltrail27",
+	"display_name": "Alex C.",
+	"timestamp": "2026-06-12 20:41:00",
+	"text": "Found the best place to watch the 9 PM lights over the water. The wind finally calmed down.",
+	"image": "waterfront_lightshow_post.jpg"
+  },
+  "events": [
+	{
+	  "location": "Harbor Point",
+	  "event": "Waterfront Light Show",
+	  "time": "9:00 PM",
+	  "venue": "Harbor Promenade"
+	},
+	{
+	  "location": "Pine Ridge",
+	  "event": "Mountain Film Night",
+	  "time": "7:00 PM",
+	  "venue": "Ridge Community Theater"
+	},
+	{
+	  "location": "Metro Center",
+	  "event": "Future Technology Expo",
+	  "time": "10:00 AM - 8:00 PM",
+	  "venue": "Metro Convention Hall"
+	},
+	{
+	  "location": "Desert Springs",
+	  "event": "Sunrise Market",
+	  "time": "6:00 AM - 10:00 AM",
+	  "venue": "Desert Plaza"
+	}
+  ],
+  "weather": [
+	{
+	  "location": "Harbor Point",
+	  "condition": "Clear",
+	  "temperature_f": 64,
+	  "detail": "Windy earlier; wind decreased after 8:00 PM."
+	},
+	{
+	  "location": "Pine Ridge",
+	  "condition": "Heavy rain",
+	  "temperature_f": 48,
+	  "detail": "Poor visibility."
+	},
+	{
+	  "location": "Metro Center",
+	  "condition": "Overcast",
+	  "temperature_f": 67,
+	  "detail": "Strong wind throughout the evening."
+	},
+	{
+	  "location": "Desert Springs",
+	  "condition": "Clear",
+	  "temperature_f": 91,
+	  "detail": "No waterfront."
+	}
+  ],
+  "username_results": [
+	{
+	  "username": "pixeltrail27",
+	  "site": "TrailFrame Social",
+	  "result": "Alex C. - Photography & Travel",
+	  "match_quality": "high"
+	},
+	{
+	  "username": "pixeltrail27",
+	  "site": "ShutterTalk",
+	  "result": "Waterfront night photography is harder than I expected.",
+	  "match_quality": "medium"
+	},
+	{
+	  "username": "pixeltrail27",
+	  "site": "TripPlanner",
+	  "result": "Saved: Harbor Point Light Show",
+	  "match_quality": "high"
+	},
+	{
+	  "username": "pixeltrails27",
+	  "site": "Travel Blog",
+	  "result": "Anna R. - similar username, different account",
+	  "match_quality": "non-match"
+	}
+  ],
+  "question": "Which location is best supported by the public information?",
+  "answers": [
+	"Harbor Point",
+	"Pine Ridge",
+	"Metro Center",
+    "Desert Springs"
+  ],
+  "correct_answer": "Harbor Point",
+  "reason": "Harbor Point independently matches the waterfront, the 9 PM light show, the wind calming after 8 PM, and the saved event listing.",
+  "hint": "Look for a location matching the time, event, weather, and physical environment."
+}
