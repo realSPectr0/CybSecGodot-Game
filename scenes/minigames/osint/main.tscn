@@ -12,9 +12,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_seyjm")
 
-[node name="MetadataLab" parent="." unique_id=1275078080 instance=ExtResource("2_soyir")]
-layout_mode = 1
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=791012269]
 layer = 41
 
@@ -24,3 +21,14 @@ offset_top = 21.0
 offset_right = 136.0
 offset_bottom = 44.0
 text = "Points: 10000"
+
+[node name="Control" type="Control" parent="." unique_id=125579086]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MetadataLab" parent="Control" unique_id=1275078080 instance=ExtResource("2_soyir")]
+layout_mode = 1

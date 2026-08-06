@@ -1,4 +1,4 @@
-extends Panel
+extends Stage
 
 
 
@@ -135,7 +135,7 @@ func on_inspected(ref):
 
 func on_button_choose(ref):
 	var d = GameManager.get_data('res://scenes/minigames/osint/data/metada_lab_data.json')
-	var point_reward = 20
+	
 	
 	$CanvasLayer/QuestionPanel/Result.show()
 	if ref.get_meta('id') == d['correct_answer']:
@@ -159,8 +159,12 @@ func _on_finish_pressed() -> void:
 
 
 func _on_question_close_pressed() -> void:
+	if $CanvasLayer/QuestionPanel/Result/Complete.visible:
+		return
+	
 	$CanvasLayer/QuestionPanel.hide()
 
 
 func _on_complete_pressed() -> void:
-	get_tree().stage_idx += 1
+	var point_reward = 20
+	stage_finished.emit(point_reward)
