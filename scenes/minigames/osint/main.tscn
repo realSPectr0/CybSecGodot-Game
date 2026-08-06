@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dxsvnkbls7rsq" path="res://scenes/minigames/osint/main.gd" id="1_seyjm"]
 [ext_resource type="PackedScene" uid="uid://dbgmq6qflf0nq" path="res://scenes/minigames/osint/metadata_lab.tscn" id="2_soyir"]
+[ext_resource type="PackedScene" uid="uid://bjackuldj17mx" path="res://scenes/minigames/osint/browser_tracking/browsing_tracking.tscn" id="3_05fow"]
 
 [node name="Main" type="Control" unique_id=372902010]
 layout_mode = 3
@@ -31,4 +32,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MetadataLab" parent="Control" unique_id=1275078080 instance=ExtResource("2_soyir")]
+layout_mode = 1
+
+[node name="BrowsingTracking" parent="Control" unique_id=1001311989 instance=ExtResource("3_05fow")]
+visible = false
 layout_mode = 1

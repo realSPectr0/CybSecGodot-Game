@@ -61,3 +61,5 @@ theme_override_styles/pressed = ExtResource("4_mukw5")
 theme_override_styles/hover = ExtResource("4_mukw5")
 theme_override_styles/focus = ExtResource("4_mukw5")
 text = "Settings"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]

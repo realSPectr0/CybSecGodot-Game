@@ -166,5 +166,7 @@ func _on_question_close_pressed() -> void:
 
 
 func _on_complete_pressed() -> void:
+	$CanvasLayer.hide()
+	
 	var point_reward = 20
 	stage_finished.emit(point_reward)
