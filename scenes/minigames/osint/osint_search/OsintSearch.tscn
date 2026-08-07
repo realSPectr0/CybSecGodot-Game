@@ -410,3 +410,5 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [connection signal="pressed" from="Finish" to="." method="_on_finish_pressed"]
+[connection signal="pressed" from="CanvasLayer/QuestionPanel/Result/Complete" to="." method="_on_complete_pressed"]
+[connection signal="pressed" from="CanvasLayer/QuestionPanel/QuestionClose" to="." method="_on_question_close_pressed"]

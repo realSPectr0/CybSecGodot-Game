@@ -66,3 +66,17 @@ func on_button_choose(ref):
 		$CanvasLayer/QuestionPanel/Result/Result2.text = 'Wrong!'
 		$CanvasLayer/QuestionPanel/Result/Result2.set('theme_override_colors/font_color', Color.DARK_RED)
 		$CanvasLayer/QuestionPanel/Result.text = data['hint']
+
+
+func _on_complete_pressed() -> void:
+	$CanvasLayer.hide()
+	
+	var point_reward = 20
+	stage_finished.emit(point_reward)
+
+
+func _on_question_close_pressed() -> void:
+	if $CanvasLayer/QuestionPanel/Result/Complete.visible:
+		return
+	
+	$CanvasLayer/QuestionPanel.hide()
