@@ -6,6 +6,13 @@
 [ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="4_ghosf"]
 [ext_resource type="Texture2D" uid="uid://qm8ytvkqbid0" path="res://scenes/minigames/osint/osint_search/alex_avatar.png" id="5_ntno5"]
 [ext_resource type="Texture2D" uid="uid://bwwne8duqam0b" path="res://scenes/minigames/osint/osint_search/waterfront_lightshow_post.jpg" id="6_ghosf"]
+[ext_resource type="PackedScene" uid="uid://br2w4uo1j16y5" path="res://scenes/minigames/osint/osint_search/event_display.tscn" id="7_oouou"]
+[ext_resource type="PackedScene" uid="uid://coigk0cteboqy" path="res://scenes/minigames/osint/osint_search/weather_display.tscn" id="8_x0nvh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oouou"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.86898494, 0.86898494, 0.8689847, 1)
 
 [node name="OsintSearch" type="Control" unique_id=1267056239]
 layout_mode = 3
@@ -48,9 +55,10 @@ offset_right = -218.0
 offset_bottom = -29.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 0
+current_tab = 2
 
 [node name="Social Media" type="TabBar" parent="TabContainer" unique_id=681839056]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -131,7 +139,78 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Events" unique_id=2014562134]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 181.0
+offset_top = 17.0
+offset_right = -181.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="TabContainer/Events/VBoxContainer" unique_id=775628489]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.20871013, 0.20871016, 0.20871013, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_oouou")
+text = "Local Events June 12"
+
+[node name="Events" type="VBoxContainer" parent="TabContainer/Events/VBoxContainer" unique_id=2069569014]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="EventDisplay" parent="TabContainer/Events/VBoxContainer/Events" unique_id=2136478008 instance=ExtResource("7_oouou")]
+layout_mode = 2
+
+[node name="EventDisplay2" parent="TabContainer/Events/VBoxContainer/Events" unique_id=1597413229 instance=ExtResource("7_oouou")]
+layout_mode = 2
+
+[node name="EventDisplay3" parent="TabContainer/Events/VBoxContainer/Events" unique_id=1705140060 instance=ExtResource("7_oouou")]
+layout_mode = 2
+
+[node name="EventDisplay4" parent="TabContainer/Events/VBoxContainer/Events" unique_id=604247203 instance=ExtResource("7_oouou")]
+layout_mode = 2
+
 [node name="Weather" type="TabBar" parent="TabContainer" unique_id=1060299396]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Weather" unique_id=1708584997]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 181.0
+offset_top = 17.0
+offset_right = -181.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="TabContainer/Weather/VBoxContainer" unique_id=1704683410]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.20871013, 0.20871016, 0.20871013, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_oouou")
+text = "Local Weather - June 12"
+
+[node name="WeatherDisplayContainer" type="VBoxContainer" parent="TabContainer/Weather/VBoxContainer" unique_id=1941479150]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="WeatherDisplay" parent="TabContainer/Weather/VBoxContainer/WeatherDisplayContainer" unique_id=1594891001 instance=ExtResource("8_x0nvh")]
+layout_mode = 2
+
+[node name="WeatherDisplay2" parent="TabContainer/Weather/VBoxContainer/WeatherDisplayContainer" unique_id=714797780 instance=ExtResource("8_x0nvh")]
+layout_mode = 2
+
+[node name="WeatherDisplay3" parent="TabContainer/Weather/VBoxContainer/WeatherDisplayContainer" unique_id=217717964 instance=ExtResource("8_x0nvh")]
+layout_mode = 2
+
+[node name="WeatherDisplay4" parent="TabContainer/Weather/VBoxContainer/WeatherDisplayContainer" unique_id=1701916347 instance=ExtResource("8_x0nvh")]
+layout_mode = 2

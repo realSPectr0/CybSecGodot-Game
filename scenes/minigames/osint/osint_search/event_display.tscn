@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://br2w4uo1j16y5"]
+
+[ext_resource type="Texture2D" uid="uid://dbig3p7nov0co" path="res://scenes/minigames/osint/osint_search/events.svg" id="1_114qs"]
+
+[node name="EventDisplay" type="HBoxContainer" unique_id=2136478008]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=456039052]
+custom_minimum_size = Vector2(86, 86)
+layout_mode = 2
+texture = ExtResource("1_114qs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Box" type="VBoxContainer" parent="." unique_id=1370202691]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="Label" parent="Box" unique_id=622793201]
+layout_mode = 2
+text = "Harbor Point"
+
+[node name="Title2" type="Label" parent="Box" unique_id=883907249]
+layout_mode = 2
+text = "Harbor Point"
+
+[node name="Time" type="Label" parent="Box" unique_id=1152505276]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.70980394)
+theme_override_font_sizes/font_size = 14
+text = "Harbor Point"
+
+[node name="Location" type="Label" parent="Box" unique_id=687746844]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.70980394)
+theme_override_font_sizes/font_size = 14
+text = "Harbor Point"

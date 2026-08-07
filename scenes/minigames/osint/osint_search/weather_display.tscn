@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://coigk0cteboqy"]
+
+[ext_resource type="Texture2D" uid="uid://bepfmpc4s8i60" path="res://scenes/minigames/osint/osint_search/weather.svg" id="1_mmxas"]
+
+[node name="WeatherDisplay" type="HBoxContainer" unique_id=1594891001]
+offset_right = 290.0
+offset_bottom = 86.0
+
+[node name="Box" type="VBoxContainer" parent="." unique_id=381347112]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Title" type="Label" parent="Box" unique_id=743630077]
+layout_mode = 2
+text = "Harbor Point"
+
+[node name="Detail" type="Label" parent="Box" unique_id=1299534590]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.70980394)
+theme_override_font_sizes/font_size = 14
+text = "Harbor Point"
+autowrap_mode = 2
+
+[node name="Vis" type="Label" parent="Box" unique_id=879121888]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.70980394)
+theme_override_font_sizes/font_size = 14
+text = "Harbor Point"
+
+[node name="Temp" type="Label" parent="Box" unique_id=1709689409]
+layout_mode = 2
+text = "Harbor Point"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1856015794]
+custom_minimum_size = Vector2(86, 86)
+layout_mode = 2
+texture = ExtResource("1_mmxas")
+expand_mode = 1
+stretch_mode = 5
