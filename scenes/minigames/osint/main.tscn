@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b1y7onwga4c56"]
 
 [ext_resource type="Script" uid="uid://dxsvnkbls7rsq" path="res://scenes/minigames/osint/main.gd" id="1_seyjm"]
+[ext_resource type="PackedScene" uid="uid://c4ebeeg21keo4" path="res://scenes/minigames/osint/final_question_panel.tscn" id="2_hlvxq"]
 [ext_resource type="PackedScene" uid="uid://dbgmq6qflf0nq" path="res://scenes/minigames/osint/metadata_lab.tscn" id="2_soyir"]
 [ext_resource type="PackedScene" uid="uid://bjackuldj17mx" path="res://scenes/minigames/osint/browser_tracking/browsing_tracking.tscn" id="3_05fow"]
 [ext_resource type="PackedScene" uid="uid://k3moks0oxym7" path="res://scenes/minigames/osint/osint_search/OsintSearch.tscn" id="4_8mo48"]
@@ -24,6 +25,9 @@ offset_right = 136.0
 offset_bottom = 44.0
 text = "Points: 10000"
 
+[node name="FinalQuestionPanel" parent="CanvasLayer" unique_id=2139463013 instance=ExtResource("2_hlvxq")]
+visible = false
+
 [node name="Control" type="Control" parent="." unique_id=125579086]
 layout_mode = 1
 anchors_preset = 15
@@ -42,3 +46,5 @@ layout_mode = 1
 [node name="OsintSearch" parent="Control" unique_id=1267056239 instance=ExtResource("4_8mo48")]
 visible = false
 layout_mode = 1
+
+[connection signal="stage_finished" from="Control/OsintSearch" to="." method="_on_osint_search_stage_finished"]

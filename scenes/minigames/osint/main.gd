@@ -6,7 +6,9 @@ var stage_idx = 0:
 		$Control.get_child(stage_idx).hide()
 		
 		stage_idx = value
-		$Control.get_child(stage_idx).show()
+		if stage_idx < 3:
+			$Control.get_child(stage_idx).show()
+			
 
 var current_points_total = 0
 
@@ -23,3 +25,7 @@ func _physics_process(delta: float) -> void:
 func _on_stage_finished(points) -> void:
 	current_points_total += points
 	stage_idx += 1
+
+
+func _on_osint_search_stage_finished(points) -> void:
+	$CanvasLayer/FinalQuestionPanel.show()

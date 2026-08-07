@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://c4ebeeg21keo4"]
+
+[ext_resource type="Script" uid="uid://c4s0w3qj7k3wb" path="res://scenes/minigames/osint/final_question_panel.gd" id="1_6cvoo"]
+[ext_resource type="FontFile" uid="uid://sa5q1m5icp5w" path="res://scenes/minigames/firewalls_and_viruses/Habbo.ttf" id="1_lrj11"]
+[ext_resource type="StyleBox" uid="uid://miqenymvbqx2" path="res://scenes/minigames/password_security/reso/button.tres" id="2_6cvoo"]
+[ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="3_yqc7o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8mo48"]
+bg_color = Color(0.094391085, 0.121254794, 0.18236837, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3882353, 0.8392157, 0.77254903, 0.45490196)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="FinalQuestionPanel" type="Panel" unique_id=2139463013]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 97.0
+offset_top = 47.0
+offset_right = -97.0
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8mo48")
+script = ExtResource("1_6cvoo")
+
+[node name="Title" type="Label" parent="." unique_id=1088052815]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -117.5
+offset_top = 28.0
+offset_right = 117.5
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.5719027, 0.7969905, 0.8176524, 1)
+theme_override_font_sizes/font_size = 20
+text = "Final Question: 1/2"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1137095685]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = 123.0
+offset_right = -42.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="QuestionText" type="Label" parent="VBoxContainer" unique_id=2051010259]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8175213, 0.8175213, 0.81752115, 1)
+theme_override_fonts/font = ExtResource("1_lrj11")
+theme_override_font_sizes/font_size = 26
+text = "sdffdsfd"
+autowrap_mode = 2
+
+[node name="Buttons" type="GridContainer" parent="VBoxContainer" unique_id=792003095]
+layout_mode = 2
+columns = 2
+
+[node name="AnswerButton" type="Button" parent="VBoxContainer/Buttons" unique_id=1901422416]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("2_6cvoo")
+theme_override_styles/pressed = ExtResource("3_yqc7o")
+theme_override_styles/hover = ExtResource("3_yqc7o")
+theme_override_styles/focus = ExtResource("3_yqc7o")
+text = "Answer"
+autowrap_mode = 2
+
+[node name="AnswerButton2" type="Button" parent="VBoxContainer/Buttons" unique_id=1408121122]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("2_6cvoo")
+theme_override_styles/pressed = ExtResource("3_yqc7o")
+theme_override_styles/hover = ExtResource("3_yqc7o")
+theme_override_styles/focus = ExtResource("3_yqc7o")
+text = "Answer"
+autowrap_mode = 2
+
+[node name="AnswerButton3" type="Button" parent="VBoxContainer/Buttons" unique_id=1358314107]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("2_6cvoo")
+theme_override_styles/pressed = ExtResource("3_yqc7o")
+theme_override_styles/hover = ExtResource("3_yqc7o")
+theme_override_styles/focus = ExtResource("3_yqc7o")
+text = "Answer"
+autowrap_mode = 2
+
+[node name="AnswerButton4" type="Button" parent="VBoxContainer/Buttons" unique_id=1528687772]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("2_6cvoo")
+theme_override_styles/pressed = ExtResource("3_yqc7o")
+theme_override_styles/hover = ExtResource("3_yqc7o")
+theme_override_styles/focus = ExtResource("3_yqc7o")
+text = "Answer"
+autowrap_mode = 2
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
