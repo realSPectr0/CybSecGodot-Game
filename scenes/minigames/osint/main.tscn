@@ -47,4 +47,5 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
+[connection signal="answered" from="CanvasLayer/FinalQuestionPanel" to="." method="_on_final_question_panel_answered"]
 [connection signal="stage_finished" from="Control/OsintSearch" to="." method="_on_osint_search_stage_finished"]

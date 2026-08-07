@@ -29,3 +29,7 @@ func _on_stage_finished(points) -> void:
 
 func _on_osint_search_stage_finished(points) -> void:
 	$CanvasLayer/FinalQuestionPanel.show()
+
+
+func _on_final_question_panel_answered(points: Variant) -> void:
+	current_points_total += points

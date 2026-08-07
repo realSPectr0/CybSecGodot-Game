@@ -1,5 +1,7 @@
 extends Panel
 
+signal answered(points)
+
 
 var data = {
 	"questions": {
@@ -54,11 +56,23 @@ func show_question(idx):
 	var count = 0
 	for i in data['questions']['question_%d' % question_idx]['options']:
 		$VBoxContainer/Buttons.get_child(count).text = i
+		$VBoxContainer/Buttons.get_child(count).set_meta('id', count)
 		
 		count += 1
 
 
 func on_button_choose(ref):
+	if ref.get_meta('id') == data['questions']['question_%d' % question_idx]['answer']:
+		match question_idx:
+			0: answered.emit(15)
+			1: answered.emit(5)
+			2: answered.emit(10)
+	
+	question_idx += 1
+	if question_idx < 3:
+		show_question(question_idx)
+	else:
+		$VBoxContainer.hide()
 	
 	return
 	
