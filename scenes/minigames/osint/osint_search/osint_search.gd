@@ -3,6 +3,9 @@ extends Stage
 var data = {}
 
 func _ready() -> void:
+	for i in $CanvasLayer/QuestionPanel/VBoxContainer/Buttons.get_children():
+		i.pressed.connect(on_button_choose.bind(i))
+	
 	$TabContainer.current_tab = 0
 	
 	data = GameManager.get_data('res://scenes/minigames/osint/osint_search/osint_search_data.json')
@@ -29,3 +32,37 @@ func _ready() -> void:
 		$TabContainer/Weather/VBoxContainer/WeatherDisplayContainer.get_child(count).get_node('Box').get_node('Detail').text = i['detail']
 		
 		count += 1
+
+
+func show_question():
+	$CanvasLayer/QuestionPanel/Result.hide()
+	$CanvasLayer/QuestionPanel.show()
+	
+	var d = GameManager.get_data('res://scenes/minigames/osint/osint_search/osint_search_data.json')
+	$CanvasLayer/QuestionPanel/VBoxContainer/QuestionText.text = d['question']
+	
+	var count = 0
+	for i in d['answers']:
+		$CanvasLayer/QuestionPanel/VBoxContainer/Buttons.get_child(count).text = '%s' % i
+		$CanvasLayer/QuestionPanel/VBoxContainer/Buttons.get_child(count).set_meta('id', i)
+		
+		count += 1
+
+
+func _on_finish_pressed() -> void:
+	show_question()
+
+
+func on_button_choose(ref):
+	
+	$CanvasLayer/QuestionPanel/Result.show()
+	if ref.get_meta('id') == data['correct_answer']:
+		$CanvasLayer/QuestionPanel/Result/Result2.text = 'Correct!'
+		$CanvasLayer/QuestionPanel/Result/Result2.set('theme_override_colors/font_color', Color.SEA_GREEN)
+		$CanvasLayer/QuestionPanel/Result.text = data['reason']
+		
+		$CanvasLayer/QuestionPanel/Result/Complete.show()
+	else:
+		$CanvasLayer/QuestionPanel/Result/Result2.text = 'Wrong!'
+		$CanvasLayer/QuestionPanel/Result/Result2.set('theme_override_colors/font_color', Color.DARK_RED)
+		$CanvasLayer/QuestionPanel/Result.text = data['hint']
