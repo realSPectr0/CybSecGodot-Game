@@ -6,6 +6,18 @@
 [ext_resource type="PackedScene" uid="uid://bjackuldj17mx" path="res://scenes/minigames/osint/browser_tracking/browsing_tracking.tscn" id="3_05fow"]
 [ext_resource type="PackedScene" uid="uid://k3moks0oxym7" path="res://scenes/minigames/osint/osint_search/OsintSearch.tscn" id="4_8mo48"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8mo48"]
+bg_color = Color(0.094391085, 0.121254794, 0.18236837, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3882353, 0.8392157, 0.77254903, 0.45490196)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
 [node name="Main" type="Control" unique_id=372902010]
 layout_mode = 3
 anchors_preset = 15
@@ -28,6 +40,79 @@ text = "Points: 10000"
 [node name="FinalQuestionPanel" parent="CanvasLayer" unique_id=2139463013 instance=ExtResource("2_hlvxq")]
 visible = false
 
+[node name="GameoverPanel" type="Panel" parent="CanvasLayer" unique_id=1854051123]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 97.0
+offset_top = 47.0
+offset_right = -97.0
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8mo48")
+
+[node name="Title" type="Label" parent="CanvasLayer/GameoverPanel" unique_id=1088052815]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -418.0
+offset_top = 57.0
+offset_right = 418.0
+offset_bottom = 116.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.5719027, 0.7969905, 0.8176524, 1)
+theme_override_font_sizes/font_size = 20
+text = "Strong investigations combine several clues while acknowledging uncertainty. Browser
+tracking and OSINT can support a conclusion, but they rarely provide absolute proof."
+horizontal_alignment = 1
+
+[node name="TotalPoints" type="Label" parent="CanvasLayer/GameoverPanel" unique_id=1420632830]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -166.0
+offset_top = 158.0
+offset_right = 166.0
+offset_bottom = 203.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Total Points: 100"
+horizontal_alignment = 1
+
+[node name="RankName" type="Label" parent="CanvasLayer/GameoverPanel" unique_id=592733868]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -419.0
+offset_top = 245.0
+offset_right = 419.0
+offset_bottom = 279.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "wews"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Detail" type="Label" parent="CanvasLayer/GameoverPanel" unique_id=1202243581]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -419.0
+offset_top = 291.0
+offset_right = 419.0
+offset_bottom = 399.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.5207287, 0.7055987, 0.38150606, 1)
+theme_override_font_sizes/font_size = 20
+text = "You connected several independent clues and correctly heheheheheheh identified misleading evidence."
+autowrap_mode = 2
+
 [node name="Control" type="Control" parent="." unique_id=125579086]
 layout_mode = 1
 anchors_preset = 15
@@ -48,4 +133,6 @@ visible = false
 layout_mode = 1
 
 [connection signal="answered" from="CanvasLayer/FinalQuestionPanel" to="." method="_on_final_question_panel_answered"]
+[connection signal="finished" from="CanvasLayer/FinalQuestionPanel" to="." method="_on_final_question_panel_finished"]
+[connection signal="visibility_changed" from="CanvasLayer/GameoverPanel" to="CanvasLayer/GameoverPanel" method="_on_visibility_changed"]
 [connection signal="stage_finished" from="Control/OsintSearch" to="." method="_on_osint_search_stage_finished"]

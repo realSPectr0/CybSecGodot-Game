@@ -1,7 +1,7 @@
 extends Panel
 
 signal answered(points)
-
+signal finished
 
 var data = {
 	"questions": {
@@ -73,6 +73,8 @@ func on_button_choose(ref):
 		show_question(question_idx)
 	else:
 		$VBoxContainer.hide()
+		$SliderContainer.show()
+		
 	
 	return
 	
@@ -92,3 +94,11 @@ func on_button_choose(ref):
 func _on_visibility_changed() -> void:
 	if visible:
 		show_question(0)
+
+
+func _on_h_slider_value_changed(value: float) -> void:
+	$SliderContainer/Amount.text = '%d%%' % value
+
+
+func _on_finish_pressed() -> void:
+	finished.emit()
