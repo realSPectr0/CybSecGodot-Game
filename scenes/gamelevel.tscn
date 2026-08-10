@@ -16,7 +16,7 @@
 [ext_resource type="Script" uid="uid://dbjn77swuk08u" path="res://scenes/level_1npc.gd" id="13_ov5yj"]
 [ext_resource type="PackedScene" uid="uid://c4lq05xlvn71c" path="res://scenes/minigames/password_security/main.tscn" id="13_pflgl"]
 [ext_resource type="PackedScene" uid="uid://cmycgi23kmuo6" path="res://scenes/minigames/gaming_security/GamingSecurity.tscn" id="14_gueac"]
-[ext_resource type="PackedScene" uid="uid://b1y7onwga4c56" path="res://scenes/minigames/osint/main.tscn" id="16_2dy68"]
+[ext_resource type="PackedScene" uid="uid://di7778lveb0u1" path="res://scenes/minigames/osint/menu.tscn" id="16_2dy68"]
 [ext_resource type="PackedScene" uid="uid://rdeu7poj2ehb" path="res://scenes/quiz_person.tscn" id="17_k3sw6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_inqap"]
