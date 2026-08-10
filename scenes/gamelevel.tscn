@@ -2817,7 +2817,7 @@ script = ExtResource("1_i68so")
 [node name="player" parent="." unique_id=1092919849 instance=ExtResource("1_gm810")]
 unique_name_in_owner = true
 y_sort_enabled = true
-position = Vector2(1180, 101.00003)
+position = Vector2(1040, 534)
 scale = Vector2(2.5, 2.5)
 menu_ui_file = "res://scenes/menu_ui.tscn"
 
@@ -3000,7 +3000,7 @@ scale = Vector2(2.5, 2.5)
 script = ExtResource("8_v5q8u")
 minigame_scene = ExtResource("16_2dy68")
 overhead_title = "Osint Search"
-id = "osint_search"
+id = "phishing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker16" unique_id=78569835]
 position = Vector2(0, 15.649994)
@@ -3070,12 +3070,6 @@ position = Vector2(1060, 594)
 title = "Password Security"
 id = "password_security"
 quiz_path = "res://reso/quizzes/phishing_quiz.json"
-
-[node name="QuizPerson6" parent="." unique_id=1746431786 instance=ExtResource("17_k3sw6")]
-position = Vector2(1140, 594)
-title = "OSINT Search"
-id = "osint_search"
-quiz_path = "res://scenes/minigames/osint/main.tscn"
 
 [node name="QuizPerson2" parent="." unique_id=1199249510 instance=ExtResource("17_k3sw6")]
 position = Vector2(1220.0001, 594)
