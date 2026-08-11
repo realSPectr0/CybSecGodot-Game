@@ -31,14 +31,16 @@ var data = {
 				"Leaving consistent timestamps and time-zone information in files",
 				"Using Firefox",
 				"Taking landscape photos",
-				"Viewing an event page",
+				"Allowing a persistent cookie to connect browser sessions",
 			],
-			"answer": 0
+			"answers": [0, 3]
 		}
 	}
 }
 
 var question_idx = 0
+
+var third_question_answers_selected = []
 
 
 func _ready() -> void:
@@ -62,11 +64,32 @@ func show_question(idx):
 
 
 func on_button_choose(ref):
-	if ref.get_meta('id') == data['questions']['question_%d' % question_idx]['answer']:
+	if data['questions']['question_%d' % question_idx].has('answers'):
+		if third_question_answers_selected.has(ref) == false:
+			third_question_answers_selected.append(ref)
+		
+		var score_accu = 0
+		if third_question_answers_selected.size() >= 2:
+			var count = 0
+			for i in data['questions']['question_%d' % question_idx]['answers']:
+				if i == third_question_answers_selected[count].get_meta('id'):
+					
+					score_accu += 5
+					
+					count += 1
+		else:
+			return
+		
+		answered.emit(score_accu)
+	elif ref.get_meta('id') == data['questions']['question_%d' % question_idx]['answer']:
 		match question_idx:
 			0: answered.emit(15)
 			1: answered.emit(5)
-			2: answered.emit(10)
+			#2: answered.emit(10)
+	
+	for i in $VBoxContainer/Buttons.get_children():
+		i.release_focus()
+		i.button_pressed = false
 	
 	question_idx += 1
 	if question_idx < 3:
