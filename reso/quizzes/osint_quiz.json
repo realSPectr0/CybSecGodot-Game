@@ -1,0 +1,42 @@
+{
+	"question_1": {
+		"text": "What do tracking cookies do?",
+		"choices": [
+			"A. Remove advertisements from websites",
+			"B. Follow your activity and help build a profile about you",
+			"C. Prevent websites from remembering your login",
+			"D. Hide your identity from advertisers"
+		],
+		"answer_idx": 1
+	},
+	"question_2": {
+		"text": "What information can photo metadata contain?",
+		"choices": [
+			"A. Only the photo’s file size",
+			"B. Your passwords and text messages",
+			"C. The GPS location, time, and phone model",
+			"D. A list of everyone who viewed the photo"
+		],
+		"answer_idx": 2
+	},
+	"question_3": {
+		"text": "What does OSINT mean?",
+		"choices": [
+			"A. Obtaining private information by hacking accounts",
+			"B. Collecting information using publicly available sources",
+			"C. Removing personal information from the internet",
+			"D. Blocking websites from tracking your activity"
+		],
+		"answer_idx": 1
+	},
+	"question_4": {
+		"text": "Which action best protects your online privacy?",
+		"choices": [
+			"A. Posting photos with visible street signs",
+			"B. Using the same username on every platform",
+			"C. Setting accounts to private and checking photo backgrounds",
+			"D. Assuming incognito mode makes you completely anonymous"
+		],
+		"answer_idx": 2
+	}
+}

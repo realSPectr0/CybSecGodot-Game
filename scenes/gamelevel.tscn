@@ -3000,7 +3000,7 @@ scale = Vector2(2.5, 2.5)
 script = ExtResource("8_v5q8u")
 minigame_scene = ExtResource("16_2dy68")
 overhead_title = "Osint Search"
-id = "phishing"
+id = "osint"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker16" unique_id=78569835]
 position = Vector2(0, 15.649994)
@@ -3070,6 +3070,12 @@ position = Vector2(1060, 594)
 title = "Password Security"
 id = "password_security"
 quiz_path = "res://reso/quizzes/phishing_quiz.json"
+
+[node name="QuizPerson6" parent="." unique_id=72354587 instance=ExtResource("17_k3sw6")]
+position = Vector2(1140, 594)
+title = "Browser Tracking/OSINT"
+id = "osint"
+quiz_path = "res://reso/quizzes/osint_quiz.json"
 
 [node name="QuizPerson2" parent="." unique_id=1199249510 instance=ExtResource("17_k3sw6")]
 position = Vector2(1220.0001, 594)
