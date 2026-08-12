@@ -45,3 +45,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	#else:
 		#var res = load('res://reso/quizzes_learn.dialogue')
 		#DialogueManager.show_dialogue_balloon(res, 'start')
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	GameManager.npc_nearby = null
+	GameManager.global_player_ref.talk_button.visible = false
