@@ -10,6 +10,9 @@ var currently_taking_quiz_id = ''
 
 
 func _ready() -> void:
+	$AnswerStatePopup/Panel.hide()
+	$AnswerStatePopup/Panel/AnimationPlayer.play("RESET")
+	
 	await get_tree().create_timer(.5).timeout
 	#generate_password()
 	GameManager.global_player_ref.freeze = true
@@ -25,8 +28,6 @@ func _ready() -> void:
 	
 	$QuestionPanel/Label2.text = GameManager.minigame_title
 	$QuestionPanel.show()
-	
-	$AnswerStatePopup/Panel/AnimationPlayer.play("RESET")
 	
 	#for i in $Panel/GridContainer.get_children():
 		#i.take.connect(func(ref):
@@ -92,11 +93,13 @@ func answer_choose(idx):
 		wrong_answers_count += 1
 		$AnswerStatePopup/Panel/Label.text = 'WRONG!'
 		$AnswerStatePopup/Panel.self_modulate = Color.DARK_RED
+		$AnswerStatePopup/Panel.show()
 		$AnswerStatePopup/Panel/AnimationPlayer.play("anim")
 	else:
 		$AnswerStatePopup/Panel.self_modulate = Color.SEA_GREEN
 		$AnswerStatePopup/Panel/Label.text = 'CORRECT!'
 		correct_answers_count += 1
+		$AnswerStatePopup/Panel.show()
 		$AnswerStatePopup/Panel/AnimationPlayer.play("anim")
 	
 	question_idx += 1
