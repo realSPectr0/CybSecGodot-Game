@@ -26,6 +26,8 @@ func _ready() -> void:
 	$QuestionPanel/Label2.text = GameManager.minigame_title
 	$QuestionPanel.show()
 	
+	$AnswerStatePopup/Panel/AnimationPlayer.play("RESET")
+	
 	#for i in $Panel/GridContainer.get_children():
 		#i.take.connect(func(ref):
 			#currently_taking_quiz = ref
