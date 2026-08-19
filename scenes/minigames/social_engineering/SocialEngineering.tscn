@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bhltgu1lf4qrc"]
+
+[ext_resource type="Script" uid="uid://dybju16kkw5k4" path="res://scenes/minigames/social_engineering/social_engineering.gd" id="1_0wj5b"]
+
+[node name="SocialEngineering" type="Node2D" unique_id=509950735]
+script = ExtResource("1_0wj5b")

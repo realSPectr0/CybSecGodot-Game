@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c4lq05xlvn71c" path="res://scenes/minigames/password_security/main.tscn" id="13_pflgl"]
 [ext_resource type="PackedScene" uid="uid://cmycgi23kmuo6" path="res://scenes/minigames/gaming_security/GamingSecurity.tscn" id="14_gueac"]
 [ext_resource type="PackedScene" uid="uid://di7778lveb0u1" path="res://scenes/minigames/osint/menu.tscn" id="16_2dy68"]
+[ext_resource type="PackedScene" uid="uid://bhltgu1lf4qrc" path="res://scenes/minigames/social_engineering/SocialEngineering.tscn" id="17_fix8w"]
 [ext_resource type="PackedScene" uid="uid://rdeu7poj2ehb" path="res://scenes/quiz_person.tscn" id="17_k3sw6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_inqap"]
@@ -3019,6 +3020,32 @@ position = Vector2(0, 16)
 shape = SubResource("CircleShape2D_85vpr")
 metadata/_edit_lock_ = true
 
+[node name="hard_worker17" type="CharacterBody2D" parent="Hard_workers" unique_id=1531092981]
+y_sort_enabled = true
+position = Vector2(541, 542)
+scale = Vector2(2.5, 2.5)
+script = ExtResource("8_v5q8u")
+minigame_scene = ExtResource("17_fix8w")
+overhead_title = "Social Engineering"
+id = "social_engineering"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker17" unique_id=219213365]
+position = Vector2(0, 15.649994)
+shape = SubResource("RectangleShape2D_4yucn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Hard_workers/hard_worker17" unique_id=945752312]
+sprite_frames = SubResource("SpriteFrames_x8kms")
+animation = &"idle_up"
+metadata/_edit_lock_ = true
+
+[node name="interaction area" type="Area2D" parent="Hard_workers/hard_worker17" unique_id=1655450395]
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hard_workers/hard_worker17/interaction area" unique_id=128412100]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_85vpr")
+metadata/_edit_lock_ = true
+
 [node name="Boss" type="CharacterBody2D" parent="." unique_id=1229084494]
 z_index = 1
 y_sort_enabled = true
@@ -3070,6 +3097,14 @@ position = Vector2(1060, 594)
 title = "Password Security"
 id = "password_security"
 quiz_path = "res://reso/quizzes/phishing_quiz.json"
+
+[node name="QuizPerson7" parent="." unique_id=1826832902 instance=ExtResource("17_k3sw6")]
+position = Vector2(986, 656)
+title = "Social Engineering"
+id = "social_engineering"
+
+[node name="AnimatedSprite2D" parent="QuizPerson7" index="1" unique_id=1284221584]
+autoplay = "idle_right"
 
 [node name="QuizPerson6" parent="." unique_id=72354587 instance=ExtResource("17_k3sw6")]
 position = Vector2(1140, 594)
@@ -3125,11 +3160,14 @@ autoplay = "idle_up"
 [connection signal="body_exited" from="Hard_workers/hard_worker15/interaction area" to="Hard_workers/hard_worker15" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="Hard_workers/hard_worker16/interaction area" to="Hard_workers/hard_worker16" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Hard_workers/hard_worker16/interaction area" to="Hard_workers/hard_worker16" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="Hard_workers/hard_worker17/interaction area" to="Hard_workers/hard_worker17" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Hard_workers/hard_worker17/interaction area" to="Hard_workers/hard_worker17" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="Boss/interaction area" to="Boss" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Boss/interaction area" to="Boss" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="Level1NPC/interaction area" to="Level1NPC" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Level1NPC/interaction area" to="Level1NPC" method="_on_interaction_area_body_exited"]
 
+[editable path="QuizPerson7"]
 [editable path="QuizPerson3"]
 [editable path="QuizPerson4"]
 [editable path="QuizPerson5"]
