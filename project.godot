@@ -22,6 +22,7 @@ GameManager="*uid://cbl2iv8lqmhem"
 SceneChanger="*uid://buf0bssqvxfsr"
 GameSaveOrLoad="*uid://ceue4wodyw5w5"
 DialogueManager="*uid://c3rodes2l3gxb"
+Bgm="*uid://cjp7j64aqys43"
 
 [dialogic]
 

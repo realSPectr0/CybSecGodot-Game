@@ -1,0 +1,302 @@
+[
+  {
+	"question": "Hey, what's your pet's name?",
+	"choices": [
+	  "Don't give, flag as suspicious",
+	  "Give them the name",
+      "Ask why they need it first"
+	],
+	"correct_answer": 0,
+	"explanation": "Pet names are commonly used as security questions. Never share personal information with strangers."
+  },
+  {
+	"question": "Hi, I'm from IT support. I need your password to fix an urgent server issue.",
+	"choices": [
+	  "Give them the password quickly",
+	  "Refuse and report to your supervisor/IT security team",
+      "Ask for their employee ID but still give the password"
+	],
+	"correct_answer": 1,
+	"explanation": "Legitimate IT will NEVER ask for your password. Always verify through official channels."
+  },
+  {
+	"question": "I'm your new coworker. Can you hold the door open for me? I forgot my badge.",
+	"choices": [
+	  "Hold the door open to be nice",
+	  "Refuse and direct them to security/reception",
+      "Ask their name but let them in anyway"
+	],
+	"correct_answer": 1,
+	"explanation": "Tailgating is a common physical security threat. Never let unauthorized people into secure areas."
+  },
+  {
+	"question": "You won a free iPhone! Click this link to claim your prize: http://free-iphone-now.com",
+	"choices": [
+	  "Click the link immediately",
+	  "Delete the message and report as phishing",
+      "Forward it to friends so they can win too"
+	],
+	"correct_answer": 1,
+	"explanation": "Unexpected prizes are classic phishing bait. Never click suspicious links."
+  },
+  {
+	"question": "This is your bank. We've detected suspicious activity. Please confirm your card number and CVV.",
+	"choices": [
+	  "Provide the information to secure your account",
+	  "Hang up and call your bank using the number on your card",
+      "Ask them to hold while you verify, then give the info"
+	],
+	"correct_answer": 1,
+	"explanation": "Banks never ask for full card details over the phone. Always call back using official numbers."
+  },
+  {
+	"question": "Hey, I'm doing a survey for a coffee shop loyalty program. What's your mother's maiden name?",
+	"choices": [
+	  "Give the answer to get loyalty points",
+	  "Refuse and walk away",
+      "Give a fake name instead"
+	],
+	"correct_answer": 1,
+	"explanation": "Mother's maiden name is a common security question. Legitimate surveys don't ask for this."
+  },
+  {
+	"question": "I found a USB drive in the parking lot. Should I plug it into my work computer to find the owner?",
+	"choices": [
+	  "Plug it in to check for owner information",
+	  "Hand it to IT security without plugging it in",
+      "Plug it in but only open text files"
+	],
+	"correct_answer": 1,
+	"explanation": "Unknown USB drives can contain malware. Never plug them into work systems."
+  },
+  {
+	"question": "Your CEO just emailed asking you to urgently wire $50,000 to a new vendor. What do you do?",
+	"choices": [
+	  "Process the wire transfer immediately - it's the CEO",
+	  "Verify through a separate communication channel (call, in-person)",
+      "Reply to the email asking for more details"
+	],
+	"correct_answer": 1,
+	"explanation": "CEO fraud (BEC scams) are common. Always verify unusual financial requests independently."
+  },
+  {
+	"question": "A delivery person asks to use your work phone because theirs died and they need to contact their boss.",
+	"choices": [
+	  "Let them use your phone - it's just a quick call",
+	  "Refuse and offer to make the call for them or direct them to reception",
+      "Let them use it but watch closely"
+	],
+	"correct_answer": 1,
+	"explanation": "This could be a pretext to access your contacts or install something. Never hand over your device."
+  },
+  {
+	"question": "You get a call from 'Microsoft Support' saying your computer has a virus and they need remote access.",
+	"choices": [
+	  "Give them remote access to fix it",
+	  "Hang up - Microsoft never calls users unsolicited",
+      "Ask for their callback number first"
+	],
+	"correct_answer": 1,
+	"explanation": "Tech support scams are extremely common. Microsoft never makes unsolicited support calls."
+  },
+  {
+	"question": "A 'fellow employee' on Slack asks you to download a new app they built to 'help with productivity'.",
+	"choices": [
+	  "Download and install it to be helpful",
+	  "Report to IT security and do not install",
+      "Install it on a personal device first to test"
+	],
+	"correct_answer": 1,
+	"explanation": "Unvetted software can contain malware or steal data. Only install approved applications."
+  },
+  {
+	"question": "Someone in a coffee shop is shoulder-surfing while you type your password. You notice them watching.",
+	"choices": [
+	  "Ignore it and keep typing",
+	  "Shield your screen, then change your password immediately",
+      "Confront them aggressively"
+	],
+	"correct_answer": 1,
+	"explanation": "Shoulder surfing is a real threat. Protect your screen and change compromised passwords."
+  },
+  {
+	"question": "Your 'colleague' asks you to email them the customer database for a 'project they're working on'.",
+	"choices": [
+	  "Send it right away - they're a colleague",
+	  "Verify their need through your manager and proper data request channels",
+      "Send a partial version to be safe"
+	],
+	"correct_answer": 1,
+	"explanation": "Data should only be shared through proper authorization channels, never via casual requests."
+  },
+  {
+	"question": "You receive a text: 'Your package delivery failed. Click here to reschedule: bit.ly/xyz123'",
+	"choices": [
+	  "Click the link to reschedule your delivery",
+	  "Delete the text and check with the actual carrier through their official website",
+      "Reply STOP to the text"
+	],
+	"correct_answer": 1,
+	"explanation": "SMS phishing (smishing) uses fake delivery notifications. Always verify through official channels."
+  },
+  {
+	"question": "A person claiming to be a fire inspector needs immediate access to the server room for a 'surprise inspection'.",
+	"choices": [
+	  "Let them in immediately - it's an emergency",
+	  "Verify their credentials with building security/facilities management first",
+      "Let them in but escort them"
+	],
+	"correct_answer": 1,
+	"explanation": "Impersonation attacks use urgency to bypass verification. Always verify credentials through official channels."
+  },
+  {
+	"question": "A recruiter on LinkedIn asks for your full date of birth and Social Security Number for a 'background check' before any interview.",
+	"choices": [
+	  "Provide the information to move forward",
+	  "Refuse - legitimate employers don't ask for SSN before hiring",
+      "Give only the date of birth"
+	],
+	"correct_answer": 1,
+	"explanation": "SSN and DOB are prime targets for identity theft. Never share them before verifying the employer."
+  },
+  {
+	"question": "Your 'IT department' emails asking you to 'verify your account' by clicking a link and entering credentials.",
+	"choices": [
+	  "Click the link and verify your account",
+	  "Delete the email and contact IT through official channels",
+      "Hover over the link to check if it looks legitimate first"
+	],
+	"correct_answer": 1,
+	"explanation": "Credential harvesting emails mimic IT communications. Always verify through official channels, not email links."
+  },
+  {
+	"question": "A 'customer' calls asking for your direct manager's full name and phone number for a complaint.",
+	"choices": [
+	  "Provide the information to help the customer",
+	  "Direct them to the official customer service line or company directory",
+      "Give them the manager's first name only"
+	],
+	"correct_answer": 1,
+	"explanation": "This could be pretexting to gather information for a future targeted attack. Use official channels."
+  },
+  {
+	"question": "You find a note on your desk: 'Call me back ASAP about your account - [Bank Name] 1-800-555-0199'",
+	"choices": [
+	  "Call the number immediately",
+	  "Look up the bank's official number independently and call that instead",
+      "Call the number but don't give any information"
+	],
+	"correct_answer": 1,
+	"explanation": "Vishing (voice phishing) uses fake callback numbers. Always use official contact information from your card or website."
+  },
+  {
+	"question": "A 'new intern' asks you to share your login credentials because their account 'hasn't been set up yet'.",
+	"choices": [
+	  "Share your credentials to help them get started",
+	  "Refuse and direct them to HR/IT for proper account setup",
+      "Create a temporary password for them to use"
+	],
+	"correct_answer": 1,
+	"explanation": "Account sharing violates security policies. Everyone must have their own authorized credentials."
+  },
+  {
+	"question": "You get a friend request from someone with your CEO's name and photo, but you know you're already connected.",
+	"choices": [
+	  "Accept the request - maybe they made a new account",
+	  "Report/ignore the request and alert your security team",
+      "Message them to ask if it's really them"
+	],
+	"correct_answer": 1,
+	"explanation": "Clone accounts are used for impersonation attacks. Report them immediately."
+  },
+  {
+	"question": "Someone asks you to take a photo of your work badge 'for the company directory'.",
+	"choices": [
+	  "Take the photo - it's for the company",
+	  "Refuse and verify the request with HR or security",
+      "Take the photo but cover the barcode"
+	],
+	"correct_answer": 1,
+	"explanation": "Badge photos can be used to create fake credentials. Never photograph your access badges."
+  },
+  {
+	"question": "A 'contractor' says they need to borrow your access badge to 'quickly grab something from the supply room'.",
+	"choices": [
+	  "Lend them your badge to be helpful",
+	  "Refuse and offer to escort them or contact security",
+      "Lend it but ask for their ID as collateral"
+	],
+	"correct_answer": 1,
+	"explanation": "Never lend your access badge. It's tied to your identity and access privileges."
+  },
+  {
+	"question": "You receive an email with an attachment named 'Invoice_Q3_2026.pdf.exe' from an unknown sender.",
+	"choices": [
+	  "Open the attachment to check the invoice",
+	  "Delete the email immediately and report it",
+      "Rename the file to remove .exe and then open it"
+	],
+	"correct_answer": 1,
+	"explanation": "Double extensions (.pdf.exe) hide malware. Never open suspicious attachments from unknown senders."
+  },
+  {
+	"question": "A person in a suit with a clipboard approaches the reception desk and says they're here for a 'confidential audit'.",
+	"choices": [
+	  "Let them through immediately - they look official",
+	  "Verify their identity and appointment with the appropriate department",
+      "Ask them to wait while you check, but let them sit in a secure area"
+	],
+	"correct_answer": 1,
+	"explanation": "Authority impersonation relies on looking official. Always verify appointments and identities."
+  },
+  {
+	"question": "Your 'boss' sends a WhatsApp message from a new number asking you to buy gift cards for a 'client meeting'.",
+	"choices": [
+	  "Buy the gift cards and send the codes immediately",
+	  "Verify through a known contact method (office phone, in-person)",
+      "Buy the cards but ask to deliver them in person"
+	],
+	"correct_answer": 1,
+	"explanation": "Gift card scams are extremely common. Always verify unusual requests through known contact methods."
+  },
+  {
+	"question": "A 'job applicant' asks to connect to your guest WiFi and wants the password written down for them.",
+	"choices": [
+	  "Write down the password for them",
+	  "Provide the password verbally or through a secure temporary access method",
+      "Let them use your personal hotspot instead"
+	],
+	"correct_answer": 1,
+	"explanation": "Written passwords can be copied or shared. Use secure, temporary access methods for guests."
+  },
+  {
+	"question": "Someone calls claiming to be from the IRS and says you'll be arrested unless you pay immediately with gift cards.",
+	"choices": [
+	  "Buy the gift cards to avoid arrest",
+	  "Hang up - the IRS never demands immediate payment via gift cards",
+      "Ask for their badge number and supervisor's name"
+	],
+	"correct_answer": 1,
+	"explanation": "Government agencies never demand gift card payments or threaten immediate arrest. This is always a scam."
+  },
+  {
+	"question": "A 'journalist' calls asking detailed questions about your company's new product launch and security measures.",
+	"choices": [
+	  "Answer their questions to get good press",
+	  "Direct them to your official PR/communications team",
+      "Answer general questions but avoid specifics"
+	],
+	"correct_answer": 1,
+	"explanation": "Pretexting as media is used to gather competitive intelligence. Only authorized PR should speak to press."
+  },
+  {
+	"question": "You receive a package with your name on it but you didn't order anything. It has a return address you don't recognize.",
+	"choices": [
+	  "Open it immediately to see what's inside",
+	  "Contact security/facilities - it could be a malicious package",
+      "Leave it unopened and wait to see if someone claims it"
+	],
+	"correct_answer": 1,
+	"explanation": "Unexpected packages can contain malicious devices. Always have security inspect unknown deliveries."
+  }
+]

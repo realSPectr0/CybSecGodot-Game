@@ -5,6 +5,9 @@
 [ext_resource type="StyleBox" uid="uid://miqenymvbqx2" path="res://scenes/minigames/password_security/reso/button.tres" id="3_13qxm"]
 [ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="4_mukw5"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6jpma"]
+bg_color = Color(0.11588413, 0.13394952, 0.19081059, 1)
+
 [node name="Menu" type="Control" unique_id=120936205]
 layout_mode = 3
 anchors_preset = 15
@@ -51,7 +54,7 @@ theme_override_styles/hover = ExtResource("4_mukw5")
 theme_override_styles/focus = ExtResource("4_mukw5")
 text = "Instructions"
 
-[node name="Settings" type="Button" parent="VBoxContainer" unique_id=783000253]
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=783000253]
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_6jpma")
@@ -60,6 +63,22 @@ theme_override_styles/normal = ExtResource("3_13qxm")
 theme_override_styles/pressed = ExtResource("4_mukw5")
 theme_override_styles/hover = ExtResource("4_mukw5")
 theme_override_styles/focus = ExtResource("4_mukw5")
-text = "Settings"
+text = "Quit"
+
+[node name="InstructionsPanel" type="Panel" parent="." unique_id=811395213]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 59.0
+offset_top = 24.0
+offset_right = -59.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6jpma")
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Instructions" to="." method="_on_instructions_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
