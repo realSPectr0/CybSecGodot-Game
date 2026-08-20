@@ -5,6 +5,16 @@ var points = 0
 var current_question_idx = 0
 var questions = []
 
+var people_sprite_frames = [
+	load("res://reso/chars_sprite_frames/char_1.tres"),
+	load("res://reso/chars_sprite_frames/char_2.tres"),
+	load("res://reso/chars_sprite_frames/char_3.tres"),
+	load("res://reso/chars_sprite_frames/char_4.tres"),
+	load("res://reso/chars_sprite_frames/char_5.tres"),
+]
+
+var can_spawn = true
+
 
 func _ready() -> void:
 	$CanvasLayer/ProgressBar.max_value = $GameTimer.wait_time
@@ -15,11 +25,13 @@ func _ready() -> void:
 	questions = GameManager.get_data('res://scenes/minigames/social_engineering/social_engineering_data.json')
 	questions.shuffle()
 	
-	show_question()
+	#show_question()
 
 
 func _physics_process(delta: float) -> void:
 	$CanvasLayer/ProgressBar.value = $GameTimer.time_left
+	
+	$CanvasLayer/Points.text = 'Points: %d' % points
 
 
 func show_question():
@@ -39,6 +51,14 @@ func show_question():
 		count += 1
 
 
+func spawn_customer():
+	var e = load('res://scenes/minigames/social_engineering/customer.tscn').instantiate()
+	e.global_position = $SpawnPoint.global_position
+	e.map_ref = self
+	e.end_point = $EndPoint.global_position
+	$CustomerContainer.add_child(e)
+
+
 func _on_game_timer_timeout() -> void:
 	pass # Replace with function body.
 
@@ -55,8 +75,19 @@ func on_answer_button_pressed(idx):
 	
 	$CanvasLayer/Panel/Label2.text = questions[current_question_idx]['explanation']
 	
-	await $CanvasLayer/Panel/AnimationPlayer.animation_finished
+	#await $CanvasLayer/Panel/AnimationPlayer.animation_finished
 	
 	current_question_idx += 1
 	
-	show_question()
+	$CanvasLayer/DialogPanel.hide()
+	can_spawn = true
+	for i in $CustomerContainer.get_children():
+		i.queue_free()
+	
+	#show_question()
+
+
+func _on_customer_spawn_timer_timeout() -> void:
+	if can_spawn:
+		spawn_customer()
+		can_spawn = false

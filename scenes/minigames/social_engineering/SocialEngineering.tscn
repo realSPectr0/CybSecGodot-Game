@@ -7,6 +7,12 @@
 [ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="3_bydco"]
 [ext_resource type="FontFile" uid="uid://sa5q1m5icp5w" path="res://scenes/minigames/firewalls_and_viruses/Habbo.ttf" id="4_bydco"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bydco"]
+bg_color = Color(0.11523976, 0.15044188, 0.3367452, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5a6cg"]
+bg_color = Color(0.36888632, 0.5457922, 0.77918494, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lv6be"]
 bg_color = Color(1, 1, 1, 1)
 
@@ -271,6 +277,8 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 30.0
 grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_bydco")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5a6cg")
 value = 40.0
 show_percentage = false
 
@@ -455,8 +463,11 @@ tile_set = ExtResource("2_2np28")
 position = Vector2(528, 266)
 zoom = Vector2(3, 3)
 
-[node name="SpawnPoint" type="Node2D" parent="." unique_id=316386686]
-position = Vector2(326, 256)
+[node name="EndPoint" type="Node2D" parent="." unique_id=1453394465]
+position = Vector2(487, 225)
+
+[node name="SpawnPoint" type="Node2D" parent="." unique_id=2070391116]
+position = Vector2(320, 225)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=931644094]
 position = Vector2(489, 264)
@@ -464,4 +475,11 @@ sprite_frames = SubResource("SpriteFrames_lr8r0")
 animation = &"idle_up"
 autoplay = "idle_up"
 
+[node name="CustomerSpawnTimer" type="Timer" parent="." unique_id=1867548254]
+wait_time = 3.0
+autostart = true
+
+[node name="CustomerContainer" type="Node2D" parent="." unique_id=310703450]
+
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
+[connection signal="timeout" from="CustomerSpawnTimer" to="." method="_on_customer_spawn_timer_timeout"]
