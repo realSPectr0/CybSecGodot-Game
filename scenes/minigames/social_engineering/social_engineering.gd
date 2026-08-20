@@ -56,11 +56,13 @@ func spawn_customer():
 	e.global_position = $SpawnPoint.global_position
 	e.map_ref = self
 	e.end_point = $EndPoint.global_position
+	e.sprite_frames = people_sprite_frames.pick_random()
 	$CustomerContainer.add_child(e)
 
 
 func _on_game_timer_timeout() -> void:
-	pass # Replace with function body.
+	$CanvasLayer/GameWinPanel.show()
+	$CanvasLayer/GameWinPanel/Panel/Label2.text = 'Total Score: %d' % points
 
 
 func on_answer_button_pressed(idx):
@@ -68,6 +70,8 @@ func on_answer_button_pressed(idx):
 		$CanvasLayer/Panel.self_modulate = Color.SEA_GREEN
 		$CanvasLayer/Panel/Label.text = 'CORRECT!'
 		$CanvasLayer/Panel/AnimationPlayer.play("anim")
+		
+		points += 25
 	else:
 		$CanvasLayer/Panel.self_modulate = Color.DARK_RED
 		$CanvasLayer/Panel/Label.text = 'WRONG!'
@@ -91,3 +95,7 @@ func _on_customer_spawn_timer_timeout() -> void:
 	if can_spawn:
 		spawn_customer()
 		can_spawn = false
+
+
+func _on_done_pressed() -> void:
+	queue_free()
