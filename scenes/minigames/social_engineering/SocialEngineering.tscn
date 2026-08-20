@@ -5,6 +5,65 @@
 [ext_resource type="StyleBox" uid="uid://miqenymvbqx2" path="res://scenes/minigames/password_security/reso/button.tres" id="2_2xko5"]
 [ext_resource type="Texture2D" uid="uid://c8jf38o8ih1ja" path="res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/Amelia_idle_anim_16x16.png" id="3_0gxcj"]
 [ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="3_bydco"]
+[ext_resource type="FontFile" uid="uid://sa5q1m5icp5w" path="res://scenes/minigames/firewalls_and_viruses/Habbo.ttf" id="4_bydco"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lv6be"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_o3rdh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_transform_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k7tq7"]
+resource_name = "anim"
+length = 3.0000000000000004
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_transform_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 2.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 0), Vector2(1, 1), Vector2(1, 1), Vector2(1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wxhkv"]
+resource_name = "close"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_transform_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5a6cg"]
+_data = {
+&"RESET": SubResource("Animation_o3rdh"),
+&"anim": SubResource("Animation_k7tq7"),
+&"close": SubResource("Animation_wxhkv")
+}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v5q8u"]
 atlas = ExtResource("3_0gxcj")
@@ -279,9 +338,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -180.0
-offset_top = -352.0
+offset_top = -302.0
 offset_right = 180.0
-offset_bottom = -181.0
+offset_bottom = -189.0
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
@@ -313,6 +372,61 @@ theme_override_styles/hover = ExtResource("3_bydco")
 theme_override_styles/focus = ExtResource("3_bydco")
 text = "Answer"
 
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=357250040]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 257.0
+offset_bottom = -257.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lv6be")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=408297572]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.5
+offset_top = -61.0
+offset_right = 153.5
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9691369, 0.9691369, 0.9691368, 1)
+theme_override_fonts/font = ExtResource("4_bydco")
+theme_override_font_sizes/font_size = 65
+text = "CORRECT!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Panel" unique_id=914202824]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -217.0
+offset_top = -1.0
+offset_right = 217.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_bydco")
+theme_override_font_sizes/font_size = 26
+text = "Reason"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Panel" unique_id=273978071]
+libraries/ = SubResource("AnimationLibrary_5a6cg")
+
 [node name="Ground" type="TileMapLayer" parent="." unique_id=295970341]
 visibility_layer = 524288
 z_index = -15
@@ -328,13 +442,13 @@ tile_set = ExtResource("2_2np28")
 [node name="Objs" type="TileMapLayer" parent="." unique_id=1464528334]
 visibility_layer = 524288
 z_index = -15
-tile_map_data = PackedByteArray("AAAdABAAAQAAAAUAAAAdABEAAQAAAAYAAAAdABIAAQAAAAcAAAAdABMAAQAAAAgAAAAeABAAAQABAAUAAAAeABEAAQABAAYAAAAeABIAAQABAAcAAAAeABMAAQABAAgAAAAfABAAAQABAAUAAAAfABEAAQABAAYAAAAfABIAAQABAAcAAAAfABMAAQABAAgAAAAiABAAAQACAAUAAAAiABEAAQACAAYAAAAiABIAAQACAAcAAAAiABMAAQACAAgAAAAgABAAAQABAAUAAAAgABEAAQABAAYAAAAgABIAAQABAAcAAAAgABMAAQABAAgAAAAhABAAAQABAAUAAAAhABEAAQABAAYAAAAhABIAAQABAAcAAAAhABMAAQABAAgAAAAaAAoAAwAHAAwAAAAaAAsAAwAHAA0AAAAaAAwAAwAHAA4AAAAbAAoAAwAIAAwAAAAbAAsAAwAIAA0AAAAbAAwAAwAIAA4AAAAcAAoAAwAHAA8AAAAcAAsAAwAHABAAAAAcAAwAAwAHABEAAAAdAAoAAwAIAA8AAAAdAAsAAwAIABAAAAAdAAwAAwAIABEAAAAgAAoAAwAIAAoAAAAgAAsAAwAIAAsAAAAfAAoAAwAHAAoAAAAfAAsAAwAHAAsAAAAhAAoAAwAIAAgAAAAhAAsAAwAIAAkAAAAiAAoAAwAJAAgAAAAiAAsAAwAJAAkAAAAYAAoAAwAAAAwAAAAYAAsAAwAAAA0AAAAZAAoAAwABAAwAAAAZAAsAAwABAA0AAAAkAAoAAwAPAAAAAAAkAAsAAwAPAAEAAAAjAAoAAwAPAAIAAAAjAAsAAwAPAAMAAAAWAAsAAwABABMAAAAWAAwAAwABABQAAAAVAAsAAwAAABMAAAAVAAwAAwAAABQAAAAXAAsAAwAEAA8AAAAXAAwAAwAEABAAAAAlAAoAAwACABcAAAAlAAsAAwACABgAAAAlAAwAAwACABkAAAAmAAoAAwADABcAAAAmAAsAAwADABgAAAAmAAwAAwADABkAAAAnAAsAAwAEABgAAAAnAAwAAwAEABkAAAAoAAsAAwAFABgAAAAoAAwAAwAFABkAAAA=")
+tile_map_data = PackedByteArray("AAAaAAoAAwAHAAwAAAAaAAsAAwAHAA0AAAAaAAwAAwAHAA4AAAAbAAoAAwAIAAwAAAAbAAsAAwAIAA0AAAAbAAwAAwAIAA4AAAAcAAoAAwAHAA8AAAAcAAsAAwAHABAAAAAcAAwAAwAHABEAAAAdAAoAAwAIAA8AAAAdAAsAAwAIABAAAAAdAAwAAwAIABEAAAAgAAoAAwAIAAoAAAAgAAsAAwAIAAsAAAAfAAoAAwAHAAoAAAAfAAsAAwAHAAsAAAAhAAoAAwAIAAgAAAAhAAsAAwAIAAkAAAAiAAoAAwAJAAgAAAAiAAsAAwAJAAkAAAAYAAoAAwAAAAwAAAAYAAsAAwAAAA0AAAAZAAoAAwABAAwAAAAZAAsAAwABAA0AAAAkAAoAAwAPAAAAAAAkAAsAAwAPAAEAAAAjAAoAAwAPAAIAAAAjAAsAAwAPAAMAAAAWAAsAAwABABMAAAAWAAwAAwABABQAAAAVAAsAAwAAABMAAAAVAAwAAwAAABQAAAAXAAsAAwAEAA8AAAAXAAwAAwAEABAAAAAlAAoAAwACABcAAAAlAAsAAwACABgAAAAlAAwAAwACABkAAAAmAAoAAwADABcAAAAmAAsAAwADABgAAAAmAAwAAwADABkAAAAnAAsAAwAEABgAAAAnAAwAAwAEABkAAAAoAAsAAwAFABgAAAAoAAwAAwAFABkAAAAdABAAAQAAAAYAAAAdABEAAQAAAAcAAAAdABIAAQAAAAgAAAAeABAAAQABAAYAAAAeABEAAQABAAcAAAAeABIAAQABAAgAAAAfABAAAQABAAYAAAAfABEAAQABAAcAAAAfABIAAQABAAgAAAAgABAAAQABAAYAAAAgABEAAQABAAcAAAAgABIAAQABAAgAAAAhABAAAQABAAYAAAAhABEAAQABAAcAAAAhABIAAQABAAgAAAAiABAAAQACAAYAAAAiABEAAQACAAcAAAAiABIAAQACAAgAAAAdAA8AAQAAAAUAAAAeAA8AAQABAAUAAAAfAA8AAQABAAUAAAAgAA8AAQABAAUAAAAhAA8AAQABAAUAAAAiAA8AAQACAAUAAAA=")
 tile_set = ExtResource("2_2np28")
 
 [node name="Objs2" type="TileMapLayer" parent="." unique_id=459956593]
 visibility_layer = 524288
 z_index = -15
-tile_map_data = PackedByteArray("AAAfABIAAQADAAgAAAAfABMAAQADAAkAAAAhABIAAQADAAgAAAAhABMAAQADAAkAAAAeABAAAwAKABoAAAAeABEAAwAKABsAAAAfABAAAwALABUAAAAfABEAAwALABYAAAAhABAAAwANAC0AAAAhABEAAwANAC4AAAA=")
+tile_map_data = PackedByteArray("AAAeABAAAwAKABsAAAAfABAAAwALABYAAAAfABEAAQADAAgAAAAfABIAAQADAAkAAAAhABAAAwANAC4AAAAhABEAAQADAAgAAAAhABIAAQADAAkAAAAeAA8AAwAKABoAAAAfAA8AAwALABUAAAAhAA8AAwANAC0AAAA=")
 tile_set = ExtResource("2_2np28")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=892110025]
@@ -345,7 +459,7 @@ zoom = Vector2(3, 3)
 position = Vector2(326, 256)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=931644094]
-position = Vector2(489, 275)
+position = Vector2(489, 264)
 sprite_frames = SubResource("SpriteFrames_lr8r0")
 animation = &"idle_up"
 autoplay = "idle_up"

@@ -5,6 +5,7 @@ var points = 0
 var current_question_idx = 0
 var questions = []
 
+
 func _ready() -> void:
 	$CanvasLayer/ProgressBar.max_value = $GameTimer.wait_time
 	
@@ -43,4 +44,19 @@ func _on_game_timer_timeout() -> void:
 
 
 func on_answer_button_pressed(idx):
-	pass
+	if idx == questions[current_question_idx]['correct_answer']:
+		$CanvasLayer/Panel.self_modulate = Color.SEA_GREEN
+		$CanvasLayer/Panel/Label.text = 'CORRECT!'
+		$CanvasLayer/Panel/AnimationPlayer.play("anim")
+	else:
+		$CanvasLayer/Panel.self_modulate = Color.DARK_RED
+		$CanvasLayer/Panel/Label.text = 'WRONG!'
+		$CanvasLayer/Panel/AnimationPlayer.play("anim")
+	
+	$CanvasLayer/Panel/Label2.text = questions[current_question_idx]['explanation']
+	
+	await $CanvasLayer/Panel/AnimationPlayer.animation_finished
+	
+	current_question_idx += 1
+	
+	show_question()
