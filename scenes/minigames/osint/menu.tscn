@@ -71,14 +71,54 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 59.0
-offset_top = 24.0
-offset_right = -59.0
-offset_bottom = -24.0
+offset_left = 218.0
+offset_top = 86.0
+offset_right = -218.0
+offset_bottom = -86.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6jpma")
 
+[node name="Label" type="Label" parent="InstructionsPanel" unique_id=311807042]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -288.0
+offset_top = 28.0
+offset_right = 288.0
+offset_bottom = 358.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "My friend, Alex Carter, said that he will be somewhere tonight, but I forgot where. Practice your OSINT, browser-tracking, and metadata skills to find out where!
+
+You will be presented with photos, browser data, posts, and other open-source information to answer a couple of questions and see if you have what it takes to be an internet detective!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Okay" type="Button" parent="InstructionsPanel" unique_id=1881562880]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -74.0
+offset_right = 96.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_6jpma")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("3_13qxm")
+theme_override_styles/pressed = ExtResource("4_mukw5")
+theme_override_styles/hover = ExtResource("4_mukw5")
+theme_override_styles/focus = ExtResource("4_mukw5")
+text = "Okay"
+
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Instructions" to="." method="_on_instructions_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="InstructionsPanel/Okay" to="." method="_on_okay_pressed"]

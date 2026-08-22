@@ -6,8 +6,12 @@ func _on_play_pressed() -> void:
 
 
 func _on_instructions_pressed() -> void:
-	pass # Replace with function body.
+	$InstructionsPanel.show()
 
 
 func _on_quit_pressed() -> void:
 	queue_free()
+
+
+func _on_okay_pressed() -> void:
+	$InstructionsPanel.hide()

@@ -1,0 +1,42 @@
+{
+	"question_1": {
+		"text": "What does social engineering mainly target?",
+		"choices": [
+			"A. Computer hardware",
+			"B. Human emotions and trust",
+			"C. Internet speed",
+			"D. Antivirus software"
+		],
+		"answer_idx": 1
+	},
+	"question_2": {
+		"text": "Which example is pretexting?",
+		"choices": [
+			"A. A fake IT worker asks for your password",
+			"B. A website installs an official update",
+			"C. A friend sends you a normal game invite",
+			"D. A teacher posts an assignment"
+		],
+		"answer_idx": 0
+	},
+	"question_3": {
+		"text": "What should you do if someone claims to be from your school or bank?",
+		"choices": [
+			"A. Use the link or phone number they provide",
+			"B. Give them limited information",
+			"C. Contact the organization through its official website or number",
+			"D. Respond quickly before the request expires"
+		],
+		"answer_idx": 2
+	},
+	"question_4": {
+		"text": "Which action is the best defense against social engineering?",
+		"choices": [
+			"A. Act immediately when a message feels urgent",
+			"B. Share more information so the person trusts you",
+			"C. Slow down, verify independently, and tell a trusted adult",
+			"D. Trust anyone who knows your name and school"
+		],
+		"answer_idx": 2
+	}
+}

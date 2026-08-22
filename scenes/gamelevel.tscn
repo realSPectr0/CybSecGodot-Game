@@ -3099,12 +3099,15 @@ id = "password_security"
 quiz_path = "res://reso/quizzes/phishing_quiz.json"
 
 [node name="QuizPerson7" parent="." unique_id=1826832902 instance=ExtResource("17_k3sw6")]
-position = Vector2(986, 656)
+position = Vector2(985, 653)
 title = "Social Engineering"
 id = "social_engineering"
+quiz_path = "res://reso/quizzes/social_engineering_quiz.json"
 
 [node name="AnimatedSprite2D" parent="QuizPerson7" index="1" unique_id=1284221584]
-autoplay = "idle_right"
+animation = &"sitting"
+autoplay = "sitting"
+frame_progress = 0.0
 
 [node name="QuizPerson6" parent="." unique_id=72354587 instance=ExtResource("17_k3sw6")]
 position = Vector2(1140, 594)
