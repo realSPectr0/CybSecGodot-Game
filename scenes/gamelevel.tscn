@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://c5gdqo28lueux" path="res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="5_pgho5"]
 [ext_resource type="PackedScene" uid="uid://x3e0uwidxls2" path="res://scenes/receptionpc.tscn" id="7_vny4q"]
 [ext_resource type="Script" uid="uid://b2ynrkw2abah0" path="res://scenes/hard_worker.gd" id="8_v5q8u"]
-[ext_resource type="Texture2D" uid="uid://bwnwqhw585y4f" path="res://art/0_Premade_Characters/16x16/Premade_Character_17.png" id="10_gueac"]
 [ext_resource type="PackedScene" uid="uid://ojbjrkjj75uf" path="res://scenes/minigames/deepfakes/deepfakes.tscn" id="11_pflgl"]
 [ext_resource type="PackedScene" uid="uid://c1cy2wvemcfie" path="res://scenes/minigames/firewalls_and_viruses/firewalls_and_viruses.tscn" id="13_2xpee"]
 [ext_resource type="PackedScene" uid="uid://da6bwpmv2khoi" path="res://scenes/minigames/phishing/phishing_main.tscn" id="13_gueac"]
@@ -2617,29 +2616,29 @@ sources/2 = SubResource("TileSetAtlasSource_twbrq")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4yucn"]
 size = Vector2(14.5, 9.700012)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k3sw6"]
-atlas = ExtResource("10_gueac")
-region = Rect2(288, 32, 16, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_2dy68"]
-atlas = ExtResource("10_gueac")
-region = Rect2(304, 32, 16, 32)
+atlas = ExtResource("1_llsdn")
+region = Rect2(288, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fix8w"]
-atlas = ExtResource("10_gueac")
-region = Rect2(320, 32, 16, 32)
+atlas = ExtResource("1_llsdn")
+region = Rect2(304, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q57yw"]
-atlas = ExtResource("10_gueac")
-region = Rect2(336, 32, 16, 32)
+atlas = ExtResource("1_llsdn")
+region = Rect2(320, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_muvkp"]
-atlas = ExtResource("10_gueac")
-region = Rect2(352, 32, 16, 32)
+atlas = ExtResource("1_llsdn")
+region = Rect2(336, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ah82"]
-atlas = ExtResource("10_gueac")
-region = Rect2(368, 32, 16, 32)
+atlas = ExtResource("1_llsdn")
+region = Rect2(352, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4h8k"]
+atlas = ExtResource("1_llsdn")
+region = Rect2(368, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6na0p"]
 atlas = ExtResource("1_llsdn")
@@ -2717,9 +2716,6 @@ region = Rect2(176, 0, 16, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k3sw6")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_2dy68")
 }, {
 "duration": 1.0,
@@ -2733,6 +2729,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1ah82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4h8k")
 }],
 "loop": 1,
 "name": &"idle_down",
@@ -3021,8 +3020,9 @@ shape = SubResource("CircleShape2D_85vpr")
 metadata/_edit_lock_ = true
 
 [node name="hard_worker17" type="CharacterBody2D" parent="Hard_workers" unique_id=1531092981]
+z_index = 1
 y_sort_enabled = true
-position = Vector2(541, 542)
+position = Vector2(541, 150.00002)
 scale = Vector2(2.5, 2.5)
 script = ExtResource("8_v5q8u")
 minigame_scene = ExtResource("17_fix8w")
@@ -3035,7 +3035,8 @@ shape = SubResource("RectangleShape2D_4yucn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Hard_workers/hard_worker17" unique_id=945752312]
 sprite_frames = SubResource("SpriteFrames_x8kms")
-animation = &"idle_up"
+animation = &"idle_down"
+autoplay = "idle_down"
 metadata/_edit_lock_ = true
 
 [node name="interaction area" type="Area2D" parent="Hard_workers/hard_worker17" unique_id=1655450395]
