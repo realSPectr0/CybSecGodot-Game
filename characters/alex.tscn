@@ -6,7 +6,7 @@
 [ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="4_xsrno"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ft1p4"]
-size = Vector2(9.5, 12.5)
+size = Vector2(14.5, 12.5)
 
 [node name="Alex" type="CharacterBody2D" unique_id=1092919849 groups=["Player"]]
 collision_layer = 128
