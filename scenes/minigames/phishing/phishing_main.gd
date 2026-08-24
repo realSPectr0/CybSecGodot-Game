@@ -16,6 +16,13 @@ var points_per_correct_answer = 100
 
 func _ready() -> void:
 	$Scout/TextureProgressBar.max_value = $FishCatchTimer.wait_time
+	
+	#var count = 0
+	#var d = GameManager.get_data('res://scenes/minigames/phishing/emails_data.json')
+	#for i in d['emails']:
+		#print(i['from'])
+		#
+		#count += 1
 
 
 #func _unhandled_input(event: InputEvent) -> void:
