@@ -4,7 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://c4ebeeg21keo4" path="res://scenes/minigames/osint/final_question_panel.tscn" id="2_hlvxq"]
 [ext_resource type="PackedScene" uid="uid://dbgmq6qflf0nq" path="res://scenes/minigames/osint/metadata_lab.tscn" id="2_soyir"]
 [ext_resource type="PackedScene" uid="uid://bjackuldj17mx" path="res://scenes/minigames/osint/browser_tracking/browsing_tracking.tscn" id="3_05fow"]
+[ext_resource type="FontFile" uid="uid://sa5q1m5icp5w" path="res://scenes/minigames/firewalls_and_viruses/Habbo.ttf" id="3_uqdmk"]
 [ext_resource type="PackedScene" uid="uid://k3moks0oxym7" path="res://scenes/minigames/osint/osint_search/OsintSearch.tscn" id="4_8mo48"]
+[ext_resource type="StyleBox" uid="uid://miqenymvbqx2" path="res://scenes/minigames/password_security/reso/button.tres" id="4_jv3wy"]
+[ext_resource type="StyleBox" uid="uid://n6y6a1tvh7ds" path="res://scenes/minigames/password_security/reso/button_hovered.tres" id="5_ixm07"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8mo48"]
 bg_color = Color(0.094391085, 0.121254794, 0.18236837, 1)
@@ -113,6 +116,28 @@ theme_override_font_sizes/font_size = 20
 text = "You connected several independent clues and correctly heheheheheheh identified misleading evidence."
 autowrap_mode = 2
 
+[node name="Quit" type="Button" parent="CanvasLayer/GameoverPanel" unique_id=1136220385]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -73.0
+offset_right = 123.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_uqdmk")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("4_jv3wy")
+theme_override_styles/pressed = ExtResource("5_ixm07")
+theme_override_styles/hover = ExtResource("5_ixm07")
+theme_override_styles/focus = ExtResource("5_ixm07")
+text = "Quit"
+
 [node name="Control" type="Control" parent="." unique_id=125579086]
 layout_mode = 1
 anchors_preset = 15
@@ -135,4 +160,5 @@ layout_mode = 1
 [connection signal="answered" from="CanvasLayer/FinalQuestionPanel" to="." method="_on_final_question_panel_answered"]
 [connection signal="finished" from="CanvasLayer/FinalQuestionPanel" to="." method="_on_final_question_panel_finished"]
 [connection signal="visibility_changed" from="CanvasLayer/GameoverPanel" to="CanvasLayer/GameoverPanel" method="_on_visibility_changed"]
+[connection signal="pressed" from="CanvasLayer/GameoverPanel/Quit" to="." method="_on_quit_pressed"]
 [connection signal="stage_finished" from="Control/OsintSearch" to="." method="_on_osint_search_stage_finished"]

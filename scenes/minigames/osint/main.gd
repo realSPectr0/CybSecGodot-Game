@@ -51,3 +51,7 @@ func _on_final_question_panel_finished() -> void:
 	elif current_points_total <= 100:
 		$CanvasLayer/GameoverPanel/RankName.text = 'Digital Investigator'
 		$CanvasLayer/GameoverPanel/Detail.text = 'You connected several independent clues and correctly identified misleading evidence.'
+
+
+func _on_quit_pressed() -> void:
+	queue_free()
