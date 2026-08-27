@@ -22,8 +22,7 @@ func _on_close_pressed() -> void:
 
 
 func _on_enter_pressed() -> void:
-	#$Panel/LineEdit.text == GameManager.player_data['passwords'][minigame_id] and $Panel/LineEdit.text != ''
-	if true:
+	if $Panel/LineEdit.text == GameManager.player_data['passwords'][minigame_id] and $Panel/LineEdit.text != '':
 		get_tree().change_scene_to_packed(GameManager.minigame_ref)
 		GameManager.previous_location = GameManager.global_player_ref.global_position
 		
