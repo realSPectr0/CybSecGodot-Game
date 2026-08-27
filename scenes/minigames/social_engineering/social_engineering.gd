@@ -98,4 +98,5 @@ func _on_customer_spawn_timer_timeout() -> void:
 
 
 func _on_done_pressed() -> void:
-	queue_free()
+	get_tree().paused = false
+	GameManager.finish_minigame()
