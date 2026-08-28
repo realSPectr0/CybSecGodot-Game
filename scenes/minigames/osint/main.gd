@@ -54,4 +54,5 @@ func _on_final_question_panel_finished() -> void:
 
 
 func _on_quit_pressed() -> void:
-	queue_free()
+	get_tree().paused = false
+	GameManager.finish_minigame()
