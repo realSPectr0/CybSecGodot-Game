@@ -64,4 +64,5 @@ func _on_pc_area_area_entered(area: Area2D) -> void:
 
 
 func _on_ok_pressed() -> void:
+	get_tree().paused = false
 	GameManager.finish_minigame()
