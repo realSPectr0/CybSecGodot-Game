@@ -3097,7 +3097,7 @@ metadata/_edit_lock_ = true
 position = Vector2(1060, 594)
 title = "Password Security"
 id = "password_security"
-quiz_path = "res://reso/quizzes/phishing_quiz.json"
+quiz_path = "res://reso/quizzes/password_security.json"
 
 [node name="QuizPerson7" parent="." unique_id=1826832902 instance=ExtResource("17_k3sw6")]
 position = Vector2(985, 653)
