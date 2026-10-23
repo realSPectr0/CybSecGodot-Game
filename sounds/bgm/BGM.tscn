@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cjp7j64aqys43"]
+
+[ext_resource type="AudioStream" uid="uid://h6j5hksdrpqs" path="res://sounds/bgm/office_bg_music.wav" id="1_7lye6"]
+
+[node name="Bgm" type="Node" unique_id=1408239933]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1353847461]
+stream = ExtResource("1_7lye6")
+volume_db = -10.0
+autoplay = true

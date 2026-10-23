@@ -1,0 +1,30 @@
+EXPECTED METADATA DISPLAY
+
+FILE: harbor_sunset.jpg
+File Type: JPEG
+Created: June 12, 2026, 7:42 PM
+Modified: June 12, 2026, 8:05 PM
+Time Zone: UTC-7
+Camera: Pixel 8
+Editing Software: Snapseed
+GPS Location: Removed
+Owner: Alex Carter
+
+FILE: weekend_notes.pdf
+File Type: PDF
+Author: Alex Carter
+Created: June 12, 2026, 9:14 AM
+Time Zone: UTC-7
+Title: Weekend Notes
+Subject: Waterfront event research
+Software: LibreOffice 25.2 (simulated)
+Page Count: 2
+
+FILE: desert_banner.png
+File Type: PNG
+Downloaded: June 3, 2026
+Original GPS Location: Desert Springs
+Original Photographer: Morgan Lee
+Source: OpenStock Local (fictional)
+Owner: Not Alex Carter
+Created: September 18, 2024

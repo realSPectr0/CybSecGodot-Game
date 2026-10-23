@@ -1,0 +1,42 @@
+{
+	"question_1": {
+		"text": "What is smishing?",
+		"choices": [
+			"A. A scam sent through text messages",
+			"B. A virus that damages your phone",
+			"C. An advertisement sent by email",
+			"D. A fake social media profile"
+		],
+		"answer_idx": 0
+	},
+	"question_2": {
+		"text": "Which message contains the clearest phishing red flag?",
+		"choices": [
+			"A. \"Your monthly school newsletter is available.\"",
+			"B. \"Your account will be deleted in 10 minutes—click now!\"",
+			"C. \"Your package is expected to arrive tomorrow.\"",
+			"D. \"Your teacher posted a new assignment.\""
+		],
+		"answer_idx": 1
+	},
+	"question_3": {
+		"text": "What should you do when a message says your account has been suspended?",
+		"choices": [
+			"A. Click the link and enter your password",
+			"B. Reply and ask whether the message is real",
+			"C. Open the official app or website yourself and check",
+			"D. Forward the message to your friends"
+		],
+		"answer_idx": 2
+	},
+	"question_4": {
+		"text": "What should you do if you already clicked a suspicious link?",
+		"choices": [
+			"A. Ignore it and hope nothing happens",
+			"B. Tell a trusted adult immediately",
+			"C. Click it again to check what it was",
+			"D. Delete your entire account"
+		],
+		"answer_idx": 1
+	}
+}

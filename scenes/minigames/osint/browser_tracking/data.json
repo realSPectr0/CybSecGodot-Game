@@ -1,0 +1,67 @@
+{
+	"data": [
+		{
+			"session_id": "A",
+			"cookie_id": "FP-2048",
+			"browser": "Firefox 139",
+			"operating_system": "Windows 11",
+			"screen_resolution": "1920x1080",
+			"language": "en-US",
+			"timezone": "UTC-7",
+			"ip_region": "Harbor Point",
+			"referrer": "search.local",
+			"visit_time": "2026-06-12 18:48:00",
+			"vpn_detected": false
+		},
+		{
+			"session_id": "B",
+			"cookie_id": "FP-2048",
+			"browser": "Firefox 139",
+			"operating_system": "Windows 11",
+			"screen_resolution": "1920x1080",
+			"language": "en-US",
+			"timezone": "UTC-7",
+			"ip_region": "Metro Center",
+			"referrer": "harbor-events.local",
+			"visit_time": "2026-06-12 19:03:00",
+			"vpn_detected": true
+		},
+		{
+			"session_id": "C",
+			"cookie_id": "LM-7781",
+			"browser": "Chrome 137",
+			"operating_system": "ChromeOS",
+			"screen_resolution": "1366x768",
+			"language": "en-US",
+			"timezone": "UTC-5",
+			"ip_region": "Pine Ridge",
+			"referrer": "Direct Visit",
+			"visit_time": "2026-06-12 19:10:00",
+			"vpn_detected": false
+		}
+	],
+	"stage_id": "browser_tracking",
+	"question": "Which two sessions most likely came from the same browser?",
+	"answers": [
+		{
+			"id": "A",
+			"text": "A and B"
+		},
+		{
+			"id": "B",
+			"text": "A and C"
+		},
+		{
+			"id": "C",
+			"text": "B and C"
+		},
+		{
+			"id": "D",
+			"text": "All three"
+		}
+	],
+	"correct_answer": "A",
+	"reason": "A and B share the same persistent cookie, browser version, operating system, resolution, language, and time zone. The IP difference is explained by the VPN.",
+	"teaching_note": "Browser data can correlate sessions, but it does not prove who was using the device.",
+	"hint": "Compare the cookie ID before relying on the IP location."
+}

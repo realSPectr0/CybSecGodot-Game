@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bnf4136w57jpf"]
+
+[ext_resource type="SpriteFrames" uid="uid://ba6uiaiy7fobn" path="res://reso/chars_sprite_frames/char_2.tres" id="1_k1c4s"]
+[ext_resource type="Script" uid="uid://x1dpees0ih55" path="res://scenes/minigames/social_engineering/customer.gd" id="2_k1c4s"]
+
+[node name="Customer" type="AnimatedSprite2D" unique_id=81827313]
+sprite_frames = ExtResource("1_k1c4s")
+animation = &"run_right"
+autoplay = "run_right"
+script = ExtResource("2_k1c4s")

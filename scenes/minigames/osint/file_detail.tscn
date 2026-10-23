@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://tu1y35ih215s"]
+
+[ext_resource type="Script" uid="uid://bw0g27ftj0i7f" path="res://scenes/minigames/osint/file_detail.gd" id="1_a1ivw"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_pqp44"]
+color = Color(0.9254902, 0.9254902, 0.9254902, 1)
+thickness = 24
+
+[node name="FileDetail" type="HBoxContainer" unique_id=634659759]
+script = ExtResource("1_a1ivw")
+
+[node name="Label" type="Label" parent="." unique_id=1013967685]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "harbor_sunset.jpg"
+
+[node name="VSeparator" type="VSeparator" parent="." unique_id=1600770371]
+visible = false
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_pqp44")
+
+[node name="Label2" type="Label" parent="." unique_id=666883389]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "harbor_sunset.jpg"
+horizontal_alignment = 2

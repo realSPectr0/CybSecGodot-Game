@@ -1,7 +1,7 @@
 ~ start
 Worker: Are you ready to learn {{GameManager.minigame_title}}?
 - Yes
-	Worker: Okay!
+	Worker: Okay! Enter the password to continue...
 	do GameManager.start_minigame()
 - No
 	Worker: Okay see ya later!

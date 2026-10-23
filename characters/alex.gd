@@ -7,7 +7,11 @@ var freeze = false
 var last_direction = "down"  # Default facing direction
 var interacting = false
 
+
+@onready var ui = $UI
 @onready var camera = $Camera2D
+@onready var talk_button = $UI/Talk
+
 
 func _ready() -> void:
 	if GameManager.character == 'male':
@@ -80,3 +84,7 @@ func pop_to_ui(scene):
 	freeze = true
 	
 	$UI/Popup.add_child(scene.instantiate())
+
+
+func _on_talk_pressed() -> void:
+	GameManager.npc_nearby.start_dialogue()

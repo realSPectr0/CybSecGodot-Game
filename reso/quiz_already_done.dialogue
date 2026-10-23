@@ -1,0 +1,4 @@
+~ start
+Staff: The password for {{GameManager.minigame_title}} is already done.
+Staff: Password is {{GameManager.quiz_pass}}.
+=> END

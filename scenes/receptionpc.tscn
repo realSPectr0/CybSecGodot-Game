@@ -123,7 +123,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2xpee")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_down",
 "speed": 5.0
 }, {
@@ -146,7 +146,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_muvkp")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_left",
 "speed": 5.0
 }, {
@@ -169,7 +169,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7a4g2")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_right",
 "speed": 5.0
 }, {
@@ -192,13 +192,13 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_spr1k")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_up",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_85vpr"]
-radius = 50.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3sw6"]
+size = Vector2(86, 48)
 
 [node name="receptionpc" type="CharacterBody2D" unique_id=1427256539]
 script = ExtResource("1_yji3l")
@@ -212,10 +212,11 @@ sprite_frames = SubResource("SpriteFrames_4m13e")
 animation = &"idle_up"
 
 [node name="interaction area" type="Area2D" parent="." unique_id=1921725400]
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interaction area" unique_id=407949587]
-position = Vector2(0, 16)
-shape = SubResource("CircleShape2D_85vpr")
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_k3sw6")
 
 [connection signal="body_entered" from="interaction area" to="." method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="interaction area" to="." method="_on_interaction_area_body_exited"]

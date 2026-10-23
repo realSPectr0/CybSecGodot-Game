@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c0m6bvq3yo4jq"
+path="res://.godot/imported/quizzes_learn.dialogue-433d992d160a3afe4af5b4be7696b839.tres"
+
+[deps]
+
+source_file="res://reso/quizzes_learn.dialogue"
+dest_files=["res://.godot/imported/quizzes_learn.dialogue-433d992d160a3afe4af5b4be7696b839.tres"]
+
+[params]
+
+defaults=true

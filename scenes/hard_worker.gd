@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var minigame_scene: PackedScene
 @export var overhead_title = ''
+@export var id = ''
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -80,10 +81,18 @@ func _on_interaction_area_body_entered(body):
 		player_in_range = true
 		player_ref = body
 		
-		start_dialogue()
+		#start_dialogue()
+		
+		GameManager.npc_nearby = self
+		GameManager.global_player_ref.talk_button.text = overhead_title
+		GameManager.global_player_ref.talk_button.visible = true
+
 
 # Signal from the NPC's Area2D
 func _on_interaction_area_body_exited(body):
 	if body.name == "player":
 		player_in_range = false
 		player_ref = null
+		
+		GameManager.npc_nearby = null
+		GameManager.global_player_ref.talk_button.visible = false

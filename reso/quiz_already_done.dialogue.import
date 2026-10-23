@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cvs13ofxfiofw"
+path="res://.godot/imported/quiz_already_done.dialogue-156889fa765677beab9bca155c618682.tres"
+
+[deps]
+
+source_file="res://reso/quiz_already_done.dialogue"
+dest_files=["res://.godot/imported/quiz_already_done.dialogue-156889fa765677beab9bca155c618682.tres"]
+
+[params]
+
+defaults=true

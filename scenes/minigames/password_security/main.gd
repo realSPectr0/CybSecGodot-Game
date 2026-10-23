@@ -151,6 +151,7 @@ func check_password():
 
 
 func complete_minigame():
+	get_tree().paused = false
 	GameManager.finish_minigame()
 	#queue_free()
 
@@ -217,4 +218,5 @@ func _on_retype_password_text_changed(new_text: String) -> void:
 
 
 func _on_close_pressed() -> void:
-	queue_free()
+	#queue_free()
+	complete_minigame()

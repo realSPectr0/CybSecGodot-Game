@@ -1,0 +1,42 @@
+{
+	"question_1": {
+		"text": "Which type of malware disguises itself as a useful program?",
+		"choices": [
+			"A. Worm",
+			"B. Trojan",
+			"C. Firewall",
+			"D. Spyware"
+		],
+		"answer_idx": 1
+	},
+	"question_2": {
+		"text": "What is the main job of a firewall?",
+		"choices": [
+			"A. Back up your files",
+			"B. Create stronger passwords",
+			"C. Monitor and control network traffic",
+			"D. Remove every infected file automatically"
+		],
+		"answer_idx": 2
+	},
+	"question_3": {
+		"text": "How do a firewall and antivirus work together?",
+		"choices": [
+			"A. The firewall controls traffic, while antivirus checks files and behavior",
+			"B. The firewall creates backups, while antivirus installs updates",
+			"C. The firewall stores passwords, while antivirus blocks advertisements",
+			"D. They perform exactly the same job"
+		],
+		"answer_idx": 0
+	},
+	"question_4": {
+		"text": "Which habit provides the best everyday protection against malware?",
+		"choices": [
+			"A. Turning off the firewall when an app requests it",
+			"B. Downloading free software from unknown websites",
+			"C. Ignoring updates until the device stops working",
+			"D. Installing updates and downloading only from trusted sources"
+		],
+		"answer_idx": 3
+	}
+}
