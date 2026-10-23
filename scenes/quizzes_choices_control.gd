@@ -56,7 +56,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	$QuestionPanel/QuestionIDX.text = '%d/%d' % [question_idx + 1, question_data.size()]
+	$QuestionPanel/QuestionIDX.text = '%d/%d' % [question_idx, question_data.size()]
 
 
 func show_question(idx):
